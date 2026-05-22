@@ -7,12 +7,9 @@ export const BlogVsAds = () => {
 	return (
 		<section className="bg-slate-50 px-4 py-16 md:py-20">
 			<div className="mx-auto max-w-5xl">
-				<Reveal className="mb-12 text-center">
-					<p className="mb-3 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
-						Blog vs Ads
-					</p>
-					<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
-						광고비와 블로그의 <span className="gradient-text">차이</span>
+				<Reveal className="mb-8">
+					<h2 className="font-bold text-2xl text-[#0a0a0a] tracking-tight md:text-3xl">
+						광고비와 블로그의 차이 → 퍼포먼스 VS 블로그
 					</h2>
 				</Reveal>
 
@@ -20,10 +17,10 @@ export const BlogVsAds = () => {
 					<div className="grid grid-cols-3 border-slate-100 border-b">
 						<div className="px-6 py-4" />
 						<div className="border-slate-100 border-l px-6 py-4 text-center">
-							<span className="font-bold text-[#0a0a0a] text-base">광고</span>
+							<span className="font-bold text-[#0a0a0a] text-base">퍼포먼스 마케팅</span>
 						</div>
 						<div className="border-[#58d68d]/20 border-l bg-[#f0fdf4] px-6 py-4 text-center">
-							<span className="font-bold text-[#58d68d] text-base">블로그</span>
+							<span className="font-bold text-[#58d68d] text-base">블로그 마케팅</span>
 						</div>
 					</div>
 

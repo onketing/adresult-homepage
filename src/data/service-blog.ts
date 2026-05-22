@@ -38,11 +38,12 @@ export const BLOG_PROCESS = [
 ] as const;
 
 export const BLOG_VS_ADS = [
-	{ axis: "노출 시점", ads: "광고비 집행 즉시", blog: "누적 — 시간이 지날수록 증가" },
-	{ axis: "비용 발생", ads: "클릭당 과금 (중단 시 0)", blog: "1회 발행 후 0원" },
-	{ axis: "표시 방식", ads: "광고 라벨 표시", blog: "검색 결과 자연 노출" },
-	{ axis: "광고 차단 영향", ads: "차단 즉시 노출 0", blog: "무관" },
-	{ axis: "자산 축적", ads: "없음", blog: "채널 자산으로 누적" },
+	{ axis: "효과 시작", ads: "빠름 (즉시 유입)", blog: "점진적 증가" },
+	{ axis: "비용", ads: "고예산 소진형", blog: "저예산 장기 효율형" },
+	{ axis: "유지력", ads: "중단 시 즉시 종료", blog: "게시 후 지속 노출" },
+	{ axis: "고객 반응", ads: "광고로 인식", blog: "후기/정보로 신뢰 확보" },
+	{ axis: "검색 노출", ads: "광고 영역", blog: "자연 검색 상위 가능" },
+	{ axis: "결과", ads: "단기 유입 확보", blog: "장기 매출 자산화" },
 ] as const;
 
 // TODO: 치과·세무사 수치는 실수치로 교체 필요

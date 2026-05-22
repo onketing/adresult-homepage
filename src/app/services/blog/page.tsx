@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { AboutMidCTA } from "@/components/sections/AboutMidCTA";
 import { BlogHero } from "@/components/sections/BlogHero";
-import { BlogPain } from "@/components/sections/BlogPain";
 import { BlogVsAds } from "@/components/sections/BlogVsAds";
 import { CaseTestimonial } from "@/components/sections/CaseTestimonial";
 import { ServiceEngagementPolicy } from "@/components/sections/ServiceEngagementPolicy";
@@ -21,7 +20,6 @@ export const BlogServicePage = () => {
 		<>
 			<BlogHero />
 			<BlogVsAds />
-			<BlogPain />
 			<ServiceProofStrip items={BLOG_PROOF} />
 			<ServiceWhatWeDo items={BLOG_PILLARS} />
 			<CaseTestimonial cases={BLOG_CASES} />
