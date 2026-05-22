@@ -18,7 +18,7 @@ export const ContactHero = () => {
 				className="pointer-events-none absolute inset-0"
 				style={{
 					background:
-						"radial-gradient(ellipse 65% 55% at 50% 50%, rgba(88,214,141,0.18), rgba(88,214,141,0.05) 50%, transparent 72%)",
+						"radial-gradient(ellipse 65% 55% at 50% 50%, rgba(88,214,141,0.35), rgba(88,214,141,0.12) 50%, transparent 72%)",
 				}}
 				animate={{ opacity: [0.7, 1, 0.7] }}
 				transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
