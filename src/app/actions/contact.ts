@@ -45,7 +45,7 @@ export async function submitContact(data: ContactData) {
 			.filter(Boolean);
 
 		await resend.emails.send({
-			from: "Growth Wave <noreply@growthwave.co.kr>",
+			from: "온케팅 <noreply@onketing.kr>",
 			to: recipients,
 			subject: `[문의] ${data.name} · ${data.company} · ${data.profession || "직군 미선택"}`,
 			html,

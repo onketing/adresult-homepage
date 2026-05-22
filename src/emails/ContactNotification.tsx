@@ -44,7 +44,7 @@ export const ContactNotification = ({
 				<Section style={header}>
 					<Row>
 						<Column>
-							<Text style={eyebrow}>GROWTH WAVE · 새 문의</Text>
+							<Text style={eyebrow}>온케팅 · 새 문의</Text>
 							<Text style={title}>{name}님이 문의했습니다</Text>
 							<Text style={date}>{sentAt}</Text>
 						</Column>
@@ -114,7 +114,7 @@ export const ContactNotification = ({
 				{/* 푸터 */}
 				<Section style={footer}>
 					<Text style={footerText}>
-						Growth Wave · growthwave.co.kr
+						온케팅 · onketing.kr
 						<br />
 						영업일 1일 내 회신 · 이 메일은 자동 발송됩니다
 					</Text>
