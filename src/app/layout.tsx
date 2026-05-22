@@ -58,6 +58,11 @@ export const metadata: Metadata = {
 			"naver-site-verification": "d4226bbbaae73c2c62b9327693fac4b373595e3a",
 		},
 	},
+	icons: {
+		icon: [{ url: "/icon.png", sizes: "512x512", type: "image/png" }],
+		shortcut: "/icon.png",
+		apple: "/icon.png",
+	},
 };
 
 const DUMMY_TEL = "02-000-0000";
