@@ -10,6 +10,7 @@ import { siteConfig } from "@/config/site";
 export const StickyCTA = () => {
 	const [open, setOpen] = useState(false);
 	const triggeredRef = useRef(false);
+	const triggeredFinalRef = useRef(false);
 	const pathname = usePathname();
 
 	const isHidden = pathname.startsWith("/contact");
@@ -37,6 +38,26 @@ export const StickyCTA = () => {
 				}
 			},
 			{ rootMargin: "-50% 0px -50% 0px" },
+		);
+		observer.observe(target);
+		return () => observer.disconnect();
+	}, [pathname]);
+
+	// 최종 CTA 섹션 도달 시 1회 자동 오픈
+	// biome-ignore lint/correctness/useExhaustiveDependencies: pathname is the trigger, not consumed
+	useEffect(() => {
+		const target = document.getElementById("final-cta");
+		if (!target) return;
+		const observer = new IntersectionObserver(
+			(entries) => {
+				for (const entry of entries) {
+					if (entry.isIntersecting && !triggeredFinalRef.current) {
+						triggeredFinalRef.current = true;
+						setOpen(true);
+					}
+				}
+			},
+			{ rootMargin: "-10% 0px -10% 0px" },
 		);
 		observer.observe(target);
 		return () => observer.disconnect();

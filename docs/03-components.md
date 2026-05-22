@@ -59,7 +59,7 @@ type CTACardProps = {
 
 ```ts
 type SectionHeadingProps = {
-  eyebrow?: string;          // 보라색(#7c3aed) 소문자 레이블
+  eyebrow?: string;          // 그린(#58d68d) 소문자 레이블
   title: string;             // h2 텍스트 (필수)
   highlight?: string;        // title 뒤에 gradient-text로 붙는 단어/구
   sub?: string;              // h2 아래 설명 (max-w-2xl 자동 센터 정렬)

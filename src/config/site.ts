@@ -47,23 +47,19 @@ export const siteConfig = {
 			matchPrefix: "/services",
 			children: [
 				{
-					label: "전문직 마케팅",
-					href: "/services/professional",
-					description: "광고 규정 직접 검토 · 12개 직군 전용",
-					icon: "Crown",
-					flagship: true,
-				},
-				{
-					label: "블로그 마케팅",
-					href: "/services/blog",
-					description: "검색에서 상담으로 이어지는 콘텐츠",
-					icon: "FileText",
-				},
-				{
-					label: "숏폼 마케팅",
+					label: "터지는 숏폼",
 					href: "/services/shortform",
-					description: "릴스·쇼츠·틱톡 전문가 채널 구축",
-					icon: "Clapperboard",
+					icon: "Zap",
+				},
+				{
+					label: "쌓이는 팬층",
+					href: "/services/professional",
+					icon: "Users",
+				},
+				{
+					label: "찾아오는 블로그",
+					href: "/services/blog",
+					icon: "Search",
 				},
 			],
 		},

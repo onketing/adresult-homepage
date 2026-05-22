@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown, Clapperboard, Crown, FileText } from "lucide-react";
+import { ChevronDown, Search, Users, Zap } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -10,9 +10,9 @@ import { cn } from "@/lib/utils";
 import { MobileMenu } from "./MobileMenu";
 
 const CHILD_ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
-	Clapperboard,
-	Crown,
-	FileText,
+	Zap,
+	Users,
+	Search,
 };
 
 // 상단이 투명해야 하는 페이지 (다크 풀스크린 Hero)
@@ -103,7 +103,7 @@ export const Header = () => {
 											isOpen ? "visible opacity-100" : "invisible opacity-0",
 										)}
 									>
-										<div className="w-[360px] rounded-2xl border border-slate-200 bg-white p-2 shadow-[0_24px_60px_rgba(15,23,42,0.12)]">
+										<div className="w-52 rounded-2xl border border-slate-200 bg-white p-1.5 shadow-[0_24px_60px_rgba(15,23,42,0.12)]">
 											{item.children.map((child) => {
 												const ChildIcon = CHILD_ICON_MAP[child.icon];
 												const isChildActive =
@@ -114,29 +114,26 @@ export const Header = () => {
 														href={child.href}
 														onClick={() => setOpenMenu(null)}
 														className={cn(
-															"flex items-center gap-4 rounded-xl px-3 py-3 transition-colors hover:bg-slate-50",
-															isChildActive && "bg-[#052e16]/6 text-[#0a0a0a]",
+															"flex items-center gap-3 rounded-xl px-3 py-2.5 transition-colors hover:bg-slate-50",
+															isChildActive && "bg-[#052e16]/6",
 														)}
 													>
-														<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-slate-100">
+														<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#052e16]/8">
 															{ChildIcon && (
-																<ChildIcon className="h-4 w-4 text-[#0a0a0a]" aria-hidden="true" />
+																<ChildIcon
+																	className="h-3.5 w-3.5 text-[#16a34a]"
+																	aria-hidden="true"
+																/>
 															)}
 														</div>
-														<div className="min-w-0 flex-1">
-															<div className="flex items-center gap-2">
-																<span
-																	className={cn(
-																		"font-semibold text-sm",
-																		isChildActive ? "text-[#0a0a0a]" : "text-foreground",
-																	)}
-																>
-																	{child.label}
-																</span>
-																{child.flagship && <span className="badge-purple">대표</span>}
-															</div>
-															<p className="text-muted-foreground text-xs">{child.description}</p>
-														</div>
+														<span
+															className={cn(
+																"font-semibold text-sm",
+																isChildActive ? "text-[#0a0a0a]" : "text-foreground",
+															)}
+														>
+															{child.label}
+														</span>
 													</Link>
 												);
 											})}

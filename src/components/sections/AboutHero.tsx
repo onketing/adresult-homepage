@@ -25,30 +25,7 @@ export const AboutHero = () => {
 						priority
 					/>
 				) : (
-					<div className="flex h-full w-full items-center justify-center opacity-10">
-						<div className="text-center text-white">
-							<svg
-								className="mx-auto mb-3 h-12 w-12"
-								fill="none"
-								stroke="currentColor"
-								strokeWidth={1.5}
-								viewBox="0 0 24 24"
-								aria-hidden="true"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z"
-								/>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z"
-								/>
-							</svg>
-							<p className="font-mono text-xs tracking-widest">images/about/office-main.jpg</p>
-						</div>
-					</div>
+					<div className="h-full w-full" />
 				)}
 			</div>
 
@@ -84,46 +61,24 @@ export const AboutHero = () => {
 			<div className="relative z-10 mx-auto w-full max-w-6xl px-8 py-32 md:px-12">
 				<div className="max-w-xl">
 					<motion.p
-						className="mb-6 font-semibold text-sm text-white/70 uppercase tracking-[0.5em]"
+						className="mb-10 font-semibold text-2xl text-white/70 uppercase tracking-[0.3em]"
 						initial={{ opacity: 0, y: 16 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, ease }}
 					>
-						회 사 소 개
+						회사소개
 					</motion.p>
 
 					<motion.h1
-						className="mb-8 font-bold text-[52px] text-white leading-[1.08] tracking-tight md:text-[72px] lg:text-[88px]"
+						className="mb-8 font-bold text-[48px] text-white leading-[1.15] tracking-tight md:text-[64px] lg:text-[80px]"
 						initial={{ opacity: 0, y: 32 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.75, delay: 0.1, ease }}
 					>
-						노출이 아니라,
+						아직도 마케팅
 						<br />
-						<span className="gradient-text">의뢰를</span>
-						<br />
-						만듭니다.
+						<span className="text-[#58d68d]">안하고</span> 계신가요?
 					</motion.h1>
-
-					<motion.p
-						className="mb-10 max-w-sm break-keep text-lg text-white/75 leading-relaxed"
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.65, delay: 0.2, ease }}
-					>
-						대부분의 대행사는 노출 수를 보고합니다.
-						<br />
-						우리는 8년간 의뢰로 이어지는 콘텐츠만 만들었습니다.
-					</motion.p>
-
-					<motion.p
-						className="font-mono text-white/40 text-xs tracking-[0.2em]"
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ duration: 0.5, delay: 0.3, ease }}
-					>
-						전문직 12개 직군 · 누적 200+ 콘텐츠 · 재계약율 90%+
-					</motion.p>
 				</div>
 			</div>
 

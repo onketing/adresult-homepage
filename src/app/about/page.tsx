@@ -1,17 +1,9 @@
 import type { Metadata } from "next";
-import { AboutCaseHighlight } from "@/components/sections/AboutCaseHighlight";
-import { AboutCEOMessage } from "@/components/sections/AboutCEOMessage";
-import { AboutCEOTimeline } from "@/components/sections/AboutCEOTimeline";
-import { AboutClientStrip } from "@/components/sections/AboutClientStrip";
+import { AboutConsequences } from "@/components/sections/AboutConsequences";
 import { AboutFoundingStory } from "@/components/sections/AboutFoundingStory";
 import { AboutHero } from "@/components/sections/AboutHero";
-import { AboutHowWeWork } from "@/components/sections/AboutHowWeWork";
-import { AboutMidCTA } from "@/components/sections/AboutMidCTA";
-import { AboutMission } from "@/components/sections/AboutMission";
-import { AboutSignature } from "@/components/sections/AboutSignature";
-import { AboutTrustCounter } from "@/components/sections/AboutTrustCounter";
-import { AESlogan } from "@/components/sections/AESlogan";
-import { Comparison } from "@/components/sections/Comparison";
+import { AboutResults } from "@/components/sections/AboutResults";
+import { AboutWhyPossible } from "@/components/sections/AboutWhyPossible";
 import { OrgChart } from "@/components/sections/OrgChart";
 import { CTACard } from "@/components/shared/CTACard";
 
@@ -27,51 +19,35 @@ export const AboutPage = () => {
 			{/* 1. 풀스크린 다크 Hero */}
 			<AboutHero />
 
-			{/* 2. 창업 스토리 + 팀 사진 */}
+			{/* 2. 창업 스토리 */}
 			<AboutFoundingStory />
 
-			{/* 3. 신뢰 카운터 — 4축 숫자 */}
-			<AboutTrustCounter />
+			{/* 3. 하지 않으면 이렇게 됩니다 */}
+			<AboutConsequences />
 
-			{/* 4. 5단계 프로세스 */}
-			<AboutHowWeWork />
+			{/* 4. 우리의 성과 Before / After */}
+			<AboutResults />
 
-			{/* 5. 직군 Marquee */}
-			<AboutClientStrip />
+			{/* 5. 어떻게 이런 성과가 가능했냐고요? */}
+			<AboutWhyPossible />
 
-			{/* 6. 슬로건 (다크) */}
-			<AESlogan />
-
-			{/* 7. 시그니처 방법론 */}
-			<AboutSignature />
-
-			{/* 8. 직군별 성과 케이스 */}
-			<AboutCaseHighlight />
-
-			{/* 9. CEO 메시지 */}
-			<AboutCEOMessage />
-
-			{/* 10. CEO 타임라인 */}
-			<AboutCEOTimeline />
-
-			{/* 11. 미션 */}
-			<AboutMission />
-
-			{/* 12. 조직도 */}
+			{/* 6. 조직도 */}
 			<OrgChart />
 
-			{/* 13. 비교 */}
-			<Comparison />
-
-			{/* 14. 중간 CTA (다채널) */}
-			<AboutMidCTA />
-
-			{/* 15. 최종 CTA */}
+			{/* 7. 최종 CTA */}
 			<CTACard
 				variant="gradient"
-				headline="전문직 마케팅, 우리에게 맡기세요."
-				sub="광고 규정 위반 항목 즉시 확인"
+				eyebrow="전문직 마케팅 컨설팅"
+				headline={
+					<>
+						세상은 이미
+						<br />
+						마케팅되고 있습니다.
+					</>
+				}
+				sub="뒤쳐지지 마세요."
 				buttonText="마케팅 컨설팅"
+				triggerContactOnView
 			/>
 		</>
 	);

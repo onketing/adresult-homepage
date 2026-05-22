@@ -65,7 +65,7 @@ export type FaqItem = {
 export type NavChild = {
 	label: string;
 	href: string;
-	description: string;
+	description?: string;
 	icon: string;
 	flagship?: boolean;
 };

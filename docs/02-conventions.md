@@ -75,10 +75,10 @@ export const cn = (...inputs: ClassValue[]) => {
 
 | 변수 | 값 | 용도 |
 |------|----|------|
-| `--brand-violet` | `#7c3aed` | 주 브랜드색, gradient-text, ring, eyebrow |
-| `--brand-indigo` | `#4338ca` | gradient 중간, primary |
-| `--brand-navy` | `#1e3a8a` | gradient 끝, 다크 강조 |
-| `--primary` | `#4338ca` | 버튼·링크 |
+| `--brand-sage` | `#58d68d` | 주 브랜드색, gradient-text, ring, eyebrow |
+| `--brand-green` | `#16a34a` | gradient 중간, primary |
+| `--brand-forest` | `#15803d` | gradient 끝, 다크 강조 |
+| `--primary` | `#16a34a` | 버튼·링크 |
 | `--primary-foreground` | `#ffffff` | |
 | `--secondary` | `#f8fafc` | |
 | `--secondary-foreground` | `#0f172a` | |
@@ -89,7 +89,7 @@ export const cn = (...inputs: ClassValue[]) => {
 | `--destructive` | `#ef4444` | |
 | `--border` | `#e2e8f0` | 카드 테두리 |
 | `--input` | `#e2e8f0` | |
-| `--ring` | `#7c3aed` | focus ring |
+| `--ring` | `#58d68d` | focus ring |
 | `--background` | `#ffffff` | |
 | `--foreground` | `#0f172a` | |
 | `--card` | `#ffffff` | |
@@ -120,13 +120,13 @@ export const cn = (...inputs: ClassValue[]) => {
 
 | 클래스 | 역할 | CSS 요약 |
 |--------|------|----------|
-| `.gradient-brand` | 그라데이션 배경 | `linear-gradient(135deg, #7c3aed 0%, #4338ca 50%, #1e3a8a 100%)` |
-| `.gradient-text` | 텍스트 그라데이션 | `135deg violet→navy`, `background-clip: text`, `color: transparent` |
-| `.gradient-soft` | 소프트 배경 | `radial-gradient(60% 50% at 50% 50%, rgba(124,58,237,0.12), transparent 70%)` |
-| `.gradient-border` | 테두리 그라데이션 | `border-image: linear-gradient(135deg, violet→indigo→navy) 1` |
+| `.gradient-brand` | 그라데이션 배경 | `linear-gradient(135deg, #58d68d 0%, #16a34a 50%, #15803d 100%)` |
+| `.gradient-text` | 텍스트 그라데이션 | `135deg green→forest`, `background-clip: text`, `color: transparent` |
+| `.gradient-soft` | 소프트 배경 | `radial-gradient(60% 50% at 50% 50%, rgba(88,214,141,0.12), transparent 70%)` |
+| `.gradient-border` | 테두리 그라데이션 | `border-image: linear-gradient(135deg, sage→green→forest) 1` |
 | `.card-hover` | 카드 호버 | `transition 0.2s ease`, hover: `translateY(-4px)` + `box-shadow 0 6px 16px rgba(0,0,0,0.06)` |
 | `.btn-solid-dark` | 검은 버튼 | `bg #0a0a0a`, `color #fff`, hover: `opacity 0.85` |
-| `.badge-purple` | 보라 배지 | `bg rgb(124 58 237/0.1)`, `color #7c3aed`, `font-size 0.625rem`, `font-weight 700`, `border-radius 9999px` |
+| `.badge-purple` | 그린 배지 | `bg rgb(88 214 141/0.1)`, `color #58d68d`, `font-size 0.625rem`, `font-weight 700`, `border-radius 9999px` |
 
 ### 반응형 & 레이아웃
 ```

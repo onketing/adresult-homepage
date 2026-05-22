@@ -6,7 +6,6 @@ import { siteConfig } from "@/config/site";
 const TRUST_STATS = [
 	{ value: "1일", label: "영업일 내 회신" },
 	{ value: "0원", label: "컨설팅 비용" },
-	{ value: "없음", label: "계약 의무" },
 ] as const;
 
 type CTACardProps = {
@@ -15,6 +14,7 @@ type CTACardProps = {
 	buttonText?: string;
 	eyebrow?: string;
 	variant?: "dark" | "gradient";
+	triggerContactOnView?: boolean;
 };
 
 export const CTACard = ({
@@ -23,10 +23,14 @@ export const CTACard = ({
 	buttonText = "마케팅 컨설팅",
 	eyebrow,
 	variant = "dark",
+	triggerContactOnView = false,
 }: CTACardProps) => {
 	if (variant === "gradient") {
 		return (
-			<section className="gradient-brand relative overflow-hidden px-4 py-24 md:py-32">
+			<section
+				id={triggerContactOnView ? "final-cta" : undefined}
+				className="gradient-brand relative overflow-hidden px-4 py-24 md:py-32"
+			>
 				{/* Radial glow */}
 				<div
 					className="pointer-events-none absolute top-0 left-1/2 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-white opacity-[0.07] blur-[120px]"
@@ -74,7 +78,7 @@ export const CTACard = ({
 						</h2>
 
 						{/* Sub */}
-						<p className="mb-14 text-base text-white/60 leading-relaxed md:text-lg">{sub}</p>
+						<p className="mb-14 font-semibold text-white/90 text-xl leading-relaxed md:text-2xl">{sub}</p>
 
 						{/* Trust stats */}
 						<div className="flex items-center justify-center border-white/15 border-t pt-10">

@@ -38,7 +38,7 @@ export const SERVICE_CARDS: ServiceCard[] = [
 	{
 		href: "/services/professional",
 		icon: "Share2",
-		eyebrow: "말하는 포트폴리오",
+		eyebrow: "쌓이는 팬층",
 		title: "전문가 채널을\n꾸준히 키웁니다",
 		description: "SNS가 당신을 대신해 이야기합니다.",
 		points: [
@@ -46,6 +46,6 @@ export const SERVICE_CARDS: ServiceCard[] = [
 			"글이 쌓일수록 의뢰인이 먼저 찾아옵니다.",
 			'"선생님 글 다 읽고 왔어요." 이런 분들이 옵니다.',
 		],
-		cta: "말하는 포트폴리오 알아보기",
+		cta: "쌓이는 팬층 알아보기",
 	},
 ];

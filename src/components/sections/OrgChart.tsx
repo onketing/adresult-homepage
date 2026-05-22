@@ -7,12 +7,12 @@ const deptDirs = ["left", "scale", "right"] as const;
 
 export const OrgChart = () => {
 	return (
-		<section className="relative overflow-hidden bg-white px-4 py-24 md:py-28">
+		<section className="relative overflow-hidden bg-white px-4 pt-0 pb-24 md:pb-28">
 			<div className="gradient-soft pointer-events-none absolute inset-0" aria-hidden="true" />
 
 			<div className="relative mx-auto max-w-4xl">
 				<Reveal>
-					<SectionHeading eyebrow="Organization" title="조직도" className="mb-12" />
+					<SectionHeading title="조직도" className="mb-12" />
 				</Reveal>
 
 				{/* CEO */}
