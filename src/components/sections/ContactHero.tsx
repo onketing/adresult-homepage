@@ -51,7 +51,7 @@ export const ContactHero = () => {
 				</motion.h1>
 
 				<motion.p
-					className="mx-auto mb-12 max-w-lg break-keep text-base text-slate-600 leading-relaxed md:text-lg"
+					className="mx-auto mb-20 max-w-lg break-keep text-base text-slate-600 leading-relaxed md:text-lg"
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.2 }}
