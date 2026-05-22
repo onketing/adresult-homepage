@@ -57,7 +57,7 @@ export const PainPoints = () => {
 								ease: [0.22, 1, 0.36, 1],
 							}}
 						>
-							<div className="group relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-[#58d68d]/20 hover:bg-[#faf8ff] hover:shadow-[0_16px_48px_rgba(88,214,141,0.12)]">
+							<div className="group relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-[#58d68d]/20 hover:bg-[#f0fdf4] hover:shadow-[0_16px_48px_rgba(88,214,141,0.12)]">
 								{/* 왼쪽 gradient 세로선 */}
 								<div className="absolute inset-y-0 left-0 w-[3px] rounded-l-2xl bg-linear-to-b from-[#58d68d] to-[#16a34a] opacity-40 transition-opacity duration-500 group-hover:opacity-100" />
 

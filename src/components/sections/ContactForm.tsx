@@ -206,7 +206,7 @@ export const ContactForm = () => {
 						).map((stat) => (
 							<div
 								key={stat.label}
-								className="rounded-lg border border-[#e9d5ff]/60 bg-[#faf8ff] p-3 text-center"
+								className="rounded-lg border border-[#58d68d]/20 bg-[#f0fdf4] p-3 text-center"
 							>
 								<p className="font-bold text-[#58d68d] text-lg leading-none">{stat.value}</p>
 								<p className="mt-1 text-[10px] text-slate-400">{stat.label}</p>

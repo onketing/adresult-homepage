@@ -19,7 +19,7 @@ export const OrgChart = () => {
 				<Reveal direction="scale" delay={0.1}>
 					<div className="flex justify-center">
 						<div className="w-full max-w-xs">
-							<div className="rounded-2xl bg-linear-to-br from-[#58d68d] to-[#5b21b6] px-8 py-7 text-center shadow-[0_4px_24px_rgba(88,214,141,0.3)]">
+							<div className="rounded-2xl bg-linear-to-br from-[#58d68d] to-[#15803d] px-8 py-7 text-center shadow-[0_4px_24px_rgba(88,214,141,0.3)]">
 								<p className="font-bold text-lg text-white">대표</p>
 								<p className="mt-1.5 text-sm text-white/70 leading-relaxed">
 									전문직 마케팅 전략 총괄
