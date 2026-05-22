@@ -73,7 +73,7 @@ export const ContactForm = () => {
 		const fd = new FormData(e.currentTarget);
 		try {
 			await submitContact({
-				company: (fd.get("company") as string) ?? "",
+				company: "",
 				profession,
 				name: (fd.get("name") as string) ?? "",
 				tel: (fd.get("tel") as string) ?? "",
@@ -242,21 +242,6 @@ export const ContactForm = () => {
 					<form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-6">
 						<div className="grid gap-5 sm:grid-cols-2">
 							<div className="space-y-2">
-								<Label
-									htmlFor="company"
-									className="font-semibold text-slate-700 text-xs uppercase tracking-[0.08em]"
-								>
-									회사/소속명 <span className="font-normal text-destructive">*</span>
-								</Label>
-								<Input
-									id="company"
-									name="company"
-									placeholder="예: OO 한의원, 홍길동 변호사"
-									required
-									className="h-12 border-slate-200 text-sm focus-visible:border-[#58d68d] focus-visible:ring-2 focus-visible:ring-[#58d68d]/15"
-								/>
-							</div>
-							<div className="space-y-2">
 								<Label className="font-semibold text-slate-700 text-xs uppercase tracking-[0.08em]">
 									직군
 								</Label>
@@ -328,7 +313,7 @@ export const ContactForm = () => {
 									htmlFor="name"
 									className="font-semibold text-slate-700 text-xs uppercase tracking-[0.08em]"
 								>
-									담당자 이름 <span className="font-normal text-destructive">*</span>
+									성함 <span className="font-normal text-destructive">*</span>
 								</Label>
 								<Input
 									id="name"

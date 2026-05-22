@@ -13,30 +13,32 @@ export const ContactHero = () => {
 
 	return (
 		<section className="relative flex min-h-screen items-center overflow-hidden bg-white px-6 py-28 md:px-10 md:py-36">
-			{/* Pulsing brand-color circles — centered */}
+			{/* Soft green radial glow */}
+			<div
+				className="pointer-events-none absolute inset-0"
+				style={{
+					background:
+						"radial-gradient(ellipse 55% 45% at 50% 50%, rgba(88,214,141,0.18), transparent 70%)",
+				}}
+				aria-hidden="true"
+			/>
+
+			{/* Outward ripple rings */}
 			<div
 				className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
 				aria-hidden="true"
 			>
-				{([480, 680, 900] as const).map((size, i) => (
+				{([0, 1, 2] as const).map((i) => (
 					<motion.div
-						key={size}
-						className="absolute rounded-full bg-[#58d68d]"
-						style={{
-							width: size,
-							height: size,
-							left: -size / 2,
-							top: -size / 2,
-						}}
-						animate={{
-							scale: [1, 1.1, 1],
-							opacity: [0.07 - i * 0.02, 0.02, 0.07 - i * 0.02],
-						}}
+						key={i}
+						className="absolute rounded-full border border-[#58d68d]"
+						style={{ width: 160, height: 160, left: -80, top: -80 }}
+						animate={{ scale: [1, 6], opacity: [0.35, 0] }}
 						transition={{
-							duration: 3.5 + i * 0.8,
+							duration: 4,
+							delay: i * 1.35,
 							repeat: Number.POSITIVE_INFINITY,
-							ease: "easeInOut",
-							delay: i * 0.55,
+							ease: "easeOut",
 						}}
 					/>
 				))}
@@ -44,7 +46,7 @@ export const ContactHero = () => {
 
 			{/* Fine grid */}
 			<div
-				className="pointer-events-none absolute inset-0 opacity-30"
+				className="pointer-events-none absolute inset-0 opacity-25"
 				style={{
 					backgroundImage:
 						"linear-gradient(rgba(148,163,184,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.3) 1px, transparent 1px)",
@@ -64,7 +66,7 @@ export const ContactHero = () => {
 				>
 					마케팅 진단
 					<br />
-					<span className="text-[#7c3aed]">무료</span>로 받아보세요
+					<span className="text-[#58d68d]">무료</span>로 받아보세요
 				</motion.h1>
 
 				<motion.p
