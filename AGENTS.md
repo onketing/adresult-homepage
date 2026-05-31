@@ -10,3 +10,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 @docs/03-components.md
 @docs/04-pages.md
 @docs/05-data-and-seo.md
+@docs/06-images.md

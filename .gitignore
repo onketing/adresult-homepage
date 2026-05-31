@@ -54,3 +54,4 @@ next-env.d.ts
 
 # team photo originals (Korean filenames, English copies are tracked)
 public/images/team/김*.png
+.claude/scheduled_tasks.lock
