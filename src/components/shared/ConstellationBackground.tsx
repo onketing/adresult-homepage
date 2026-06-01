@@ -40,20 +40,20 @@ type ShootingStar = {
 const GREEN = "88, 214, 141";
 
 const STAR_COLORS = [
-	"255, 255, 255",   // 흰색
-	"186, 230, 253",   // 하늘
-	"196, 181, 253",   // 연보라
-	"167, 243, 208",   // 에메랄드
-	"253, 230, 138",   // 따뜻한 노란별
+	"255, 255, 255", // 흰색
+	"186, 230, 253", // 하늘
+	"196, 181, 253", // 연보라
+	"167, 243, 208", // 에메랄드
+	"253, 230, 138", // 따뜻한 노란별
 ];
 
 // 성운 정의 (위치는 비율, 애니메이션은 tick으로 맥동)
 const NEBULA_DEF = [
-	{ cx: 0.08,  cy: 0.12, rBase: 360, color: [88,  214, 141], alpha: 0.08 },
-	{ cx: 0.88,  cy: 0.82, rBase: 430, color: [139, 92,  246], alpha: 0.09 },
-	{ cx: 0.62,  cy: 0.22, rBase: 290, color: [6,   182, 212], alpha: 0.07 },
-	{ cx: 0.25,  cy: 0.72, rBase: 330, color: [99,  102, 241], alpha: 0.07 },
-	{ cx: 0.50,  cy: 0.50, rBase: 200, color: [88,  214, 141], alpha: 0.04 }, // 중앙 미세 글로우
+	{ cx: 0.08, cy: 0.12, rBase: 360, color: [88, 214, 141], alpha: 0.08 },
+	{ cx: 0.88, cy: 0.82, rBase: 430, color: [139, 92, 246], alpha: 0.09 },
+	{ cx: 0.62, cy: 0.22, rBase: 290, color: [6, 182, 212], alpha: 0.07 },
+	{ cx: 0.25, cy: 0.72, rBase: 330, color: [99, 102, 241], alpha: 0.07 },
+	{ cx: 0.5, cy: 0.5, rBase: 200, color: [88, 214, 141], alpha: 0.04 }, // 중앙 미세 글로우
 ];
 
 export const ConstellationBackground = ({ className }: { className?: string }) => {
@@ -79,6 +79,9 @@ export const ConstellationBackground = ({ className }: { className?: string }) =
 		let nextShoot = 180;
 		const mouse = { x: 0, y: 0, active: false };
 		let raf = 0;
+		let running = false;
+		let onScreen = true;
+		let tabVisible = true;
 
 		const LINK_DIST = 160;
 		const HUB_DIST = 340;
@@ -249,11 +252,7 @@ export const ConstellationBackground = ({ className }: { className?: string }) =
 				const t = n.pulse;
 				ctx.fillStyle = `rgba(${GREEN}, ${(1 - t) * 0.75})`;
 				ctx.beginPath();
-				ctx.arc(
-					n.x + (hubX - n.x) * t + px,
-					n.y + (hubY - n.y) * t + py,
-					1.8, 0, Math.PI * 2,
-				);
+				ctx.arc(n.x + (hubX - n.x) * t + px, n.y + (hubY - n.y) * t + py, 1.8, 0, Math.PI * 2);
 				ctx.fill();
 			}
 
@@ -369,7 +368,17 @@ export const ConstellationBackground = ({ className }: { className?: string }) =
 				}
 			}
 
-			if (!reduce) raf = requestAnimationFrame(draw);
+			if (!reduce && running) raf = requestAnimationFrame(draw);
+		};
+
+		const start = () => {
+			if (reduce || running || !onScreen || !tabVisible) return;
+			running = true;
+			raf = requestAnimationFrame(draw);
+		};
+		const stop = () => {
+			running = false;
+			cancelAnimationFrame(raf);
 		};
 
 		const onMove = (e: MouseEvent) => {
@@ -383,15 +392,38 @@ export const ConstellationBackground = ({ className }: { className?: string }) =
 			if (reduce) draw();
 		};
 
+		const onVisibility = () => {
+			tabVisible = document.visibilityState === "visible";
+			if (tabVisible) start();
+			else stop();
+		};
+
+		const io = new IntersectionObserver(
+			([entry]) => {
+				onScreen = entry.isIntersecting;
+				if (onScreen) start();
+				else stop();
+			},
+			{ threshold: 0 },
+		);
+
 		build();
-		draw();
+		if (reduce) {
+			draw(); // 정지 상태 단일 프레임
+		} else {
+			start();
+		}
+		io.observe(canvas);
 		window.addEventListener("mousemove", onMove, { passive: true });
 		window.addEventListener("resize", onResize);
+		document.addEventListener("visibilitychange", onVisibility);
 
 		return () => {
-			cancelAnimationFrame(raf);
+			stop();
+			io.disconnect();
 			window.removeEventListener("mousemove", onMove);
 			window.removeEventListener("resize", onResize);
+			document.removeEventListener("visibilitychange", onVisibility);
 		};
 	}, []);
 

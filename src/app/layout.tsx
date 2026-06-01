@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Roboto_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
@@ -22,6 +22,13 @@ const inter = Inter({
 	subsets: ["latin"],
 	variable: "--font-inter",
 	display: "swap",
+});
+
+const robotoMono = Roboto_Mono({
+	subsets: ["latin"],
+	variable: "--font-roboto-mono",
+	display: "swap",
+	weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -147,7 +154,7 @@ export const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<html
 			lang="ko"
-			className={`${pretendard.variable} ${inter.variable} h-full`}
+			className={`${pretendard.variable} ${inter.variable} ${robotoMono.variable} h-full`}
 			suppressHydrationWarning
 		>
 			<body

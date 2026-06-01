@@ -20,7 +20,12 @@ export default function OgImage() {
 				backgroundColor: "#ffffff",
 			}}
 		>
-			<img src={logoBase64} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+			{/* biome-ignore lint/performance/noImgElement: next/og(Satori)는 raw <img>만 지원 — next/image 사용 불가 */}
+			<img
+				src={logoBase64}
+				alt="온세상이마케팅이다"
+				style={{ width: "100%", height: "100%", objectFit: "contain" }}
+			/>
 		</div>,
 		{ ...size },
 	);

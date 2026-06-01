@@ -9,7 +9,9 @@
 		var(--font-pretendard), "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
 		system-ui, sans-serif;
 	--font-inter: var(--font-inter), "Inter", sans-serif;
-	--font-mono: ui-monospace, monospace;
+	--font-mono:
+		var(--font-roboto-mono), ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
+		var(--font-pretendard), "Pretendard Variable", monospace;
 	--font-heading: var(--font-pretendard), "Pretendard Variable", Pretendard, sans-serif;
 	--color-ring: var(--ring);
 	--color-input: var(--input);
