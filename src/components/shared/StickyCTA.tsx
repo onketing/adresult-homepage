@@ -12,6 +12,8 @@ export const StickyCTA = () => {
 	const triggeredRef = useRef(false);
 	const triggeredFinalRef = useRef(false);
 	const pathname = usePathname();
+	const cardRef = useRef<HTMLDivElement>(null);
+	const btnRef = useRef<HTMLButtonElement>(null);
 
 	const isHidden = pathname.startsWith("/contact");
 
@@ -22,6 +24,18 @@ export const StickyCTA = () => {
 		window.addEventListener("keydown", onKey);
 		return () => window.removeEventListener("keydown", onKey);
 	}, []);
+
+	// 카드·버튼 외부 클릭 시 닫기 (백드롭 없이 — hover 이벤트 차단 방지)
+	useEffect(() => {
+		if (!open) return;
+		const onDown = (e: MouseEvent) => {
+			const t = e.target as Node;
+			if (cardRef.current?.contains(t) || btnRef.current?.contains(t)) return;
+			setOpen(false);
+		};
+		document.addEventListener("mousedown", onDown);
+		return () => document.removeEventListener("mousedown", onDown);
+	}, [open]);
 
 	// 홈 첫 진입 시 1회 자동 오픈 (사용자가 닫으면 이후 스크롤 트리거가 다시 열어줌)
 	useEffect(() => {
@@ -74,25 +88,11 @@ export const StickyCTA = () => {
 
 	return (
 		<>
-			{/* 백드롭 */}
-			<AnimatePresence>
-				{open && (
-					<motion.div
-						key="backdrop"
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
-						transition={{ duration: 0.15 }}
-						className="fixed inset-0 z-40"
-						onClick={() => setOpen(false)}
-					/>
-				)}
-			</AnimatePresence>
-
 			{/* 빠른 상담 카드 */}
 			<AnimatePresence>
 				{open && (
 					<motion.div
+						ref={cardRef}
 						key="card"
 						initial={{ opacity: 0, y: 16, scale: 0.96 }}
 						animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -197,6 +197,7 @@ export const StickyCTA = () => {
 
 			{/* CONTACT 트리거 버튼 */}
 			<button
+				ref={btnRef}
 				type="button"
 				onClick={() => setOpen((v) => !v)}
 				aria-expanded={open}
