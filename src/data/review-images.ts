@@ -30,19 +30,19 @@ const chat = (n: number, w: number, h: number, ext = "jpg"): ReviewImage => ({
 // 짧은(거의 정사각) 후기 컷
 const R01 = review(1, 364, 408);
 const R02 = review(2, 841, 934);
-const R03 = review(3, 364, 408, "png");
+const R03 = review(3, 364, 655, "png");
 const R04 = review(4, 364, 408);
 const R05 = review(5, 364, 408);
 const R06 = review(6, 364, 408);
-const R07 = review(7, 364, 497, "png");
-const R08 = review(8, 364, 408, "png");
+const R07 = review(7, 364, 912, "png");
+const R08 = review(8, 432, 744, "png");
 
 // 세로로 긴 업무 카톡 컷
 const C09 = chat(9, 1206, 1613);
 const C10 = chat(10, 1206, 1554);
-const C11 = chat(11, 1206, 1845, "jpeg");
+const C11 = chat(11, 691, 1440, "jpeg");
 const C12 = chat(12, 1206, 2052);
-const C13 = chat(13, 1206, 3204, "jpeg");
+const C13 = chat(13, 1080, 2632, "jpeg");
 const C14 = chat(14, 1206, 1887);
 // 스택(짧은 컷 2장)과 단일(세로 긴 컷)을 번갈아 — 흐름에 변화를 준다.
 // (marquee가 자동으로 반복 재생)
