@@ -9,59 +9,57 @@ export const Hero = () => {
 	const [muted, setMuted] = useState(true);
 	const [showHint, setShowHint] = useState(true);
 
-	// 음소거로 즉시 자동재생 → 아무 동작(스크롤·클릭·터치·키)에서 소리를 켠다.
-	// unmute가 막혀도 영상은 음소거 상태로 계속 재생되게 보장한다.
+	// 브라우저 정책상 "소리 있는 자동재생"은 사용자 동작이 있어야만 허용된다.
+	// 1) 진입 즉시 소리와 함께 재생을 먼저 시도 — 다른 페이지에서 클릭으로 넘어온 경우(활성화 유지)엔 바로 소리가 난다.
+	// 2) 막히면 음소거로 재생하고, 첫 클릭/탭/키 입력에서 소리를 켠다.
+	//    (scroll·wheel은 브라우저가 '사용자 동작'으로 인정하지 않아 unmute가 거부되므로 제외한다)
 	useEffect(() => {
 		const video = videoRef.current;
 		if (!video) return;
 
-		const events: (keyof WindowEventMap)[] = [
-			"pointerdown",
-			"keydown",
-			"touchstart",
-			"scroll",
-			"wheel",
-		];
+		const events: (keyof WindowEventMap)[] = ["pointerdown", "touchstart", "keydown"];
 
 		const removeListeners = () => {
 			for (const e of events) window.removeEventListener(e, onInteract);
 		};
 
+		// 소리와 함께 재생 시도 → 성공 시 true. 차단되면 음소거로 재생 유지하고 false.
+		const enableSound = () => {
+			video.muted = false;
+			return video
+				.play()
+				.then(() => {
+					if (video.muted) return false; // 브라우저가 강제 음소거함
+					setMuted(false);
+					setShowHint(false);
+					return true;
+				})
+				.catch(() => {
+					video.muted = true;
+					video.play().catch(() => {}); // 영상은 멈추지 않게 음소거로 계속
+					return false;
+				});
+		};
+
 		const onInteract = () => {
-			setShowHint(false);
 			if (!video.muted) {
 				removeListeners();
 				return;
 			}
-			video.muted = false;
-			video
-				.play()
-				.then(() => {
-					// 브라우저가 unmute를 막고 강제 음소거했을 수 있음
-					if (video.muted) {
-						video.play().catch(() => {}); // 멈추지 않게 재생 유지
-						return;
-					}
-					setMuted(false);
-					removeListeners();
-				})
-				.catch(() => {
-					// unmute 차단 → 음소거로 되돌려 재생 유지 (영상 멈춤 방지)
-					video.muted = true;
-					video.play().catch(() => {});
-				});
+			void enableSound().then((ok) => {
+				if (ok) removeListeners();
+			});
 		};
 
-		// 음소거 즉시 자동재생 — state 초기값이 muted=true
-		video.muted = true;
-		video.play().catch(() => {});
+		// 진입 즉시 소리와 함께 시도 (막히면 내부에서 음소거 재생으로 폴백)
+		void enableSound();
 
 		for (const e of events) {
 			window.addEventListener(e, onInteract, { passive: true });
 		}
 
-		// 힌트 자동 숨김 — 등장(1s) 후 약 3초 노출 뒤 사라짐
-		const hintTimer = window.setTimeout(() => setShowHint(false), 4000);
+		// 안내 문구 자동 숨김 (소리가 켜지면 enableSound에서 이미 숨김 처리)
+		const hintTimer = window.setTimeout(() => setShowHint(false), 6000);
 
 		return () => {
 			window.clearTimeout(hintTimer);
@@ -86,16 +84,20 @@ export const Hero = () => {
 			<div className="relative aspect-video w-full md:absolute md:inset-0 md:aspect-auto">
 				<video
 					ref={videoRef}
-					className="absolute inset-0 h-full w-full object-cover"
+					className="absolute inset-0 h-full w-full object-contain"
 					autoPlay
 					loop
 					playsInline
 					preload="auto"
+					onEnded={(e) => {
+						// loop 속성이 동작하지 않는 브라우저 대비 — 끝나면 처음으로 되감아 재생
+						const v = e.currentTarget;
+						v.currentTime = 0;
+						void v.play();
+					}}
 				>
-					{/* H.264 — 전 브라우저 호환 (Chrome·Firefox 포함) */}
-					<source src="/home-hero-video-h264.mp4" type="video/mp4; codecs=avc1" />
-					{/* HEVC 원본 — Safari 폴백 */}
-					<source src="/home-hero-video.mp4" type="video/mp4; codecs=hvc1" />
+					{/* H.264 1080p — 전 브라우저 호환 */}
+					<source src="/home-hero-video.mp4" type="video/mp4" />
 					<track kind="captions" />
 				</video>
 			</div>
