@@ -30,6 +30,8 @@ export const PulseBurstBackground = ({ className }: { className?: string }) => {
 		const reduce =
 			typeof window !== "undefined" &&
 			window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+		// reduce-motion이어도 정지시키지 않고 모션을 약화해 계속 재생 (Windows 기본값 대응)
+		const MO = reduce ? 0.4 : 1; // 링 확산 속도 배수 (스파크는 reduce 시 생략)
 
 		let width = 0;
 		let height = 0;
@@ -73,17 +75,15 @@ export const PulseBurstBackground = ({ className }: { className?: string }) => {
 			ctx.fillRect(0, 0, width, height);
 
 			// 리플 링 스폰
-			if (!reduce && tick >= nextRing) {
+			if (tick >= nextRing) {
 				rings.push({ r: 0, life: 0, maxLife: 160, lineWidth: 1.5 });
 				nextRing = tick + 90;
 			}
 
 			for (let i = rings.length - 1; i >= 0; i--) {
 				const ring = rings[i];
-				if (!reduce) {
-					ring.life++;
-					ring.r = (ring.life / ring.maxLife) * maxR;
-				}
+				ring.life += MO;
+				ring.r = (ring.life / ring.maxLife) * maxR;
 				const fade = 1 - ring.life / ring.maxLife;
 				ctx.strokeStyle = `rgba(${GREEN}, ${fade * 0.28})`;
 				ctx.lineWidth = ring.lineWidth;
@@ -127,11 +127,11 @@ export const PulseBurstBackground = ({ className }: { className?: string }) => {
 				if (s.life >= s.maxLife) sparks.splice(i, 1);
 			}
 
-			if (!reduce && running) raf = requestAnimationFrame(draw);
+			if (running) raf = requestAnimationFrame(draw);
 		};
 
 		const start = () => {
-			if (reduce || running || !onScreen || !tabVisible) return;
+			if (running || !onScreen || !tabVisible) return;
 			running = true;
 			raf = requestAnimationFrame(draw);
 		};
@@ -142,7 +142,6 @@ export const PulseBurstBackground = ({ className }: { className?: string }) => {
 
 		const onResize = () => {
 			build();
-			if (reduce) draw();
 		};
 		const onVisibility = () => {
 			tabVisible = document.visibilityState === "visible";
@@ -160,8 +159,7 @@ export const PulseBurstBackground = ({ className }: { className?: string }) => {
 		);
 
 		build();
-		if (reduce) draw();
-		else start();
+		start();
 		io.observe(canvas);
 		window.addEventListener("resize", onResize);
 		document.addEventListener("visibilitychange", onVisibility);

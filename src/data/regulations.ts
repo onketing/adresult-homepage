@@ -105,4 +105,17 @@ export const REGULATIONS: Regulation[] = [
 		allowed: ["중개 가능 지역·물건 종류 안내", "자격·등록 사항 안내", "사무소 위치·연락처 안내"],
 		prohibited: ["허위 매물·가격 광고", "다른 중개사와의 비교 광고", "투자 결과 보장 표현"],
 	},
+	// TODO: 행정사 실제 행정사법 조문(광고 관련) 확인 후 allowed/prohibited 카피 검수
+	{
+		profession: "행정사",
+		slug: "admin-agent",
+		law: "행정사법",
+		rule: "행정사 광고 기준",
+		allowed: [
+			"취급 인허가·민원 업무 분야 소개",
+			"자격·경력·등록 사항 안내",
+			"사무소 위치·연락처 안내",
+		],
+		prohibited: ["인허가 결과 보장 표현", "타 행정사와의 비교 광고", "수수료 허위 표시"],
+	},
 ];

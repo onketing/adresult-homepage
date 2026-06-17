@@ -1,5 +1,5 @@
 export const PROFESSIONAL_PROOF = [
-	{ value: 11, suffix: "개", label: "직군 커버리지", caption: "변호사부터 공인중개사까지" },
+	{ value: 12, suffix: "개", label: "직군 커버리지", caption: "변호사부터 행정사까지" },
 	{ value: 8, suffix: "년", label: "전문직 마케팅 경험", caption: "같은 분야만 8년" },
 	{ value: 0, suffix: "건", label: "광고 규정 위반", caption: "8년 누적 0건" },
 	{ value: 100, suffix: "%", label: "광고 심의 통과율", caption: "전문직 광고 기준 통과" },

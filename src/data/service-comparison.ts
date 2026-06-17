@@ -33,7 +33,7 @@ export const SERVICE_COMPARISON: ComparisonRow[] = [
 		axis: "적합 직군",
 		blog: { score: 4, note: "변호사·세무사·노무사에 특히 강함" },
 		shortform: { score: 3, note: "의료·한의원·피부과 선호" },
-		professional: { score: 5, note: "11개 직군 전체 대응" },
+		professional: { score: 5, note: "12개 직군 전체 대응" },
 	},
 	{
 		axis: "운영 부담",

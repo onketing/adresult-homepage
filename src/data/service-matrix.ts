@@ -49,7 +49,7 @@ export const SERVICE_MATRIX: ServiceMatrixCard[] = [
 		kpiLabel: "상담 신청 증가",
 		caseDesc: "블로그·숏폼·광고 규정 통합 운영",
 		bullets: [
-			"11개 직군 규정 전담 검토",
+			"12개 직군 규정 전담 검토",
 			"채널별 전략 + 콘텐츠 + 광고 통합",
 			"월간 데이터 보고 — 노출 수 아닌 상담 수",
 		],

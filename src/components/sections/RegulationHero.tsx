@@ -73,7 +73,7 @@ const DOCS = [
 ] as const;
 
 const STATS = [
-	{ value: "11개", label: "직군" },
+	{ value: "12개", label: "직군" },
 	{ value: "200+", label: "누적 콘텐츠" },
 	{ value: "즉시", label: "리스크 대응" },
 ] as const;
@@ -127,7 +127,7 @@ export const RegulationHero = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.2 }}
 					>
-						11개 직군 법령을 발행 전 직접 검토합니다.
+						12개 직군 법령을 발행 전 직접 검토합니다.
 					</motion.p>
 
 					{/* 신뢰 지표 스트립 */}

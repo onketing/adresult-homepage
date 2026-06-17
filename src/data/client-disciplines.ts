@@ -10,4 +10,5 @@ export const CLIENT_DISCIPLINES = [
 	{ name: "변리사", caption: "변리사법" },
 	{ name: "법무사", caption: "법무사법 광고" },
 	{ name: "공인중개사", caption: "부동산광고법" },
+	{ name: "행정사", caption: "행정사법 광고" },
 ] as const;

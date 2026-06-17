@@ -86,6 +86,9 @@ export const ConstellationBackground = ({
 		const reduce =
 			typeof window !== "undefined" &&
 			window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+		// reduce-motion이어도 정지시키지 않고 모션을 약화해 계속 재생 (Windows 기본값 대응)
+		const MO = reduce ? 0.45 : 1; // 이동·트윙클·펄스 속도 배수
+		const DENSITY = reduce ? 0.6 : 1; // 입자 수 배수
 
 		let width = 0;
 		let height = 0;
@@ -115,7 +118,9 @@ export const ConstellationBackground = ({
 			mouse.x = width / 2;
 			mouse.y = height / 2;
 
-			const count = Math.min(88, Math.max(36, Math.floor((width * height) / 18000)));
+			const count = Math.round(
+				Math.min(88, Math.max(36, Math.floor((width * height) / 18000))) * DENSITY,
+			);
 			nodes = Array.from({ length: count }, () => ({
 				x: Math.random() * width,
 				y: Math.random() * height,
@@ -127,7 +132,9 @@ export const ConstellationBackground = ({
 				hubLinked: false,
 			}));
 
-			const starCount = Math.min(280, Math.max(140, Math.floor((width * height) / 6500)));
+			const starCount = Math.round(
+				Math.min(280, Math.max(140, Math.floor((width * height) / 6500))) * DENSITY,
+			);
 			stars = Array.from({ length: starCount }, () => {
 				const r = Math.random() * 1.8 + 0.15;
 				return {
@@ -189,7 +196,7 @@ export const ConstellationBackground = ({
 
 			// ── 2. 별 필드 + 십자 광선 ──
 			for (const s of stars) {
-				if (!reduce && s.twinkleSpeed > 0) s.phase += s.twinkleSpeed;
+				if (s.twinkleSpeed > 0) s.phase += s.twinkleSpeed * MO;
 				const twinkle = s.twinkleSpeed > 0 ? Math.sin(s.phase) * 0.3 + 0.7 : 1;
 				const alpha = s.baseOpacity * twinkle * STAR_DIM;
 				const col = STAR_COLORS[s.colorIdx];
@@ -224,14 +231,12 @@ export const ConstellationBackground = ({
 
 			// ── 3. 노드 이동 + 허브 판정 ──
 			for (const n of nodes) {
-				if (!reduce) {
-					n.x += n.vx;
-					n.y += n.vy;
-					if (n.x < 0) n.x = width;
-					if (n.x > width) n.x = 0;
-					if (n.y < 0) n.y = height;
-					if (n.y > height) n.y = 0;
-				}
+				n.x += n.vx * MO;
+				n.y += n.vy * MO;
+				if (n.x < 0) n.x = width;
+				if (n.x > width) n.x = 0;
+				if (n.y < 0) n.y = height;
+				if (n.y > height) n.y = 0;
 				n.hubLinked = Math.hypot(n.x - hubX, n.y - hubY) < HUB_DIST;
 			}
 
@@ -263,10 +268,8 @@ export const ConstellationBackground = ({
 				ctx.lineTo(hubX + px, hubY + py);
 				ctx.stroke();
 
-				if (!reduce) {
-					n.pulse += n.pulseSpeed;
-					if (n.pulse > 1) n.pulse -= 1;
-				}
+				n.pulse += n.pulseSpeed * MO;
+				if (n.pulse > 1) n.pulse -= 1;
 				const t = n.pulse;
 				ctx.fillStyle = `rgba(${GREEN}, ${(1 - t) * 0.75})`;
 				ctx.beginPath();
@@ -386,11 +389,11 @@ export const ConstellationBackground = ({
 				}
 			}
 
-			if (!reduce && running) raf = requestAnimationFrame(draw);
+			if (running) raf = requestAnimationFrame(draw);
 		};
 
 		const start = () => {
-			if (reduce || running || !onScreen || !tabVisible) return;
+			if (running || !onScreen || !tabVisible) return;
 			running = true;
 			raf = requestAnimationFrame(draw);
 		};
@@ -407,7 +410,6 @@ export const ConstellationBackground = ({
 		};
 		const onResize = () => {
 			build();
-			if (reduce) draw();
 		};
 
 		const onVisibility = () => {
@@ -426,11 +428,7 @@ export const ConstellationBackground = ({
 		);
 
 		build();
-		if (reduce) {
-			draw(); // 정지 상태 단일 프레임
-		} else {
-			start();
-		}
+		start();
 		io.observe(canvas);
 		window.addEventListener("mousemove", onMove, { passive: true });
 		window.addEventListener("resize", onResize);

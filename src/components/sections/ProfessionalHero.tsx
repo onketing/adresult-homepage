@@ -46,7 +46,7 @@ export const ProfessionalHero = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.2 }}
 					>
-						11개 직군 법령을 직접 검토합니다.
+						12개 직군 법령을 직접 검토합니다.
 					</motion.p>
 				</div>
 

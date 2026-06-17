@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView, useReducedMotion } from "motion/react";
+import { motion, type UseInViewOptions, useInView, useReducedMotion } from "motion/react";
 import { useRef } from "react";
 
 type RevealProps = {
@@ -9,6 +9,8 @@ type RevealProps = {
 	delay?: number;
 	direction?: "up" | "down" | "left" | "right" | "none" | "scale";
 	duration?: number;
+	// 뷰포트 진입 트리거 여백. 음수일수록 더 안쪽에서, 작을수록 더 일찍 등장.
+	margin?: UseInViewOptions["margin"];
 };
 
 export const Reveal = ({
@@ -17,11 +19,12 @@ export const Reveal = ({
 	delay = 0,
 	direction = "up",
 	duration = 1.1,
+	margin = "-120px",
 }: RevealProps) => {
 	const ref = useRef<HTMLDivElement>(null);
 	// once: true — 아래로 스크롤하며 처음 보일 때 1회만 재생.
 	// 위로 다시 스크롤해도 재생/리셋하지 않는다 (Windows 재실행 끊김·요소 미표시 방지).
-	const isInView = useInView(ref, { once: true, margin: "-120px" });
+	const isInView = useInView(ref, { once: true, margin });
 	const prefersReducedMotion = useReducedMotion();
 
 	const directionMap = {

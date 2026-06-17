@@ -33,6 +33,9 @@ export const RisingDotsBackground = ({ className }: { className?: string }) => {
 		const reduce =
 			typeof window !== "undefined" &&
 			window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+		// reduce-motion이어도 정지시키지 않고 모션을 약화해 계속 재생 (Windows 기본값 대응)
+		const MO = reduce ? 0.45 : 1; // 상승·흔들림 속도 배수
+		const DENSITY = reduce ? 0.6 : 1; // 입자 수 배수
 
 		let width = 0;
 		let height = 0;
@@ -68,7 +71,9 @@ export const RisingDotsBackground = ({ className }: { className?: string }) => {
 			canvas.width = Math.floor(width * dpr);
 			canvas.height = Math.floor(height * dpr);
 			ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-			const count = Math.min(120, Math.max(40, Math.floor((width * height) / 14000)));
+			const count = Math.round(
+				Math.min(120, Math.max(40, Math.floor((width * height) / 14000))) * DENSITY,
+			);
 			particles = Array.from({ length: count }, () => makeParticle(false));
 		};
 
@@ -77,11 +82,9 @@ export const RisingDotsBackground = ({ className }: { className?: string }) => {
 
 			for (let i = 0; i < particles.length; i++) {
 				const p = particles[i];
-				if (!reduce) {
-					p.y -= p.vy;
-					p.phase += p.swaySpeed;
-					p.life++;
-				}
+				p.y -= p.vy * MO;
+				p.phase += p.swaySpeed * MO;
+				p.life += MO;
 				const drawX = p.x + Math.sin(p.phase) * p.swayAmp;
 
 				// 페이드 인/아웃
@@ -108,16 +111,16 @@ export const RisingDotsBackground = ({ className }: { className?: string }) => {
 				ctx.fill();
 
 				// 수명 끝 또는 화면 위로 → 바닥에서 재생성
-				if (!reduce && (p.life >= p.maxLife || p.y < -10)) {
+				if (p.life >= p.maxLife || p.y < -10) {
 					particles[i] = makeParticle(true);
 				}
 			}
 
-			if (!reduce && running) raf = requestAnimationFrame(draw);
+			if (running) raf = requestAnimationFrame(draw);
 		};
 
 		const start = () => {
-			if (reduce || running || !onScreen || !tabVisible) return;
+			if (running || !onScreen || !tabVisible) return;
 			running = true;
 			raf = requestAnimationFrame(draw);
 		};
@@ -128,7 +131,6 @@ export const RisingDotsBackground = ({ className }: { className?: string }) => {
 
 		const onResize = () => {
 			build();
-			if (reduce) draw();
 		};
 		const onVisibility = () => {
 			tabVisible = document.visibilityState === "visible";
@@ -146,8 +148,7 @@ export const RisingDotsBackground = ({ className }: { className?: string }) => {
 		);
 
 		build();
-		if (reduce) draw();
-		else start();
+		start();
 		io.observe(canvas);
 		window.addEventListener("resize", onResize);
 		document.addEventListener("visibilitychange", onVisibility);

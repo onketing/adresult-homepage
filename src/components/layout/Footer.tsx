@@ -13,7 +13,7 @@ export const Footer = () => {
 					<div>
 						<Logo variant="light" className="mb-3" />
 						<p className="max-w-xs text-slate-400 text-sm leading-relaxed">
-							전문직 11개 직군 전용 마케팅 파트너.
+							전문직 12개 직군 전용 마케팅 파트너.
 							<br />
 							의뢰인이 먼저 찾아오는 구조를 만듭니다.
 						</p>

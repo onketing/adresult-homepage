@@ -14,7 +14,7 @@ export const DisciplineGrid = () => {
 						Coverage
 					</p>
 					<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
-						11개 직군, <span className="gradient-text">규정별로 구분합니다</span>
+						12개 직군, <span className="gradient-text">규정별로 구분합니다</span>
 					</h2>
 					<p className="mx-auto mt-4 max-w-md break-keep text-base text-slate-500 leading-relaxed">
 						직군마다 적용되는 법령이 다릅니다. 섞지 않습니다.

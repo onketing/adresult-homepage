@@ -24,10 +24,10 @@ export const FOUNDING_STORY = {
 		},
 		{
 			id: "fields",
-			value: 11,
+			value: 12,
 			suffix: "개",
 			label: "전문직 직군",
-			description: "11개 직군 검색 의도 직접 학습",
+			description: "12개 직군 검색 의도 직접 학습",
 		},
 		{
 			id: "retention",

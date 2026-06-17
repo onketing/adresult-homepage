@@ -1,3 +1,4 @@
+import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -75,6 +76,9 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+	// MDX(.md/.mdx)를 모듈로 처리 — 블로그 글은 src/content/blog/*.mdx
+	pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+
 	async headers() {
 		// dev에서는 CSP가 Turbopack HMR WebSocket을 차단하므로 비활성화
 		if (process.env.NODE_ENV !== "production") return [];
@@ -87,7 +91,7 @@ const nextConfig: NextConfig = {
 	},
 
 	images: {
-		qualities: [75, 90],
+		qualities: [75, 90, 95],
 		remotePatterns: [
 			{
 				// TODO(배포 전): 모든 https 도메인 허용 → 실제 사용 도메인으로 좁힐 것
@@ -99,4 +103,11 @@ const nextConfig: NextConfig = {
 	},
 };
 
-export default nextConfig;
+// 표(GFM) 등 마크다운 확장 지원. Turbopack 호환을 위해 플러그인은 문자열로 지정한다.
+const withMDX = createMDX({
+	options: {
+		remarkPlugins: [["remark-gfm"]],
+	},
+});
+
+export default withMDX(nextConfig);

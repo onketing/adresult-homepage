@@ -59,6 +59,8 @@ export const WaveformBackground = ({ className }: { className?: string }) => {
 		const reduce =
 			typeof window !== "undefined" &&
 			window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+		// reduce-motion이어도 정지시키지 않고 모션을 약화해 계속 재생 (Windows 기본값 대응)
+		const MO = reduce ? 0.4 : 1; // 웨이브·이퀄라이저 속도 배수
 
 		let width = 0;
 		let height = 0;
@@ -89,7 +91,7 @@ export const WaveformBackground = ({ className }: { className?: string }) => {
 			for (const w of WAVES) {
 				const baseY = height * w.yRatio;
 				const amp = height * w.amp;
-				const phase = tick * w.speed;
+				const phase = tick * w.speed * MO;
 				ctx.strokeStyle = `rgba(${w.color}, ${w.alpha})`;
 				ctx.lineWidth = w.width;
 				ctx.beginPath();
@@ -111,8 +113,8 @@ export const WaveformBackground = ({ className }: { className?: string }) => {
 			for (let i = 0; i < bars; i++) {
 				const x = i * gap + (gap - barW) / 2;
 				// 막대마다 위상을 어긋나게 → 리듬감
-				const wobble = Math.sin(tick * 0.05 + i * 0.6) * 0.5 + 0.5;
-				const wobble2 = Math.sin(tick * 0.09 + i * 0.27) * 0.5 + 0.5;
+				const wobble = Math.sin(tick * 0.05 * MO + i * 0.6) * 0.5 + 0.5;
+				const wobble2 = Math.sin(tick * 0.09 * MO + i * 0.27) * 0.5 + 0.5;
 				const h = maxH * (0.18 + wobble * 0.6 + wobble2 * 0.22);
 				const g = ctx.createLinearGradient(0, floorY - h, 0, floorY);
 				g.addColorStop(0, `rgba(${GREEN}, 0)`);
@@ -131,11 +133,11 @@ export const WaveformBackground = ({ className }: { className?: string }) => {
 				ctx.fill();
 			}
 
-			if (!reduce && running) raf = requestAnimationFrame(draw);
+			if (running) raf = requestAnimationFrame(draw);
 		};
 
 		const start = () => {
-			if (reduce || running || !onScreen || !tabVisible) return;
+			if (running || !onScreen || !tabVisible) return;
 			running = true;
 			raf = requestAnimationFrame(draw);
 		};
@@ -146,7 +148,6 @@ export const WaveformBackground = ({ className }: { className?: string }) => {
 
 		const onResize = () => {
 			build();
-			if (reduce) draw();
 		};
 		const onVisibility = () => {
 			tabVisible = document.visibilityState === "visible";
@@ -164,8 +165,7 @@ export const WaveformBackground = ({ className }: { className?: string }) => {
 		);
 
 		build();
-		if (reduce) draw();
-		else start();
+		start();
 		io.observe(canvas);
 		window.addEventListener("resize", onResize);
 		document.addEventListener("visibilitychange", onVisibility);
