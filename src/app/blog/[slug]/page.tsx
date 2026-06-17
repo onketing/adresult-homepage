@@ -78,10 +78,24 @@ export const BlogPostPage = async ({ params }: { params: Promise<{ slug: string 
 		],
 	};
 
+	const faqSchema =
+		post.faq && post.faq.length > 0
+			? {
+					"@context": "https://schema.org",
+					"@type": "FAQPage",
+					mainEntity: post.faq.map((f) => ({
+						"@type": "Question",
+						name: f.q,
+						acceptedAnswer: { "@type": "Answer", text: f.a },
+					})),
+				}
+			: null;
+
 	return (
 		<article className="bg-white">
 			<script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
 			<script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+			{faqSchema ? <script type="application/ld+json">{JSON.stringify(faqSchema)}</script> : null}
 
 			<div className="mx-auto max-w-[720px] px-4 pt-28 pb-16 md:px-6 md:pt-36">
 				{/* Breadcrumb */}
@@ -108,6 +122,21 @@ export const BlogPostPage = async ({ params }: { params: Promise<{ slug: string 
 				<div className="prose prose-slate mt-8 prose-h2:mt-12 max-w-none prose-h2:scroll-mt-24 prose-th:bg-slate-50 prose-a:font-medium prose-h2:font-bold prose-strong:font-medium prose-a:text-[#16a34a] prose-h2:text-2xl prose-h2:text-foreground prose-li:text-slate-700 prose-p:text-slate-700 prose-strong:text-[#16a34a] prose-table:text-sm prose-p:leading-relaxed prose-h2:tracking-tight prose-headings:tracking-tight hover:prose-a:text-[#15803d]">
 					<Post />
 				</div>
+
+				{/* 자주 묻는 질문 */}
+				{post.faq && post.faq.length > 0 ? (
+					<section className="mt-14 border-slate-100 border-t pt-10">
+						<h2 className="font-bold text-2xl text-foreground tracking-tight">자주 묻는 질문</h2>
+						<dl className="mt-6 space-y-6">
+							{post.faq.map((item) => (
+								<div key={item.q}>
+									<dt className="font-semibold text-foreground">Q. {item.q}</dt>
+									<dd className="mt-2 text-slate-700 leading-relaxed">{item.a}</dd>
+								</div>
+							))}
+						</dl>
+					</section>
+				) : null}
 
 				{/* 태그 (하단) */}
 				<div className="mt-10 flex flex-wrap gap-2">

@@ -10,6 +10,7 @@ declare module "*.mdx" {
 		tags: string[];
 		category: string;
 		naverUrl?: string;
+		faq?: { q: string; a: string }[];
 	};
 
 	const MDXComponent: ComponentType;

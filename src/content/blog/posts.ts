@@ -7,6 +7,8 @@ import { frontmatter as smartplaceFm } from "./naver-smartplace-setup.mdx";
 import { frontmatter as introFm } from "./onketing-intro.mdx";
 import { frontmatter as taxFm } from "./tax-accountant-marketing.mdx";
 
+export type FaqItem = { q: string; a: string };
+
 export type Frontmatter = {
 	title: string;
 	description: string;
@@ -15,6 +17,7 @@ export type Frontmatter = {
 	tags: string[];
 	category: string;
 	naverUrl?: string;
+	faq?: FaqItem[];
 };
 
 export type BlogPost = Frontmatter & { slug: string };

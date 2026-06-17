@@ -39,37 +39,35 @@ export const REGULATIONS: Regulation[] = [
 	{
 		profession: "세무사",
 		slug: "tax",
-		law: "세무사법 §22의2",
+		law: "세무사법 §12의7",
 		rule: "세무사 광고 기준",
 		allowed: ["취급 세무 분야 소개", "학력·경력·자격 안내", "사무소 위치·연락처 안내"],
-		prohibited: ["성공 실적·절세 수치 보장", "다른 세무사와의 비교 광고", "수수료 허위 표시"],
+		prohibited: ["성공 실적·절세 수치 보장", "무료·최저가 표기", "다른 세무사와의 비교 광고"],
 	},
 	{
 		profession: "노무사",
 		slug: "labor",
-		law: "공인노무사법",
-		rule: "광고 기준",
+		law: "표시·광고의 공정화에 관한 법률",
+		rule: "노무사 광고 기준",
 		allowed: ["취급 업무 분야 소개", "학력·경력·자격 안내", "사무소 위치·연락처 안내"],
 		prohibited: ["사건 처리 결과 표방", "타 노무사와의 비교 광고", "수임료 허위 표시"],
 	},
 	{
 		profession: "수의사",
 		slug: "vet",
-		law: "수의사법 §12",
+		law: "표시·광고의 공정화에 관한 법률",
 		rule: "수의사 광고 기준",
 		allowed: ["진료 과목·전문 분야 소개", "의료진 경력·학력 안내", "진료 시간·위치 안내"],
 		prohibited: ["치료 결과 보장 표현", "의약품·시술 효능 과장", "허위·과장 광고"],
 	},
-	// TODO: 회계사 실제 공인회계사법 조문 확인 후 allowed/prohibited 카피 수정
 	{
 		profession: "회계사",
 		slug: "cpa",
-		law: "공인회계사법 §40",
+		law: "공인회계사회 윤리기준",
 		rule: "공인회계사 광고 기준",
 		allowed: ["취급 회계·세무 업무 소개", "학력·경력·자격 안내", "사무소 위치·연락처 안내"],
 		prohibited: ["절세 결과 보장·수치 표방", "타 회계사와의 비교 광고", "수수료 허위 표시"],
 	},
-	// TODO: 약사 실제 약사법 §68 조문 확인 후 allowed/prohibited 카피 수정
 	{
 		profession: "약사",
 		slug: "pharmacist",
@@ -78,25 +76,22 @@ export const REGULATIONS: Regulation[] = [
 		allowed: ["조제·복약 지도 서비스 안내", "영업시간·위치 안내", "전문 분야 자격 소개"],
 		prohibited: ["의약품 효능 과장·완치 보장", "특정 의약품 비교 광고", "허위 처방 정보 표시"],
 	},
-	// TODO: 변리사 실제 변리사법 §24 조문 확인 후 allowed/prohibited 카피 수정
 	{
 		profession: "변리사",
 		slug: "patent",
-		law: "변리사법 §24",
+		law: "변리사법 §8의5",
 		rule: "변리사 광고 기준",
 		allowed: ["취급 특허·상표 분야 소개", "학력·경력·자격 안내", "사무소 위치·연락처 안내"],
 		prohibited: ["특허 등록 결과 보장 표현", "타 변리사와의 비교 광고", "수수료 허위 표시"],
 	},
-	// TODO: 법무사 실제 법무사법 §74의2 조문 확인 후 allowed/prohibited 카피 수정
 	{
 		profession: "법무사",
 		slug: "judicial-scrivener",
-		law: "법무사법 §74의2",
+		law: "표시·광고의 공정화에 관한 법률",
 		rule: "법무사 광고 기준",
 		allowed: ["취급 등기·공탁 업무 소개", "학력·경력·자격 안내", "사무소 위치·연락처 안내"],
 		prohibited: ["사건 처리 결과 보장 표현", "타 법무사와의 비교 광고", "수임료 허위 표시"],
 	},
-	// TODO: 공인중개사 실제 공인중개사법 §18의2 조문 확인 후 allowed/prohibited 카피 수정
 	{
 		profession: "공인중개사",
 		slug: "realtor",
@@ -105,17 +100,16 @@ export const REGULATIONS: Regulation[] = [
 		allowed: ["중개 가능 지역·물건 종류 안내", "자격·등록 사항 안내", "사무소 위치·연락처 안내"],
 		prohibited: ["허위 매물·가격 광고", "다른 중개사와의 비교 광고", "투자 결과 보장 표현"],
 	},
-	// TODO: 행정사 실제 행정사법 조문(광고 관련) 확인 후 allowed/prohibited 카피 검수
 	{
 		profession: "행정사",
 		slug: "admin-agent",
-		law: "행정사법",
+		law: "행정사법 §22",
 		rule: "행정사 광고 기준",
 		allowed: [
 			"취급 인허가·민원 업무 분야 소개",
 			"자격·경력·등록 사항 안내",
 			"사무소 위치·연락처 안내",
 		],
-		prohibited: ["인허가 결과 보장 표현", "타 행정사와의 비교 광고", "수수료 허위 표시"],
+		prohibited: ["소비자를 오도·오해시키는 광고", "사적 관계·영향력 선전", "인허가 결과 보장 표현"],
 	},
 ];
