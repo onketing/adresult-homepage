@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 import { getTotalPages, POSTS } from "@/content/blog/posts";
+import { SHORTFORM_PRO_SLUGS } from "@/data/shortform-professions";
 
 const staticRoutes = [
 	{ path: "", priority: 1.0, changeFrequency: "weekly" as const },
@@ -40,7 +41,15 @@ export const sitemap = (): MetadataRoute.Sitemap => {
 		priority: 0.7,
 	}));
 
-	return [...staticEntries, ...pageEntries, ...postEntries];
+	// 직군별 숏폼 페이지 (/services/shortform/lawyer …)
+	const proEntries = SHORTFORM_PRO_SLUGS.map((slug) => ({
+		url: `${siteConfig.url}/services/shortform/${slug}`,
+		lastModified: now,
+		changeFrequency: "monthly" as const,
+		priority: 0.8,
+	}));
+
+	return [...staticEntries, ...pageEntries, ...postEntries, ...proEntries];
 };
 
 export default sitemap;

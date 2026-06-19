@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ServiceProcess } from "@/components/sections/ServiceProcess";
 import { ServiceWhatWeDo } from "@/components/sections/ServiceWhatWeDo";
 import { ShortformAccumulation } from "@/components/sections/ShortformAccumulation";
@@ -7,6 +8,7 @@ import { ShortformHero } from "@/components/sections/ShortformHero";
 import { ShortformPain } from "@/components/sections/ShortformPain";
 import { ShortformPortfolio } from "@/components/sections/ShortformPortfolio";
 import { SHORTFORM_PILLARS, SHORTFORM_PROCESS } from "@/data/service-shortform";
+import { SHORTFORM_PROS } from "@/data/shortform-professions";
 
 export const metadata: Metadata = {
 	title: "전문직 숏폼 마케팅 | 온세상이마케팅이다",
@@ -117,6 +119,36 @@ export const ShortformServicePage = () => {
 			<ShortformAccumulation />
 			<ServiceProcess steps={SHORTFORM_PROCESS} eyebrow="진행과정" />
 			<ShortformPortfolio />
+
+			{/* 직군별 숏폼 가이드 (내부 링크 — 직군 전용 페이지) */}
+			<section className="bg-slate-50 px-4 py-16 md:px-8 md:py-20">
+				<div className="mx-auto max-w-6xl">
+					<p className="font-semibold text-[#16a34a] text-sm uppercase tracking-[0.25em]">
+						By profession
+					</p>
+					<h2 className="mt-3 font-bold text-3xl text-foreground tracking-tight md:text-4xl">
+						직군별 숏폼 전략
+					</h2>
+					<p className="mt-3 max-w-xl text-muted-foreground leading-relaxed">
+						직군마다 광고 규정과 찍어야 할 콘텐츠가 다릅니다. 직군 전용 가이드를 확인하세요.
+					</p>
+					<div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+						{Object.values(SHORTFORM_PROS).map((p) => (
+							<Link
+								key={p.slug}
+								href={`/services/shortform/${p.slug}`}
+								className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-5 transition-all duration-200 hover:-translate-y-1 hover:border-[#58d68d]/40 hover:shadow-[0_12px_32px_rgba(15,23,42,0.10)]"
+							>
+								<span className="font-bold text-foreground text-lg tracking-tight transition-colors group-hover:text-[#16a34a]">
+									{p.profession} 숏폼
+								</span>
+								<span className="mt-1 text-muted-foreground text-sm">광고 규정·콘텐츠 전략 →</span>
+							</Link>
+						))}
+					</div>
+				</div>
+			</section>
+
 			<ShortformFinalCTA />
 		</>
 	);
