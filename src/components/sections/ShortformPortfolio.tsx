@@ -11,7 +11,7 @@ type Reel = {
 // 실제 제작된 릴스. 클릭 시 인스타그램 릴스로 이동.
 const REELS: Reel[] = [
 	{
-		href: "https://www.instagram.com/reel/DYRL-n3zvb4/",
+		href: "https://www.instagram.com/reel/DZmfjfARS8Q/",
 		src: "/images/shortform/shortform-1.png",
 		alt: "온세상이마케팅이다 제작 릴스 1",
 	},
