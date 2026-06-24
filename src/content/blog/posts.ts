@@ -1,11 +1,14 @@
 import type { ComponentType } from "react";
 import { frontmatter as aeoSeoFm } from "./aeo-seo-marketing.mdx";
+import { frontmatter as animalHospitalFm } from "./animal-hospital-marketing.mdx";
 import { frontmatter as laborFm } from "./labor-attorney-marketing.mdx";
 import { frontmatter as lawyerFm } from "./lawyer-shortform-marketing.mdx";
+import { frontmatter as metaAdsFm } from "./meta-ads-setup-guide.mdx";
 import { frontmatter as exclusionFm } from "./naver-blog-exclusion.mdx";
 import { frontmatter as smartplaceFm } from "./naver-smartplace-setup.mdx";
 import { frontmatter as introFm } from "./onketing-intro.mdx";
 import { frontmatter as proShortformFm } from "./professional-shortform.mdx";
+import { frontmatter as subsidyFm } from "./small-business-subsidy-2026.mdx";
 import { frontmatter as taxFm } from "./tax-accountant-marketing.mdx";
 
 export type FaqItem = { q: string; a: string };
@@ -31,6 +34,21 @@ type RegistryEntry = {
 
 // 새 글 추가 시: src/content/blog/{slug}.mdx 작성 후 아래에 한 항목만 등록한다.
 const REGISTRY: RegistryEntry[] = [
+	{
+		slug: "meta-ads-setup-guide",
+		frontmatter: metaAdsFm,
+		load: () => import("./meta-ads-setup-guide.mdx"),
+	},
+	{
+		slug: "animal-hospital-marketing",
+		frontmatter: animalHospitalFm,
+		load: () => import("./animal-hospital-marketing.mdx"),
+	},
+	{
+		slug: "small-business-subsidy-2026",
+		frontmatter: subsidyFm,
+		load: () => import("./small-business-subsidy-2026.mdx"),
+	},
 	{ slug: "onketing-intro", frontmatter: introFm, load: () => import("./onketing-intro.mdx") },
 	{
 		slug: "naver-blog-exclusion",
