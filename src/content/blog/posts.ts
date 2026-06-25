@@ -10,6 +10,7 @@ import { frontmatter as introFm } from "./onketing-intro.mdx";
 import { frontmatter as proShortformFm } from "./professional-shortform.mdx";
 import { frontmatter as subsidyFm } from "./small-business-subsidy-2026.mdx";
 import { frontmatter as taxFm } from "./tax-accountant-marketing.mdx";
+import { frontmatter as taxNoInquiryFm } from "./tax-accountant-no-inquiry.mdx";
 
 export type FaqItem = { q: string; a: string };
 
@@ -34,6 +35,11 @@ type RegistryEntry = {
 
 // 새 글 추가 시: src/content/blog/{slug}.mdx 작성 후 아래에 한 항목만 등록한다.
 const REGISTRY: RegistryEntry[] = [
+	{
+		slug: "tax-accountant-no-inquiry",
+		frontmatter: taxNoInquiryFm,
+		load: () => import("./tax-accountant-no-inquiry.mdx"),
+	},
 	{
 		slug: "meta-ads-setup-guide",
 		frontmatter: metaAdsFm,
