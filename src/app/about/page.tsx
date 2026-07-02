@@ -141,7 +141,7 @@ export const AboutPage = () => {
 							<p className="mb-5 font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
 								Introduce ADRESULT
 							</p>
-							<p className="break-keep text-xl text-slate-600 leading-relaxed md:text-2xl">
+							<p className="break-keep text-slate-600 text-xl leading-relaxed md:text-2xl">
 								고객과 진심으로 소통하며 끊임없이 연구합니다.
 								<br />
 								멈추지 않고 성장하며, 당신의 성공을 함께 만들어가는
