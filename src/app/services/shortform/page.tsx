@@ -248,7 +248,7 @@ export const ShortformServicePage = () => {
 						</div>
 					</Reveal>
 					<div className="mt-12 flex flex-col items-center gap-5 md:mt-14 md:flex-row md:items-center md:gap-7">
-						<Reveal direction="up" className="w-full md:w-[43%]">
+						<Reveal direction="up" className="w-full md:w-[38%]">
 							<Image
 								src="/shortform/direct-1.jpg"
 								alt="현직 인플루언서가 촬영을 코칭하는 현장"
@@ -291,9 +291,9 @@ export const ShortformServicePage = () => {
 					</h2>
 				</Reveal>
 				<Reveal className="mt-14 md:mt-16">
-					<div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-8 md:flex-row md:items-start md:gap-8">
-						<div className="w-full max-w-sm">
-							<div className="rounded-full bg-white px-8 py-4 text-center font-bold text-[#0a0a0a] text-lg md:text-xl">
+					<div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 md:flex-row md:items-start md:gap-10">
+						<div className="w-full max-w-md">
+							<div className="rounded-xl bg-white px-8 py-5 text-center font-bold text-[#0a0a0a] text-lg md:text-xl">
 								일반 영상 제작 대행
 							</div>
 							<ul className="mt-6 space-y-2 text-left text-lg text-white md:pl-10 md:text-xl">
@@ -303,8 +303,8 @@ export const ShortformServicePage = () => {
 							</ul>
 						</div>
 						<span className="font-extrabold text-4xl text-white md:mt-2 md:text-5xl">VS</span>
-						<div className="w-full max-w-sm">
-							<div className="rounded-full bg-white px-8 py-4 text-center font-bold text-[#e11d29] text-lg md:text-xl">
+						<div className="w-full max-w-md">
+							<div className="rounded-xl bg-white px-8 py-5 text-center font-bold text-[#e11d29] text-lg md:text-xl">
 								끝장숏폼
 							</div>
 							<ul className="mt-6 space-y-2 text-left text-lg text-white md:pl-10 md:text-xl">
@@ -425,11 +425,11 @@ export const ShortformServicePage = () => {
 						<p className="mt-1 font-bold text-[#0a0a0a] text-base md:text-lg">
 							검색 + 알고리즘 기반 플랫폼
 						</p>
-						<div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-3">
+						<div className="mx-auto mt-8 grid max-w-4xl grid-cols-3 gap-3 md:gap-4">
 							{YT_CHIPS.map((c) => (
 								<span
 									key={c}
-									className="rounded-lg bg-slate-100 px-6 py-3 font-medium text-[#0a0a0a] text-sm md:text-base"
+									className="break-keep rounded-xl bg-slate-100 px-4 py-5 text-center font-medium text-[#0a0a0a] text-base md:text-lg"
 								>
 									{c}
 								</span>
@@ -451,7 +451,7 @@ export const ShortformServicePage = () => {
 						</p>
 					</Reveal>
 					<Reveal className="mt-10">
-						<p className="break-keep text-base text-slate-600 md:text-lg">
+						<p className="break-keep font-bold text-[#0a0a0a] text-lg md:text-2xl">
 							환자가 정보를 찾을 때 키워드 검색과 알고리즘을 통해 노출됩니다
 						</p>
 					</Reveal>
@@ -461,11 +461,11 @@ export const ShortformServicePage = () => {
 						<p className="mt-1 font-bold text-[#0a0a0a] text-base md:text-lg">
 							알고리즘 추천기반 플랫폼
 						</p>
-						<div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-3">
+						<div className="mx-auto mt-8 grid max-w-4xl grid-cols-3 gap-3 md:gap-4">
 							{IG_CHIPS.map((c) => (
 								<span
 									key={c}
-									className="rounded-lg bg-slate-100 px-6 py-3 font-medium text-[#0a0a0a] text-sm md:text-base"
+									className="break-keep rounded-xl bg-slate-100 px-4 py-5 text-center font-medium text-[#0a0a0a] text-base md:text-lg"
 								>
 									{c}
 								</span>
@@ -522,7 +522,7 @@ export const ShortformServicePage = () => {
 						</div>
 					</Reveal>
 					<Reveal className="mt-12">
-						<p className="break-keep font-bold text-lg text-white leading-relaxed md:text-xl">
+						<p className="break-keep font-bold text-white text-xl leading-relaxed md:text-2xl">
 							모든 병원에 같은 콘텐츠를 쓰는 순간
 							<br />
 							전환은 절대 일어나지 않습니다
@@ -531,7 +531,7 @@ export const ShortformServicePage = () => {
 					<div className="mt-10 space-y-3">
 						{SPECIALTY.map((s, i) => (
 							<Reveal key={s.field} delay={i * 0.06} direction="up">
-								<div className="rounded-xl bg-white px-6 py-4 text-center font-bold text-[#0a0a0a] text-base md:text-lg">
+								<div className="rounded-xl bg-white px-6 py-5 text-center font-bold text-[#0a0a0a] text-lg md:text-xl">
 									{s.field} <span className="text-slate-400">→</span>{" "}
 									<span className="text-[#e11d29]">{s.psych}</span>
 								</div>
@@ -543,7 +543,7 @@ export const ShortformServicePage = () => {
 						<p className="font-extrabold text-white text-xl md:text-2xl">환자 유입 퍼널</p>
 					</Reveal>
 					<Reveal className="mt-10">
-						<div className="flex flex-wrap items-start justify-center gap-x-2 gap-y-6 md:gap-x-3">
+						<div className="flex flex-wrap items-start justify-center gap-x-4 gap-y-6 md:gap-x-8">
 							{FUNNEL.map((f, i) => (
 								<Fragment key={f.label}>
 									<div className="flex w-20 flex-col items-center gap-2 md:w-24">
@@ -603,7 +603,7 @@ export const ShortformServicePage = () => {
 									width={c.w}
 									height={c.h}
 									quality={90}
-									className="h-24 w-24 object-contain md:h-32 md:w-32"
+									className="h-28 w-28 object-contain md:h-40 md:w-40"
 								/>
 							))}
 						</div>
