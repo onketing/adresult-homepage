@@ -63,10 +63,10 @@ export const siteConfig = {
 	nav: [
 		{
 			label: "회사소개",
-			href: "/introduce",
-			matchPrefix: "/introduce",
+			href: "/about",
+			matchPrefix: "/about",
 			children: [
-				{ label: "ABOUT", href: "/introduce", icon: "Building2" },
+				{ label: "ABOUT", href: "/about", icon: "Building2" },
 				{ label: "HISTORY", href: "/history", icon: "History" },
 				{ label: "CEO", href: "/ceo", icon: "User" },
 				{ label: "PEOPLE", href: "/people", icon: "UsersRound" },
