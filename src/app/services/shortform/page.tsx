@@ -507,7 +507,7 @@ export const ShortformServicePage = () => {
 
 			{/* 8. 04 — 진료과목별 콘텐츠 구조 + 환자 유입 퍼널 (레드 밴드) */}
 			<section className="w-full bg-[#e11d29] px-4 py-24 text-center md:px-8 md:py-28">
-				<div className="mx-auto max-w-4xl">
+				<div className="mx-auto max-w-[1400px]">
 					<Reveal>
 						<div className="flex items-start gap-5 text-left md:gap-8">
 							<span className="shrink-0 font-extrabold text-5xl text-white leading-none md:text-7xl">
@@ -528,7 +528,7 @@ export const ShortformServicePage = () => {
 							전환은 절대 일어나지 않습니다
 						</p>
 					</Reveal>
-					<div className="mt-10 space-y-3">
+					<div className="mx-auto mt-10 max-w-4xl space-y-3">
 						{SPECIALTY.map((s, i) => (
 							<Reveal key={s.field} delay={i * 0.06} direction="up">
 								<div className="rounded-xl bg-white px-6 py-5 text-center font-bold text-[#0a0a0a] text-lg md:text-xl">
@@ -603,7 +603,7 @@ export const ShortformServicePage = () => {
 									width={c.w}
 									height={c.h}
 									quality={90}
-									className="h-28 w-28 object-contain md:h-40 md:w-40"
+									className="h-32 w-32 object-contain md:h-52 md:w-52"
 								/>
 							))}
 						</div>
@@ -622,28 +622,28 @@ export const ShortformServicePage = () => {
 				</Reveal>
 				<Reveal className="mt-14 md:mt-16">
 					<div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-						<div className="flex w-24 flex-col items-center gap-2">
-							<Eye className="h-10 w-10 text-white" />
-							<span className="break-keep text-center font-medium text-white md:text-lg">
+						<div className="flex w-28 flex-col items-center gap-3 md:w-36">
+							<Eye className="h-14 w-14 text-white md:h-16 md:w-16" />
+							<span className="break-keep text-center font-medium text-lg text-white md:text-xl">
 								콘텐츠 시청
 							</span>
 						</div>
-						<ChevronRight className="h-7 w-7 shrink-0 text-white/80" />
-						<div className="flex h-32 w-32 items-center justify-center rounded-full border-4 border-white md:h-36 md:w-36">
-							<span className="break-keep text-center font-bold text-white md:text-lg">
+						<ChevronRight className="h-8 w-8 shrink-0 text-white/80 md:h-11 md:w-11" />
+						<div className="flex h-40 w-40 items-center justify-center rounded-full border-4 border-white md:h-52 md:w-52">
+							<span className="break-keep text-center font-bold text-lg text-white md:text-2xl">
 								반복 노출
 							</span>
 						</div>
-						<ChevronRight className="h-7 w-7 shrink-0 text-white/80" />
-						<div className="flex h-32 w-32 items-center justify-center rounded-full border-4 border-white md:h-36 md:w-36">
-							<span className="break-keep text-center font-bold text-white md:text-lg">
+						<ChevronRight className="h-8 w-8 shrink-0 text-white/80 md:h-11 md:w-11" />
+						<div className="flex h-40 w-40 items-center justify-center rounded-full border-4 border-white md:h-52 md:w-52">
+							<span className="break-keep text-center font-bold text-lg text-white md:text-2xl">
 								의사 신뢰 형성
 							</span>
 						</div>
-						<ChevronRight className="h-7 w-7 shrink-0 text-white/80" />
-						<div className="flex w-24 flex-col items-center gap-2">
-							<MessageSquare className="h-10 w-10 text-white" />
-							<span className="break-keep text-center font-medium text-white md:text-lg">
+						<ChevronRight className="h-8 w-8 shrink-0 text-white/80 md:h-11 md:w-11" />
+						<div className="flex w-28 flex-col items-center gap-3 md:w-36">
+							<MessageSquare className="h-14 w-14 text-white md:h-16 md:w-16" />
+							<span className="break-keep text-center font-medium text-lg text-white md:text-xl">
 								상담문의
 							</span>
 						</div>
@@ -673,7 +673,7 @@ export const ShortformServicePage = () => {
 						/>
 					</Reveal>
 					<Reveal className="mt-6">
-						<p className="text-slate-500 text-sm md:text-base">
+						<p className="text-base text-slate-500 md:text-xl">
 							26년 03월 20일 기준 26년 9월까지 실제 예약 마감된 병원
 						</p>
 					</Reveal>
@@ -711,7 +711,7 @@ export const ShortformServicePage = () => {
 						))}
 					</div>
 					<Reveal className="mt-16">
-						<p className="break-keep text-base text-slate-700 leading-relaxed md:text-xl">
+						<p className="break-keep text-lg text-slate-700 leading-relaxed md:text-2xl">
 							콘텐츠가 꾸준히 축적될수록
 							<br />
 							<span className="font-bold text-[#e11d29]">
