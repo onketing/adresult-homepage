@@ -1,6 +1,17 @@
 "use client";
 
-import { Building2, History, Search, Sparkles, User, Users, UsersRound, Zap } from "lucide-react";
+import {
+	Building2,
+	FileText,
+	History,
+	Search,
+	Sparkles,
+	Star,
+	User,
+	Users,
+	UsersRound,
+	Zap,
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -18,6 +29,8 @@ const CHILD_ICON_MAP: Record<string, React.ComponentType<{ className?: string }>
 	User,
 	UsersRound,
 	Sparkles,
+	FileText,
+	Star,
 };
 
 // 상단이 투명해야 하는 페이지 (다크 풀스크린/영상 Hero)
@@ -170,7 +183,7 @@ export const Header = () => {
 				{/* Right */}
 				<div className="flex items-center gap-2">
 					<a
-						href="/onketing-brochure.pdf"
+						href="/adresult-brochure.pdf"
 						download="애드리절트 회사소개서.pdf"
 						className={cn(
 							"hidden rounded-md px-4 py-2.5 font-semibold text-sm transition-colors lg:block",

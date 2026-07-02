@@ -89,8 +89,8 @@ export const AboutMidCTA = () => {
 						className="w-full sm:w-auto"
 					>
 						<a
-							href="/onketing-brochure.pdf"
-							download="Onketing 회사소개서.pdf"
+							href="/adresult-brochure.pdf"
+							download="애드리절트 회사소개서.pdf"
 							className="block w-full rounded-md border border-white/30 px-8 py-4 font-semibold text-base text-white transition-colors hover:border-white/60 hover:bg-white/5"
 						>
 							회사소개서 PDF

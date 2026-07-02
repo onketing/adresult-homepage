@@ -38,7 +38,7 @@ export const StickyCTA = () => {
 							병원 마케팅 문의
 						</Link>
 						<a
-							href="/onketing-brochure.pdf"
+							href="/adresult-brochure.pdf"
 							download="애드리절트 회사소개서.pdf"
 							className="rounded-full border border-white/70 px-8 py-3 font-bold text-base text-white transition-colors hover:bg-white/10 md:text-lg"
 						>

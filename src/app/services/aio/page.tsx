@@ -1,13 +1,50 @@
 import { Phone } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
+import { BreadcrumbJsonLd } from "@/components/shared/BreadcrumbJsonLd";
 import { Reveal } from "@/components/shared/Reveal";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-	title: "AIO마케팅 | 애드리절트(ADRESULT)",
+	title: "병원 AIO마케팅·AI 검색 노출(GEO) | 애드리절트(ADRESULT)",
+	alternates: { canonical: "/services/aio" },
 	description:
-		"환자의 검색이 AI로 바뀌고 있습니다. AIO(AI Optimization)마케팅으로 ChatGPT·Gemini·Perplexity 등 AI가 우리 병원을 추천하게 만드세요.",
+		"병원 AIO마케팅(GEO)으로 ChatGPT·Gemini·Perplexity·구글 AI 검색에서 우리 병원이 추천되게 만듭니다. 병원 AI검색마케팅·AI노출마케팅 전문 애드리절트.",
+	keywords: [
+		"병원 AIO마케팅",
+		"병원AIO마케팅",
+		"병원AI검색마케팅",
+		"병원GEO마케팅",
+		"병원AI노출마케팅",
+		"AIO마케팅",
+		"GEO 마케팅",
+		"AI 검색 최적화",
+		"피부과AIO마케팅",
+		"피부과AI검색노출",
+		"성형외과AIO마케팅",
+		"성형외과AI검색노출",
+		"정형외과AIO마케팅",
+		"정형외과AI검색마케팅",
+		"치과AIO마케팅",
+		"한의원AIO마케팅",
+		"한의원AI검색노출",
+	],
+};
+
+const aioServiceSchema = {
+	"@context": "https://schema.org",
+	"@type": "Service",
+	name: "병원 AIO마케팅 (AI 검색 노출·GEO)",
+	url: "https://adresult.kr/services/aio",
+	provider: {
+		"@type": "Organization",
+		name: "애드리절트(ADRESULT)",
+		url: "https://adresult.kr",
+	},
+	description:
+		"ChatGPT·Gemini·Perplexity·구글 AI 검색에서 병원이 추천되도록 최적화하는 병원 AIO마케팅(GEO). 5개 AI 엔진 노출을 추적·관리합니다.",
+	areaServed: "KR",
+	serviceType: "병원 AIO마케팅·AI 검색 노출(GEO)",
 };
 
 const HASHTAGS: { label: string; color: string }[] = [
@@ -106,6 +143,15 @@ const SEMINAR_BODY = [
 export const AioPage = () => {
 	return (
 		<>
+			<script type="application/ld+json">{JSON.stringify(aioServiceSchema)}</script>
+			<BreadcrumbJsonLd
+				items={[
+					{ name: "홈", path: "" },
+					{ name: "마케팅", path: "/services" },
+					{ name: "AIO마케팅", path: "/services/aio" },
+				]}
+			/>
+
 			{/* 1. HERO — 왼쪽 설명 + 오른쪽 Gemini 검색 화면 */}
 			<section className="bg-white px-4 pt-28 pb-20 md:px-8 md:pt-36 md:pb-28">
 				<div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2 md:gap-16">
