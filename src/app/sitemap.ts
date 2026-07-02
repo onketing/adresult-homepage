@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 import { getTotalPages, POSTS } from "@/content/blog/posts";
 import { SHORTFORM_PRO_SLUGS } from "@/data/shortform-professions";
+import { SPECIALTY_SLUGS } from "@/data/specialties";
 
 const staticRoutes = [
 	{ path: "", priority: 1.0, changeFrequency: "weekly" as const },
@@ -54,7 +55,14 @@ export const sitemap = (): MetadataRoute.Sitemap => {
 		priority: 0.8,
 	}));
 
-	return [...staticEntries, ...pageEntries, ...postEntries, ...proEntries];
+	const specialtyEntries = SPECIALTY_SLUGS.map((slug) => ({
+		url: `${siteConfig.url}/specialty/${slug}`,
+		lastModified: now,
+		changeFrequency: "monthly" as const,
+		priority: 0.8,
+	}));
+
+	return [...staticEntries, ...pageEntries, ...postEntries, ...proEntries, ...specialtyEntries];
 };
 
 export default sitemap;

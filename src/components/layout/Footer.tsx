@@ -1,6 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import { WaveDivider } from "@/components/shared/WaveDivider";
 import { siteConfig } from "@/config/site";
+import { SPECIALTIES } from "@/data/specialties";
 
 const SOCIALS: { src: string; href: string; label: string }[] = [
 	{ src: "/youtube-logo.png", href: siteConfig.contact.youtube, label: "유튜브" },
@@ -76,7 +78,22 @@ export const Footer = () => {
 					</div>
 				</div>
 
-				<div className="mt-10 border-white/10 border-t pt-6 text-center text-slate-400 text-xs">
+				<div className="mt-10 border-white/10 border-t pt-8">
+					<p className="font-semibold text-sm text-white">진료과별 병원마케팅</p>
+					<div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+						{SPECIALTIES.map((s) => (
+							<Link
+								key={s.slug}
+								href={`/specialty/${s.slug}`}
+								className="text-slate-300 text-sm transition-colors hover:text-white"
+							>
+								{s.name} 마케팅
+							</Link>
+						))}
+					</div>
+				</div>
+
+				<div className="mt-8 border-white/10 border-t pt-6 text-center text-slate-400 text-xs">
 					Copyright © 2026 ADRESULT. All rights reserved.
 				</div>
 			</div>
