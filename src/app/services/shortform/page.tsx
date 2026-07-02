@@ -408,7 +408,19 @@ export const ShortformServicePage = () => {
 						</div>
 					</Reveal>
 
-					<Reveal className="mt-16">
+					<Reveal direction="scale" className="mt-14 md:mt-16">
+						<Image
+							src="/shortform/step3-1.png"
+							alt="검색+알고리즘 기반 유튜브·인스타그램 바이럴 구조"
+							width={1300}
+							height={521}
+							quality={90}
+							sizes="(max-width: 1024px) 100vw, 900px"
+							className="mx-auto h-auto w-full max-w-4xl"
+						/>
+					</Reveal>
+
+					<Reveal className="mt-20">
 						<p className="font-extrabold text-2xl text-[#e11d29] md:text-3xl">유튜브</p>
 						<p className="mt-1 font-bold text-[#0a0a0a] text-base md:text-lg">
 							검색 + 알고리즘 기반 플랫폼
@@ -423,6 +435,20 @@ export const ShortformServicePage = () => {
 								</span>
 							))}
 						</div>
+					</Reveal>
+					<Reveal direction="scale" className="mt-10">
+						<Image
+							src="/shortform/step3-2.png"
+							alt="유튜브 검색 노출 예시"
+							width={862}
+							height={371}
+							quality={90}
+							sizes="(max-width: 768px) 100vw, 680px"
+							className="mx-auto h-auto w-full max-w-2xl"
+						/>
+						<p className="mt-4 text-slate-400 text-sm md:text-base">
+							* 이해를 돕기 위한 예시입니다.
+						</p>
 					</Reveal>
 					<Reveal className="mt-10">
 						<p className="break-keep text-base text-slate-600 md:text-lg">
@@ -445,6 +471,31 @@ export const ShortformServicePage = () => {
 								</span>
 							))}
 						</div>
+					</Reveal>
+					<Reveal direction="scale" className="mt-10">
+						<div className="flex items-start justify-center gap-4 md:gap-6">
+							<Image
+								src="/shortform/step3-3.png"
+								alt="인스타그램 알고리즘 노출 예시 1"
+								width={296}
+								height={528}
+								quality={90}
+								sizes="(max-width: 768px) 45vw, 260px"
+								className="h-auto w-full max-w-[260px]"
+							/>
+							<Image
+								src="/shortform/step3-4.png"
+								alt="인스타그램 알고리즘 노출 예시 2"
+								width={296}
+								height={528}
+								quality={90}
+								sizes="(max-width: 768px) 45vw, 260px"
+								className="h-auto w-full max-w-[260px]"
+							/>
+						</div>
+						<p className="mt-4 text-slate-400 text-sm md:text-base">
+							* 이해를 돕기 위한 예시입니다.
+						</p>
 					</Reveal>
 					<Reveal className="mt-10">
 						<p className="break-keep font-bold text-[#0a0a0a] text-base md:text-xl">
