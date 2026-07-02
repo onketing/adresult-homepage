@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Logo } from "@/components/shared/Logo";
 import { WaveDivider } from "@/components/shared/WaveDivider";
 import { siteConfig } from "@/config/site";
 
@@ -18,9 +17,13 @@ export const Footer = () => {
 				<div className="grid gap-10 md:grid-cols-2">
 					{/* Left */}
 					<div>
-						<span className="inline-flex rounded-xl bg-white px-5 py-3.5">
-							<Logo variant="dark" />
-						</span>
+						<Image
+							src="/footer-logo.png"
+							alt="애드리절트 ADRESULT"
+							width={831}
+							height={180}
+							className="h-12 w-auto"
+						/>
 						<p className="mt-5 max-w-md text-base text-slate-200 leading-relaxed md:text-lg">
 							결과로 말하는 광고회사.
 							<br />
