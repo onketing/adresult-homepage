@@ -5,6 +5,10 @@ import { SHORTFORM_PRO_SLUGS } from "@/data/shortform-professions";
 
 const staticRoutes = [
 	{ path: "", priority: 1.0, changeFrequency: "weekly" as const },
+	{ path: "/introduce", priority: 0.8, changeFrequency: "monthly" as const },
+	{ path: "/history", priority: 0.6, changeFrequency: "monthly" as const },
+	{ path: "/ceo", priority: 0.6, changeFrequency: "monthly" as const },
+	{ path: "/people", priority: 0.6, changeFrequency: "monthly" as const },
 	{ path: "/about", priority: 0.8, changeFrequency: "monthly" as const },
 	{ path: "/services", priority: 0.8, changeFrequency: "weekly" as const },
 	{ path: "/services/professional", priority: 0.9, changeFrequency: "weekly" as const },

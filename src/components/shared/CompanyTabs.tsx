@@ -1,0 +1,44 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+
+const TABS = [
+	{ label: "ABOUT", href: "/introduce" },
+	{ label: "HISTORY", href: "/history" },
+	{ label: "CEO", href: "/ceo" },
+	{ label: "PEOPLE", href: "/people" },
+];
+
+export const CompanyTabs = () => {
+	const pathname = usePathname();
+
+	return (
+		<nav
+			className="sticky top-16 z-30 border-slate-200 border-b bg-white md:top-20"
+			aria-label="회사소개 탭"
+		>
+			<div className="mx-auto flex max-w-7xl">
+				{TABS.map((tab) => {
+					const active = pathname === tab.href;
+					return (
+						<Link
+							key={tab.href}
+							href={tab.href}
+							aria-current={active ? "page" : undefined}
+							className={cn(
+								"flex-1 border-slate-200 border-l py-5 text-center font-bold text-sm tracking-wide transition-colors first:border-l-0 md:text-base",
+								active
+									? "bg-[#e11d29] text-white"
+									: "text-[#0a0a0a] hover:bg-slate-50 hover:text-[#e11d29]",
+							)}
+						>
+							{tab.label}
+						</Link>
+					);
+				})}
+			</div>
+		</nav>
+	);
+};

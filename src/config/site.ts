@@ -61,7 +61,17 @@ export const siteConfig = {
 		businessHours: "24시간 문의 접수 · 연중무휴",
 	},
 	nav: [
-		{ label: "회사소개", href: "/about" },
+		{
+			label: "회사소개",
+			href: "/introduce",
+			matchPrefix: "/introduce",
+			children: [
+				{ label: "ABOUT", href: "/introduce", icon: "Building2" },
+				{ label: "HISTORY", href: "/history", icon: "History" },
+				{ label: "CEO", href: "/ceo", icon: "User" },
+				{ label: "PEOPLE", href: "/people", icon: "UsersRound" },
+			],
+		},
 		{
 			label: "마케팅",
 			href: "/services/professional",
