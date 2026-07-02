@@ -185,7 +185,7 @@ export const AboutPage = () => {
 
 			{/* INTRODUCE — 왼쪽 sticky(하단이 Result와 일직선) / 오른쪽 스크롤 */}
 			<section className="bg-white px-4 py-24 md:px-8 md:py-32">
-				<div className="mx-auto grid max-w-[1440px] gap-12 md:grid-cols-2 md:gap-20">
+				<div className="mx-auto grid max-w-[1600px] gap-12 md:grid-cols-2 md:gap-20">
 					{/* LEFT — sticky */}
 					<div>
 						<div className="md:sticky md:top-[30vh]">
@@ -241,7 +241,7 @@ export const AboutPage = () => {
 
 			{/* MARKETING KNOW-HOW */}
 			<section className="bg-white px-4 pb-28 md:px-8 md:pb-32">
-				<div className="mx-auto max-w-[1440px]">
+				<div className="mx-auto max-w-[1600px]">
 					<Reveal>
 						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
 							ADRESULT Marketing Know-how
@@ -278,7 +278,7 @@ export const AboutPage = () => {
 
 			{/* CUSTOMIZED STRATEGY — 4단계 프로세스 */}
 			<section className="border-slate-100 border-t bg-white px-4 py-24 md:px-8 md:py-32">
-				<div className="mx-auto max-w-[1440px]">
+				<div className="mx-auto max-w-[1600px]">
 					<Reveal>
 						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
 							Customized Strategy
@@ -295,7 +295,7 @@ export const AboutPage = () => {
 							<Fragment key={step.title}>
 								<Reveal
 									delay={i * 0.1}
-									className="flex w-full max-w-xs flex-col items-center text-center lg:w-64"
+									className="flex w-full max-w-xs flex-col items-center text-center lg:w-80"
 								>
 									<div className="group flex h-32 w-32 items-center justify-center rounded-full border-2 border-[#e11d29] bg-[#e11d29] transition-colors duration-300 hover:bg-white md:h-40 md:w-40">
 										<step.Icon
@@ -304,7 +304,7 @@ export const AboutPage = () => {
 											aria-hidden="true"
 										/>
 									</div>
-									<p className="mt-6 break-keep font-bold text-[#e11d29] text-xl md:text-2xl">
+									<p className="mt-6 whitespace-nowrap font-bold text-[#e11d29] text-xl md:text-2xl">
 										{step.no}. {step.title}
 									</p>
 									<p className="mt-3 break-keep text-base text-slate-500 leading-relaxed md:text-lg">
@@ -328,7 +328,7 @@ export const AboutPage = () => {
 
 			{/* CUSTOMER REVIEW — 무한 스크롤 후기 */}
 			<section className="border-slate-100 border-t bg-white py-24 md:py-28">
-				<div className="mx-auto max-w-[1440px] px-4 md:px-8">
+				<div className="mx-auto max-w-[1600px] px-4 md:px-8">
 					<Reveal>
 						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
 							Customer Review
@@ -347,7 +347,7 @@ export const AboutPage = () => {
 
 			{/* FLOOR INFORMATION — 사옥 층별 안내 (풀블리드) */}
 			<section className="border-slate-100 border-t bg-white pt-24 pb-16 md:pt-28 md:pb-20">
-				<div className="mx-auto max-w-[1440px] px-4 md:px-8">
+				<div className="mx-auto max-w-[1600px] px-4 md:px-8">
 					<Reveal>
 						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
 							Floor Information
@@ -403,7 +403,7 @@ export const AboutPage = () => {
 
 			{/* BRANCH-OFFICE INFORMATION — 지사안내 */}
 			<section className="border-slate-100 border-t bg-white px-4 py-24 md:px-8 md:py-28">
-				<div className="mx-auto max-w-[1440px]">
+				<div className="mx-auto max-w-[1600px]">
 					<Reveal>
 						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
 							Branch-Office Information
@@ -440,7 +440,7 @@ export const AboutPage = () => {
 
 			{/* 참고해주세요 */}
 			<section className="border-slate-100 border-t bg-white px-4 py-20 md:px-8 md:py-24">
-				<div className="mx-auto max-w-[1440px]">
+				<div className="mx-auto max-w-[1600px]">
 					<Reveal>
 						<p className="font-bold text-[#ef3c39] text-lg">참고해주세요!</p>
 						<p className="mt-8 break-keep font-bold text-[#0a0a0a] text-base md:text-lg">
