@@ -1,6 +1,7 @@
 "use client";
 
 import { Building2, History, Search, User, Users, UsersRound, Zap } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -64,7 +65,18 @@ export const Header = () => {
 						if (pathname === "/") window.scrollTo({ top: 0, behavior: "instant" });
 					}}
 				>
-					<Logo variant="dark" />
+					{isLight ? (
+						<Image
+							src="/footer-logo.png"
+							alt="애드리절트 ADRESULT"
+							width={831}
+							height={180}
+							className="h-10 w-auto"
+							priority
+						/>
+					) : (
+						<Logo variant="dark" />
+					)}
 				</Link>
 
 				{/* Desktop nav */}
