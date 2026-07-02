@@ -71,7 +71,7 @@ export const Header = () => {
 							alt="애드리절트 ADRESULT"
 							width={831}
 							height={180}
-							className="h-10 w-auto"
+							className="h-8 w-auto"
 							priority
 						/>
 					) : (
