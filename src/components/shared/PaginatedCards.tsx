@@ -2,6 +2,7 @@
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -10,6 +11,7 @@ export type CardItem = {
 	title: string;
 	excerpt: string;
 	image: string;
+	href?: string;
 };
 
 export const PaginatedCards = ({ items, perPage = 9 }: { items: CardItem[]; perPage?: number }) => {
@@ -21,30 +23,40 @@ export const PaginatedCards = ({ items, perPage = 9 }: { items: CardItem[]; perP
 	return (
 		<div>
 			<div className="grid gap-6 md:grid-cols-3 md:gap-7">
-				{visible.map((it) => (
-					<article
-						key={it.id}
-						className="overflow-hidden rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-black/5 transition-transform hover:-translate-y-1"
-					>
-						<div className="relative aspect-[4/3] bg-slate-100">
-							<Image
-								src={it.image}
-								alt={it.title}
-								fill
-								sizes="(max-width: 768px) 100vw, 33vw"
-								className="object-cover object-top"
-							/>
-						</div>
-						<div className="p-5 text-left md:p-6">
-							<h3 className="line-clamp-2 break-keep font-bold text-[#0a0a0a] text-base md:text-lg">
-								{it.title}
-							</h3>
-							<p className="mt-2 line-clamp-3 break-keep text-slate-500 text-sm leading-relaxed">
-								{it.excerpt}
-							</p>
-						</div>
-					</article>
-				))}
+				{visible.map((it) => {
+					const cardClass =
+						"group block overflow-hidden rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-black/5 transition-transform hover:-translate-y-1";
+					const inner = (
+						<>
+							<div className="relative aspect-[4/3] bg-slate-100">
+								<Image
+									src={it.image}
+									alt={it.title}
+									fill
+									sizes="(max-width: 768px) 100vw, 33vw"
+									className="object-cover object-top"
+								/>
+							</div>
+							<div className="p-5 text-left md:p-6">
+								<h3 className="line-clamp-2 break-keep font-bold text-[#0a0a0a] text-base md:text-lg">
+									{it.title}
+								</h3>
+								<p className="mt-2 line-clamp-3 break-keep text-slate-500 text-sm leading-relaxed">
+									{it.excerpt}
+								</p>
+							</div>
+						</>
+					);
+					return it.href ? (
+						<Link key={it.id} href={it.href} className={cardClass}>
+							{inner}
+						</Link>
+					) : (
+						<article key={it.id} className={cardClass}>
+							{inner}
+						</article>
+					);
+				})}
 			</div>
 
 			{totalPages > 1 && (

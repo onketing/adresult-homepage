@@ -30,7 +30,7 @@ export const CasesPage = () => {
 				]}
 			/>
 			<section className="bg-white px-4 pt-28 pb-24 md:px-8 md:pt-36 md:pb-28">
-				<div className="mx-auto max-w-[1400px]">
+				<div className="mx-auto max-w-6xl">
 					<p className="font-bold text-[#e11d29] text-sm uppercase tracking-[0.25em] md:text-base">
 						Portfolio
 					</p>
