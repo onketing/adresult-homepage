@@ -4,6 +4,7 @@ import { Instagram, X, Youtube } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Reveal } from "@/components/shared/Reveal";
 import { cn } from "@/lib/utils";
 
 type Para = { text: string; bold?: boolean };
@@ -284,22 +285,23 @@ export const PeopleExecs = () => {
 
 				<div className="mx-auto mt-14 grid max-w-5xl grid-cols-1 gap-5 sm:grid-cols-2 md:mt-16 md:gap-6 lg:grid-cols-3">
 					{EXECS.map((e, i) => (
-						<button
-							type="button"
-							key={e.photo}
-							onClick={() => setOpenIdx(i)}
-							className="group block overflow-hidden rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.08)] ring-1 ring-black/5 transition-transform hover:-translate-y-1"
-						>
-							<Image
-								src={e.photo}
-								alt={`${e.name} ${e.title}`}
-								width={846}
-								height={1154}
-								quality={95}
-								sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
-								className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.03]"
-							/>
-						</button>
+						<Reveal key={e.photo} delay={i * 0.09} direction="up">
+							<button
+								type="button"
+								onClick={() => setOpenIdx(i)}
+								className="group block w-full overflow-hidden rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.08)] ring-1 ring-black/5 transition-transform hover:-translate-y-1"
+							>
+								<Image
+									src={e.photo}
+									alt={`${e.name} ${e.title}`}
+									width={846}
+									height={1154}
+									quality={95}
+									sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
+									className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.03]"
+								/>
+							</button>
+						</Reveal>
 					))}
 				</div>
 			</div>
