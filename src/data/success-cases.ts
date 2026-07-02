@@ -1,6 +1,6 @@
 import type { CardItem } from "@/components/shared/PaginatedCards";
 
-// 애드리절트 병원마케팅 성공사례 — adresult.kr 원문 이식(자동 생성, 색상·굵기·기울임 보존)
+// 애드리절트 병원마케팅 성공사례 — adresult.kr 원문 이식(자동 생성). 상단 브랜드 헤더/하단 CTA는 상세 페이지 공통.
 export type CaseRun = {
 	t?: string;
 	b?: boolean;
@@ -49,7 +49,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 1,
+				id: 0,
 			},
 			{
 				type: "h",
@@ -61,7 +61,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 2,
+				id: 1,
 			},
 			{
 				type: "p",
@@ -71,7 +71,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 3,
+				id: 2,
 			},
 			{
 				type: "p",
@@ -81,7 +81,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 4,
+				id: 3,
 			},
 			{
 				type: "p",
@@ -91,7 +91,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 5,
+				id: 4,
 			},
 			{
 				type: "p",
@@ -101,7 +101,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 6,
+				id: 5,
 			},
 			{
 				type: "p",
@@ -112,7 +112,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 7,
+				id: 6,
 			},
 			{
 				type: "p",
@@ -123,7 +123,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 8,
+				id: 7,
 			},
 			{
 				type: "p",
@@ -133,7 +133,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 9,
+				id: 8,
 			},
 			{
 				type: "p",
@@ -145,7 +145,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 10,
+				id: 9,
 			},
 			{
 				type: "p",
@@ -155,7 +155,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 11,
+				id: 10,
 			},
 			{
 				type: "h",
@@ -167,7 +167,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 12,
+				id: 11,
 			},
 			{
 				type: "img",
@@ -175,7 +175,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 364,
 				h: 229,
 				alt: "정형외과마케팅",
-				id: 13,
+				id: 12,
 			},
 			{
 				type: "p",
@@ -185,7 +185,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 14,
+				id: 13,
 			},
 			{
 				type: "img",
@@ -193,7 +193,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 364,
 				h: 434,
 				alt: "정형외과광고",
-				id: 15,
+				id: 14,
 			},
 			{
 				type: "p",
@@ -203,7 +203,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 16,
+				id: 15,
 			},
 			{
 				type: "img",
@@ -211,7 +211,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 364,
 				h: 660,
 				alt: "정형외과마케팅성공사례",
-				id: 17,
+				id: 16,
 			},
 			{
 				type: "img",
@@ -219,7 +219,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 364,
 				h: 528,
 				alt: "정형외과광고성공사례",
-				id: 18,
+				id: 17,
 			},
 			{
 				type: "p",
@@ -238,7 +238,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 2,
 					},
 				],
-				id: 19,
+				id: 18,
 			},
 			{
 				type: "p",
@@ -248,7 +248,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 20,
+				id: 19,
 			},
 			{
 				type: "p",
@@ -258,7 +258,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 21,
+				id: 20,
 			},
 			{
 				type: "p",
@@ -268,7 +268,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 22,
+				id: 21,
 			},
 			{
 				type: "p",
@@ -278,28 +278,12 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 23,
+				id: 22,
 			},
 			{
 				type: "video",
 				videoId: "HSIv3ohfJpE",
-				id: 24,
-			},
-			{
-				type: "img",
-				src: "/images/cases/164425283/5.jpg",
-				w: 700,
-				h: 262,
-				alt: "c1cd167d45d46.jpg",
-				id: 25,
-			},
-			{
-				type: "img",
-				src: "/images/cases/164425283/6.jpg",
-				w: 700,
-				h: 300,
-				alt: "14afbb2c6a1e1.jpg",
-				id: 26,
+				id: 23,
 			},
 		],
 	},
@@ -319,7 +303,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 1,
+				id: 0,
 			},
 			{
 				type: "p",
@@ -329,7 +313,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 2,
+				id: 1,
 			},
 			{
 				type: "p",
@@ -339,7 +323,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 3,
+				id: 2,
 			},
 			{
 				type: "p",
@@ -349,7 +333,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 4,
+				id: 3,
 			},
 			{
 				type: "h",
@@ -361,7 +345,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 5,
+				id: 4,
 			},
 			{
 				type: "p",
@@ -371,7 +355,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 6,
+				id: 5,
 			},
 			{
 				type: "img",
@@ -379,7 +363,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 382,
 				h: 441,
 				alt: "정형외과마케팅",
-				id: 7,
+				id: 6,
 			},
 			{
 				type: "p",
@@ -389,7 +373,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 8,
+				id: 7,
 			},
 			{
 				type: "p",
@@ -399,7 +383,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 9,
+				id: 8,
 			},
 			{
 				type: "p",
@@ -409,7 +393,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 10,
+				id: 9,
 			},
 			{
 				type: "img",
@@ -417,7 +401,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 375,
 				h: 141,
 				alt: "정형외과광고",
-				id: 11,
+				id: 10,
 			},
 			{
 				type: "p",
@@ -427,7 +411,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 12,
+				id: 11,
 			},
 			{
 				type: "h",
@@ -439,7 +423,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 13,
+				id: 12,
 			},
 			{
 				type: "p",
@@ -449,7 +433,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 14,
+				id: 13,
 			},
 			{
 				type: "p",
@@ -459,7 +443,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 15,
+				id: 14,
 			},
 			{
 				type: "img",
@@ -467,7 +451,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 391,
 				h: 526,
 				alt: "정형외과성공사례",
-				id: 16,
+				id: 15,
 			},
 			{
 				type: "p",
@@ -477,7 +461,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 17,
+				id: 16,
 			},
 			{
 				type: "p",
@@ -487,7 +471,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 18,
+				id: 17,
 			},
 			{
 				type: "img",
@@ -495,7 +479,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 396,
 				h: 234,
 				alt: "정형외과블로그",
-				id: 19,
+				id: 18,
 			},
 			{
 				type: "p",
@@ -505,7 +489,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 20,
+				id: 19,
 			},
 			{
 				type: "p",
@@ -515,7 +499,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 21,
+				id: 20,
 			},
 			{
 				type: "h",
@@ -527,7 +511,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 22,
+				id: 21,
 			},
 			{
 				type: "p",
@@ -537,7 +521,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 23,
+				id: 22,
 			},
 			{
 				type: "img",
@@ -545,7 +529,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 969,
 				h: 693,
 				alt: "정형외과성공사례",
-				id: 24,
+				id: 23,
 			},
 			{
 				type: "p",
@@ -555,7 +539,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 25,
+				id: 24,
 			},
 			{
 				type: "p",
@@ -565,23 +549,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 26,
-			},
-			{
-				type: "img",
-				src: "/images/cases/164427329/6.png",
-				w: 700,
-				h: 262,
-				alt: "6fc11a1e7ce38.png",
-				id: 27,
-			},
-			{
-				type: "img",
-				src: "/images/cases/164427329/7.png",
-				w: 700,
-				h: 300,
-				alt: "5ecc645b0dcc3.png",
-				id: 28,
+				id: 25,
 			},
 		],
 	},
@@ -603,7 +571,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 1,
+				id: 0,
 			},
 			{
 				type: "p",
@@ -613,7 +581,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 2,
+				id: 1,
 			},
 			{
 				type: "p",
@@ -623,7 +591,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 3,
+				id: 2,
 			},
 			{
 				type: "h",
@@ -635,7 +603,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 4,
+				id: 3,
 			},
 			{
 				type: "p",
@@ -645,7 +613,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 5,
+				id: 4,
 			},
 			{
 				type: "h",
@@ -657,7 +625,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 6,
+				id: 5,
 			},
 			{
 				type: "img",
@@ -665,7 +633,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 364,
 				h: 81,
 				alt: "병원홍보",
-				id: 7,
+				id: 6,
 			},
 			{
 				type: "p",
@@ -675,7 +643,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 8,
+				id: 7,
 			},
 			{
 				type: "img",
@@ -683,7 +651,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 358,
 				h: 403,
 				alt: "병원홍보성공사례",
-				id: 9,
+				id: 8,
 			},
 			{
 				type: "p",
@@ -693,7 +661,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 10,
+				id: 9,
 			},
 			{
 				type: "p",
@@ -703,28 +671,12 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 11,
+				id: 10,
 			},
 			{
 				type: "video",
 				videoId: "sg6CAF1B9L4",
-				id: 12,
-			},
-			{
-				type: "img",
-				src: "/images/cases/164429049/3.png",
-				w: 700,
-				h: 262,
-				alt: "504d37a8d548e.png",
-				id: 13,
-			},
-			{
-				type: "img",
-				src: "/images/cases/164429049/4.png",
-				w: 700,
-				h: 300,
-				alt: "951a88112bc31.png",
-				id: 14,
+				id: 11,
 			},
 		],
 	},
@@ -746,7 +698,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 1,
+				id: 0,
 			},
 			{
 				type: "p",
@@ -765,7 +717,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 2,
 					},
 				],
-				id: 2,
+				id: 1,
 			},
 			{
 				type: "p",
@@ -775,7 +727,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 3,
+				id: 2,
 			},
 			{
 				type: "h",
@@ -787,7 +739,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 4,
+				id: 3,
 			},
 			{
 				type: "p",
@@ -815,7 +767,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 4,
 					},
 				],
-				id: 5,
+				id: 4,
 			},
 			{
 				type: "p",
@@ -834,7 +786,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 2,
 					},
 				],
-				id: 6,
+				id: 5,
 			},
 			{
 				type: "p",
@@ -844,7 +796,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 7,
+				id: 6,
 			},
 			{
 				type: "img",
@@ -852,7 +804,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 498,
 				h: 307,
 				alt: "병원마케팅성공사례",
-				id: 8,
+				id: 7,
 			},
 			{
 				type: "img",
@@ -860,7 +812,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 484,
 				h: 290,
 				alt: "979bc26b48da1.png",
-				id: 9,
+				id: 8,
 			},
 			{
 				type: "img",
@@ -868,7 +820,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 538,
 				h: 391,
 				alt: "병원광고",
-				id: 10,
+				id: 9,
 			},
 			{
 				type: "p",
@@ -878,7 +830,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 11,
+				id: 10,
 			},
 			{
 				type: "h",
@@ -890,7 +842,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 12,
+				id: 11,
 			},
 			{
 				type: "p",
@@ -900,7 +852,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 13,
+				id: 12,
 			},
 			{
 				type: "p",
@@ -910,7 +862,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 14,
+				id: 13,
 			},
 			{
 				type: "p",
@@ -920,7 +872,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 15,
+				id: 14,
 			},
 			{
 				type: "p",
@@ -930,7 +882,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 16,
+				id: 15,
 			},
 			{
 				type: "p",
@@ -940,7 +892,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 17,
+				id: 16,
 			},
 			{
 				type: "p",
@@ -950,7 +902,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 18,
+				id: 17,
 			},
 			{
 				type: "p",
@@ -960,23 +912,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 19,
-			},
-			{
-				type: "img",
-				src: "/images/cases/166883724/4.png",
-				w: 700,
-				h: 262,
-				alt: "f1eaf15a4e49a.png",
-				id: 20,
-			},
-			{
-				type: "img",
-				src: "/images/cases/166883724/5.png",
-				w: 700,
-				h: 300,
-				alt: "6cdacd4634f1c.png",
-				id: 21,
+				id: 18,
 			},
 		],
 	},
@@ -998,7 +934,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 1,
+				id: 0,
 			},
 			{
 				type: "p",
@@ -1008,7 +944,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 2,
+				id: 1,
 			},
 			{
 				type: "h",
@@ -1020,7 +956,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 3,
+				id: 2,
 			},
 			{
 				type: "p",
@@ -1030,7 +966,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 4,
+				id: 3,
 			},
 			{
 				type: "img",
@@ -1038,7 +974,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 329,
 				h: 228,
 				alt: "피부과마케팅",
-				id: 5,
+				id: 4,
 			},
 			{
 				type: "p",
@@ -1048,7 +984,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 6,
+				id: 5,
 			},
 			{
 				type: "h",
@@ -1060,7 +996,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 7,
+				id: 6,
 			},
 			{
 				type: "img",
@@ -1068,7 +1004,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 966,
 				h: 593,
 				alt: "피부과블로그",
-				id: 8,
+				id: 7,
 			},
 			{
 				type: "p",
@@ -1087,7 +1023,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 2,
 					},
 				],
-				id: 9,
+				id: 8,
 			},
 			{
 				type: "h",
@@ -1099,7 +1035,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 10,
+				id: 9,
 			},
 			{
 				type: "p",
@@ -1109,7 +1045,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 11,
+				id: 10,
 			},
 			{
 				type: "p",
@@ -1120,7 +1056,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 12,
+				id: 11,
 			},
 			{
 				type: "img",
@@ -1128,7 +1064,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 535,
 				h: 374,
 				alt: "피부과광고",
-				id: 13,
+				id: 12,
 			},
 			{
 				type: "p",
@@ -1147,7 +1083,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 2,
 					},
 				],
-				id: 14,
+				id: 13,
 			},
 			{
 				type: "h",
@@ -1159,7 +1095,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 15,
+				id: 14,
 			},
 			{
 				type: "img",
@@ -1167,7 +1103,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 345,
 				h: 843,
 				alt: "피부과홍보",
-				id: 16,
+				id: 15,
 			},
 			{
 				type: "img",
@@ -1175,7 +1111,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 347,
 				h: 841,
 				alt: "피부과바이럴마케팅",
-				id: 17,
+				id: 16,
 			},
 			{
 				type: "p",
@@ -1194,7 +1130,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 2,
 					},
 				],
-				id: 18,
+				id: 17,
 			},
 			{
 				type: "h",
@@ -1206,7 +1142,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 19,
+				id: 18,
 			},
 			{
 				type: "p",
@@ -1225,7 +1161,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 2,
 					},
 				],
-				id: 20,
+				id: 19,
 			},
 			{
 				type: "p",
@@ -1235,23 +1171,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 21,
-			},
-			{
-				type: "img",
-				src: "/images/cases/167070308/6.png",
-				w: 700,
-				h: 262,
-				alt: "71f36b7c87135.png",
-				id: 22,
-			},
-			{
-				type: "img",
-				src: "/images/cases/167070308/7.png",
-				w: 700,
-				h: 300,
-				alt: "855033501532a.png",
-				id: 23,
+				id: 20,
 			},
 		],
 	},
@@ -1269,7 +1189,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 800,
 				h: 850,
 				alt: "치과마케팅",
-				id: 1,
+				id: 0,
 			},
 			{
 				type: "h",
@@ -1281,7 +1201,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 2,
+				id: 1,
 			},
 			{
 				type: "p",
@@ -1291,7 +1211,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 3,
+				id: 2,
 			},
 			{
 				type: "p",
@@ -1301,7 +1221,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 4,
+				id: 3,
 			},
 			{
 				type: "p",
@@ -1312,7 +1232,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 5,
+				id: 4,
 			},
 			{
 				type: "img",
@@ -1320,7 +1240,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 800,
 				h: 850,
 				alt: "치과블로그마케팅",
-				id: 6,
+				id: 5,
 			},
 			{
 				type: "p",
@@ -1330,7 +1250,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 7,
+				id: 6,
 			},
 			{
 				type: "p",
@@ -1340,7 +1260,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 8,
+				id: 7,
 			},
 			{
 				type: "p",
@@ -1350,7 +1270,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 9,
+				id: 8,
 			},
 			{
 				type: "p",
@@ -1369,7 +1289,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 2,
 					},
 				],
-				id: 10,
+				id: 9,
 			},
 			{
 				type: "p",
@@ -1379,7 +1299,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 11,
+				id: 10,
 			},
 			{
 				type: "img",
@@ -1387,7 +1307,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 800,
 				h: 800,
 				alt: "치과블로그",
-				id: 12,
+				id: 11,
 			},
 			{
 				type: "h",
@@ -1399,7 +1319,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 13,
+				id: 12,
 			},
 			{
 				type: "p",
@@ -1409,7 +1329,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 14,
+				id: 13,
 			},
 			{
 				type: "p",
@@ -1419,7 +1339,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 15,
+				id: 14,
 			},
 			{
 				type: "p",
@@ -1429,7 +1349,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 16,
+				id: 15,
 			},
 			{
 				type: "p",
@@ -1439,7 +1359,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 17,
+				id: 16,
 			},
 			{
 				type: "p",
@@ -1450,7 +1370,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 18,
+				id: 17,
 			},
 			{
 				type: "p",
@@ -1461,7 +1381,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 19,
+				id: 18,
 			},
 			{
 				type: "p",
@@ -1472,7 +1392,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 20,
+				id: 19,
 			},
 			{
 				type: "p",
@@ -1482,7 +1402,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 21,
+				id: 20,
 			},
 			{
 				type: "img",
@@ -1490,7 +1410,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 800,
 				h: 799,
 				alt: "치과홍보",
-				id: 22,
+				id: 21,
 			},
 			{
 				type: "h",
@@ -1502,7 +1422,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 23,
+				id: 22,
 			},
 			{
 				type: "p",
@@ -1512,7 +1432,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 24,
+				id: 23,
 			},
 			{
 				type: "p",
@@ -1522,7 +1442,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 25,
+				id: 24,
 			},
 			{
 				type: "p",
@@ -1532,7 +1452,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 26,
+				id: 25,
 			},
 			{
 				type: "p",
@@ -1542,7 +1462,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 27,
+				id: 26,
 			},
 			{
 				type: "p",
@@ -1552,7 +1472,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 28,
+				id: 27,
 			},
 			{
 				type: "p",
@@ -1562,7 +1482,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 29,
+				id: 28,
 			},
 			{
 				type: "p",
@@ -1572,7 +1492,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 30,
+				id: 29,
 			},
 			{
 				type: "p",
@@ -1596,7 +1516,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 3,
 					},
 				],
-				id: 31,
+				id: 30,
 			},
 			{
 				type: "p",
@@ -1607,7 +1527,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 32,
+				id: 31,
 			},
 			{
 				type: "p",
@@ -1622,7 +1542,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 1,
 					},
 				],
-				id: 33,
+				id: 32,
 			},
 			{
 				type: "p",
@@ -1632,7 +1552,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 34,
+				id: 33,
 			},
 			{
 				type: "p",
@@ -1642,7 +1562,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 35,
+				id: 34,
 			},
 			{
 				type: "p",
@@ -1657,7 +1577,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 1,
 					},
 				],
-				id: 36,
+				id: 35,
 			},
 			{
 				type: "img",
@@ -1665,7 +1585,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 800,
 				h: 1700,
 				alt: "치과온라인마케팅",
-				id: 37,
+				id: 36,
 			},
 			{
 				type: "p",
@@ -1675,7 +1595,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 38,
+				id: 37,
 			},
 			{
 				type: "p",
@@ -1685,7 +1605,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 39,
+				id: 38,
 			},
 			{
 				type: "p",
@@ -1695,7 +1615,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 40,
+				id: 39,
 			},
 			{
 				type: "p",
@@ -1705,7 +1625,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 41,
+				id: 40,
 			},
 			{
 				type: "p",
@@ -1720,7 +1640,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 1,
 					},
 				],
-				id: 42,
+				id: 41,
 			},
 			{
 				type: "img",
@@ -1728,7 +1648,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 800,
 				h: 850,
 				alt: "치과온라인광고",
-				id: 43,
+				id: 42,
 			},
 			{
 				type: "h",
@@ -1740,7 +1660,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 44,
+				id: 43,
 			},
 			{
 				type: "p",
@@ -1750,7 +1670,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 45,
+				id: 44,
 			},
 			{
 				type: "p",
@@ -1760,7 +1680,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 46,
+				id: 45,
 			},
 			{
 				type: "p",
@@ -1770,7 +1690,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 47,
+				id: 46,
 			},
 			{
 				type: "p",
@@ -1780,7 +1700,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 48,
+				id: 47,
 			},
 			{
 				type: "p",
@@ -1791,7 +1711,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 49,
+				id: 48,
 			},
 			{
 				type: "p",
@@ -1802,7 +1722,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 50,
+				id: 49,
 			},
 			{
 				type: "p",
@@ -1813,7 +1733,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 51,
+				id: 50,
 			},
 			{
 				type: "p",
@@ -1823,7 +1743,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 52,
+				id: 51,
 			},
 			{
 				type: "p",
@@ -1834,7 +1754,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 53,
+				id: 52,
 			},
 			{
 				type: "img",
@@ -1842,7 +1762,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 800,
 				h: 850,
 				alt: "치과마케팅성공사례",
-				id: 54,
+				id: 53,
 			},
 			{
 				type: "h",
@@ -1854,7 +1774,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 55,
+				id: 54,
 			},
 			{
 				type: "p",
@@ -1869,7 +1789,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 1,
 					},
 				],
-				id: 56,
+				id: 55,
 			},
 			{
 				type: "p",
@@ -1884,7 +1804,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 1,
 					},
 				],
-				id: 57,
+				id: 56,
 			},
 			{
 				type: "p",
@@ -1894,7 +1814,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 58,
+				id: 57,
 			},
 			{
 				type: "p",
@@ -1904,7 +1824,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 59,
+				id: 58,
 			},
 			{
 				type: "p",
@@ -1914,7 +1834,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 60,
+				id: 59,
 			},
 			{
 				type: "p",
@@ -1924,7 +1844,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 61,
+				id: 60,
 			},
 			{
 				type: "p",
@@ -1934,7 +1854,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 62,
+				id: 61,
 			},
 			{
 				type: "h",
@@ -1946,7 +1866,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 63,
+				id: 62,
 			},
 			{
 				type: "h",
@@ -1958,7 +1878,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 64,
+				id: 63,
 			},
 			{
 				type: "h",
@@ -1970,7 +1890,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 65,
+				id: 64,
 			},
 			{
 				type: "p",
@@ -1980,7 +1900,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 66,
+				id: 65,
 			},
 			{
 				type: "p",
@@ -1990,7 +1910,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 67,
+				id: 66,
 			},
 			{
 				type: "img",
@@ -1998,7 +1918,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 690,
 				h: 544,
 				alt: "병원마케팅대행사",
-				id: 68,
+				id: 67,
 			},
 			{
 				type: "img",
@@ -2006,7 +1926,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 800,
 				h: 1885,
 				alt: "애드리절트",
-				id: 69,
+				id: 68,
 			},
 			{
 				type: "h",
@@ -2018,7 +1938,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 70,
+				id: 69,
 			},
 			{
 				type: "p",
@@ -2033,7 +1953,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 1,
 					},
 				],
-				id: 71,
+				id: 70,
 			},
 			{
 				type: "p",
@@ -2044,7 +1964,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 72,
+				id: 71,
 			},
 			{
 				type: "p",
@@ -2054,7 +1974,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 73,
+				id: 72,
 			},
 			{
 				type: "p",
@@ -2065,7 +1985,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 74,
+				id: 73,
 			},
 			{
 				type: "p",
@@ -2075,7 +1995,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 75,
+				id: 74,
 			},
 			{
 				type: "p",
@@ -2085,7 +2005,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 76,
+				id: 75,
 			},
 			{
 				type: "p",
@@ -2095,7 +2015,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 77,
+				id: 76,
 			},
 			{
 				type: "p",
@@ -2110,7 +2030,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 1,
 					},
 				],
-				id: 78,
+				id: 77,
 			},
 			{
 				type: "p",
@@ -2120,7 +2040,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 79,
+				id: 78,
 			},
 			{
 				type: "p",
@@ -2130,7 +2050,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 80,
+				id: 79,
 			},
 			{
 				type: "img",
@@ -2138,7 +2058,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 800,
 				h: 850,
 				alt: "병원마케팅애드리절트",
-				id: 81,
+				id: 80,
 			},
 			{
 				type: "p",
@@ -2148,7 +2068,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 82,
+				id: 81,
 			},
 			{
 				type: "img",
@@ -2156,7 +2076,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 800,
 				h: 310,
 				alt: "884d0de04de45.png",
-				id: 83,
+				id: 82,
 			},
 			{
 				type: "h",
@@ -2168,7 +2088,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 84,
+				id: 83,
 			},
 			{
 				type: "p",
@@ -2178,7 +2098,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 85,
+				id: 84,
 			},
 			{
 				type: "p",
@@ -2189,7 +2109,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 86,
+				id: 85,
 			},
 			{
 				type: "p",
@@ -2199,7 +2119,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 87,
+				id: 86,
 			},
 			{
 				type: "p",
@@ -2209,7 +2129,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 88,
+				id: 87,
 			},
 			{
 				type: "img",
@@ -2217,7 +2137,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 565,
 				h: 334,
 				alt: "f6cb80d081913.png",
-				id: 89,
+				id: 88,
 			},
 		],
 	},
@@ -2238,7 +2158,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 1,
+				id: 0,
 			},
 			{
 				type: "p",
@@ -2248,7 +2168,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 2,
+				id: 1,
 			},
 			{
 				type: "p",
@@ -2258,7 +2178,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 3,
+				id: 2,
 			},
 			{
 				type: "p",
@@ -2268,7 +2188,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 4,
+				id: 3,
 			},
 			{
 				type: "img",
@@ -2276,7 +2196,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 534,
 				h: 128,
 				alt: "병원마케팅성공사례",
-				id: 5,
+				id: 4,
 			},
 			{
 				type: "p",
@@ -2286,7 +2206,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 6,
+				id: 5,
 			},
 			{
 				type: "p",
@@ -2296,7 +2216,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 7,
+				id: 6,
 			},
 			{
 				type: "p",
@@ -2306,7 +2226,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 8,
+				id: 7,
 			},
 			{
 				type: "p",
@@ -2316,7 +2236,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 9,
+				id: 8,
 			},
 			{
 				type: "p",
@@ -2326,7 +2246,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 10,
+				id: 9,
 			},
 			{
 				type: "h",
@@ -2337,7 +2257,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 11,
+				id: 10,
 			},
 			{
 				type: "p",
@@ -2347,7 +2267,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 12,
+				id: 11,
 			},
 			{
 				type: "p",
@@ -2357,7 +2277,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 13,
+				id: 12,
 			},
 			{
 				type: "p",
@@ -2372,7 +2292,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 1,
 					},
 				],
-				id: 14,
+				id: 13,
 			},
 			{
 				type: "p",
@@ -2382,7 +2302,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 15,
+				id: 14,
 			},
 			{
 				type: "p",
@@ -2392,7 +2312,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 16,
+				id: 15,
 			},
 			{
 				type: "img",
@@ -2400,7 +2320,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 329,
 				h: 228,
 				alt: "병원마케팅대행사",
-				id: 17,
+				id: 16,
 			},
 			{
 				type: "p",
@@ -2410,7 +2330,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 18,
+				id: 17,
 			},
 			{
 				type: "p",
@@ -2420,7 +2340,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 19,
+				id: 18,
 			},
 			{
 				type: "p",
@@ -2431,7 +2351,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 20,
+				id: 19,
 			},
 			{
 				type: "p",
@@ -2441,7 +2361,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 21,
+				id: 20,
 			},
 			{
 				type: "img",
@@ -2449,7 +2369,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 966,
 				h: 593,
 				alt: "병원블로그관리",
-				id: 22,
+				id: 21,
 			},
 			{
 				type: "p",
@@ -2460,7 +2380,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 23,
+				id: 22,
 			},
 			{
 				type: "h",
@@ -2476,7 +2396,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 1,
 					},
 				],
-				id: 24,
+				id: 23,
 			},
 			{
 				type: "p",
@@ -2486,7 +2406,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 25,
+				id: 24,
 			},
 			{
 				type: "p",
@@ -2496,7 +2416,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 26,
+				id: 25,
 			},
 			{
 				type: "p",
@@ -2506,7 +2426,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 27,
+				id: 26,
 			},
 			{
 				type: "p",
@@ -2516,7 +2436,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 28,
+				id: 27,
 			},
 			{
 				type: "img",
@@ -2524,7 +2444,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 535,
 				h: 374,
 				alt: "병원블로그광고",
-				id: 29,
+				id: 28,
 			},
 			{
 				type: "p",
@@ -2534,7 +2454,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 30,
+				id: 29,
 			},
 			{
 				type: "p",
@@ -2544,7 +2464,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 31,
+				id: 30,
 			},
 			{
 				type: "p",
@@ -2554,7 +2474,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 32,
+				id: 31,
 			},
 			{
 				type: "img",
@@ -2562,7 +2482,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 645,
 				h: 780,
 				alt: "병원블로그",
-				id: 33,
+				id: 32,
 			},
 			{
 				type: "p",
@@ -2572,7 +2492,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 34,
+				id: 33,
 			},
 			{
 				type: "p",
@@ -2582,7 +2502,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 35,
+				id: 34,
 			},
 			{
 				type: "p",
@@ -2593,7 +2513,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 36,
+				id: 35,
 			},
 			{
 				type: "img",
@@ -2601,7 +2521,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 336,
 				h: 311,
 				alt: "병원블로그홍보",
-				id: 37,
+				id: 36,
 			},
 			{
 				type: "p",
@@ -2611,7 +2531,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 38,
+				id: 37,
 			},
 			{
 				type: "p",
@@ -2621,7 +2541,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 39,
+				id: 38,
 			},
 			{
 				type: "p",
@@ -2632,7 +2552,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 40,
+				id: 39,
 			},
 			{
 				type: "h",
@@ -2662,7 +2582,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 4,
 					},
 				],
-				id: 41,
+				id: 40,
 			},
 			{
 				type: "img",
@@ -2670,7 +2590,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 965,
 				h: 443,
 				alt: "병원홍보",
-				id: 42,
+				id: 41,
 			},
 			{
 				type: "p",
@@ -2680,7 +2600,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 43,
+				id: 42,
 			},
 			{
 				type: "p",
@@ -2690,7 +2610,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 44,
+				id: 43,
 			},
 			{
 				type: "p",
@@ -2700,7 +2620,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 45,
+				id: 44,
 			},
 			{
 				type: "p",
@@ -2710,7 +2630,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 46,
+				id: 45,
 			},
 			{
 				type: "p",
@@ -2720,7 +2640,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 47,
+				id: 46,
 			},
 			{
 				type: "p",
@@ -2742,7 +2662,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 2,
 					},
 				],
-				id: 48,
+				id: 47,
 			},
 			{
 				type: "p",
@@ -2752,7 +2672,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 49,
+				id: 48,
 			},
 			{
 				type: "img",
@@ -2760,7 +2680,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 450,
 				h: 378,
 				alt: "병원광고대행사",
-				id: 50,
+				id: 49,
 			},
 			{
 				type: "p",
@@ -2770,7 +2690,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 51,
+				id: 50,
 			},
 			{
 				type: "p",
@@ -2780,7 +2700,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 52,
+				id: 51,
 			},
 			{
 				type: "p",
@@ -2790,7 +2710,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 53,
+				id: 52,
 			},
 			{
 				type: "p",
@@ -2809,7 +2729,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 2,
 					},
 				],
-				id: 54,
+				id: 53,
 			},
 			{
 				type: "p",
@@ -2819,7 +2739,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 55,
+				id: 54,
 			},
 			{
 				type: "p",
@@ -2829,7 +2749,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 56,
+				id: 55,
 			},
 			{
 				type: "p",
@@ -2839,7 +2759,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 57,
+				id: 56,
 			},
 			{
 				type: "p",
@@ -2850,7 +2770,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 58,
+				id: 57,
 			},
 			{
 				type: "img",
@@ -2858,7 +2778,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 696,
 				h: 282,
 				alt: "dc0d52e04e215.jpg",
-				id: 59,
+				id: 58,
 			},
 			{
 				type: "img",
@@ -2866,7 +2786,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 670,
 				h: 214,
 				alt: "a031b4e0586ab.jpg",
-				id: 60,
+				id: 59,
 			},
 			{
 				type: "h",
@@ -2876,7 +2796,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 61,
+				id: 60,
 			},
 		],
 	},
@@ -2895,7 +2815,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 352,
 				h: 547,
 				alt: "병원블로그",
-				id: 1,
+				id: 0,
 			},
 			{
 				type: "p",
@@ -2905,7 +2825,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 2,
+				id: 1,
 			},
 			{
 				type: "p",
@@ -2915,7 +2835,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 3,
+				id: 2,
 			},
 			{
 				type: "p",
@@ -2925,7 +2845,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 4,
+				id: 3,
 			},
 			{
 				type: "p",
@@ -2935,7 +2855,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 5,
+				id: 4,
 			},
 			{
 				type: "img",
@@ -2943,7 +2863,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 345,
 				h: 342,
 				alt: "병원블로그마케팅",
-				id: 6,
+				id: 5,
 			},
 			{
 				type: "p",
@@ -2953,7 +2873,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 7,
+				id: 6,
 			},
 			{
 				type: "p",
@@ -2963,7 +2883,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 8,
+				id: 7,
 			},
 			{
 				type: "p",
@@ -2973,7 +2893,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 9,
+				id: 8,
 			},
 			{
 				type: "p",
@@ -2983,7 +2903,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 10,
+				id: 9,
 			},
 			{
 				type: "h",
@@ -2999,7 +2919,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 1,
 					},
 				],
-				id: 11,
+				id: 10,
 			},
 			{
 				type: "p",
@@ -3009,7 +2929,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 12,
+				id: 11,
 			},
 			{
 				type: "p",
@@ -3019,7 +2939,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 13,
+				id: 12,
 			},
 			{
 				type: "img",
@@ -3027,23 +2947,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 463,
 				h: 388,
 				alt: "병원광고관리",
-				id: 14,
-			},
-			{
-				type: "img",
-				src: "/images/cases/167246130/4.jpeg",
-				w: 696,
-				h: 282,
-				alt: "f6c2e0f9001b9.jpeg",
-				id: 15,
-			},
-			{
-				type: "img",
-				src: "/images/cases/167246130/5.jpeg",
-				w: 670,
-				h: 214,
-				alt: "be181db59a0af.jpeg",
-				id: 16,
+				id: 13,
 			},
 		],
 	},
@@ -3063,7 +2967,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 1,
+				id: 0,
 			},
 			{
 				type: "p",
@@ -3073,7 +2977,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 2,
+				id: 1,
 			},
 			{
 				type: "p",
@@ -3084,7 +2988,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 3,
+				id: 2,
 			},
 			{
 				type: "p",
@@ -3094,7 +2998,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 4,
+				id: 3,
 			},
 			{
 				type: "p",
@@ -3104,7 +3008,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 5,
+				id: 4,
 			},
 			{
 				type: "p",
@@ -3114,7 +3018,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 6,
+				id: 5,
 			},
 			{
 				type: "p",
@@ -3124,7 +3028,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 7,
+				id: 6,
 			},
 			{
 				type: "img",
@@ -3132,7 +3036,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 1280,
 				h: 720,
 				alt: "병원마케팅성공사례",
-				id: 8,
+				id: 7,
 			},
 			{
 				type: "p",
@@ -3142,7 +3046,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 9,
+				id: 8,
 			},
 			{
 				type: "p",
@@ -3152,7 +3056,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 10,
+				id: 9,
 			},
 			{
 				type: "p",
@@ -3163,7 +3067,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 11,
+				id: 10,
 			},
 			{
 				type: "p",
@@ -3173,7 +3077,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 12,
+				id: 11,
 			},
 			{
 				type: "p",
@@ -3189,7 +3093,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 1,
 					},
 				],
-				id: 13,
+				id: 12,
 			},
 			{
 				type: "p",
@@ -3199,7 +3103,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 14,
+				id: 13,
 			},
 			{
 				type: "h",
@@ -3210,7 +3114,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 15,
+				id: 14,
 			},
 			{
 				type: "img",
@@ -3218,7 +3122,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 337,
 				h: 416,
 				alt: "병원마케팅",
-				id: 16,
+				id: 15,
 			},
 			{
 				type: "img",
@@ -3226,7 +3130,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 330,
 				h: 483,
 				alt: "1826954377530.png",
-				id: 17,
+				id: 16,
 			},
 			{
 				type: "img",
@@ -3234,7 +3138,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 335,
 				h: 184,
 				alt: "병원광고",
-				id: 18,
+				id: 17,
 			},
 			{
 				type: "img",
@@ -3242,7 +3146,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 329,
 				h: 334,
 				alt: "병원개원",
-				id: 19,
+				id: 18,
 			},
 			{
 				type: "h",
@@ -3253,7 +3157,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 20,
+				id: 19,
 			},
 			{
 				type: "img",
@@ -3261,7 +3165,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 260,
 				h: 217,
 				alt: "강남병원마케팅",
-				id: 21,
+				id: 20,
 			},
 			{
 				type: "h",
@@ -3272,7 +3176,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 22,
+				id: 21,
 			},
 			{
 				type: "img",
@@ -3280,7 +3184,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 323,
 				h: 179,
 				alt: "서울병원마케팅",
-				id: 23,
+				id: 22,
 			},
 			{
 				type: "h",
@@ -3291,7 +3195,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 24,
+				id: 23,
 			},
 			{
 				type: "img",
@@ -3299,7 +3203,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 305,
 				h: 462,
 				alt: "병원마케팅대행",
-				id: 25,
+				id: 24,
 			},
 			{
 				type: "h",
@@ -3310,7 +3214,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 26,
+				id: 25,
 			},
 			{
 				type: "img",
@@ -3318,7 +3222,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 323,
 				h: 809,
 				alt: "병원광고마케팅",
-				id: 27,
+				id: 26,
 			},
 			{
 				type: "img",
@@ -3326,7 +3230,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 353,
 				h: 202,
 				alt: "병원광고대행사",
-				id: 28,
+				id: 27,
 			},
 			{
 				type: "img",
@@ -3334,7 +3238,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 339,
 				h: 681,
 				alt: "병원마케팅",
-				id: 29,
+				id: 28,
 			},
 			{
 				type: "img",
@@ -3342,7 +3246,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 305,
 				h: 295,
 				alt: "병원홍보",
-				id: 30,
+				id: 29,
 			},
 			{
 				type: "h",
@@ -3353,7 +3257,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 31,
+				id: 30,
 			},
 			{
 				type: "img",
@@ -3361,23 +3265,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 324,
 				h: 329,
 				alt: "병원마케팅대행",
-				id: 32,
-			},
-			{
-				type: "img",
-				src: "/images/cases/167246533/14.jpg",
-				w: 696,
-				h: 282,
-				alt: "0945b67364293.jpg",
-				id: 33,
-			},
-			{
-				type: "img",
-				src: "/images/cases/167246533/15.jpg",
-				w: 670,
-				h: 214,
-				alt: "d623fe8d9b6f7.jpg",
-				id: 34,
+				id: 31,
 			},
 		],
 	},

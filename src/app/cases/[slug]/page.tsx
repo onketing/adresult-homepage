@@ -1,4 +1,4 @@
-import { ChevronLeft, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -70,18 +70,30 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 			/>
 
 			<article className="bg-white px-4 pt-28 pb-24 md:px-8 md:pt-36 md:pb-28">
-				<div className="mx-auto max-w-3xl">
-					<Link
-						href="/cases"
-						className="inline-flex items-center gap-1 font-semibold text-[#e11d29] text-sm transition-colors hover:text-[#b3161f]"
-					>
-						<ChevronLeft className="h-4 w-4" />
-						성공사례 목록
-					</Link>
-					<h1 className="mt-5 break-keep font-extrabold text-2xl text-[#0a0a0a] leading-snug tracking-tight md:text-4xl">
-						{a.title}
-					</h1>
-					<div className="mt-8 border-slate-100 border-t pt-8">
+				<div className="mx-auto max-w-5xl">
+					<p className="font-bold text-[#e11d29] text-sm uppercase tracking-[0.25em] md:text-base">
+						Portfolio
+					</p>
+					<p className="mt-4 text-lg text-slate-600 md:text-xl">
+						애드리절트 병원마케팅 성공사례입니다.
+					</p>
+					<p className="mt-1 break-keep font-extrabold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
+						결과로 말하는 <span className="text-[#e11d29]">애드리절트</span>
+					</p>
+
+					<div className="mt-14 border-slate-200 border-b pb-6">
+						<h1 className="break-keep font-extrabold text-[#0a0a0a] text-xl leading-snug tracking-tight md:text-2xl">
+							{a.title}
+						</h1>
+						<Link
+							href="/cases"
+							className="mt-3 inline-block text-slate-400 text-sm transition-colors hover:text-[#e11d29]"
+						>
+							성공사례
+						</Link>
+					</div>
+
+					<div className="mt-8">
 						{a.blocks.map((b) => {
 							if (b.type === "img") {
 								return (
