@@ -19,7 +19,7 @@ type Particle = {
 	baseAlpha: number;
 };
 
-const COLORS = ["88, 214, 141", "45, 212, 191", "134, 239, 172", "255, 255, 255"];
+const COLORS = ["239, 60, 57", "45, 212, 191", "252, 165, 165", "255, 255, 255"];
 
 export const RisingDotsBackground = ({ className }: { className?: string }) => {
 	const canvasRef = useRef<HTMLCanvasElement>(null);

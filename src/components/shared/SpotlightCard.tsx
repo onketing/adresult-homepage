@@ -13,7 +13,7 @@ type SpotlightCardProps = {
 export const SpotlightCard = ({
 	children,
 	className,
-	glow = "rgba(88,214,141,0.16)",
+	glow = "rgba(239,60,57,0.16)",
 	tilt = 6,
 }: SpotlightCardProps) => {
 	const ref = useRef<HTMLDivElement>(null);

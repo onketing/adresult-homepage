@@ -24,9 +24,9 @@ const CountUp = ({ to, duration = 1.4 }: { to: number; duration?: number }) => {
 };
 
 const CELL_META = [
-	{ numClass: "text-[#86efac]", borderClass: "border-b border-white/10 md:border-b-0" },
+	{ numClass: "text-[#fca5a5]", borderClass: "border-b border-white/10 md:border-b-0" },
 	{ numClass: "text-rose-400", borderClass: "border-l border-b border-white/10 md:border-b-0" },
-	{ numClass: "text-[#86efac]", borderClass: "md:border-l md:border-white/10" },
+	{ numClass: "text-[#fca5a5]", borderClass: "md:border-l md:border-white/10" },
 ] as const;
 
 const maxVal = Math.max(...TREND_DATA.bars.map((b) => b.value));
@@ -36,10 +36,10 @@ export const RegulationStats = () => {
 	const barsInView = useInView(barRef, { once: true, margin: "-60px" });
 
 	return (
-		<section className="bg-[#021009] py-20 md:py-28">
+		<section className="bg-[#0d0202] py-20 md:py-28">
 			<div className="mx-auto max-w-5xl px-4 md:px-8">
 				<Reveal className="mb-12 text-center">
-					<p className="mb-3 font-semibold text-[#86efac] text-sm uppercase tracking-[0.25em]">
+					<p className="mb-3 font-semibold text-[#fca5a5] text-sm uppercase tracking-[0.25em]">
 						Why it matters
 					</p>
 					<h2 className="font-bold text-3xl text-white tracking-tight md:text-5xl">

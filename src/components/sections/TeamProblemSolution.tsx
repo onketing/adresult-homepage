@@ -59,13 +59,13 @@ export const TeamProblemSolution = () => {
 						{SOLUTIONS.map((s, i) => (
 							<motion.div
 								key={s}
-								className="flex items-center gap-4 rounded-xl border border-[#58d68d]/25 bg-[#f0fdf4] px-6 py-4"
+								className="flex items-center gap-4 rounded-xl border border-[#ef3c39]/25 bg-[#fef2f2] px-6 py-4"
 								initial={{ opacity: 0, x: 20 }}
 								whileInView={{ opacity: 1, x: 0 }}
 								viewport={{ once: false }}
 								transition={{ delay: i * 0.1 }}
 							>
-								<CheckCircle className="h-5 w-5 shrink-0 text-[#58d68d]" aria-hidden="true" />
+								<CheckCircle className="h-5 w-5 shrink-0 text-[#ef3c39]" aria-hidden="true" />
 								<p className="break-keep font-medium text-[#0a0a0a] text-sm">{s}</p>
 							</motion.div>
 						))}

@@ -38,7 +38,7 @@ export const BlogPagination = ({
 					<span
 						key={p}
 						aria-current="page"
-						className={cn(cell, "bg-[#16a34a] text-white shadow-sm")}
+						className={cn(cell, "bg-[#e11d29] text-white shadow-sm")}
 					>
 						{p}
 					</span>

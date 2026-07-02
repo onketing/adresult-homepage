@@ -9,7 +9,7 @@ export const manifest = (): MetadataRoute.Manifest => {
 		start_url: "/",
 		display: "standalone",
 		background_color: "#ffffff",
-		theme_color: "#58d68d",
+		theme_color: "#ef3c39",
 		icons: [
 			{ src: "/favicon.ico", sizes: "any", type: "image/x-icon" },
 			{ src: "/icon-192.png", sizes: "192x192", type: "image/png" },

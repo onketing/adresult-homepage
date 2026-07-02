@@ -1,31 +1,33 @@
-// PLACEHOLDER: 아래 수치는 추정치입니다. 실데이터 확정 후 교체 필요.
+// 애드리절트 실제 운영 수치 (adresult.kr "EXCELLENT COMPANY" 기준).
 export const KPI_SHOWCASE = [
 	{
 		index: "01",
-		value: 90,
-		suffix: "%+",
-		label: "재계약율",
-		description: "파트너 10명 중 9명이 다시 저희를 선택했습니다.",
+		value: 132,
+		suffix: "개월",
+		label: "병원마케팅 최장수 고객",
+		description: "애드리절트의 병원마케팅 최장수 고객은 현재 132개월째 함께하고 있습니다.",
 	},
 	{
 		index: "02",
-		value: 3,
-		suffix: "배+",
-		label: "평균 월 상담 증가",
-		description: "6개월 뒤, 당신의 전화가 지금보다 3배 더 울립니다.",
+		value: 200,
+		suffix: "+",
+		label: "병원마케팅 고객 수",
+		description: "전국 200여 곳의 좋은 병원들이 애드리절트 병원마케팅을 통해 환자를 만납니다.",
 	},
 	{
 		index: "03",
-		value: 3,
-		suffix: "만+",
-		label: "평균 조회수",
-		description: "3개월 이상 진행했을 때 기준 숏폼 콘텐츠 평균 조회수입니다.",
+		value: 1272,
+		suffix: "곳",
+		label: "병원마케팅 누적 고객 수",
+		description:
+			"애드리절트는 병원마케팅을 포함하여 일반 기업, 변호사 등 다양한 브랜드의 마케팅을 돕고 있습니다.",
 	},
 	{
 		index: "04",
-		value: 1,
-		suffix: "일",
-		label: "소통 속도",
-		description: "업무시간 내 빠르게 회신합니다. 주말·공휴일도 카카오톡으로 확인합니다.",
+		value: 3800,
+		suffix: "+",
+		label: "병원마케팅 전문 지식",
+		description:
+			"애드리절트 사내 인트라넷 지식뱅크에는 병원의 다양한 문제를 해결하며 발견한 3,800여 개의 지식이 있습니다.",
 	},
 ] as const;

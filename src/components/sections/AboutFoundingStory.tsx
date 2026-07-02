@@ -10,7 +10,7 @@ export const AboutFoundingStory = () => {
 			<div className="mx-auto max-w-6xl">
 				{/* 슬로건 헤더 */}
 				<Reveal className="mb-14">
-					<p className="mb-6 font-mono text-2xl text-[#16a34a] tracking-[0.25em]">주변을 보세요.</p>
+					<p className="mb-6 font-mono text-2xl text-[#e11d29] tracking-[0.25em]">주변을 보세요.</p>
 					<h2 className="font-bold text-4xl text-[#0a0a0a] leading-tight tracking-tight md:text-6xl lg:text-7xl">
 						이미 온 세상이 마케팅입니다!
 					</h2>
@@ -19,7 +19,7 @@ export const AboutFoundingStory = () => {
 				{/* 창업 스토리 */}
 				<Reveal direction="left">
 					<motion.div
-						className="mb-6 select-none font-serif text-[#16a34a]/40 text-[96px] leading-none"
+						className="mb-6 select-none font-serif text-[#e11d29]/40 text-[96px] leading-none"
 						initial={{ opacity: 0, scale: 0.4, rotate: -40 }}
 						whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
 						viewport={{ once: false, margin: "-80px" }}
@@ -39,7 +39,7 @@ export const AboutFoundingStory = () => {
 						))}
 					</div>
 
-					<blockquote className="mt-8 border-[#58d68d]/30 border-l-2 pl-5">
+					<blockquote className="mt-8 border-[#ef3c39]/30 border-l-2 pl-5">
 						<p className="break-keep font-semibold text-[#0a0a0a] text-lg leading-snug md:text-xl">
 							&ldquo;{FOUNDING_STORY.quote}&rdquo;
 						</p>

@@ -62,7 +62,7 @@ export const BlogHero = () => {
 				className="pointer-events-none absolute inset-0"
 				style={{
 					background:
-						"radial-gradient(ellipse at 15% 50%, rgba(88,214,141,0.09) 0%, transparent 55%), radial-gradient(ellipse at 85% 20%, rgba(22,163,74,0.04) 0%, transparent 50%)",
+						"radial-gradient(ellipse at 15% 50%, rgba(239,60,57,0.09) 0%, transparent 55%), radial-gradient(ellipse at 85% 20%, rgba(225,29,41,0.04) 0%, transparent 50%)",
 				}}
 			/>
 
@@ -70,7 +70,7 @@ export const BlogHero = () => {
 				{/* Left: text */}
 				<div>
 					<motion.p
-						className="mb-5 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]"
+						className="mb-5 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]"
 						initial={{ opacity: 0, y: 12 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, ease }}
@@ -113,7 +113,7 @@ export const BlogHero = () => {
 						<div className="flex items-center gap-2 border-slate-100 border-b bg-slate-50 px-4 py-3">
 							<span className="h-3 w-3 rounded-full bg-red-400" />
 							<span className="h-3 w-3 rounded-full bg-yellow-400" />
-							<span className="h-3 w-3 rounded-full bg-green-400" />
+							<span className="h-3 w-3 rounded-full bg-red-400" />
 							<div
 								className="ml-3 flex-1 rounded-md bg-white px-3 py-1.5 text-slate-500 text-xs"
 								aria-hidden="true"
@@ -124,9 +124,9 @@ export const BlogHero = () => {
 
 						{/* Search bar */}
 						<div className="border-slate-100 border-b px-5 py-4">
-							<div className="flex items-center gap-2 rounded-lg border border-[#58d68d]/30 bg-[#f0fdf4] px-4 py-2.5">
+							<div className="flex items-center gap-2 rounded-lg border border-[#ef3c39]/30 bg-[#fef2f2] px-4 py-2.5">
 								<svg
-									className="h-4 w-4 shrink-0 text-[#58d68d]"
+									className="h-4 w-4 shrink-0 text-[#ef3c39]"
 									fill="none"
 									viewBox="0 0 24 24"
 									stroke="currentColor"
@@ -166,7 +166,7 @@ export const BlogHero = () => {
 											<div className="mb-1 flex items-center gap-2">
 												<span
 													className={`rounded px-1.5 py-0.5 font-semibold text-[10px] ${
-														i === 0 ? "bg-[#58d68d] text-white" : "bg-slate-100 text-slate-700"
+														i === 0 ? "bg-[#ef3c39] text-white" : "bg-slate-100 text-slate-700"
 													}`}
 												>
 													블로그
@@ -174,7 +174,7 @@ export const BlogHero = () => {
 											</div>
 											<p
 												className={`text-sm leading-snug ${
-													i === 0 ? "font-semibold text-[#58d68d]" : "text-[#0a0a0a]"
+													i === 0 ? "font-semibold text-[#ef3c39]" : "text-[#0a0a0a]"
 												}`}
 											>
 												{title}
@@ -185,8 +185,8 @@ export const BlogHero = () => {
 							</AnimatePresence>
 						</div>
 
-						<div className="border-slate-100 border-t bg-[#f0fdf4] px-5 py-3">
-							<p className="font-medium text-[#58d68d] text-xs">
+						<div className="border-slate-100 border-t bg-[#fef2f2] px-5 py-3">
+							<p className="font-medium text-[#ef3c39] text-xs">
 								→ 1번 결과에서 상담 문의 클릭율 +3배
 							</p>
 						</div>
@@ -200,11 +200,11 @@ export const BlogHero = () => {
 						transition={{ duration: 0.5, delay: 0.65, ease }}
 					>
 						<div className="flex items-center gap-2.5">
-							<div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#f0fdf4]">
-								<span className="font-bold text-[#58d68d] text-base">↑</span>
+							<div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#fef2f2]">
+								<span className="font-bold text-[#ef3c39] text-base">↑</span>
 							</div>
 							<div>
-								<p className="font-bold text-[#58d68d] text-sm leading-none">+500%</p>
+								<p className="font-bold text-[#ef3c39] text-sm leading-none">+500%</p>
 								<p className="mt-0.5 text-[10px] text-slate-400">3개월 조회수</p>
 							</div>
 						</div>

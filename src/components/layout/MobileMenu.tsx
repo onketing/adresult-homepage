@@ -46,7 +46,7 @@ export const MobileMenu = ({ isLight = false }: { isLight?: boolean }) => {
 						<Link
 							href="/contact"
 							onClick={() => setOpen(false)}
-							className="block w-full rounded-md bg-[#052e16] py-3 text-center font-semibold text-sm text-white transition-opacity hover:opacity-80"
+							className="block w-full rounded-md bg-[#3a0509] py-3 text-center font-semibold text-sm text-white transition-opacity hover:opacity-80"
 						>
 							문의하기
 						</Link>
@@ -81,7 +81,7 @@ export const MobileMenu = ({ isLight = false }: { isLight?: boolean }) => {
 																className={cn(
 																	"rounded-lg px-3 py-3 text-sm transition-colors hover:bg-slate-50",
 																	isChildActive
-																		? "bg-[#052e16]/8 font-semibold text-[#0a0a0a]"
+																		? "bg-[#3a0509]/8 font-semibold text-[#0a0a0a]"
 																		: "text-slate-600",
 																)}
 															>
@@ -118,7 +118,7 @@ export const MobileMenu = ({ isLight = false }: { isLight?: boolean }) => {
 						<Link
 							href="/contact"
 							onClick={() => setOpen(false)}
-							className="block w-full rounded-md bg-[#052e16] py-3.5 text-center font-semibold text-sm text-white transition-opacity hover:opacity-80"
+							className="block w-full rounded-md bg-[#3a0509] py-3.5 text-center font-semibold text-sm text-white transition-opacity hover:opacity-80"
 						>
 							문의하기
 						</Link>

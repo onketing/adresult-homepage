@@ -8,7 +8,7 @@ export const BlogVsAds = () => {
 		<section className="bg-slate-50 px-4 py-16 md:py-24">
 			<div className="mx-auto max-w-5xl">
 				<Reveal className="mb-10">
-					<p className="mb-3 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+					<p className="mb-3 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 						Blog vs Ads
 					</p>
 					<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-4xl">
@@ -25,8 +25,8 @@ export const BlogVsAds = () => {
 						<div className="border-slate-100 border-l px-6 py-4 text-center">
 							<span className="font-bold text-[#0a0a0a] text-sm">퍼포먼스 마케팅</span>
 						</div>
-						<div className="border-[#58d68d]/20 border-l bg-[#f0fdf4] px-6 py-4 text-center">
-							<span className="font-bold text-[#58d68d] text-sm">블로그 마케팅</span>
+						<div className="border-[#ef3c39]/20 border-l bg-[#fef2f2] px-6 py-4 text-center">
+							<span className="font-bold text-[#ef3c39] text-sm">블로그 마케팅</span>
 						</div>
 					</div>
 
@@ -41,8 +41,8 @@ export const BlogVsAds = () => {
 										{row.ads}
 									</span>
 								</div>
-								<div className="flex items-center border-[#58d68d]/20 border-l bg-[#f0fdf4] px-6 py-4">
-									<span className="break-keep font-medium text-[#58d68d] text-sm leading-relaxed">
+								<div className="flex items-center border-[#ef3c39]/20 border-l bg-[#fef2f2] px-6 py-4">
+									<span className="break-keep font-medium text-[#ef3c39] text-sm leading-relaxed">
 										{row.blog}
 									</span>
 								</div>
@@ -56,8 +56,8 @@ export const BlogVsAds = () => {
 						<div className="border-slate-100 border-l px-6 py-3 text-center">
 							<span className="text-slate-400 text-xs">단기 유입 확보</span>
 						</div>
-						<div className="border-[#58d68d]/20 border-l bg-[#f0fdf4] px-6 py-3 text-center">
-							<span className="font-semibold text-[#58d68d] text-xs">장기 매출 자산화</span>
+						<div className="border-[#ef3c39]/20 border-l bg-[#fef2f2] px-6 py-3 text-center">
+							<span className="font-semibold text-[#ef3c39] text-xs">장기 매출 자산화</span>
 						</div>
 					</div>
 				</div>

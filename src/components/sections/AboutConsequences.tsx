@@ -33,12 +33,12 @@ export const AboutConsequences = () => {
 			{/* 분위기 orbs */}
 			<div
 				aria-hidden="true"
-				className="pointer-events-none absolute h-[500px] w-[500px] rounded-full bg-[#58d68d] opacity-[0.07] blur-[130px]"
+				className="pointer-events-none absolute h-[500px] w-[500px] rounded-full bg-[#ef3c39] opacity-[0.07] blur-[130px]"
 				style={{ top: "-120px", left: "-120px" }}
 			/>
 			<div
 				aria-hidden="true"
-				className="pointer-events-none absolute h-[400px] w-[400px] rounded-full bg-[#58d68d] opacity-[0.04] blur-[100px]"
+				className="pointer-events-none absolute h-[400px] w-[400px] rounded-full bg-[#ef3c39] opacity-[0.04] blur-[100px]"
 				style={{ bottom: "-80px", right: "-80px" }}
 			/>
 
@@ -55,7 +55,7 @@ export const AboutConsequences = () => {
 					{CONSEQUENCES.map((item, i) => (
 						<Reveal key={item.num} delay={i * 0.08} direction="up">
 							<div className="flex gap-8 py-8 md:gap-12 md:py-10">
-								<span className="mt-1 shrink-0 font-mono text-[#58d68d]/50 text-xs tracking-widest md:text-sm">
+								<span className="mt-1 shrink-0 font-mono text-[#ef3c39]/50 text-xs tracking-widest md:text-sm">
 									{item.num}
 								</span>
 								<div>

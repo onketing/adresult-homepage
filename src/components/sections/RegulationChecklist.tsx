@@ -90,7 +90,7 @@ export const RegulationChecklist = () => {
 													>
 														<motion.path
 															d="M3 8 L6.5 11.5 L13 5"
-															stroke="#58d68d"
+															stroke="#ef3c39"
 															strokeWidth="1.8"
 															strokeLinecap="round"
 															strokeLinejoin="round"

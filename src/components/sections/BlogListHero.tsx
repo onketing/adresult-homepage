@@ -9,7 +9,7 @@ export const BlogListHero = ({ count }: { count: number }) => {
 		<section className="relative overflow-hidden bg-[radial-gradient(ellipse_70%_60%_at_50%_20%,#ffffff_0%,#eef2f7_60%,#e2e8f0_100%)] px-4 pt-32 pb-16 md:px-8 md:pt-40 md:pb-24">
 			{/* 브랜드 그린 오브 */}
 			<motion.div
-				className="pointer-events-none absolute h-[420px] w-[420px] rounded-full bg-[#58d68d] opacity-[0.16] blur-[130px]"
+				className="pointer-events-none absolute h-[420px] w-[420px] rounded-full bg-[#ef3c39] opacity-[0.16] blur-[130px]"
 				style={{ top: "-120px", right: "-60px" }}
 				animate={{ x: [0, -30, 20, 0], y: [0, 40, -20, 0] }}
 				transition={{ duration: 16, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
@@ -22,7 +22,7 @@ export const BlogListHero = ({ count }: { count: number }) => {
 
 			<div className="relative z-10 mx-auto max-w-6xl">
 				<motion.p
-					className="font-semibold text-[#16a34a] text-sm uppercase tracking-[0.25em]"
+					className="font-semibold text-[#e11d29] text-sm uppercase tracking-[0.25em]"
 					initial={{ opacity: 0, y: 16 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.55, ease }}
@@ -53,7 +53,7 @@ export const BlogListHero = ({ count }: { count: number }) => {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.26, ease }}
 				>
-					<span className="inline-block h-1.5 w-1.5 rounded-full bg-[#58d68d]" />
+					<span className="inline-block h-1.5 w-1.5 rounded-full bg-[#ef3c39]" />
 					<span>총 {count}편의 글</span>
 				</motion.div>
 			</div>

@@ -8,7 +8,7 @@ const ScoreDots = ({ score }: { score: number }) => (
 				// biome-ignore lint/suspicious/noArrayIndexKey: static list
 				key={i}
 				className={
-					i < score ? "h-2 w-2 rounded-full bg-[#58d68d]" : "h-2 w-2 rounded-full bg-slate-200"
+					i < score ? "h-2 w-2 rounded-full bg-[#ef3c39]" : "h-2 w-2 rounded-full bg-slate-200"
 				}
 			/>
 		))}
@@ -20,7 +20,7 @@ export const ServiceComparison = () => {
 		<section className="bg-slate-50 px-4 py-20 md:py-28">
 			<div className="mx-auto max-w-5xl">
 				<Reveal className="mb-14 text-center">
-					<p className="mb-3 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+					<p className="mb-3 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 						Comparison
 					</p>
 					<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">

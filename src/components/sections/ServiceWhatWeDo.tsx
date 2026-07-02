@@ -23,7 +23,7 @@ export const ServiceWhatWeDo = ({ items, heading, sub }: Props) => {
 			<div className="mx-auto max-w-6xl">
 				<Reveal className="mb-12 text-center">
 					{!heading && (
-						<p className="mb-3 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+						<p className="mb-3 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 							What We Do
 						</p>
 					)}
@@ -48,11 +48,11 @@ export const ServiceWhatWeDo = ({ items, heading, sub }: Props) => {
 								className="flex h-full flex-col rounded-2xl border border-slate-100 bg-slate-50 p-8"
 								whileHover={{
 									y: -8,
-									boxShadow: "0 24px 48px rgba(88,214,141,0.12)",
-									borderColor: "rgba(88,214,141,0.35)",
+									boxShadow: "0 24px 48px rgba(239,60,57,0.12)",
+									borderColor: "rgba(239,60,57,0.35)",
 								}}
 							>
-								<span className="mb-4 font-bold font-mono text-[#58d68d] text-sm tracking-[0.15em]">
+								<span className="mb-4 font-bold font-mono text-[#ef3c39] text-sm tracking-[0.15em]">
 									{item.num}
 								</span>
 								<h3 className="mb-3 font-bold text-[#0a0a0a] text-xl">{item.title}</h3>

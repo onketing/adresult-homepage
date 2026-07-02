@@ -10,7 +10,7 @@ export const FAQContact = () => {
 				<div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[260px_1fr] md:gap-14">
 					{/* 좌: 헤딩 */}
 					<Reveal direction="left">
-						<p className="mb-3 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+						<p className="mb-3 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 							Contact
 						</p>
 						<h2 className="mb-4 font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-4xl">
@@ -28,7 +28,7 @@ export const FAQContact = () => {
 								href={siteConfig.contact.kakaoOpenChat}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="group flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-[#58d68d]/40 hover:shadow-[0_4px_16px_rgba(88,214,141,0.08)]"
+								className="group flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-[#ef3c39]/40 hover:shadow-[0_4px_16px_rgba(239,60,57,0.08)]"
 							>
 								<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#FEE500]">
 									<MessageCircle className="h-4 w-4 text-[#0a0a0a]" aria-hidden="true" />
@@ -41,9 +41,9 @@ export const FAQContact = () => {
 
 							<a
 								href={`tel:${siteConfig.contact.tel}`}
-								className="group flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-[#58d68d]/40 hover:shadow-[0_4px_16px_rgba(88,214,141,0.08)]"
+								className="group flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-[#ef3c39]/40 hover:shadow-[0_4px_16px_rgba(239,60,57,0.08)]"
 							>
-								<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#052e16]">
+								<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#3a0509]">
 									<Phone className="h-4 w-4 text-white" aria-hidden="true" />
 								</div>
 								<div>
@@ -54,10 +54,10 @@ export const FAQContact = () => {
 
 							<a
 								href={`mailto:${siteConfig.contact.email}`}
-								className="group flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-[#58d68d]/40 hover:shadow-[0_4px_16px_rgba(88,214,141,0.08)]"
+								className="group flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-[#ef3c39]/40 hover:shadow-[0_4px_16px_rgba(239,60,57,0.08)]"
 							>
-								<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#58d68d]/10">
-									<Mail className="h-4 w-4 text-[#58d68d]" aria-hidden="true" />
+								<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#ef3c39]/10">
+									<Mail className="h-4 w-4 text-[#ef3c39]" aria-hidden="true" />
 								</div>
 								<div>
 									<p className="font-semibold text-[#0a0a0a] text-sm">이메일 문의</p>
@@ -67,13 +67,13 @@ export const FAQContact = () => {
 
 							<Link
 								href="/contact"
-								className="group flex items-center gap-3 rounded-xl border border-[#58d68d]/30 bg-[#58d68d]/[0.04] px-5 py-4 transition-all hover:-translate-y-0.5 hover:bg-[#58d68d]/[0.08]"
+								className="group flex items-center gap-3 rounded-xl border border-[#ef3c39]/30 bg-[#ef3c39]/[0.04] px-5 py-4 transition-all hover:-translate-y-0.5 hover:bg-[#ef3c39]/[0.08]"
 							>
-								<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#58d68d]">
+								<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#ef3c39]">
 									<ArrowRight className="h-4 w-4 text-white" aria-hidden="true" />
 								</div>
 								<div>
-									<p className="font-semibold text-[#58d68d] text-sm">마케팅 컨설팅</p>
+									<p className="font-semibold text-[#ef3c39] text-sm">마케팅 컨설팅</p>
 									<p className="text-slate-500 text-xs">영업일 1일 내 회신</p>
 								</div>
 							</Link>

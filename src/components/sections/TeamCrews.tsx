@@ -32,7 +32,7 @@ const CrewBlock = ({
 		>
 			<Reveal className="w-full lg:w-80 lg:shrink-0" direction={reverse ? "right" : "left"}>
 				<div className="rounded-md border border-slate-100 bg-white p-8 shadow-sm">
-					<div className="mb-5 flex h-12 w-12 items-center justify-center rounded-md bg-[#052e16]">
+					<div className="mb-5 flex h-12 w-12 items-center justify-center rounded-md bg-[#3a0509]">
 						{icon}
 					</div>
 					<p className="mb-1 font-semibold text-[#0a0a0a] text-xs uppercase tracking-[0.2em]">

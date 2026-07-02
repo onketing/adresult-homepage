@@ -10,7 +10,7 @@ export const DisciplineGrid = () => {
 		<section className="bg-white px-4 py-16 md:py-20">
 			<div className="mx-auto max-w-6xl">
 				<Reveal className="mb-12 text-center">
-					<p className="mb-3 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+					<p className="mb-3 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 						Coverage
 					</p>
 					<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
@@ -31,8 +31,8 @@ export const DisciplineGrid = () => {
 								viewport={{ once: false }}
 								transition={{ delay: i * 0.04, duration: 0.4 }}
 								whileHover={{
-									borderColor: "rgba(88,214,141,0.4)",
-									boxShadow: "0 8px 24px rgba(88,214,141,0.1)",
+									borderColor: "rgba(239,60,57,0.4)",
+									boxShadow: "0 8px 24px rgba(239,60,57,0.1)",
 									y: -4,
 								}}
 							>

@@ -115,7 +115,7 @@ export const CTACard = ({
 							<div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
 								<Link
 									href="/contact"
-									className="w-full rounded-xl bg-white px-8 py-4 font-bold text-[#16a34a] text-base shadow-[0_8px_24px_rgba(0,0,0,0.15)] transition-all hover:scale-[1.03] hover:shadow-[0_12px_32px_rgba(0,0,0,0.2)] sm:w-auto"
+									className="w-full rounded-xl bg-white px-8 py-4 font-bold text-[#e11d29] text-base shadow-[0_8px_24px_rgba(0,0,0,0.15)] transition-all hover:scale-[1.03] hover:shadow-[0_12px_32px_rgba(0,0,0,0.2)] sm:w-auto"
 								>
 									{buttonText}
 								</Link>
@@ -140,7 +140,7 @@ export const CTACard = ({
 		<section className="px-4 py-24">
 			<div className="mx-auto max-w-3xl text-center">
 				<Reveal>
-					<div className="rounded-md bg-[#052e16] p-6 sm:p-12">
+					<div className="rounded-md bg-[#3a0509] p-6 sm:p-12">
 						<h2 className="mb-3 font-bold text-3xl text-white leading-tight tracking-tight md:text-4xl">
 							{headline}
 						</h2>

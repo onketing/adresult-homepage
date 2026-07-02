@@ -28,11 +28,11 @@ export const FaqHero = () => {
 		<section className="relative flex min-h-screen items-center overflow-hidden bg-[#fafbfc] px-6 py-28 md:px-10 md:py-36">
 			{/* Soft tinted blobs */}
 			<div
-				className="pointer-events-none absolute top-[-10%] left-[-10%] h-[600px] w-[600px] rounded-full bg-[#58d68d] opacity-[0.05] blur-[160px]"
+				className="pointer-events-none absolute top-[-10%] left-[-10%] h-[600px] w-[600px] rounded-full bg-[#ef3c39] opacity-[0.05] blur-[160px]"
 				aria-hidden="true"
 			/>
 			<div
-				className="pointer-events-none absolute right-[-8%] bottom-[-10%] h-[500px] w-[500px] rounded-full bg-[#86efac] opacity-[0.05] blur-[140px]"
+				className="pointer-events-none absolute right-[-8%] bottom-[-10%] h-[500px] w-[500px] rounded-full bg-[#fca5a5] opacity-[0.05] blur-[140px]"
 				aria-hidden="true"
 			/>
 
@@ -81,7 +81,7 @@ export const FaqHero = () => {
 			{/* Center content */}
 			<div className="relative z-10 mx-auto w-full max-w-4xl text-center">
 				<motion.p
-					className="mb-6 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]"
+					className="mb-6 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]"
 					initial={{ opacity: 0, y: 16 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6 }}
@@ -121,7 +121,7 @@ export const FaqHero = () => {
 							key={chip.slug}
 							type="button"
 							onClick={() => scrollToCategory(chip.slug)}
-							className="rounded-full border border-slate-200 bg-white px-4 py-1.5 font-medium text-slate-700 text-sm transition-all duration-200 hover:border-[#58d68d] hover:text-[#58d68d] hover:shadow-[0_4px_12px_rgba(88,214,141,0.12)]"
+							className="rounded-full border border-slate-200 bg-white px-4 py-1.5 font-medium text-slate-700 text-sm transition-all duration-200 hover:border-[#ef3c39] hover:text-[#ef3c39] hover:shadow-[0_4px_12px_rgba(239,60,57,0.12)]"
 							initial={{ opacity: 0, y: 6 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.4, delay: 0.4 + i * 0.05 }}

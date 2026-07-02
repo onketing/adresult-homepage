@@ -45,12 +45,12 @@
 	--popover-foreground: #0f172a;
 
 	/* Brand */
-	--brand-sage: #58d68d;
-	--brand-green: #16a34a;
-	--brand-forest: #15803d;
+	--brand-sage: #ef3c39;
+	--brand-green: #e11d29;
+	--brand-forest: #b3121e;
 
 	/* Semantic */
-	--primary: #16a34a;
+	--primary: #e11d29;
 	--primary-foreground: #ffffff;
 	--secondary: #f8fafc;
 	--secondary-foreground: #0f172a;
@@ -61,9 +61,9 @@
 	--destructive: #ef4444;
 	--border: #e2e8f0;
 	--input: #e2e8f0;
-	--ring: #58d68d;
+	--ring: #ef3c39;
 	--radius: 6px;
-	--bg-tinted-sage: #f0fdf4;
+	--bg-tinted-sage: #fef2f2;
 	--bg-tinted-slate: #f8fafc;
 }
 
@@ -101,20 +101,20 @@
 
 /* Brand gradient utilities */
 .gradient-brand {
-	background: linear-gradient(135deg, #58d68d 0%, #16a34a 50%, #15803d 100%);
+	background: linear-gradient(135deg, #ef3c39 0%, #e11d29 50%, #b3121e 100%);
 }
 .gradient-text {
-	background: linear-gradient(135deg, #16a34a 0%, #052e16 100%);
+	background: linear-gradient(135deg, #e11d29 0%, #3a0509 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	color: transparent;
 }
 .gradient-soft {
-	background: radial-gradient(60% 50% at 50% 50%, rgba(88, 214, 141, 0.12), transparent 70%);
+	background: radial-gradient(60% 50% at 50% 50%, rgba(239, 60, 57, 0.12), transparent 70%);
 }
 .gradient-border {
-	border-image: linear-gradient(135deg, #58d68d 0%, #16a34a 50%, #15803d 100%) 1;
+	border-image: linear-gradient(135deg, #ef3c39 0%, #e11d29 50%, #b3121e 100%) 1;
 }
 
 /* Card hover */
@@ -183,9 +183,9 @@
 	height: 1.25rem;
 	align-items: center;
 	border-radius: 9999px;
-	background-color: rgb(88 214 141 / 0.1);
+	background-color: rgb(239 60 57 / 0.1);
 	padding-inline: 0.5rem;
 	font-size: 0.625rem;
 	font-weight: 700;
-	color: #58d68d;
+	color: #ef3c39;
 }

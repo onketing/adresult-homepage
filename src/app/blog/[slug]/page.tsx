@@ -101,14 +101,14 @@ export const BlogPostPage = async ({ params }: { params: Promise<{ slug: string 
 			<div className="mx-auto max-w-[720px] px-4 pt-28 pb-16 md:px-6 md:pt-36">
 				{/* Breadcrumb */}
 				<nav aria-label="breadcrumb" className="text-slate-500 text-sm">
-					<Link href="/blog" className="transition-colors hover:text-[#16a34a]">
+					<Link href="/blog" className="transition-colors hover:text-[#e11d29]">
 						← 블로그
 					</Link>
 				</nav>
 
 				{/* Header */}
 				<header className="mt-6">
-					<span className="inline-flex rounded-full bg-[#16a34a]/10 px-3 py-1 font-semibold text-[#16a34a] text-xs">
+					<span className="inline-flex rounded-full bg-[#e11d29]/10 px-3 py-1 font-semibold text-[#e11d29] text-xs">
 						{post.category}
 					</span>
 					<h1 className="mt-4 font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl">
@@ -120,7 +120,7 @@ export const BlogPostPage = async ({ params }: { params: Promise<{ slug: string 
 				</header>
 
 				{/* Body */}
-				<div className="prose prose-slate mt-8 prose-h2:mt-12 max-w-none prose-h2:scroll-mt-24 prose-th:bg-slate-50 prose-a:font-medium prose-h2:font-bold prose-strong:font-medium prose-a:text-[#16a34a] prose-h2:text-2xl prose-h2:text-foreground prose-li:text-slate-700 prose-p:text-slate-700 prose-strong:text-[#16a34a] prose-table:text-sm prose-p:leading-relaxed prose-h2:tracking-tight prose-headings:tracking-tight hover:prose-a:text-[#15803d]">
+				<div className="prose prose-slate mt-8 prose-h2:mt-12 max-w-none prose-h2:scroll-mt-24 prose-th:bg-slate-50 prose-a:font-medium prose-h2:font-bold prose-strong:font-medium prose-a:text-[#e11d29] prose-h2:text-2xl prose-h2:text-foreground prose-li:text-slate-700 prose-p:text-slate-700 prose-strong:text-[#e11d29] prose-table:text-sm prose-p:leading-relaxed prose-h2:tracking-tight prose-headings:tracking-tight hover:prose-a:text-[#b3121e]">
 					<Post />
 				</div>
 
@@ -155,7 +155,7 @@ export const BlogPostPage = async ({ params }: { params: Promise<{ slug: string 
 				<div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-slate-100 border-t pt-8">
 					<Link
 						href="/blog"
-						className="font-medium text-[#16a34a] text-sm transition-colors hover:text-[#15803d]"
+						className="font-medium text-[#e11d29] text-sm transition-colors hover:text-[#b3121e]"
 					>
 						← 다른 글 보기
 					</Link>
@@ -164,7 +164,7 @@ export const BlogPostPage = async ({ params }: { params: Promise<{ slug: string 
 							href={post.naverUrl}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 px-4 py-2 font-medium text-slate-600 text-sm transition-colors hover:border-[#58d68d]/50 hover:text-[#16a34a]"
+							className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 px-4 py-2 font-medium text-slate-600 text-sm transition-colors hover:border-[#ef3c39]/50 hover:text-[#e11d29]"
 						>
 							네이버 블로그에서 원문 보기
 							<ArrowUpRight className="h-4 w-4" />

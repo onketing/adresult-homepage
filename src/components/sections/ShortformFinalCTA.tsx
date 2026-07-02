@@ -14,11 +14,11 @@ export const ShortformFinalCTA = () => {
 			{/* 펄스 리플 + 스파크 배경 ("터지다" 모티프) */}
 			<PulseBurstBackground />
 			<div
-				className="pointer-events-none absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-[#58d68d] opacity-[0.12] blur-[120px]"
+				className="pointer-events-none absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-[#ef3c39] opacity-[0.12] blur-[120px]"
 				aria-hidden="true"
 			/>
 			<div
-				className="pointer-events-none absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full bg-[#58d68d] opacity-[0.08] blur-[100px]"
+				className="pointer-events-none absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full bg-[#ef3c39] opacity-[0.08] blur-[100px]"
 				aria-hidden="true"
 			/>
 

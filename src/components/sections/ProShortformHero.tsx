@@ -99,7 +99,7 @@ export const ProShortformHero = ({
 					>
 						<Link
 							href="/contact"
-							className="rounded-md bg-linear-to-r from-[#58d68d] to-[#16a34a] px-6 py-3 font-semibold text-sm text-white shadow-sm transition-opacity hover:opacity-90"
+							className="rounded-md bg-linear-to-r from-[#ef3c39] to-[#e11d29] px-6 py-3 font-semibold text-sm text-white shadow-sm transition-opacity hover:opacity-90"
 						>
 							마케팅 컨설팅
 						</Link>

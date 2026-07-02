@@ -11,7 +11,7 @@ export const ServiceEngagementPolicy = () => {
 			<div className="mx-auto max-w-6xl">
 				<div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
 					<Reveal direction="left">
-						<p className="mb-2 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+						<p className="mb-2 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 							Engagement Policy
 						</p>
 						<h2 className="mb-2 font-bold text-2xl text-[#0a0a0a] tracking-tight md:text-3xl">
@@ -21,7 +21,7 @@ export const ServiceEngagementPolicy = () => {
 						<ul className="space-y-3">
 							{ENGAGEMENT_POLICY.items.map((item) => (
 								<li key={item} className="flex items-start gap-3">
-									<span className="mt-0.5 font-semibold text-[#58d68d] text-lg leading-none">
+									<span className="mt-0.5 font-semibold text-[#ef3c39] text-lg leading-none">
 										—
 									</span>
 									<span className="break-keep text-[#0a0a0a] text-sm leading-relaxed">{item}</span>
@@ -31,7 +31,7 @@ export const ServiceEngagementPolicy = () => {
 					</Reveal>
 
 					<Reveal direction="right">
-						<p className="mb-2 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+						<p className="mb-2 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 							Our Signature
 						</p>
 						<h2 className="mb-6 font-bold text-2xl text-[#0a0a0a] tracking-tight md:text-3xl">
@@ -46,9 +46,9 @@ export const ServiceEngagementPolicy = () => {
 									whileInView={{ opacity: 1, y: 0 }}
 									viewport={{ once: false }}
 									transition={{ delay: 0.1 + i * 0.07 }}
-									whileHover={{ borderColor: "rgba(88,214,141,0.4)", y: -4 }}
+									whileHover={{ borderColor: "rgba(239,60,57,0.4)", y: -4 }}
 								>
-									<span className="mb-2 block font-bold font-mono text-[#58d68d] text-xs tracking-[0.15em]">
+									<span className="mb-2 block font-bold font-mono text-[#ef3c39] text-xs tracking-[0.15em]">
 										{pt.num}
 									</span>
 									<h3 className="mb-1 font-semibold text-[#0a0a0a] text-sm">{pt.title}</h3>

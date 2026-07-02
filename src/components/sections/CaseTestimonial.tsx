@@ -23,7 +23,7 @@ export const CaseTestimonial = ({ cases, dark = false }: Props) => {
 			<div className="mx-auto max-w-6xl">
 				<Reveal className="mb-12 text-center">
 					<p
-						className={`mb-3 font-semibold text-sm uppercase tracking-[0.25em] ${dark ? "text-[#86efac]" : "text-[#58d68d]"}`}
+						className={`mb-3 font-semibold text-sm uppercase tracking-[0.25em] ${dark ? "text-[#fca5a5]" : "text-[#ef3c39]"}`}
 					>
 						성공 사례
 					</p>
@@ -41,7 +41,7 @@ export const CaseTestimonial = ({ cases, dark = false }: Props) => {
 								className={`flex h-full flex-col overflow-hidden rounded-2xl border ${dark ? "border-white/20" : "border-slate-100"} ${dark ? "shadow-[0_4px_24px_rgba(0,0,0,0.4)]" : "shadow-[0_2px_16px_rgba(0,0,0,0.06)]"}`}
 							>
 								{/* 상단: 수치 */}
-								<div className="bg-[#052e16] px-6 py-6">
+								<div className="bg-[#3a0509] px-6 py-6">
 									<span className="mb-4 inline-block rounded-full bg-white/10 px-3 py-1 font-semibold text-white/70 text-xs">
 										{c.discipline}
 									</span>
@@ -49,7 +49,7 @@ export const CaseTestimonial = ({ cases, dark = false }: Props) => {
 									<div className="flex items-baseline gap-2">
 										<span className="text-sm text-white/30 line-through">{c.before}</span>
 										<span className="text-white/50 text-xs">→</span>
-										<span className="font-bold text-[#86efac] text-xl">{c.after}</span>
+										<span className="font-bold text-[#fca5a5] text-xl">{c.after}</span>
 									</div>
 									<p className="mt-2 text-white/30 text-xs">{c.caption}</p>
 								</div>
@@ -57,7 +57,7 @@ export const CaseTestimonial = ({ cases, dark = false }: Props) => {
 								{/* 하단: 후기 */}
 								<div className="flex flex-1 flex-col bg-white px-6 py-5">
 									<p className="flex-1 break-keep text-slate-600 text-sm leading-relaxed">
-										<span className="mr-1 font-bold text-2xl text-[#58d68d]/40 leading-none">
+										<span className="mr-1 font-bold text-2xl text-[#ef3c39]/40 leading-none">
 											{'"'}
 										</span>
 										{c.testimonial}

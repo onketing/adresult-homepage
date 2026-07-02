@@ -10,19 +10,19 @@ const PLEDGES = [
 
 export const RegulationPledge = () => {
 	return (
-		<section className="bg-[#052e16] px-4 py-24 md:py-28">
+		<section className="bg-[#3a0509] px-4 py-24 md:py-28">
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
 						{/* 좌측 */}
 						<div>
-							<p className="mb-4 select-none font-mono text-7xl text-[#58d68d] leading-none">
+							<p className="mb-4 select-none font-mono text-7xl text-[#ef3c39] leading-none">
 								&ldquo;
 							</p>
 							<h2 className="font-bold text-3xl text-white tracking-tight md:text-4xl">
 								이런 카피는 쓰지 않습니다.
 							</h2>
-							<p className="mt-4 font-semibold text-[#86efac] text-sm tracking-[0.15em]">
+							<p className="mt-4 font-semibold text-[#fca5a5] text-sm tracking-[0.15em]">
 								Onketing 약속
 							</p>
 							<p className="mt-8 font-mono text-white/60 text-xs tracking-[0.15em]">
@@ -37,7 +37,7 @@ export const RegulationPledge = () => {
 									key={pledge}
 									className="flex items-start gap-5 border-white/10 border-b py-5 last:border-0"
 								>
-									<span className="shrink-0 font-mono text-[#86efac] text-sm tracking-[0.12em]">
+									<span className="shrink-0 font-mono text-[#fca5a5] text-sm tracking-[0.12em]">
 										{String(i + 1).padStart(2, "0")}
 									</span>
 									<p className="break-keep text-base text-white/90 leading-relaxed">{pledge}</p>

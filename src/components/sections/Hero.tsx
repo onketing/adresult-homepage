@@ -84,7 +84,7 @@ export const Hero = () => {
 			<div className="relative aspect-video w-full md:absolute md:inset-0 md:aspect-auto">
 				<video
 					ref={videoRef}
-					className="absolute inset-0 h-full w-full object-contain"
+					className="absolute inset-0 h-full w-full object-cover"
 					autoPlay
 					loop
 					playsInline
@@ -100,6 +100,15 @@ export const Hero = () => {
 					<source src="/home-hero-video.mp4" type="video/mp4" />
 					<track kind="captions" />
 				</video>
+
+				{/* 좌측 중앙 텍스트 오버레이 */}
+				<div className="pointer-events-none absolute inset-0 z-20 flex items-center">
+					<h1 className="px-5 font-extrabold text-2xl text-white leading-[1.25] tracking-tight [text-shadow:0_2px_18px_rgba(0,0,0,0.5)] sm:px-8 sm:text-4xl md:px-16 md:text-5xl lg:px-24 lg:text-6xl">
+						결과로 말하는 광고회사
+						<br />
+						애드리절트 ADRESULT
+					</h1>
+				</div>
 			</div>
 
 			{/* 상단 스크림 — 헤더(흰 글자) 가독성 (데스크톱 풀스크린 전용) */}

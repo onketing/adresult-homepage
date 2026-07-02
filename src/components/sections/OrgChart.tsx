@@ -19,7 +19,7 @@ export const OrgChart = () => {
 				<Reveal direction="scale" delay={0.1}>
 					<div className="flex justify-center">
 						<div className="w-full max-w-xs">
-							<div className="rounded-2xl bg-linear-to-br from-[#58d68d] to-[#15803d] px-8 py-7 text-center shadow-[0_4px_24px_rgba(88,214,141,0.3)]">
+							<div className="rounded-2xl bg-linear-to-br from-[#ef3c39] to-[#b3121e] px-8 py-7 text-center shadow-[0_4px_24px_rgba(239,60,57,0.3)]">
 								<p className="font-bold text-lg text-white">대표</p>
 								<p className="mt-1.5 text-sm text-white/70 leading-relaxed">
 									전문직 마케팅 전략 총괄
@@ -56,9 +56,9 @@ export const OrgChart = () => {
 
 								{/* Card area — px-2 creates visual gap without breaking connectors */}
 								<div className="flex flex-col md:px-2">
-									<div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:border-[#58d68d]/30 hover:shadow-md">
+									<div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:border-[#ef3c39]/30 hover:shadow-md">
 										<div className="mb-3 flex items-center gap-2">
-											<div className="h-2.5 w-2.5 rounded-full bg-[#58d68d]" />
+											<div className="h-2.5 w-2.5 rounded-full bg-[#ef3c39]" />
 											<p className="font-bold text-foreground text-sm">{dept.name}</p>
 										</div>
 										<p className="text-muted-foreground text-xs leading-relaxed">{dept.desc}</p>
@@ -72,7 +72,7 @@ export const OrgChart = () => {
 									<div className="flex flex-col gap-2">
 										{dept.subs.map((sub, j) => (
 											<Reveal key={sub.name} direction="up" delay={0.5 + i * 0.1 + j * 0.08}>
-												<div className="rounded-xl border border-slate-200 border-dashed bg-slate-50 p-4 transition-colors duration-200 hover:border-[#58d68d]/20 hover:bg-[#58d68d]/2">
+												<div className="rounded-xl border border-slate-200 border-dashed bg-slate-50 p-4 transition-colors duration-200 hover:border-[#ef3c39]/20 hover:bg-[#ef3c39]/2">
 													<p className="font-semibold text-foreground text-xs">{sub.name}</p>
 													<p className="mt-0.5 text-muted-foreground text-xs leading-relaxed">
 														{sub.desc}

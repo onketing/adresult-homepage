@@ -90,6 +90,17 @@ const nextConfig: NextConfig = {
 		];
 	},
 
+	// 문의하기 → 외부 Tally 폼으로 이동 (기존 /contact 링크 전부 여기로 리다이렉트)
+	async redirects() {
+		return [
+			{
+				source: "/contact",
+				destination: "https://tally.so/r/gDQkzJ",
+				permanent: false,
+			},
+		];
+	},
+
 	images: {
 		qualities: [75, 90, 95],
 		remotePatterns: [

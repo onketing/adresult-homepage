@@ -22,8 +22,8 @@ export const ShortformPain = () => {
 					{WORRIES.map((worry, i) => (
 						<Reveal key={worry} delay={i * 0.1} direction="up">
 							<div className="flex items-center gap-5 rounded-2xl border border-slate-200 bg-white px-7 py-6 shadow-sm">
-								<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#58d68d]/15">
-									<span className="font-bold text-[#58d68d] text-sm">{i + 1}</span>
+								<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#ef3c39]/15">
+									<span className="font-bold text-[#ef3c39] text-sm">{i + 1}</span>
 								</div>
 								<p className="break-keep text-base text-slate-700 leading-relaxed">{worry}</p>
 							</div>

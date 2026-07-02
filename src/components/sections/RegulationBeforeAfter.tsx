@@ -13,7 +13,7 @@ const ArrowPath = ({ inView }: { inView: boolean }) => (
 	>
 		<motion.path
 			d="M2 12 H34 M26 4 L38 12 L26 20"
-			stroke="#58d68d"
+			stroke="#ef3c39"
 			strokeWidth="2.5"
 			strokeLinecap="round"
 			strokeLinejoin="round"
@@ -33,7 +33,7 @@ export const RegulationBeforeAfter = () => {
 		<section className="bg-white px-4 py-20 md:py-28">
 			<div className="mx-auto max-w-5xl">
 				<Reveal className="mb-14 text-center">
-					<p className="mb-3 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+					<p className="mb-3 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 						Before / After
 					</p>
 					<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
@@ -62,11 +62,11 @@ export const RegulationBeforeAfter = () => {
 								<ArrowPath inView={inView} />
 
 								{/* After */}
-								<div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
-									<p className="mb-1.5 font-mono text-[10px] text-emerald-600 uppercase tracking-[0.2em]">
+								<div className="rounded-xl border border-red-200 bg-red-50 p-4">
+									<p className="mb-1.5 font-mono text-[10px] text-red-600 uppercase tracking-[0.2em]">
 										통과 카피
 									</p>
-									<p className="break-keep font-medium text-emerald-700 text-sm leading-relaxed">
+									<p className="break-keep font-medium text-red-700 text-sm leading-relaxed">
 										&ldquo;{c.after}&rdquo;
 									</p>
 								</div>

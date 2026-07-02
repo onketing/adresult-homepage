@@ -50,7 +50,7 @@ export const ServiceProcess = ({ steps, footnote, eyebrow = "Process" }: Props) 
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<div className="mb-14 text-center">
-						<p className="mb-3 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+						<p className="mb-3 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 							{eyebrow}
 						</p>
 						<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
@@ -61,7 +61,7 @@ export const ServiceProcess = ({ steps, footnote, eyebrow = "Process" }: Props) 
 
 				<div ref={gridRef} className={`relative grid grid-cols-1 gap-10 md:gap-4 ${gridColsClass}`}>
 					<motion.div
-						className="absolute top-10 hidden h-0.5 rounded-full bg-linear-to-r from-[#58d68d] to-[#16a34a] md:block"
+						className="absolute top-10 hidden h-0.5 rounded-full bg-linear-to-r from-[#ef3c39] to-[#e11d29] md:block"
 						style={{ left: "10%", right: "10%", transformOrigin: "left" }}
 						initial={{ scaleX: 0 }}
 						animate={animState.inView ? { scaleX: 1 } : { scaleX: 0 }}
@@ -87,8 +87,8 @@ export const ServiceProcess = ({ steps, footnote, eyebrow = "Process" }: Props) 
 										: { duration: 0, delay: 0 }
 								}
 							>
-								<div className="relative z-10 mb-5 flex h-20 w-20 items-center justify-center rounded-full border border-slate-200 bg-white shadow-[0_2px_8px_rgba(88,214,141,0.06)]">
-									<span className="font-bold font-mono text-[#58d68d] text-xl">{item.step}</span>
+								<div className="relative z-10 mb-5 flex h-20 w-20 items-center justify-center rounded-full border border-slate-200 bg-white shadow-[0_2px_8px_rgba(239,60,57,0.06)]">
+									<span className="font-bold font-mono text-[#ef3c39] text-xl">{item.step}</span>
 								</div>
 								<h3 className="mb-2 font-bold text-[#0a0a0a] text-base">{item.title}</h3>
 								<p className="max-w-[180px] break-keep text-slate-500 text-sm leading-relaxed">

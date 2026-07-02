@@ -7,7 +7,7 @@
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"includes": ["**", "!supabase", "!scripts", "!public/images/.omc"]
+		"includes": ["**", "!supabase", "!scripts", "!public/images/.omc", "!.claude"]
 	},
 	"formatter": {
 		"enabled": true,

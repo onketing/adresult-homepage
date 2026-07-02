@@ -136,7 +136,7 @@ export const SHORTFORM_PROS: Record<string, ShortformPro> = {
 		slug: "doctor",
 		profession: "의사",
 		regulationSlug: "doctor",
-		accent: "#0d9488",
+		accent: "#e11d29",
 		icon: "stethoscope",
 		title: "병원·의사 마케팅 대행사 — 숏폼·블로그로 내원까지 | 온케팅",
 		description:
@@ -304,7 +304,7 @@ export const SHORTFORM_PROS: Record<string, ShortformPro> = {
 		slug: "tax",
 		profession: "세무사",
 		regulationSlug: "tax",
-		accent: "#15803d",
+		accent: "#b3121e",
 		icon: "calculator",
 		title: "세무사 마케팅 대행사 — 숏폼·블로그로 기장·상담까지 | 온케팅",
 		description:

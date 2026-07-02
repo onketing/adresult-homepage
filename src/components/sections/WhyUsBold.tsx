@@ -11,18 +11,18 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
 
 export const WhyUsBold = () => {
 	return (
-		<section className="relative bg-[#052e16] px-4 py-20 md:py-24">
+		<section className="relative bg-[#3a0509] px-4 py-20 md:py-24">
 			<div
 				className="pointer-events-none absolute inset-x-0 top-0 h-[400px]"
 				aria-hidden="true"
 				style={{
-					background: "radial-gradient(50% 100% at 50% 0%, rgba(88,214,141,0.14), transparent 70%)",
+					background: "radial-gradient(50% 100% at 50% 0%, rgba(239,60,57,0.14), transparent 70%)",
 				}}
 			/>
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<div className="mb-12 text-center">
-						<p className="mb-3 font-semibold text-[#86efac] text-sm uppercase tracking-[0.25em]">
+						<p className="mb-3 font-semibold text-[#fca5a5] text-sm uppercase tracking-[0.25em]">
 							Why Us
 						</p>
 						<h2 className="font-bold text-3xl text-white leading-tight tracking-tight md:text-4xl">
@@ -44,15 +44,15 @@ export const WhyUsBold = () => {
 										<span className="mb-5 block font-mono text-[#0a0a0a]/30 text-[11px] tracking-[0.2em]">
 											{String(i + 1).padStart(2, "0")}
 										</span>
-										<Icon className="mb-4 h-5 w-5 text-[#58d68d]" aria-hidden="true" />
+										<Icon className="mb-4 h-5 w-5 text-[#ef3c39]" aria-hidden="true" />
 										<div className="mb-2 flex items-center gap-3">
 											<h3 className="font-bold text-foreground text-lg">{card.title}</h3>
 										</div>
 										<p className="mb-4 text-muted-foreground text-sm leading-relaxed">
 											{card.description}
 										</p>
-										<div className="mt-auto flex min-h-[3.25rem] items-center rounded-md bg-[#58d68d]/[0.08] px-4 py-3">
-											<span className="font-semibold text-[#58d68d] text-sm">{card.stat}</span>
+										<div className="mt-auto flex min-h-[3.25rem] items-center rounded-md bg-[#ef3c39]/[0.08] px-4 py-3">
+											<span className="font-semibold text-[#ef3c39] text-sm">{card.stat}</span>
 										</div>
 									</div>
 								</SpotlightCard>
@@ -88,7 +88,7 @@ export const WhyUsBold = () => {
 								<div className="bg-white/3 px-4 py-3 md:px-8 md:py-5">
 									<p className="text-sm text-white/40">{card.before}</p>
 								</div>
-								<div className="border-[#58d68d]/50 border-l bg-[#58d68d]/10 px-4 py-3 md:px-8 md:py-5">
+								<div className="border-[#ef3c39]/50 border-l bg-[#ef3c39]/10 px-4 py-3 md:px-8 md:py-5">
 									<p className="font-semibold text-sm text-white">{card.after}</p>
 								</div>
 							</div>

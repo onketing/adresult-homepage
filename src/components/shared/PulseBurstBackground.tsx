@@ -16,7 +16,7 @@ type Spark = {
 	size: number;
 };
 
-const GREEN = "88, 214, 141";
+const GREEN = "239, 60, 57";
 
 export const PulseBurstBackground = ({ className }: { className?: string }) => {
 	const canvasRef = useRef<HTMLCanvasElement>(null);

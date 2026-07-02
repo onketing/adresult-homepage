@@ -48,7 +48,7 @@ export const ShortformHero = () => {
 			<WaveformBackground />
 
 			<motion.div
-				className="pointer-events-none absolute h-[400px] w-[400px] rounded-full bg-[#58d68d] opacity-[0.18] blur-[120px]"
+				className="pointer-events-none absolute h-[400px] w-[400px] rounded-full bg-[#ef3c39] opacity-[0.18] blur-[120px]"
 				style={{ top: "-80px", right: "-80px" }}
 				animate={{ x: [0, -30, 20, 0], y: [0, 40, -20, 0] }}
 				transition={{ duration: 14, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
@@ -57,7 +57,7 @@ export const ShortformHero = () => {
 			<div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2">
 				<div>
 					<motion.p
-						className="mb-4 font-semibold text-[#16a34a] text-sm uppercase tracking-[0.25em]"
+						className="mb-4 font-semibold text-[#e11d29] text-sm uppercase tracking-[0.25em]"
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}

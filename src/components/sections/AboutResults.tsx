@@ -48,7 +48,7 @@ export const AboutResults = () => {
 				{/* Header */}
 				<div className="mb-16 md:mb-20">
 					<motion.p
-						className="mb-5 font-mono text-[#16a34a] text-base uppercase tracking-[0.25em]"
+						className="mb-5 font-mono text-[#e11d29] text-base uppercase tracking-[0.25em]"
 						initial={{ opacity: 0, y: 16 }}
 						animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
 						transition={{ duration: 0.6, ease }}
@@ -105,9 +105,9 @@ export const AboutResults = () => {
 							animate={{ x: [0, 8, 0] }}
 							transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
 						>
-							<ArrowRight className="h-20 w-20 text-[#16a34a] md:h-24 md:w-24" strokeWidth={2} />
+							<ArrowRight className="h-20 w-20 text-[#e11d29] md:h-24 md:w-24" strokeWidth={2} />
 						</motion.div>
-						<span className="font-bold text-[#16a34a] text-[11px] uppercase tracking-widest">
+						<span className="font-bold text-[#e11d29] text-[11px] uppercase tracking-widest">
 							온세상이마케팅이다
 						</span>
 					</motion.div>
@@ -115,7 +115,7 @@ export const AboutResults = () => {
 					{/* After */}
 					<div className="flex flex-col items-center">
 						<motion.p
-							className="mb-8 font-semibold text-[#16a34a] text-xs uppercase tracking-[0.25em]"
+							className="mb-8 font-semibold text-[#e11d29] text-xs uppercase tracking-[0.25em]"
 							initial={{ opacity: 0 }}
 							animate={isInView ? { opacity: 1 } : { opacity: 0 }}
 							transition={{ duration: 0.5, delay: 0.3 }}
@@ -176,9 +176,9 @@ export const AboutResults = () => {
 								<span className="font-bold text-sm text-white">1.3만</span>
 								<span className="text-white/50 text-xs">팔로워</span>
 							</div>
-							<div className="flex items-center gap-2 rounded-full border border-[#16a34a]/20 bg-[#16a34a]/8 px-4 py-2.5">
-								<span className="font-bold text-[#15803d] text-sm">290만+</span>
-								<span className="text-[#16a34a]/60 text-xs">총 조회수</span>
+							<div className="flex items-center gap-2 rounded-full border border-[#e11d29]/20 bg-[#e11d29]/8 px-4 py-2.5">
+								<span className="font-bold text-[#b3121e] text-sm">290만+</span>
+								<span className="text-[#e11d29]/60 text-xs">총 조회수</span>
 							</div>
 						</motion.div>
 					</div>

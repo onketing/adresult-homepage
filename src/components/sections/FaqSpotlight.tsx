@@ -47,9 +47,9 @@ export const FaqSpotlight = () => {
 							<Reveal key={item.question} delay={i * 0.08}>
 								<a
 									href={`#faq-${item.slug}`}
-									className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-[#58d68d]/40 hover:shadow-[0_8px_24px_rgba(88,214,141,0.08)]"
+									className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-[#ef3c39]/40 hover:shadow-[0_8px_24px_rgba(239,60,57,0.08)]"
 								>
-									<p className="mb-3 flex items-center gap-1.5 font-mono text-[#58d68d] text-xs uppercase tracking-[0.2em]">
+									<p className="mb-3 flex items-center gap-1.5 font-mono text-[#ef3c39] text-xs uppercase tracking-[0.2em]">
 										<Icon className="h-3.5 w-3.5" aria-hidden="true" />
 										{item.category}
 									</p>
@@ -59,7 +59,7 @@ export const FaqSpotlight = () => {
 									<p className="line-clamp-3 break-keep text-slate-600 text-sm leading-relaxed">
 										{item.answer}
 									</p>
-									<p className="mt-5 text-right font-semibold text-[#58d68d] text-sm">
+									<p className="mt-5 text-right font-semibold text-[#ef3c39] text-sm">
 										전체 보기{" "}
 										<span className="inline-block transition-transform duration-200 group-hover:translate-x-1">
 											→

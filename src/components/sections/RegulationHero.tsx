@@ -38,10 +38,10 @@ const DOCS = [
 			{ id: "p6", w: "w-full" },
 		],
 		stamp: "통과",
-		stampColor: "text-emerald-400",
-		stampBorder: "border-emerald-500/40",
-		stampBg: "bg-[#042318]",
-		accentBar: "bg-emerald-500/30",
+		stampColor: "text-red-400",
+		stampBorder: "border-red-500/40",
+		stampBg: "bg-[#230505]",
+		accentBar: "bg-red-500/30",
 		rotate: 0,
 		stampRotate: "-rotate-6",
 		delay: 0.2,
@@ -84,10 +84,10 @@ export const RegulationHero = () => {
 	};
 
 	return (
-		<section className="relative flex min-h-screen items-center overflow-hidden bg-[#052e16] px-6 py-24 md:px-10 md:py-32">
+		<section className="relative flex min-h-screen items-center overflow-hidden bg-[#3a0509] px-6 py-24 md:px-10 md:py-32">
 			{/* 우상단 orb */}
 			<motion.div
-				className="pointer-events-none absolute h-[500px] w-[500px] rounded-full bg-[#58d68d] opacity-[0.14] blur-[140px]"
+				className="pointer-events-none absolute h-[500px] w-[500px] rounded-full bg-[#ef3c39] opacity-[0.14] blur-[140px]"
 				style={{ top: "-120px", right: "-120px" }}
 				animate={{ x: [0, -40, 20, 0], y: [0, 50, -20, 0] }}
 				transition={{ duration: 16, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
@@ -104,7 +104,7 @@ export const RegulationHero = () => {
 				{/* 좌측 텍스트 */}
 				<div>
 					<motion.p
-						className="mb-5 font-semibold text-[#86efac] text-sm uppercase tracking-[0.25em]"
+						className="mb-5 font-semibold text-[#fca5a5] text-sm uppercase tracking-[0.25em]"
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}

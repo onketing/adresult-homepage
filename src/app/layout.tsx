@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Roboto_Mono } from "next/font/google";
+import { Inter, Nanum_Pen_Script, Roboto_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -31,6 +31,15 @@ const robotoMono = Roboto_Mono({
 	variable: "--font-roboto-mono",
 	display: "swap",
 	weight: ["400", "500", "700"],
+});
+
+// 손글씨 강조용 (애드리절트 "맞춤 전략" 섹션 등)
+const nanumPen = Nanum_Pen_Script({
+	subsets: ["latin"],
+	weight: "400",
+	variable: "--font-hand",
+	display: "swap",
+	preload: false,
 });
 
 export const metadata: Metadata = {
@@ -68,14 +77,9 @@ export const metadata: Metadata = {
 			"msvalidate.01": "FEADAB9A050D08C9269521AB466C6271",
 		},
 	},
+	// 파비콘은 src/app/icon.png(=title-logo) 컨벤션이 자동 처리
 	icons: {
-		icon: [
-			{ url: "/favicon.ico", sizes: "any" },
-			{ url: "/icon-192.png", sizes: "192x192", type: "image/png" },
-			{ url: "/icon-512.png", sizes: "512x512", type: "image/png" },
-		],
-		shortcut: "/favicon.ico",
-		apple: { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+		apple: "/title-logo.png",
 	},
 };
 
@@ -89,9 +93,9 @@ const jsonLd = {
 	"@type": ["Organization", "ProfessionalService"],
 	"@id": `${siteConfig.url}/#organization`,
 	name: siteConfig.nameKo,
-	legalName: "온세상이마케팅이다",
-	alternateName: ["온케팅", "온세상이마케팅", "Onketing", "onketing"],
-	slogan: "처음 맡은 팀이 끝까지 갑니다.",
+	legalName: "애드리절트",
+	alternateName: ["ADRESULT", "adresult", "애드리절트"],
+	slogan: "결과로 말하는 광고회사",
 	description: siteConfig.description,
 	url: siteConfig.url,
 	logo: {
@@ -100,65 +104,66 @@ const jsonLd = {
 		width: 512,
 		height: 512,
 	},
-	foundingDate: "2024",
+	foundingDate: "2015",
 	...(siteConfig.contact.tel !== DUMMY_TEL && { telephone: siteConfig.contact.tel }),
+	faxNumber: siteConfig.contact.fax,
 	email: siteConfig.contact.email,
+	founder: { "@type": "Person", name: siteConfig.contact.owner },
 	address: {
 		"@type": "PostalAddress",
 		streetAddress: siteConfig.contact.address,
-		addressLocality: "화성시",
-		addressRegion: "경기도",
-		postalCode: "18469",
+		addressLocality: "강남구",
+		addressRegion: "서울특별시",
 		addressCountry: "KR",
 	},
 	areaServed: { "@type": "Country", name: "대한민국" },
 	serviceType: [
-		"전문직 마케팅",
-		"블로그 마케팅",
-		"숏폼 마케팅",
-		"변호사 마케팅",
-		"의사 마케팅",
-		"한의사 마케팅",
-		"수의사 마케팅",
-		"노무사 마케팅",
-		"세무사 마케팅",
-		"행정사 마케팅",
+		"병원마케팅",
+		"병원 AI마케팅",
+		"병원 숏폼 마케팅",
+		"병원 바이럴 마케팅",
+		"병원 유튜브 마케팅",
+		"병원 블로그 마케팅",
+		"피부과 마케팅",
+		"정형외과 마케팅",
+		"성형외과 마케팅",
+		"의료마케팅",
 	],
 	knowsAbout: [
-		"전문직 광고 규정",
-		"변호사법 제23조",
-		"의료법 제56조",
-		"수의사법 제12조",
-		"공인노무사법",
-		"세무사법 제22조의2",
-		"네이버 블로그 SEO",
+		"병원마케팅",
+		"진료과별 맞춤 마케팅",
+		"병원 신규환자 유치",
+		"의료광고법",
+		"병원 AI마케팅",
 		"숏폼 영상 마케팅",
+		"유튜브 콘텐츠 마케팅",
 		"검색 의도 기반 콘텐츠",
 		"인스타그램 릴스",
 		"유튜브 쇼츠",
 	],
 	sameAs: [
+		siteConfig.contact.youtube,
 		siteConfig.contact.instagram,
 		siteConfig.contact.naverBlog,
 		siteConfig.contact.kakaoOpenChat,
 	],
 	hasOfferCatalog: {
 		"@type": "OfferCatalog",
-		name: "전문직 마케팅 서비스",
+		name: "병원마케팅 서비스",
 		itemListElement: [
 			{
 				"@type": "Offer",
 				itemOffered: {
 					"@type": "Service",
-					name: "전문직 블로그 마케팅",
-					url: `${siteConfig.url}/services/blog`,
+					name: "병원 통합 마케팅",
+					url: `${siteConfig.url}/services/professional`,
 				},
 			},
 			{
 				"@type": "Offer",
 				itemOffered: {
 					"@type": "Service",
-					name: "전문직 숏폼 마케팅",
+					name: "병원 숏폼·영상 마케팅",
 					url: `${siteConfig.url}/services/shortform`,
 				},
 			},
@@ -166,8 +171,8 @@ const jsonLd = {
 				"@type": "Offer",
 				itemOffered: {
 					"@type": "Service",
-					name: "전문직 통합 마케팅",
-					url: `${siteConfig.url}/services/professional`,
+					name: "병원 바이럴·블로그 마케팅",
+					url: `${siteConfig.url}/services/blog`,
 				},
 			},
 		],
@@ -179,8 +184,8 @@ const websiteSchema = {
 	"@type": "WebSite",
 	"@id": `${siteConfig.url}/#website`,
 	url: siteConfig.url,
-	name: "온세상이마케팅이다",
-	alternateName: "온케팅",
+	name: "애드리절트",
+	alternateName: "ADRESULT",
 	description: siteConfig.description,
 	publisher: { "@id": `${siteConfig.url}/#organization` },
 };
@@ -189,7 +194,7 @@ export const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<html
 			lang="ko"
-			className={`${pretendard.variable} ${inter.variable} ${robotoMono.variable} h-full`}
+			className={`${pretendard.variable} ${inter.variable} ${robotoMono.variable} ${nanumPen.variable} h-full`}
 			suppressHydrationWarning
 		>
 			<body

@@ -8,7 +8,7 @@ const spring = { type: "spring", stiffness: 280, damping: 18 } as const;
 
 export const BlogFinalCTA = () => {
 	return (
-		<section className="relative overflow-hidden bg-[#052e16] px-4 py-24 md:py-32">
+		<section className="relative overflow-hidden bg-[#3a0509] px-4 py-24 md:py-32">
 			{/* Grid overlay */}
 			<div
 				className="pointer-events-none absolute inset-0 opacity-[0.07]"
@@ -20,17 +20,17 @@ export const BlogFinalCTA = () => {
 			/>
 			{/* Green orbs */}
 			<div
-				className="pointer-events-none absolute -top-40 left-1/4 h-[480px] w-[480px] rounded-full bg-[#16a34a] opacity-[0.14] blur-[100px]"
+				className="pointer-events-none absolute -top-40 left-1/4 h-[480px] w-[480px] rounded-full bg-[#e11d29] opacity-[0.14] blur-[100px]"
 				aria-hidden="true"
 			/>
 			<div
-				className="pointer-events-none absolute right-1/4 -bottom-40 h-96 w-96 rounded-full bg-[#58d68d] opacity-[0.08] blur-[80px]"
+				className="pointer-events-none absolute right-1/4 -bottom-40 h-96 w-96 rounded-full bg-[#ef3c39] opacity-[0.08] blur-[80px]"
 				aria-hidden="true"
 			/>
 
 			<div className="relative z-10 mx-auto max-w-4xl text-center">
 				<Reveal>
-					<p className="mb-4 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+					<p className="mb-4 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 						Blog Marketing
 					</p>
 					<h2 className="mb-4 break-keep font-bold text-4xl text-white tracking-tight md:text-6xl">
@@ -54,7 +54,7 @@ export const BlogFinalCTA = () => {
 				>
 					<Link
 						href="/contact"
-						className="gradient-brand block rounded-xl px-12 py-5 font-semibold text-lg text-white shadow-[0_8px_32px_rgba(88,214,141,0.25)] transition-opacity hover:opacity-90"
+						className="gradient-brand block rounded-xl px-12 py-5 font-semibold text-lg text-white shadow-[0_8px_32px_rgba(239,60,57,0.25)] transition-opacity hover:opacity-90"
 					>
 						문의하기
 					</Link>

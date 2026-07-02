@@ -15,7 +15,7 @@ export const AboutHero = () => {
 
 	return (
 		<section className="relative flex min-h-screen items-center overflow-hidden">
-			<div className="absolute inset-0 bg-[#052e16]">
+			<div className="absolute inset-0 bg-[#3a0509]">
 				{HERO_PHOTO_READY ? (
 					<Image
 						src="/images/about/office-main.jpg"
@@ -32,14 +32,14 @@ export const AboutHero = () => {
 			{/* Floating gradient orbs */}
 			<motion.div
 				aria-hidden="true"
-				className="pointer-events-none absolute h-[600px] w-[600px] rounded-full bg-[#58d68d] opacity-[0.18] blur-[130px]"
+				className="pointer-events-none absolute h-[600px] w-[600px] rounded-full bg-[#ef3c39] opacity-[0.18] blur-[130px]"
 				style={{ top: "-200px", left: "-200px" }}
 				animate={{ x: [0, 60, -30, 0], y: [0, -50, 80, 0] }}
 				transition={{ duration: 15, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
 			/>
 			<motion.div
 				aria-hidden="true"
-				className="pointer-events-none absolute h-[500px] w-[500px] rounded-full bg-[#15803d] opacity-[0.10] blur-[110px]"
+				className="pointer-events-none absolute h-[500px] w-[500px] rounded-full bg-[#b3121e] opacity-[0.10] blur-[110px]"
 				style={{ bottom: "-100px", right: "-100px" }}
 				animate={{ x: [0, -50, 30, 0], y: [0, 40, -60, 0] }}
 				transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 4 }}
@@ -49,7 +49,7 @@ export const AboutHero = () => {
 			<div
 				className="pointer-events-none absolute inset-0"
 				style={{
-					background: "linear-gradient(135deg, #052e16 0%, #15803d 60%, #58d68d 100%)",
+					background: "linear-gradient(135deg, #3a0509 0%, #b3121e 60%, #ef3c39 100%)",
 					clipPath: "polygon(0 0, 62% 0, 44% 100%, 0 100%)",
 				}}
 			/>
@@ -68,7 +68,7 @@ export const AboutHero = () => {
 					>
 						아직도 마케팅
 						<br />
-						<span className="text-[#58d68d]">안하고</span> 계신가요?
+						<span className="text-[#ef3c39]">안하고</span> 계신가요?
 					</motion.h1>
 
 					<motion.p

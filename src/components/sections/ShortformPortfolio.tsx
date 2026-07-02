@@ -123,7 +123,7 @@ export const ShortformPortfolio = () => {
 					animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
 					transition={{ duration: 0.7, ease }}
 				>
-					<p className="mb-3 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+					<p className="mb-3 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 						포트폴리오
 					</p>
 					<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
@@ -179,7 +179,7 @@ export const ShortformPortfolio = () => {
 									</div>
 								</div>
 								{/* 인스타그램 배지 */}
-								<span className="absolute top-2.5 right-2.5 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-sm transition-colors group-hover:bg-[#16a34a]">
+								<span className="absolute top-2.5 right-2.5 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-sm transition-colors group-hover:bg-[#e11d29]">
 									<Instagram className="h-4 w-4" />
 								</span>
 							</div>

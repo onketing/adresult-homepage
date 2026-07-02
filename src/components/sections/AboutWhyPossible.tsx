@@ -47,10 +47,10 @@ export const AboutWhyPossible = () => {
 							<SpotlightCard className="h-full rounded-2xl">
 								<div className="flex h-full flex-col gap-5 rounded-2xl border border-slate-100 bg-slate-50 p-8 transition-shadow duration-300 hover:shadow-md">
 									<div className="flex items-center gap-3">
-										<div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#052e16]/8">
-											<item.icon className="h-6 w-6 text-[#16a34a]" aria-hidden="true" />
+										<div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#3a0509]/8">
+											<item.icon className="h-6 w-6 text-[#e11d29]" aria-hidden="true" />
 										</div>
-										<span className="font-mono text-[#58d68d]/60 text-xs tracking-widest">
+										<span className="font-mono text-[#ef3c39]/60 text-xs tracking-widest">
 											{item.num}
 										</span>
 									</div>

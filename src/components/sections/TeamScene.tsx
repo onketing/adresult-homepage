@@ -16,7 +16,7 @@ const SCENE_PHOTOS = [
 
 export const TeamScene = () => {
 	return (
-		<section className="bg-[#052e16] py-24 md:py-28">
+		<section className="bg-[#3a0509] py-24 md:py-28">
 			<div className="mx-auto max-w-6xl px-4 md:px-8">
 				{/* 헤더 */}
 				<Reveal className="mb-12 md:mb-16">

@@ -47,12 +47,12 @@ export const Header = () => {
 				<Link
 					href="/"
 					className="transition-opacity hover:opacity-80"
-					aria-label="Onketing 홈으로"
+					aria-label="애드리절트 홈으로"
 					onClick={() => {
 						if (pathname === "/") window.scrollTo({ top: 0, behavior: "instant" });
 					}}
 				>
-					<Logo variant={isLight ? "light" : "dark"} />
+					<Logo variant="dark" />
 				</Link>
 
 				{/* Desktop nav */}
@@ -78,7 +78,7 @@ export const Header = () => {
 												? "text-white/80 hover:bg-white/10 hover:text-white"
 												: "hover:bg-slate-50",
 											!isLight &&
-												(isActive ? "text-[#58d68d]" : "text-slate-600 hover:text-[#0a0a0a]"),
+												(isActive ? "text-[#ef3c39]" : "text-slate-600 hover:text-[#0a0a0a]"),
 										)}
 									>
 										{item.label}
@@ -103,13 +103,13 @@ export const Header = () => {
 														onClick={() => setOpenMenu(null)}
 														className={cn(
 															"flex items-center gap-3 rounded-xl px-3 py-2.5 transition-colors hover:bg-slate-50",
-															isChildActive && "bg-[#052e16]/6",
+															isChildActive && "bg-[#3a0509]/6",
 														)}
 													>
-														<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#052e16]/8">
+														<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#3a0509]/8">
 															{ChildIcon && (
 																<ChildIcon
-																	className="h-3.5 w-3.5 text-[#16a34a]"
+																	className="h-3.5 w-3.5 text-[#e11d29]"
 																	aria-hidden="true"
 																/>
 															)}
@@ -143,7 +143,7 @@ export const Header = () => {
 										: cn(
 												"hover:bg-slate-50 hover:text-foreground",
 												isActive
-													? "text-[#58d68d] after:absolute after:inset-x-2 after:-bottom-[3px] after:h-0.5 after:rounded-full after:bg-[#58d68d] after:content-['']"
+													? "text-[#ef3c39] after:absolute after:inset-x-2 after:-bottom-[3px] after:h-0.5 after:rounded-full after:bg-[#ef3c39] after:content-['']"
 													: "text-slate-600",
 											),
 								)}
@@ -158,7 +158,7 @@ export const Header = () => {
 				<div className="flex items-center gap-2">
 					<a
 						href="/onketing-brochure.pdf"
-						download="Onketing 회사소개서.pdf"
+						download="애드리절트 회사소개서.pdf"
 						className={cn(
 							"hidden rounded-md px-4 py-2.5 font-semibold text-sm transition-colors lg:block",
 							isLight
@@ -173,8 +173,8 @@ export const Header = () => {
 						className={cn(
 							"hidden rounded-md px-5 py-2.5 font-semibold text-sm shadow-sm transition-opacity hover:opacity-90 lg:block",
 							isLight
-								? "bg-[#58d68d] text-white"
-								: "bg-linear-to-r from-[#58d68d] to-[#16a34a] text-white",
+								? "bg-[#ef3c39] text-white"
+								: "bg-linear-to-r from-[#ef3c39] to-[#e11d29] text-white",
 						)}
 					>
 						문의하기

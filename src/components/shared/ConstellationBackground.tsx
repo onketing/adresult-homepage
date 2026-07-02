@@ -39,11 +39,11 @@ type ShootingStar = {
 
 // 성운 정의 (위치는 비율, 애니메이션은 tick으로 맥동)
 const NEBULA_DEF = [
-	{ cx: 0.08, cy: 0.12, rBase: 360, color: [88, 214, 141], alpha: 0.08 },
+	{ cx: 0.08, cy: 0.12, rBase: 360, color: [239, 60, 57], alpha: 0.08 },
 	{ cx: 0.88, cy: 0.82, rBase: 430, color: [139, 92, 246], alpha: 0.09 },
 	{ cx: 0.62, cy: 0.22, rBase: 290, color: [6, 182, 212], alpha: 0.07 },
 	{ cx: 0.25, cy: 0.72, rBase: 330, color: [99, 102, 241], alpha: 0.07 },
-	{ cx: 0.5, cy: 0.5, rBase: 200, color: [88, 214, 141], alpha: 0.04 }, // 중앙 미세 글로우
+	{ cx: 0.5, cy: 0.5, rBase: 200, color: [239, 60, 57], alpha: 0.04 }, // 중앙 미세 글로우
 ];
 
 export const ConstellationBackground = ({
@@ -63,7 +63,7 @@ export const ConstellationBackground = ({
 
 		// 팔레트 — 다크/라이트 분기
 		const isLight = variant === "light";
-		const GREEN = isLight ? "22, 163, 74" : "88, 214, 141";
+		const GREEN = isLight ? "225, 29, 41" : "239, 60, 57";
 		const STAR_COLORS = isLight
 			? [
 					"100, 116, 139", // slate-500

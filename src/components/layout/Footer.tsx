@@ -1,31 +1,31 @@
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Youtube } from "lucide-react";
 import { Logo } from "@/components/shared/Logo";
 import { WaveDivider } from "@/components/shared/WaveDivider";
 import { siteConfig } from "@/config/site";
 
 export const Footer = () => {
 	return (
-		<footer className="bg-[#031a0c] text-white">
-			<WaveDivider fillColor="#031a0c" />
+		<footer className="bg-[#1a0505] text-white">
+			<WaveDivider fillColor="#1a0505" />
 			<div className="mx-auto max-w-7xl px-4 pt-16 pb-10 lg:px-8">
 				<div className="grid gap-10 md:grid-cols-2">
 					{/* Left */}
 					<div>
 						<Logo variant="light" className="mb-3" />
 						<p className="max-w-xs text-slate-400 text-sm leading-relaxed">
-							전문직 12개 직군 전용 마케팅 파트너.
+							결과로 말하는 광고회사.
 							<br />
-							의뢰인이 먼저 찾아오는 구조를 만듭니다.
+							진료과별 1:1 맞춤 병원마케팅으로 신환을 만듭니다.
 						</p>
 						<div className="mt-5 flex gap-3">
 							<a
-								href={siteConfig.contact.naverBlog}
+								href={siteConfig.contact.youtube}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white text-xs transition-colors hover:bg-white/20"
+								className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
 							>
-								<span className="sr-only">네이버 블로그</span>
-								<span aria-hidden="true">N</span>
+								<span className="sr-only">애드리절트TV 유튜브</span>
+								<Youtube className="h-4 w-4" aria-hidden="true" />
 							</a>
 							<a
 								href={siteConfig.contact.kakaoOpenChat}
@@ -45,6 +45,9 @@ export const Footer = () => {
 							<span className="text-slate-300">회사명</span> {siteConfig.contact.businessName}
 						</p>
 						<p>
+							<span className="text-slate-300">대표자</span> {siteConfig.contact.owner}
+						</p>
+						<p>
 							<span className="text-slate-300">사업자등록번호</span>{" "}
 							{siteConfig.contact.businessNumber}
 						</p>
@@ -61,7 +64,7 @@ export const Footer = () => {
 				</div>
 
 				<div className="mt-10 border-white/10 border-t pt-6 text-center text-slate-400 text-xs">
-					Copyright © 2026 Onketing. All rights reserved.
+					Copyright © 2026 ADRESULT. All rights reserved.
 				</div>
 			</div>
 		</footer>

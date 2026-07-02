@@ -26,7 +26,7 @@ export const ShortformAccumulation = () => {
 				<div ref={ref} className="space-y-4">
 					<div className="mb-6 flex items-center gap-6">
 						<div className="flex items-center gap-2">
-							<div className="h-3 w-3 rounded-full bg-[#58d68d]" />
+							<div className="h-3 w-3 rounded-full bg-[#ef3c39]" />
 							<span className="text-sm text-white/60">숏폼 누적 효과</span>
 						</div>
 						<div className="flex items-center gap-2">
@@ -48,7 +48,7 @@ export const ShortformAccumulation = () => {
 								<div className="flex items-center gap-3">
 									<div className="h-5 flex-1 overflow-hidden rounded-full bg-white/5">
 										<motion.div
-											className="h-full rounded-full bg-linear-to-r from-[#58d68d] to-[#86efac]"
+											className="h-full rounded-full bg-linear-to-r from-[#ef3c39] to-[#fca5a5]"
 											initial={{ width: "0%" }}
 											animate={isInView ? { width: `${item.shortform}%` } : { width: "0%" }}
 											transition={{

@@ -14,7 +14,7 @@ export const ServiceMatrix = () => {
 		<section className="bg-white px-4 py-20 md:py-28">
 			<div className="mx-auto max-w-6xl">
 				<Reveal className="mb-14 text-center">
-					<p className="mb-3 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+					<p className="mb-3 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 						Channels
 					</p>
 					<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
@@ -35,11 +35,11 @@ export const ServiceMatrix = () => {
 								className={cn(
 									"group flex h-full flex-col rounded-2xl border bg-white p-8 transition-all duration-300",
 									hovered === null || hovered === card.id
-										? "border-slate-200 opacity-100 hover:-translate-y-1 hover:border-[#58d68d]/50 hover:shadow-[0_12px_40px_rgba(88,214,141,0.1)]"
+										? "border-slate-200 opacity-100 hover:-translate-y-1 hover:border-[#ef3c39]/50 hover:shadow-[0_12px_40px_rgba(239,60,57,0.1)]"
 										: "scale-[0.98] border-slate-100 opacity-40",
 								)}
 							>
-								<p className="mb-3 font-mono text-[#58d68d] text-[10px] uppercase tracking-[0.3em]">
+								<p className="mb-3 font-mono text-[#ef3c39] text-[10px] uppercase tracking-[0.3em]">
 									{card.eyebrow}
 								</p>
 
@@ -60,7 +60,7 @@ export const ServiceMatrix = () => {
 								<ul className="mb-6 flex-1 space-y-2">
 									{card.bullets.map((b) => (
 										<li key={b} className="flex items-start gap-2 text-slate-600 text-sm">
-											<span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#58d68d]" />
+											<span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ef3c39]" />
 											<span className="break-keep">{b}</span>
 										</li>
 									))}

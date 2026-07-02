@@ -20,7 +20,7 @@ export const SectionHeading = ({
 	return (
 		<div className={cn(align === "center" ? "text-center" : "text-left", className)}>
 			{eyebrow && (
-				<p className="mb-3 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+				<p className="mb-3 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 					{eyebrow}
 				</p>
 			)}

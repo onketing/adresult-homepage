@@ -11,7 +11,7 @@ const spring = { type: "spring", stiffness: 280, damping: 18 } as const;
 
 export const AboutMidCTA = () => {
 	return (
-		<section className="relative overflow-hidden bg-[#052e16] px-4 py-20 md:py-24">
+		<section className="relative overflow-hidden bg-[#3a0509] px-4 py-20 md:py-24">
 			{DESK_PHOTO_READY && (
 				<>
 					<Image
@@ -20,18 +20,18 @@ export const AboutMidCTA = () => {
 						fill
 						className="object-cover object-center"
 					/>
-					<div className="absolute inset-0 bg-[#052e16]/85" />
+					<div className="absolute inset-0 bg-[#3a0509]/85" />
 					<div
 						className="pointer-events-none absolute inset-0"
 						style={{
-							background: "linear-gradient(135deg, #052e1630 0%, transparent 60%)",
+							background: "linear-gradient(135deg, #3a050930 0%, transparent 60%)",
 						}}
 					/>
 				</>
 			)}
 			<div className="relative z-10 mx-auto max-w-4xl text-center">
 				<Reveal>
-					<p className="mb-4 font-semibold text-[#86efac] text-sm uppercase tracking-[0.25em]">
+					<p className="mb-4 font-semibold text-[#fca5a5] text-sm uppercase tracking-[0.25em]">
 						Direct Contact
 					</p>
 					<h2 className="mb-3 font-bold text-3xl text-white tracking-tight md:text-4xl">

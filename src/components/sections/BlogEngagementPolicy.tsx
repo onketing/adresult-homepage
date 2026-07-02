@@ -12,7 +12,7 @@ export const BlogEngagementPolicy = () => {
 					{/* Left: dark rejection card */}
 					<Reveal direction="left">
 						<div className="flex h-full flex-col rounded-2xl bg-[#0a0a0a] p-8 md:p-10">
-							<p className="mb-4 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+							<p className="mb-4 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 								Engagement Policy
 							</p>
 							<h2 className="mb-8 font-bold text-2xl text-white tracking-tight md:text-3xl">
@@ -29,7 +29,7 @@ export const BlogEngagementPolicy = () => {
 										transition={{ delay: 0.05 + i * 0.08 }}
 									>
 										<div className="flex items-start gap-2.5">
-											<span className="mt-0.5 shrink-0 font-bold text-[#58d68d] text-sm leading-none">
+											<span className="mt-0.5 shrink-0 font-bold text-[#ef3c39] text-sm leading-none">
 												—
 											</span>
 											<span className="break-keep font-semibold text-sm text-white">
@@ -48,7 +48,7 @@ export const BlogEngagementPolicy = () => {
 					{/* Right: signature promise card */}
 					<Reveal direction="right">
 						<div className="flex h-full flex-col rounded-2xl border border-slate-100 bg-slate-50 p-8 md:p-10">
-							<p className="mb-4 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+							<p className="mb-4 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 								Our Signature
 							</p>
 							<h2 className="mb-8 font-bold text-2xl text-[#0a0a0a] tracking-tight md:text-3xl">
@@ -63,9 +63,9 @@ export const BlogEngagementPolicy = () => {
 										whileInView={{ opacity: 1, y: 0 }}
 										viewport={{ once: false }}
 										transition={{ delay: 0.1 + i * 0.08 }}
-										whileHover={{ borderColor: "rgba(88,214,141,0.4)", y: -4 }}
+										whileHover={{ borderColor: "rgba(239,60,57,0.4)", y: -4 }}
 									>
-										<span className="mb-2 block font-bold font-mono text-[#58d68d] text-xs tracking-[0.15em]">
+										<span className="mb-2 block font-bold font-mono text-[#ef3c39] text-xs tracking-[0.15em]">
 											{pt.num}
 										</span>
 										<h3 className="mb-1 font-semibold text-[#0a0a0a] text-sm">{pt.title}</h3>

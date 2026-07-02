@@ -51,7 +51,7 @@ export const BlogCaseChart = () => {
 		<section className="bg-white px-4 py-16 md:py-20">
 			<div className="mx-auto max-w-6xl">
 				<Reveal className="mb-12 text-center">
-					<p className="mb-3 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+					<p className="mb-3 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 						운영 현황
 					</p>
 					<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
@@ -64,7 +64,7 @@ export const BlogCaseChart = () => {
 						{/* Header */}
 						<div className="mb-6 flex flex-wrap items-start justify-between gap-4">
 							<div>
-								<span className="mb-2 inline-block rounded-full bg-[#f0fdf4] px-3 py-1 font-semibold text-[#58d68d] text-xs">
+								<span className="mb-2 inline-block rounded-full bg-[#fef2f2] px-3 py-1 font-semibold text-[#ef3c39] text-xs">
 									의원
 								</span>
 								<h3 className="font-bold text-[#0a0a0a] text-xl">H의원 블로그</h3>
@@ -72,11 +72,11 @@ export const BlogCaseChart = () => {
 							</div>
 							<div className="flex gap-6">
 								<div className="text-right">
-									<p className="font-bold text-2xl text-[#58d68d] md:text-3xl">+500%</p>
+									<p className="font-bold text-2xl text-[#ef3c39] md:text-3xl">+500%</p>
 									<p className="text-slate-500 text-xs">조회수 3개월 증가</p>
 								</div>
 								<div className="text-right">
-									<p className="font-bold text-2xl text-[#16a34a] md:text-3xl">+495%</p>
+									<p className="font-bold text-2xl text-[#e11d29] md:text-3xl">+495%</p>
 									<p className="text-slate-500 text-xs">방문자 3개월 증가</p>
 								</div>
 							</div>
@@ -85,11 +85,11 @@ export const BlogCaseChart = () => {
 						{/* Legend */}
 						<div className="mb-4 flex gap-5">
 							<div className="flex items-center gap-1.5">
-								<span className="h-2.5 w-2.5 rounded-full bg-[#58d68d]" />
+								<span className="h-2.5 w-2.5 rounded-full bg-[#ef3c39]" />
 								<span className="text-slate-600 text-xs">조회수</span>
 							</div>
 							<div className="flex items-center gap-1.5">
-								<span className="h-2.5 w-2.5 rounded-full bg-[#16a34a]" />
+								<span className="h-2.5 w-2.5 rounded-full bg-[#e11d29]" />
 								<span className="text-slate-600 text-xs">방문자 수</span>
 							</div>
 						</div>
@@ -103,12 +103,12 @@ export const BlogCaseChart = () => {
 							>
 								<defs>
 									<linearGradient id="blogViewsGrad" x1="0" y1="0" x2="0" y2="1">
-										<stop offset="0%" stopColor="#58d68d" stopOpacity="0.22" />
-										<stop offset="100%" stopColor="#58d68d" stopOpacity="0.02" />
+										<stop offset="0%" stopColor="#ef3c39" stopOpacity="0.22" />
+										<stop offset="100%" stopColor="#ef3c39" stopOpacity="0.02" />
 									</linearGradient>
 									<linearGradient id="blogVisitorsGrad" x1="0" y1="0" x2="0" y2="1">
-										<stop offset="0%" stopColor="#16a34a" stopOpacity="0.14" />
-										<stop offset="100%" stopColor="#16a34a" stopOpacity="0.02" />
+										<stop offset="0%" stopColor="#e11d29" stopOpacity="0.14" />
+										<stop offset="100%" stopColor="#e11d29" stopOpacity="0.02" />
 									</linearGradient>
 								</defs>
 
@@ -155,7 +155,7 @@ export const BlogCaseChart = () => {
 								<motion.path
 									d={visitorsLine}
 									fill="none"
-									stroke="#16a34a"
+									stroke="#e11d29"
 									strokeWidth="2.5"
 									strokeLinecap="round"
 									strokeLinejoin="round"
@@ -166,7 +166,7 @@ export const BlogCaseChart = () => {
 								<motion.path
 									d={viewsLine}
 									fill="none"
-									stroke="#58d68d"
+									stroke="#ef3c39"
 									strokeWidth="2.5"
 									strokeLinecap="round"
 									strokeLinejoin="round"
@@ -182,7 +182,7 @@ export const BlogCaseChart = () => {
 										cx={pt.x}
 										cy={pt.y}
 										r="4"
-										fill="#58d68d"
+										fill="#ef3c39"
 										stroke="white"
 										strokeWidth="2"
 										initial={{ scale: 0, opacity: 0 }}
@@ -198,7 +198,7 @@ export const BlogCaseChart = () => {
 										cx={pt.x}
 										cy={pt.y}
 										r="4"
-										fill="#16a34a"
+										fill="#e11d29"
 										stroke="white"
 										strokeWidth="2"
 										initial={{ scale: 0, opacity: 0 }}

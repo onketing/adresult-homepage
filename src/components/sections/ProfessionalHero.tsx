@@ -14,9 +14,9 @@ export const ProfessionalHero = () => {
 	};
 
 	return (
-		<section className="relative flex min-h-screen items-center overflow-hidden bg-[#052e16] px-6 py-24 md:px-10 md:py-32">
+		<section className="relative flex min-h-screen items-center overflow-hidden bg-[#3a0509] px-6 py-24 md:px-10 md:py-32">
 			<motion.div
-				className="pointer-events-none absolute h-[500px] w-[500px] rounded-full bg-[#58d68d] opacity-[0.18] blur-[130px]"
+				className="pointer-events-none absolute h-[500px] w-[500px] rounded-full bg-[#ef3c39] opacity-[0.18] blur-[130px]"
 				style={{ bottom: "-100px", left: "-100px" }}
 				animate={{ x: [0, 40, -20, 0], y: [0, -30, 50, 0] }}
 				transition={{ duration: 18, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
@@ -25,7 +25,7 @@ export const ProfessionalHero = () => {
 			<div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2">
 				<div>
 					<motion.p
-						className="mb-4 font-semibold text-[#86efac] text-sm uppercase tracking-[0.25em]"
+						className="mb-4 font-semibold text-[#fca5a5] text-sm uppercase tracking-[0.25em]"
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
@@ -59,8 +59,8 @@ export const ProfessionalHero = () => {
 							animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
 							transition={{ delay: i * 0.04, duration: 0.4 }}
 							whileHover={{
-								borderColor: "rgba(88,214,141,0.4)",
-								backgroundColor: "rgba(88,214,141,0.1)",
+								borderColor: "rgba(239,60,57,0.4)",
+								backgroundColor: "rgba(239,60,57,0.1)",
 							}}
 						>
 							<p className="font-semibold text-sm text-white">{d.name}</p>

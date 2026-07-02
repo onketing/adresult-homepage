@@ -21,7 +21,7 @@ const WAVES: WaveDef[] = [
 		freq: 0.006,
 		speed: 0.018,
 		yRatio: 0.4,
-		color: "88, 214, 141",
+		color: "239, 60, 57",
 		alpha: 0.32,
 		width: 2,
 	},
@@ -45,7 +45,7 @@ const WAVES: WaveDef[] = [
 	},
 ];
 
-const GREEN = "88, 214, 141";
+const GREEN = "239, 60, 57";
 
 export const WaveformBackground = ({ className }: { className?: string }) => {
 	const canvasRef = useRef<HTMLCanvasElement>(null);

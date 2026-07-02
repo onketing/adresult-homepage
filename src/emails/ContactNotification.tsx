@@ -140,7 +140,7 @@ const container: React.CSSProperties = {
 };
 
 const header: React.CSSProperties = {
-	background: "linear-gradient(135deg,#58d68d 0%,#16a34a 55%,#15803d 100%)",
+	background: "linear-gradient(135deg,#ef3c39 0%,#e11d29 55%,#b3121e 100%)",
 	borderRadius: "16px 16px 0 0",
 	padding: "32px 36px 28px",
 };
@@ -198,7 +198,7 @@ const contactBox: React.CSSProperties = {
 const contactLabel: React.CSSProperties = {
 	margin: "0 0 10px",
 	fontSize: 10,
-	color: "#58d68d",
+	color: "#ef3c39",
 	fontWeight: 700,
 	textTransform: "uppercase",
 	letterSpacing: "0.14em",
@@ -216,7 +216,7 @@ const contactTel: React.CSSProperties = {
 	margin: 0,
 	fontSize: 17,
 	fontWeight: 700,
-	color: "#16a34a",
+	color: "#e11d29",
 	letterSpacing: "0.01em",
 };
 
@@ -270,7 +270,7 @@ const divider: React.CSSProperties = {
 const messageBlock: React.CSSProperties = {
 	marginTop: 24,
 	background: "#f8fafc",
-	borderLeft: "3px solid #58d68d",
+	borderLeft: "3px solid #ef3c39",
 	borderRadius: "0 10px 10px 0",
 	padding: "18px 20px",
 };
@@ -278,7 +278,7 @@ const messageBlock: React.CSSProperties = {
 const messageLabel: React.CSSProperties = {
 	margin: "0 0 10px",
 	fontSize: 10,
-	color: "#58d68d",
+	color: "#ef3c39",
 	fontWeight: 700,
 	textTransform: "uppercase",
 	letterSpacing: "0.14em",

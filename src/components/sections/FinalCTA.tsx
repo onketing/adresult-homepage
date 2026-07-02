@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 
 export const FinalCTA = () => {
 	return (
-		<section className="relative overflow-hidden bg-[#04100a] px-4 py-28 md:py-36">
+		<section className="relative overflow-hidden bg-[#140505] px-4 py-28 md:py-36">
 			{/* CSS aurora — 4개 블롭이 각자 다른 속도로 천천히 궤도를 돌며 프리미엄 마무리 느낌 */}
 			<div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
 				<div
@@ -15,7 +15,7 @@ export const FinalCTA = () => {
 					style={{
 						width: "700px",
 						height: "700px",
-						background: "radial-gradient(circle, rgba(88,214,141,0.28) 0%, transparent 70%)",
+						background: "radial-gradient(circle, rgba(239,60,57,0.28) 0%, transparent 70%)",
 						top: "50%",
 						left: "50%",
 						transform: "translate(-50%, -50%)",
@@ -27,7 +27,7 @@ export const FinalCTA = () => {
 					style={{
 						width: "480px",
 						height: "480px",
-						background: "radial-gradient(circle, rgba(22,163,74,0.18) 0%, transparent 70%)",
+						background: "radial-gradient(circle, rgba(225,29,41,0.18) 0%, transparent 70%)",
 						top: "30%",
 						left: "20%",
 						animation: "auroraB 22s ease-in-out infinite",
@@ -38,7 +38,7 @@ export const FinalCTA = () => {
 					style={{
 						width: "360px",
 						height: "360px",
-						background: "radial-gradient(circle, rgba(134,239,172,0.14) 0%, transparent 70%)",
+						background: "radial-gradient(circle, rgba(252,165,165,0.14) 0%, transparent 70%)",
 						bottom: "20%",
 						right: "15%",
 						animation: "auroraC 26s ease-in-out infinite",
@@ -72,20 +72,22 @@ export const FinalCTA = () => {
 
 			<div className="relative mx-auto max-w-3xl text-center">
 				<Reveal>
-					<p className="mb-5 font-mono text-[#86efac] text-xs uppercase tracking-[0.35em]">
+					<p className="mb-5 font-mono text-[#fca5a5] text-xs uppercase tracking-[0.35em]">
 						문의하기
 					</p>
 					<h2 className="mb-6 break-keep font-extrabold text-[40px] text-white leading-[1.35] tracking-tight md:text-[60px]">
-						고민하고 있는 이 순간에도 뒤쳐지고 있습니다.
+						잘나가는 병원은,
+						<br />
+						애드리절트에서 합니다.
 					</h2>
 					<p className="mb-12 break-keep text-lg text-white/55 leading-relaxed md:text-xl">
-						매출로 전환되는 마케팅, 경험해보세요.
+						결과로 말하는 병원마케팅, 지금 시작하세요.
 					</p>
 
 					<div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
 						<Link
 							href="/contact"
-							className="gradient-brand w-full rounded-xl px-8 py-4 font-bold text-base text-white shadow-[0_8px_32px_rgba(88,214,141,0.45)] transition-all hover:scale-[1.03] hover:shadow-[0_12px_40px_rgba(88,214,141,0.6)] sm:w-auto"
+							className="gradient-brand w-full rounded-xl px-8 py-4 font-bold text-base text-white shadow-[0_8px_32px_rgba(239,60,57,0.45)] transition-all hover:scale-[1.03] hover:shadow-[0_12px_40px_rgba(239,60,57,0.6)] sm:w-auto"
 						>
 							문의하기
 						</Link>
@@ -100,7 +102,9 @@ export const FinalCTA = () => {
 						</a>
 					</div>
 
-					<p className="mt-10 font-mono text-white/30 text-xs tracking-wider">영업일 1일 내 회신</p>
+					<p className="mt-10 font-mono text-white/30 text-xs tracking-wider">
+						24시간 문의 접수 · 연중무휴
+					</p>
 				</Reveal>
 			</div>
 

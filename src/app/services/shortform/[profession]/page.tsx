@@ -158,12 +158,12 @@ export const ProShortformPage = async ({ params }: { params: Promise<{ professio
 						/>
 						<div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
 							<Reveal direction="left">
-								<div className="h-full rounded-2xl border border-[#16a34a]/25 bg-white p-7">
-									<p className="font-semibold text-[#16a34a] text-sm">가능한 표현</p>
+								<div className="h-full rounded-2xl border border-[#e11d29]/25 bg-white p-7">
+									<p className="font-semibold text-[#e11d29] text-sm">가능한 표현</p>
 									<ul className="mt-4 space-y-3">
 										{reg.allowed.map((a) => (
 											<li key={a} className="flex gap-2.5 text-slate-700 leading-relaxed">
-												<Check className="mt-0.5 h-5 w-5 shrink-0 text-[#16a34a]" />
+												<Check className="mt-0.5 h-5 w-5 shrink-0 text-[#e11d29]" />
 												<span>{a}</span>
 											</li>
 										))}
@@ -239,12 +239,12 @@ export const ProShortformPage = async ({ params }: { params: Promise<{ professio
 								<Reveal key={l.href} delay={i * 0.06}>
 									<Link
 										href={l.href}
-										className="group flex h-full items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white p-5 transition-colors hover:border-[#58d68d]/50"
+										className="group flex h-full items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white p-5 transition-colors hover:border-[#ef3c39]/50"
 									>
 										<span className="break-keep font-medium text-foreground text-sm leading-snug">
 											{l.label}
 										</span>
-										<ArrowRight className="h-4 w-4 shrink-0 text-[#16a34a] transition-transform group-hover:translate-x-1" />
+										<ArrowRight className="h-4 w-4 shrink-0 text-[#e11d29] transition-transform group-hover:translate-x-1" />
 									</Link>
 								</Reveal>
 							))}

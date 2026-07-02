@@ -36,7 +36,7 @@ export const RegulationLawSwitcher = () => {
 								onClick={() => setSelected(i)}
 								className={`rounded-lg border px-4 py-2.5 text-left font-semibold text-sm transition-all ${
 									selected === i
-										? "border-[#58d68d] bg-[#58d68d] text-white"
+										? "border-[#ef3c39] bg-[#ef3c39] text-white"
 										: "border-slate-200 text-slate-700 hover:border-slate-400 hover:bg-slate-50"
 								}`}
 							>
@@ -69,14 +69,14 @@ export const RegulationLawSwitcher = () => {
 								{/* 2열 표 */}
 								<div className="grid grid-cols-2 gap-4">
 									{/* 가능 */}
-									<div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
-										<p className="mb-3 font-semibold text-emerald-700 text-xs uppercase tracking-[0.15em]">
+									<div className="rounded-xl border border-red-200 bg-red-50 p-4">
+										<p className="mb-3 font-semibold text-red-700 text-xs uppercase tracking-[0.15em]">
 											✓ 가능한 표현
 										</p>
 										<ul className="space-y-2">
 											{reg.allowed.map((a) => (
 												<li key={a} className="flex items-start gap-2">
-													<span className="mt-0.5 shrink-0 text-emerald-500 text-xs">✓</span>
+													<span className="mt-0.5 shrink-0 text-red-500 text-xs">✓</span>
 													<span className="break-keep text-[#0a0a0a] text-sm leading-relaxed">
 														{a}
 													</span>
@@ -125,14 +125,14 @@ export const RegulationLawSwitcher = () => {
 							</summary>
 							<div className="pb-4">
 								<div className="grid grid-cols-1 gap-3">
-									<div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
-										<p className="mb-2 font-semibold text-[10px] text-emerald-700 uppercase tracking-[0.2em]">
+									<div className="rounded-xl border border-red-200 bg-red-50 p-4">
+										<p className="mb-2 font-semibold text-[10px] text-red-700 uppercase tracking-[0.2em]">
 											✓ 가능한 표현
 										</p>
 										<ul className="space-y-1.5">
 											{r.allowed.map((a) => (
 												<li key={a} className="flex items-start gap-1.5">
-													<span className="mt-0.5 shrink-0 text-emerald-500 text-xs">✓</span>
+													<span className="mt-0.5 shrink-0 text-red-500 text-xs">✓</span>
 													<span className="break-keep text-[#0a0a0a] text-xs leading-relaxed">
 														{a}
 													</span>

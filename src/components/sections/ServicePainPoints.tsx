@@ -13,7 +13,7 @@ export const ServicePainPoints = ({ items }: Props) => {
 		<section className="bg-slate-50 px-4 py-16 md:py-20">
 			<div className="mx-auto max-w-6xl">
 				<Reveal className="mb-12 text-center">
-					<p className="mb-3 font-semibold text-[#58d68d] text-sm uppercase tracking-[0.25em]">
+					<p className="mb-3 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
 						Pain Points
 					</p>
 					<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
@@ -25,7 +25,7 @@ export const ServicePainPoints = ({ items }: Props) => {
 					{items.map((text, i) => (
 						<Reveal key={text} direction={DIRS[i]} delay={i * 0.1}>
 							<div className="flex items-start gap-4 rounded-xl border border-slate-200 bg-white px-6 py-5 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
-								<span className="mt-0.5 select-none font-bold text-4xl text-[#58d68d]/30 leading-none">
+								<span className="mt-0.5 select-none font-bold text-4xl text-[#ef3c39]/30 leading-none">
 									{'"'}
 								</span>
 								<p className="break-keep text-[#0a0a0a] text-base leading-relaxed">{text}</p>

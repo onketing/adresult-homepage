@@ -23,7 +23,7 @@ export const TeamHero = () => {
 			{/* ── Left text area ── */}
 			<div className="relative z-10 flex w-full flex-col justify-center px-6 py-28 md:px-14 md:py-36 lg:w-[58%] lg:py-40 lg:pr-16 lg:pl-20 xl:pl-28">
 				<motion.p
-					className="mb-6 font-semibold text-[#58d68d] text-base uppercase tracking-[0.25em]"
+					className="mb-6 font-semibold text-[#ef3c39] text-base uppercase tracking-[0.25em]"
 					initial={{ opacity: 0, y: 16 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6 }}
@@ -77,7 +77,7 @@ export const TeamHero = () => {
 
 				{/* Subtle violet orb */}
 				<div
-					className="pointer-events-none absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-[#58d68d] opacity-[0.06] blur-[130px]"
+					className="pointer-events-none absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-[#ef3c39] opacity-[0.06] blur-[130px]"
 					aria-hidden="true"
 				/>
 
