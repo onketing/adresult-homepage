@@ -73,7 +73,7 @@ const HISTORY_MILESTONES: { year: string; items: string[] }[] = [
 		year: "2019",
 		items: [
 			"코리아 리더 대상 선정",
-			"마케팅 책 「마케팅 때문에 고민입니다」 출간 (교보문고 베스트 셀러)",
+			"마케팅 책 「마케팅 때문에 고민입니다」 출간\n(교보문고 베스트 셀러)",
 		],
 	},
 	{ year: "2021", items: ["서울특별시장 표창장 수상", "유명 프랜차이즈 CMO 역임"] },
@@ -206,7 +206,7 @@ export const HistoryPage = () => {
 											{h.items.map((it) => (
 												<p
 													key={it}
-													className="break-keep font-medium text-base text-white leading-relaxed md:text-lg"
+													className="whitespace-pre-line break-keep font-medium text-base text-white leading-relaxed md:text-lg"
 												>
 													{it}
 												</p>
