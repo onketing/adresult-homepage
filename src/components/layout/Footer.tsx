@@ -1,7 +1,14 @@
-import { MessageCircle, Youtube } from "lucide-react";
+import Image from "next/image";
 import { Logo } from "@/components/shared/Logo";
 import { WaveDivider } from "@/components/shared/WaveDivider";
 import { siteConfig } from "@/config/site";
+
+const SOCIALS: { src: string; href: string; label: string }[] = [
+	{ src: "/youtube-logo.png", href: siteConfig.contact.youtube, label: "유튜브" },
+	{ src: "/blog-logo.png", href: siteConfig.contact.naverBlog, label: "네이버 블로그" },
+	{ src: "/instagram-logo.png", href: siteConfig.contact.instagram, label: "인스타그램" },
+	{ src: "/kakao-logo.png", href: siteConfig.contact.kakaoOpenChat, label: "카카오톡" },
+];
 
 export const Footer = () => {
 	return (
@@ -11,54 +18,57 @@ export const Footer = () => {
 				<div className="grid gap-10 md:grid-cols-2">
 					{/* Left */}
 					<div>
-						<Logo variant="light" className="mb-3" />
-						<p className="max-w-xs text-slate-400 text-sm leading-relaxed">
+						<span className="inline-flex rounded-xl bg-white px-5 py-3.5">
+							<Logo variant="dark" />
+						</span>
+						<p className="mt-5 max-w-md text-base text-slate-200 leading-relaxed md:text-lg">
 							결과로 말하는 광고회사.
 							<br />
 							진료과별 1:1 맞춤 병원마케팅으로 신환을 만듭니다.
 						</p>
-						<div className="mt-5 flex gap-3">
-							<a
-								href={siteConfig.contact.youtube}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
-							>
-								<span className="sr-only">애드리절트TV 유튜브</span>
-								<Youtube className="h-4 w-4" aria-hidden="true" />
-							</a>
-							<a
-								href={siteConfig.contact.kakaoOpenChat}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
-							>
-								<span className="sr-only">카카오톡 채널</span>
-								<MessageCircle className="h-4 w-4" aria-hidden="true" />
-							</a>
+						<div className="mt-6 flex gap-3">
+							{SOCIALS.map((s) => (
+								<a
+									key={s.href}
+									href={s.href}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="transition-transform hover:-translate-y-0.5"
+								>
+									<span className="sr-only">{s.label}</span>
+									<Image
+										src={s.src}
+										alt=""
+										width={36}
+										height={36}
+										className="h-9 w-9 object-contain"
+									/>
+								</a>
+							))}
 						</div>
 					</div>
 
 					{/* Right */}
-					<div className="space-y-1.5 text-slate-400 text-sm md:text-right">
+					<div className="space-y-2 text-base text-slate-200 md:text-right md:text-lg">
 						<p>
-							<span className="text-slate-300">회사명</span> {siteConfig.contact.businessName}
+							<span className="font-semibold text-white">회사명</span>{" "}
+							{siteConfig.contact.businessName}
 						</p>
 						<p>
-							<span className="text-slate-300">대표자</span> {siteConfig.contact.owner}
+							<span className="font-semibold text-white">대표자</span> {siteConfig.contact.owner}
 						</p>
 						<p>
-							<span className="text-slate-300">사업자등록번호</span>{" "}
+							<span className="font-semibold text-white">사업자등록번호</span>{" "}
 							{siteConfig.contact.businessNumber}
 						</p>
 						<p>
-							<span className="text-slate-300">주소</span> {siteConfig.contact.address}
+							<span className="font-semibold text-white">주소</span> {siteConfig.contact.address}
 						</p>
 						<p>
-							<span className="text-slate-300">TEL</span> {siteConfig.contact.tel}
+							<span className="font-semibold text-white">TEL</span> {siteConfig.contact.tel}
 						</p>
 						<p>
-							<span className="text-slate-300">EMAIL</span> {siteConfig.contact.email}
+							<span className="font-semibold text-white">EMAIL</span> {siteConfig.contact.email}
 						</p>
 					</div>
 				</div>
