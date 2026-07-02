@@ -14,7 +14,7 @@ const DEPARTMENTS = ["마케팅본부", "콘텐츠·영상본부", "디자인본
 export const PeoplePage = () => {
 	return (
 		<>
-			<CompanyHero />
+			<CompanyHero videoSrc="/people-hero-video.mp4" />
 			<CompanyTabs />
 
 			{/* ORGANIZATION CHART */}

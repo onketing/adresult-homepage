@@ -104,7 +104,7 @@ const HISTORY_MILESTONES: { year: string; items: string[] }[] = [
 export const HistoryPage = () => {
 	return (
 		<>
-			<CompanyHero />
+			<CompanyHero videoSrc="/history-hero-video.mp4" />
 			<CompanyTabs />
 
 			{/* EXCELLENT COMPANY — 이미지 + 수상 타임라인 */}
