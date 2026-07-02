@@ -1,4 +1,3 @@
-import { Youtube } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -89,9 +88,10 @@ export const CeoPage = () => {
 						href={CEO_YOUTUBE}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-bold text-[#0a0a0a] transition-transform hover:scale-[1.03]"
+						className="mt-8 inline-flex min-w-[240px] items-center justify-center gap-2.5 rounded-full bg-white px-8 py-4 font-bold text-[#0a0a0a] text-lg transition-transform hover:scale-[1.03]"
 					>
-						<Youtube className="h-5 w-5 text-[#e11d29]" aria-hidden="true" /> 바로가기
+						<Image src="/youtube-logo.png" alt="" width={24} height={24} className="h-6 w-6" />{" "}
+						바로가기
 					</Link>
 				</Reveal>
 			</section>
@@ -125,12 +125,12 @@ export const CeoPage = () => {
 
 					{/* 추천사 */}
 					<Reveal className="mx-auto mt-14 max-w-3xl md:mt-16">
-						<p className="break-keep font-bold text-[#0a0a0a] text-lg md:text-xl">
+						<p className="break-keep font-bold text-[#0a0a0a] text-xl md:text-2xl">
 							많은 비용을 투자하고도 제대로 마케팅 효과를 보지 못한
 							<br />
 							소상공인들에게 등불 같은 책.
 						</p>
-						<p className="mt-6 break-keep text-left text-base text-slate-600 leading-relaxed md:text-lg">
+						<p className="mt-6 break-keep text-left text-lg text-slate-700 leading-relaxed md:text-xl">
 							시중에 출시된 마케팅 도서들이 매출을 올리기 위한 마케팅의 필요성에 대해 서술하고
 							있다면, 이 책에선 좀 다른 것들을 기대해도 좋다. 오늘날 주된 마케팅으로 자리 잡은
 							‘온라인마케팅’의 원리와 구조, 매출상승에 대한 실제 경험을 베이스로 한 노하우, 더불어
@@ -138,7 +138,7 @@ export const CeoPage = () => {
 							콘텐츠를 만들어낼 수 있는 방법까지 상세히 담고 있다. 많은 비용을 투자하고도 제대로
 							마케팅 효과를 보지 못한 소상공인들에게 등불 같은 책이 될 것이다.
 						</p>
-						<p className="mt-6 text-right text-slate-500 text-sm md:text-base">
+						<p className="mt-6 text-right font-medium text-base text-slate-600 md:text-lg">
 							-인덕의료재단 이사장 이윤환
 						</p>
 					</Reveal>
