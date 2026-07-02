@@ -1,8 +1,7 @@
 // 회사소개 하위 페이지 공용 히어로 — 홈과 동일한 영상 배경 + "Company introduction"
 export const CompanyHero = () => {
 	return (
-		<section className="relative h-[56vh] min-h-[360px] w-full overflow-hidden bg-[#0b1220] pt-16 md:pt-20">
-			{/* biome-ignore lint/a11y/useMediaCaption: 자막 없는 배경 영상 */}
+		<section className="relative h-[calc(100svh-64px)] min-h-[420px] w-full overflow-hidden bg-[#0b1220] pt-16 md:h-[calc(100svh-65px)] md:pt-20">
 			<video
 				className="absolute inset-0 h-full w-full object-cover"
 				autoPlay
@@ -12,6 +11,7 @@ export const CompanyHero = () => {
 				preload="auto"
 			>
 				<source src="/home-hero-video.mp4" type="video/mp4" />
+				<track kind="captions" />
 			</video>
 
 			{/* 가독성 스크림 */}
