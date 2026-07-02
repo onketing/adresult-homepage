@@ -55,7 +55,12 @@ export const Reveal = ({
 			viewport={{ margin }}
 			onViewportEnter={() => setShow(true)}
 			onViewportLeave={(entry) => {
-				if (entry && entry.boundingClientRect.top > 0) setShow(false);
+				// 아래로 스크롤해 다시 들어오면 재생하도록, 요소가 뷰포트 "아래쪽으로 확실히" 벗어났을 때만 리셋.
+				// 진입 슬라이드(transform)가 상단 경계를 스치며 만드는 떨림(enter↔leave 반복)을 막기 위해
+				// top 값이 작은(상단 근처) leave 이벤트는 무시한다.
+				if (!entry) return;
+				const viewportH = typeof window === "undefined" ? 0 : window.innerHeight;
+				if (entry.boundingClientRect.top > viewportH * 0.5) setShow(false);
 			}}
 			className={className}
 		>
