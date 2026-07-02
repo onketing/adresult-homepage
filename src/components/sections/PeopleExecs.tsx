@@ -293,9 +293,10 @@ export const PeopleExecs = () => {
 							<Image
 								src={e.photo}
 								alt={`${e.name} ${e.title}`}
-								width={423}
-								height={577}
-								sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
+								width={846}
+								height={1154}
+								quality={95}
+								sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
 								className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.03]"
 							/>
 						</button>
@@ -334,8 +335,9 @@ export const PeopleExecs = () => {
 									<Image
 										src={active.photo}
 										alt={`${active.name} ${active.title}`}
-										width={423}
-										height={577}
+										width={846}
+										height={1154}
+										quality={95}
 										className="mx-auto h-auto w-full max-w-[300px] rounded-xl bg-slate-100 object-cover"
 									/>
 									{active.links.length > 0 && (
