@@ -74,23 +74,18 @@ export const siteConfig = {
 		},
 		{
 			label: "마케팅",
-			href: "/services/professional",
+			href: "/services/aio",
 			matchPrefix: "/services",
 			children: [
 				{
-					label: "병원 통합 마케팅",
-					href: "/services/professional",
-					icon: "Users",
+					label: "AIO마케팅",
+					href: "/services/aio",
+					icon: "Sparkles",
 				},
 				{
-					label: "숏폼·영상 마케팅",
+					label: "끝장숏폼",
 					href: "/services/shortform",
 					icon: "Zap",
-				},
-				{
-					label: "바이럴·블로그",
-					href: "/services/blog",
-					icon: "Search",
 				},
 			],
 		},

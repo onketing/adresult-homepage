@@ -282,26 +282,22 @@ export const PeopleExecs = () => {
 					※ 사진을 클릭하면 임원진의 자세한 소개를 볼 수 있습니다.
 				</p>
 
-				<div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 md:mt-16 md:gap-8 lg:grid-cols-3">
+				<div className="mx-auto mt-14 grid max-w-5xl grid-cols-1 gap-5 sm:grid-cols-2 md:mt-16 md:gap-6 lg:grid-cols-3">
 					{EXECS.map((e, i) => (
 						<button
 							type="button"
 							key={e.photo}
 							onClick={() => setOpenIdx(i)}
-							className="group block overflow-hidden rounded-2xl bg-white shadow-[0_10px_30px_rgba(15,23,42,0.08)] ring-1 ring-black/5 transition-transform hover:-translate-y-1"
+							className="group block overflow-hidden rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.08)] ring-1 ring-black/5 transition-transform hover:-translate-y-1"
 						>
-							<div className="relative aspect-[3/4] overflow-hidden bg-slate-100">
-								<Image
-									src={e.photo}
-									alt={`${e.name} ${e.title}`}
-									fill
-									sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-									className="object-cover transition-transform duration-500 group-hover:scale-105"
-								/>
-							</div>
-							<div className="bg-[#e11d29] py-4 text-center font-bold text-lg text-white md:text-xl">
-								{e.name} {e.title}
-							</div>
+							<Image
+								src={e.photo}
+								alt={`${e.name} ${e.title}`}
+								width={423}
+								height={577}
+								sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
+								className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.03]"
+							/>
 						</button>
 					))}
 				</div>

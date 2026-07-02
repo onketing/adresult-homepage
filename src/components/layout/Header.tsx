@@ -1,6 +1,6 @@
 "use client";
 
-import { Building2, History, Search, User, Users, UsersRound, Zap } from "lucide-react";
+import { Building2, History, Search, Sparkles, User, Users, UsersRound, Zap } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -17,6 +17,7 @@ const CHILD_ICON_MAP: Record<string, React.ComponentType<{ className?: string }>
 	History,
 	User,
 	UsersRound,
+	Sparkles,
 };
 
 // 상단이 투명해야 하는 페이지 (다크 풀스크린/영상 Hero)
