@@ -45,6 +45,56 @@ const HOSPITAL_EXPOSURES = [
 	"/aio/hospital-exposure-6.png",
 ];
 
+const AIRANK_CHECKS: {
+	text: string;
+	img: string;
+	w: number;
+	h: number;
+	gif?: boolean;
+	caption?: string;
+}[] = [
+	{
+		text: "1. 매일 우리 병원이 어느 AI에서 언급되었는지 질의어 별로 체크합니다.",
+		img: "/aio/aio-check-1.png",
+		w: 1920,
+		h: 1000,
+		caption: "※실제 애드리절트 병원 고객사 AI 분석 자료",
+	},
+	{
+		text: "2. 우리 병원과 경쟁 병원의 추천 추이를 확인할 수 있습니다.",
+		img: "/aio/aio-check-2.png",
+		w: 1660,
+		h: 397,
+	},
+	{
+		text: "3. 내가 원하는 질문에 답을 어디에서 참고하는지 확인할 수 있습니다.",
+		img: "/aio/aio-check-3.png",
+		w: 1415,
+		h: 611,
+	},
+	{
+		text: "4. 추천 및 언급되면 바로 캡쳐하여 저장하므로, 진짜 추천되었는지 확인할 수 있습니다.(정확도 최고!)",
+		img: "/aio/aio-check-4.gif",
+		w: 1280,
+		h: 720,
+		gif: true,
+	},
+];
+
+const AIO_PROCESS: { no: string; title: string; desc: string }[] = [
+	{ no: "01", title: "문의폼 작성", desc: "아래의 문의폼을 작성하여\n상담 신청을 합니다." },
+	{
+		no: "02",
+		title: "AIO 마케팅 상담",
+		desc: "AIO 마케팅에 대한 설명 및\n운영 방식을 안내 합니다.",
+	},
+	{
+		no: "03",
+		title: "계약 및 진행",
+		desc: "최종적으로 계약이 이루어지면\n마케팅을 진행하게 됩니다.",
+	},
+];
+
 const SEMINAR_BODY = [
 	"애드리절트 AIO 마케팅에 큰 관심을 가져주셔서 감사합니다.",
 	"한 분 한 분 직접 찾아뵙고 설명드리는 것이 가장 좋지만,\n많은 분들의 관심과 문의로 인해 이번에 관련 세미나를 개최하게 되었습니다.",
@@ -138,9 +188,9 @@ export const AioPage = () => {
 				</Reveal>
 			</section>
 
-			{/* 4. 대표 사례 GIF */}
-			<section className="bg-white px-4 py-24 text-center md:px-8 md:py-32">
-				<div className="mx-auto max-w-6xl">
+			{/* 4+5. BEST CASE gif + 고객사 AI 노출 사례 (하나의 연속 섹션) */}
+			<section className="bg-slate-50 px-4 py-24 text-center md:px-8 md:py-32">
+				<div className="mx-auto max-w-[1400px]">
 					<Reveal>
 						<p className="mb-4 font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
 							Best Case
@@ -159,13 +209,8 @@ export const AioPage = () => {
 							className="mx-auto h-auto w-full max-w-4xl rounded-2xl shadow-[0_20px_50px_rgba(15,23,42,0.14)] ring-1 ring-black/10"
 						/>
 					</Reveal>
-				</div>
-			</section>
 
-			{/* 5. 고객사 AI 노출 사례 — 4분할 */}
-			<section className="bg-slate-50 px-4 py-24 text-center md:px-8 md:py-28">
-				<div className="mx-auto max-w-6xl">
-					<Reveal>
+					<Reveal className="mt-24 md:mt-32">
 						<h2 className="break-keep font-extrabold text-[#0a0a0a] text-xl md:text-3xl">
 							[AIO마케팅 진행하는 병원 고객사의 AI 노출 사례]
 						</h2>
@@ -181,7 +226,7 @@ export const AioPage = () => {
 						</p>
 					</Reveal>
 
-					<div className="mt-12 grid gap-5 md:mt-14 md:grid-cols-2 md:gap-6">
+					<div className="mt-12 grid gap-6 md:mt-14 md:grid-cols-2 md:gap-8">
 						{GRID_GIFS.map((src, i) => (
 							<Reveal key={src} delay={i * 0.08} direction="up">
 								<Image
@@ -219,13 +264,13 @@ export const AioPage = () => {
 							alt="AI 검색을 통해 애드리절트를 추천받고 문의한 실제 사례"
 							width={1275}
 							height={1268}
-							sizes="(max-width: 768px) 100vw, 768px"
-							className="mx-auto h-auto w-full max-w-3xl rounded-2xl shadow-[0_20px_50px_rgba(15,23,42,0.14)] ring-1 ring-black/10"
+							sizes="(max-width: 1024px) 100vw, 896px"
+							className="mx-auto h-auto w-full max-w-4xl rounded-2xl shadow-[0_20px_50px_rgba(15,23,42,0.14)] ring-1 ring-black/10"
 						/>
 					</Reveal>
 
 					<Reveal className="mt-16">
-						<p className="break-keep font-extrabold text-[#0a0a0a] text-xl md:text-2xl">
+						<p className="break-keep font-extrabold text-2xl text-[#0a0a0a] md:text-3xl">
 							나도 애드리절트에 <span className="text-[#e11d29]">병원마케팅 문의</span>하기
 						</p>
 						<a
@@ -316,7 +361,7 @@ export const AioPage = () => {
 
 			{/* 9. 구글·네이버 노출 시너지 — google-exposure 6개 */}
 			<section className="bg-slate-50 px-4 py-24 text-center md:px-8 md:py-32">
-				<div className="mx-auto max-w-6xl">
+				<div className="mx-auto max-w-[1400px]">
 					<Reveal>
 						<h2 className="break-keep font-extrabold text-3xl text-[#0a0a0a] leading-snug tracking-tight md:text-5xl">
 							AIO마케팅을 했더니,
@@ -337,7 +382,7 @@ export const AioPage = () => {
 							[애드리절트 구글 키워드 노출 사례]
 						</p>
 					</Reveal>
-					<div className="mt-6 grid gap-4 sm:grid-cols-2 md:gap-5 lg:grid-cols-3">
+					<div className="mt-6 grid gap-5 sm:grid-cols-2 md:gap-7 lg:grid-cols-3">
 						{EXPOSURES.map((src, i) => (
 							<Reveal key={src} delay={i * 0.06} direction="up">
 								<Image
@@ -357,7 +402,7 @@ export const AioPage = () => {
 							[AIO마케팅 진행하는 병원 고객사의 네이버 노출 사례]
 						</p>
 					</Reveal>
-					<div className="mt-6 grid gap-4 sm:grid-cols-2 md:gap-5 lg:grid-cols-3">
+					<div className="mt-6 grid gap-5 sm:grid-cols-2 md:gap-7 lg:grid-cols-3">
 						{HOSPITAL_EXPOSURES.map((src, i) => (
 							<Reveal key={src} delay={i * 0.06} direction="up">
 								<Image
@@ -368,6 +413,141 @@ export const AioPage = () => {
 									sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
 									className="h-auto w-full rounded-lg shadow-[0_8px_24px_rgba(15,23,42,0.08)] ring-1 ring-black/10"
 								/>
+							</Reveal>
+						))}
+					</div>
+				</div>
+			</section>
+
+			{/* 10. 노출 비보장 고지 + 진짜 추천 시작 + 전화 CTA */}
+			<section className="bg-white px-4 py-24 text-center md:px-8 md:py-32">
+				<div className="mx-auto max-w-4xl">
+					<Reveal>
+						<p className="text-slate-400 text-sm md:text-base">
+							※구글 및 네이버 노출은 보장이 아닙니다.
+						</p>
+						<h2 className="mt-16 break-keep font-extrabold text-2xl text-[#0a0a0a] leading-snug tracking-tight md:mt-24 md:text-4xl">
+							애드리절트 <span className="text-[#e11d29]">AIO마케팅</span>을 하면
+							<br />
+							<span className="text-[#e11d29]">AI가 우리 병원을 진짜 추천</span>하기 시작합니다.
+						</h2>
+						<a
+							href={`tel:${siteConfig.contact.tel}`}
+							className="mt-8 inline-flex items-center gap-2 rounded-lg bg-[#ffe14d] px-6 py-3 font-extrabold text-[#0a0a0a] text-lg transition-transform hover:scale-[1.03] md:text-xl"
+						>
+							<Phone className="h-5 w-5 fill-[#e11d29] text-[#e11d29]" />
+							AIO마케팅 문의 : {siteConfig.contact.tel}
+						</a>
+					</Reveal>
+				</div>
+			</section>
+
+			{/* 11. 혹시.. — 레드 풀폭 밴드 */}
+			<section className="w-full bg-[#e11d29] px-4 py-24 text-center md:py-28">
+				<Reveal>
+					<h2 className="font-extrabold text-2xl text-white md:text-3xl">혹시..</h2>
+					<div className="mx-auto mt-10 max-w-3xl space-y-2 break-keep text-lg text-white/90 md:text-xl">
+						<p>“노출 됐을 때만 캡처 한거아니야?”</p>
+						<p>“종일 AI에 붙어있을 것도 아닌데 어떻게 확인해?”</p>
+					</div>
+					<p className="mt-8 text-lg text-white/90 md:text-xl">라고 생각하셨나요?</p>
+					<p className="mt-8 break-keep font-extrabold text-2xl text-white md:text-3xl">
+						그래서 준비했습니다.
+					</p>
+				</Reveal>
+			</section>
+
+			{/* 12. AIRANK — 유튜브 임베딩 */}
+			<section className="bg-white px-4 pt-24 pb-16 text-center md:px-8 md:pt-32 md:pb-20">
+				<div className="mx-auto max-w-5xl">
+					<Reveal>
+						<h2 className="break-keep font-extrabold text-3xl text-[#0a0a0a] leading-snug tracking-tight md:text-5xl">
+							업계 최초! AI 분석 프로그램
+							<br />
+							<span className="text-[#e11d29]">AIRANK</span>
+						</h2>
+						<p className="mt-8 text-slate-500 text-sm md:text-base">▼ 영상으로 확인하세요</p>
+					</Reveal>
+					<Reveal direction="scale" className="mt-8 md:mt-10">
+						<div className="relative aspect-video overflow-hidden rounded-2xl shadow-[0_20px_50px_rgba(15,23,42,0.18)] ring-1 ring-black/10">
+							<iframe
+								src="https://www.youtube.com/embed/bFVQBdZeTs4"
+								title="병원마케팅, 아직도 AI로 글만 쓰시나요? | 제대로 된 AI분석 AIRANK"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowFullScreen
+								className="absolute inset-0 h-full w-full"
+							/>
+						</div>
+					</Reveal>
+				</div>
+			</section>
+
+			{/* 13. AIRANK 기능 4가지 */}
+			<section className="bg-white px-4 pb-24 text-center md:px-8 md:pb-32">
+				<div className="mx-auto max-w-[1400px]">
+					{AIRANK_CHECKS.map((c) => (
+						<div key={c.img} className="mt-16 first:mt-0 md:mt-24">
+							<Reveal>
+								<h3 className="break-keep text-left font-extrabold text-[#0a0a0a] text-lg md:text-2xl">
+									{c.text}
+								</h3>
+							</Reveal>
+							<Reveal direction="scale" className="mt-8 md:mt-10">
+								<Image
+									src={c.img}
+									alt={c.text}
+									width={c.w}
+									height={c.h}
+									quality={90}
+									unoptimized={c.gif}
+									sizes="(max-width: 1400px) 100vw, 1400px"
+									className="h-auto w-full rounded-2xl ring-1 ring-black/10"
+								/>
+								{c.caption && (
+									<p className="mt-4 text-slate-500 text-sm md:text-base">{c.caption}</p>
+								)}
+							</Reveal>
+						</div>
+					))}
+				</div>
+			</section>
+
+			{/* 14. AI 마케팅 지금 시작 — 레드 밴드 */}
+			<section className="w-full bg-[#e11d29] px-4 py-24 text-center md:py-28">
+				<Reveal>
+					<h2 className="break-keep font-extrabold text-3xl text-white leading-relaxed md:text-5xl md:leading-relaxed">
+						AI 마케팅
+						<br />
+						지금 하지 않으면 뒤처집니다.
+						<br />
+						애드리절트와 바로 시작하세요<span className="italic">!</span>
+					</h2>
+				</Reveal>
+			</section>
+
+			{/* 15. AIO 마케팅 진행절차 */}
+			<section className="bg-white px-4 py-24 md:px-8 md:py-32">
+				<div className="mx-auto max-w-[1400px]">
+					<Reveal>
+						<p className="mb-4 font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
+							ADRESULT Marketing Process
+						</p>
+						<h2 className="font-extrabold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
+							AIO 마케팅 <span className="text-[#e11d29]">진행절차</span>
+						</h2>
+					</Reveal>
+					<div className="mt-14 grid gap-6 md:mt-16 md:grid-cols-3 md:gap-7">
+						{AIO_PROCESS.map((s, i) => (
+							<Reveal key={s.no} delay={i * 0.1} direction="up">
+								<div className="h-full rounded-2xl bg-slate-100 p-8 text-left ring-1 ring-black/5 md:p-10">
+									<p className="font-bold text-[#e11d29] text-lg">{s.no}</p>
+									<h3 className="mt-1 font-extrabold text-[#0a0a0a] text-xl md:text-2xl">
+										{s.title}
+									</h3>
+									<p className="mt-4 whitespace-pre-line break-keep text-slate-500 leading-relaxed">
+										{s.desc}
+									</p>
+								</div>
 							</Reveal>
 						))}
 					</div>
