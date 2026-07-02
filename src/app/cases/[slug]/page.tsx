@@ -5,7 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BreadcrumbJsonLd } from "@/components/shared/BreadcrumbJsonLd";
 import { siteConfig } from "@/config/site";
-import { CASE_ARTICLES, getCase } from "@/data/success-cases";
+import { CASE_ARTICLES, type CaseRun, getCase } from "@/data/success-cases";
 import { cn } from "@/lib/utils";
 
 export const generateStaticParams = () => CASE_ARTICLES.map((a) => ({ slug: a.slug }));
@@ -26,6 +26,21 @@ export const generateMetadata = async ({
 		openGraph: a.cover ? { images: [{ url: a.cover }] } : undefined,
 	};
 };
+
+const renderRuns = (runs?: CaseRun[]) =>
+	runs?.map((r) =>
+		r.br ? (
+			<br key={r.k} />
+		) : (
+			<span
+				key={r.k}
+				style={r.c ? { color: r.c } : undefined}
+				className={cn(r.b && "font-bold", r.i && "italic", r.u && "underline")}
+			>
+				{r.t}
+			</span>
+		),
+	);
 
 export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
 	const { slug } = await params;
@@ -71,9 +86,9 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 							if (b.type === "img") {
 								return (
 									<Image
-										key={b.src}
+										key={b.id}
 										src={b.src ?? ""}
-										alt={a.title}
+										alt={b.alt ?? a.title}
 										width={b.w ?? 800}
 										height={b.h ?? 600}
 										sizes="(max-width: 768px) 100vw, 720px"
@@ -82,32 +97,38 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 									/>
 								);
 							}
+							if (b.type === "video") {
+								return (
+									<div
+										key={b.id}
+										className="relative mt-6 mb-6 aspect-video overflow-hidden rounded-xl shadow-[0_12px_30px_rgba(15,23,42,0.15)] ring-1 ring-black/10"
+									>
+										<iframe
+											src={`https://www.youtube.com/embed/${b.videoId}`}
+											title={a.title}
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+											allowFullScreen
+											className="absolute inset-0 h-full w-full"
+										/>
+									</div>
+								);
+							}
 							if (b.type === "h") {
 								return (
 									<h2
-										key={b.text}
-										className={cn(
-											"mt-10 break-keep font-extrabold text-xl leading-snug md:text-2xl",
-											b.red ? "text-[#e11d29]" : "text-[#0a0a0a]",
-										)}
+										key={b.id}
+										className="mt-10 break-keep font-extrabold text-[#0a0a0a] text-xl leading-snug md:text-2xl"
 									>
-										{b.text}
+										{renderRuns(b.runs)}
 									</h2>
 								);
 							}
 							return (
 								<p
-									key={b.text}
-									className={cn(
-										"mt-4 break-keep text-base leading-relaxed md:text-lg",
-										b.red
-											? "font-bold text-[#e11d29]"
-											: b.bold
-												? "font-bold text-[#0a0a0a]"
-												: "text-slate-700",
-									)}
+									key={b.id}
+									className="mt-4 break-keep text-base text-slate-700 leading-relaxed md:text-lg"
 								>
-									{b.text}
+									{renderRuns(b.runs)}
 								</p>
 							);
 						})}
