@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, type UseInViewOptions, useInView, useReducedMotion } from "motion/react";
-import { useRef } from "react";
+import { motion, useReducedMotion } from "motion/react";
+import { useState } from "react";
 
 type RevealProps = {
 	children: React.ReactNode;
@@ -10,7 +10,7 @@ type RevealProps = {
 	direction?: "up" | "down" | "left" | "right" | "none" | "scale";
 	duration?: number;
 	// 뷰포트 진입 트리거 여백. 음수일수록 더 안쪽에서, 작을수록 더 일찍 등장.
-	margin?: UseInViewOptions["margin"];
+	margin?: string;
 };
 
 export const Reveal = ({
@@ -21,11 +21,10 @@ export const Reveal = ({
 	duration = 1.1,
 	margin = "-120px",
 }: RevealProps) => {
-	const ref = useRef<HTMLDivElement>(null);
-	// once: true — 아래로 스크롤하며 처음 보일 때 1회만 재생.
-	// 위로 다시 스크롤해도 재생/리셋하지 않는다 (Windows 재실행 끊김·요소 미표시 방지).
-	const isInView = useInView(ref, { once: true, margin });
 	const prefersReducedMotion = useReducedMotion();
+	// 뷰포트에 들어올 때마다 재생. 리셋(숨김)은 요소가 뷰포트 "아래"에 있을 때만.
+	// → 아래로 스크롤해 다시 들어오면 재생 / 위로 스크롤해 다시 들어올 땐 재생 안 함.
+	const [show, setShow] = useState(false);
 
 	const directionMap = {
 		up: { y: 90, x: 0 },
@@ -41,11 +40,8 @@ export const Reveal = ({
 			? { opacity: 0, scale: 0.78 }
 			: { opacity: 0, ...directionMap[direction] };
 
-	const animate = isInView
-		? direction === "scale"
-			? { opacity: 1, scale: 1, x: 0, y: 0 }
-			: { opacity: 1, x: 0, y: 0 }
-		: initial;
+	const visible =
+		direction === "scale" ? { opacity: 1, scale: 1, x: 0, y: 0 } : { opacity: 1, x: 0, y: 0 };
 
 	const transition = prefersReducedMotion
 		? { duration: 0 }
@@ -53,10 +49,14 @@ export const Reveal = ({
 
 	return (
 		<motion.div
-			ref={ref}
 			initial={initial}
-			animate={animate}
+			animate={show ? visible : initial}
 			transition={transition}
+			viewport={{ margin }}
+			onViewportEnter={() => setShow(true)}
+			onViewportLeave={(entry) => {
+				if (entry && entry.boundingClientRect.top > 0) setShow(false);
+			}}
 			className={className}
 		>
 			{children}

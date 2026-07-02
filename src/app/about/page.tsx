@@ -1,7 +1,15 @@
-import { ChevronRight, Equal, Plus } from "lucide-react";
+import {
+	Building2,
+	Camera,
+	ChevronRight,
+	ClipboardList,
+	type LucideIcon,
+	Target,
+} from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
-import { type CSSProperties, Fragment, type ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
+import { AboutOperator } from "@/components/sections/AboutOperator";
 import { AboutReviewMarquee } from "@/components/sections/AboutReviewMarquee";
 import { CompanyHero } from "@/components/sections/CompanyHero";
 import { BreadcrumbJsonLd } from "@/components/shared/BreadcrumbJsonLd";
@@ -111,53 +119,42 @@ const KNOWHOW_CARDS: { img: string; alt: string; desc: string; offset: string }[
 		img: "/about/about-contents.jpg",
 		alt: "구매전환을 높이는 콘텐츠 기획력",
 		desc: "수많은 브랜드 중에서 왜 우리여야 하는지 ‘Why Me’를 고민하며 차별화된 콘텐츠를 기획합니다.",
-		offset: "lg:mt-10",
+		offset: "lg:mt-0",
 	},
 	{
 		img: "/about/about-study.jpg",
 		alt: "대행사를 가르치는 대행사",
 		desc: "애드리절트는 마케팅 실행사이자 대행사로서 소상공인, 마케팅 대행사, 의사 등을 대상으로 마케팅 교육을 제공할 만큼 검증된 실력을 갖추고 있습니다.",
-		offset: "lg:mt-28",
+		offset: "lg:mt-24",
 	},
 ];
 
-const STRATEGY_STEPS: { icon: string; no: string; title: string; lines: [string, string] }[] = [
+const STRATEGY_STEPS: { Icon: LucideIcon; no: string; title: string; lines: [string, string] }[] = [
 	{
-		icon: "/about/hospital.png",
+		Icon: Building2,
 		no: "1",
 		title: "병원 분석",
 		lines: ["온라인 경쟁 및 현황 등", "다양한 시선으로 브랜드 분석"],
 	},
 	{
-		icon: "/about/strategy.png",
+		Icon: ClipboardList,
 		no: "2",
 		title: "병원마케팅 맞춤 전략 수립",
 		lines: ["병원에 최적화된", "통합 마케팅 전략 제공"],
 	},
 	{
-		icon: "/about/camera.png",
+		Icon: Camera,
 		no: "3",
 		title: "병원마케팅 실행",
 		lines: ["마케팅 전략에 따른", "콘텐츠 제작 후 실행"],
 	},
 	{
-		icon: "/about/target.png",
+		Icon: Target,
 		no: "4",
 		title: "고객의 목표 달성",
 		lines: ["마케팅 전략으로 인한", "고객 목표 달성"],
 	},
 ];
-
-const iconMask = (src: string): CSSProperties => ({
-	maskImage: `url(${src})`,
-	WebkitMaskImage: `url(${src})`,
-	maskRepeat: "no-repeat",
-	WebkitMaskRepeat: "no-repeat",
-	maskPosition: "center",
-	WebkitMaskPosition: "center",
-	maskSize: "contain",
-	WebkitMaskSize: "contain",
-});
 
 const FLOORS: { no: string; desc: string; top: string }[] = [
 	{ no: "3F", desc: "미팅룸, CEO룸, 경영지원팀", top: "22%" },
@@ -186,12 +183,12 @@ export const AboutPage = () => {
 			<CompanyHero />
 			<CompanyTabs />
 
-			{/* INTRODUCE — 왼쪽 고정(sticky) / 오른쪽 스크롤 */}
+			{/* INTRODUCE — 왼쪽 sticky(하단이 Result와 일직선) / 오른쪽 스크롤 */}
 			<section className="bg-white px-4 py-24 md:px-8 md:py-32">
-				<div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 md:gap-20">
+				<div className="mx-auto grid max-w-[1440px] gap-12 md:grid-cols-2 md:gap-20">
 					{/* LEFT — sticky */}
 					<div>
-						<div className="md:sticky md:top-40">
+						<div className="md:sticky md:top-[30vh]">
 							<p className="mb-5 font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
 								Introduce ADRESULT
 							</p>
@@ -200,7 +197,7 @@ export const AboutPage = () => {
 								<br />
 								멈추지 않고 성장하며, 당신의 성공을 함께 만들어가는
 							</p>
-							<p className="mt-4 break-keep font-extrabold text-3xl text-[#0a0a0a] leading-tight tracking-tight md:text-4xl">
+							<p className="mt-4 break-keep font-extrabold text-4xl text-[#0a0a0a] leading-tight tracking-tight md:text-5xl">
 								결과로 말하는 광고회사
 								<br />
 								<span className="text-[#ef3c39]">애드리절트</span>입니다.
@@ -213,40 +210,29 @@ export const AboutPage = () => {
 						{VALUE_BLOCKS.map((b) => (
 							<div key={b.en}>
 								<Reveal direction="scale">
-									<Image
-										src={b.img}
-										alt={b.alt}
-										width={b.w}
-										height={b.h}
-										sizes="(max-width: 768px) 100vw, 50vw"
-										className="h-auto w-full rounded-2xl shadow-[0_16px_40px_rgba(15,23,42,0.1)] ring-1 ring-black/5"
-									/>
+									<div className="overflow-hidden rounded-2xl shadow-[0_16px_40px_rgba(15,23,42,0.1)] ring-1 ring-black/5">
+										<Image
+											src={b.img}
+											alt={b.alt}
+											width={b.w}
+											height={b.h}
+											sizes="(max-width: 768px) 100vw, 50vw"
+											className="h-auto w-full transition-transform duration-500 hover:scale-[1.04]"
+										/>
+									</div>
 									<p
 										className={cn(
-											"mt-5 font-extrabold text-2xl tracking-tight md:text-3xl",
+											"mt-5 font-extrabold text-3xl tracking-tight md:text-4xl",
 											b.red ? "text-[#ef3c39]" : "text-[#0a0a0a]",
 										)}
 									>
 										{b.en}
 									</p>
-									<p className="mt-2 break-keep text-base text-slate-500 leading-relaxed md:text-lg">
+									<p className="mt-2 break-keep text-lg text-slate-500 leading-relaxed md:text-xl">
 										{b.desc}
 									</p>
 								</Reveal>
-								{b.op === "plus" && (
-									<div className="flex justify-center pt-8">
-										<Plus className="h-10 w-10 text-[#e11d29]" strokeWidth={4} aria-hidden="true" />
-									</div>
-								)}
-								{b.op === "equal" && (
-									<div className="flex justify-center pt-8">
-										<Equal
-											className="h-10 w-10 text-[#e11d29]"
-											strokeWidth={4}
-											aria-hidden="true"
-										/>
-									</div>
-								)}
+								{b.op && <AboutOperator type={b.op} />}
 							</div>
 						))}
 					</div>
@@ -255,7 +241,7 @@ export const AboutPage = () => {
 
 			{/* MARKETING KNOW-HOW */}
 			<section className="bg-white px-4 pb-28 md:px-8 md:pb-32">
-				<div className="mx-auto max-w-7xl">
+				<div className="mx-auto max-w-[1440px]">
 					<Reveal>
 						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
 							ADRESULT Marketing Know-how
@@ -276,9 +262,10 @@ export const AboutPage = () => {
 										sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
 										className="object-cover transition-transform duration-500 group-hover:scale-105"
 									/>
-									<div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/60" />
+									{/* hover 시 하단 불투명 그라데이션으로 이미지에 새겨진 짧은 문구를 완전히 가림 */}
+									<div className="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-black/45 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 									<div className="absolute inset-x-0 bottom-0 p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-										<p className="break-keep font-semibold text-sm text-white leading-relaxed md:text-base">
+										<p className="break-keep font-semibold text-base text-white leading-relaxed md:text-lg">
 											{card.desc}
 										</p>
 									</div>
@@ -291,7 +278,7 @@ export const AboutPage = () => {
 
 			{/* CUSTOMIZED STRATEGY — 4단계 프로세스 */}
 			<section className="border-slate-100 border-t bg-white px-4 py-24 md:px-8 md:py-32">
-				<div className="mx-auto max-w-7xl">
+				<div className="mx-auto max-w-[1440px]">
 					<Reveal>
 						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
 							Customized Strategy
@@ -303,24 +290,24 @@ export const AboutPage = () => {
 						</h2>
 					</Reveal>
 
-					<div className="mt-16 flex flex-col items-center gap-12 lg:mt-24 lg:flex-row lg:items-start lg:justify-center lg:gap-2">
+					<div className="mt-16 flex flex-col items-center gap-12 lg:mt-24 lg:flex-row lg:items-start lg:justify-center lg:gap-8">
 						{STRATEGY_STEPS.map((step, i) => (
-							<Fragment key={step.icon}>
+							<Fragment key={step.title}>
 								<Reveal
 									delay={i * 0.1}
-									className="flex w-full max-w-xs flex-col items-center text-center lg:w-56"
+									className="flex w-full max-w-xs flex-col items-center text-center lg:w-64"
 								>
 									<div className="group flex h-32 w-32 items-center justify-center rounded-full border-2 border-[#e11d29] bg-[#e11d29] transition-colors duration-300 hover:bg-white md:h-40 md:w-40">
-										<span
+										<step.Icon
+											className="h-14 w-14 text-white transition-colors duration-300 group-hover:text-[#e11d29] md:h-16 md:w-16"
+											strokeWidth={1.75}
 											aria-hidden="true"
-											style={iconMask(step.icon)}
-											className="h-12 w-12 bg-white transition-colors duration-300 group-hover:bg-[#e11d29] md:h-16 md:w-16"
 										/>
 									</div>
-									<p className="mt-6 font-bold text-[#e11d29] text-lg md:text-xl">
+									<p className="mt-6 break-keep font-bold text-[#e11d29] text-xl md:text-2xl">
 										{step.no}. {step.title}
 									</p>
-									<p className="mt-2 break-keep text-slate-500 text-sm leading-relaxed md:text-base">
+									<p className="mt-3 break-keep text-base text-slate-500 leading-relaxed md:text-lg">
 										{step.lines[0]}
 										<br />
 										{step.lines[1]}
@@ -328,7 +315,7 @@ export const AboutPage = () => {
 								</Reveal>
 								{i < STRATEGY_STEPS.length - 1 && (
 									<ChevronRight
-										className="hidden h-8 w-8 shrink-0 text-[#e11d29] lg:mt-16 lg:block"
+										className="hidden h-9 w-9 shrink-0 text-[#e11d29] lg:mt-16 lg:block"
 										strokeWidth={3}
 										aria-hidden="true"
 									/>
@@ -341,7 +328,7 @@ export const AboutPage = () => {
 
 			{/* CUSTOMER REVIEW — 무한 스크롤 후기 */}
 			<section className="border-slate-100 border-t bg-white py-24 md:py-28">
-				<div className="mx-auto max-w-7xl px-4 md:px-8">
+				<div className="mx-auto max-w-[1440px] px-4 md:px-8">
 					<Reveal>
 						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
 							Customer Review
@@ -360,7 +347,7 @@ export const AboutPage = () => {
 
 			{/* FLOOR INFORMATION — 사옥 층별 안내 (풀블리드) */}
 			<section className="border-slate-100 border-t bg-white pt-24 pb-16 md:pt-28 md:pb-20">
-				<div className="mx-auto max-w-7xl px-4 md:px-8">
+				<div className="mx-auto max-w-[1440px] px-4 md:px-8">
 					<Reveal>
 						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
 							Floor Information
@@ -383,7 +370,11 @@ export const AboutPage = () => {
 					{/* 데스크톱 오버레이 라벨 */}
 					<div className="absolute inset-0 hidden md:block">
 						{FLOORS.map((f) => (
-							<div key={f.no} className="absolute" style={{ top: f.top, left: "30%", right: "4%" }}>
+							<div
+								key={f.no}
+								className="absolute"
+								style={{ top: f.top, left: "27%", right: "14%" }}
+							>
 								<div className="flex items-end justify-end gap-2 pr-1 pb-1.5">
 									<span className="font-extrabold text-[#ef3c39] text-xl lg:text-2xl">{f.no}</span>
 									<span className="font-semibold text-[#0a0a0a] text-base lg:text-xl">
@@ -412,7 +403,7 @@ export const AboutPage = () => {
 
 			{/* BRANCH-OFFICE INFORMATION — 지사안내 */}
 			<section className="border-slate-100 border-t bg-white px-4 py-24 md:px-8 md:py-28">
-				<div className="mx-auto max-w-7xl">
+				<div className="mx-auto max-w-[1440px]">
 					<Reveal>
 						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
 							Branch-Office Information
@@ -449,7 +440,7 @@ export const AboutPage = () => {
 
 			{/* 참고해주세요 */}
 			<section className="border-slate-100 border-t bg-white px-4 py-20 md:px-8 md:py-24">
-				<div className="mx-auto max-w-7xl">
+				<div className="mx-auto max-w-[1440px]">
 					<Reveal>
 						<p className="font-bold text-[#ef3c39] text-lg">참고해주세요!</p>
 						<p className="mt-8 break-keep font-bold text-[#0a0a0a] text-base md:text-lg">

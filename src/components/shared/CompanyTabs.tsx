@@ -19,7 +19,7 @@ export const CompanyTabs = () => {
 			className="sticky top-16 z-30 border-slate-200 border-b bg-white md:top-20"
 			aria-label="회사소개 탭"
 		>
-			<div className="mx-auto flex max-w-7xl">
+			<div className="flex w-full">
 				{TABS.map((tab) => {
 					const active = pathname === tab.href;
 					return (
