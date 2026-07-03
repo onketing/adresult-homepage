@@ -158,7 +158,7 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 								return (
 									<div
 										key={b.id}
-										className="relative mt-6 mb-6 aspect-video overflow-hidden rounded-xl shadow-[0_12px_30px_rgba(15,23,42,0.15)] ring-1 ring-black/10"
+										className="relative mx-auto mt-6 mb-6 aspect-video max-w-2xl overflow-hidden rounded-xl shadow-[0_12px_30px_rgba(15,23,42,0.15)] ring-1 ring-black/10"
 									>
 										<iframe
 											src={`https://www.youtube.com/embed/${b.videoId}`}
@@ -195,7 +195,8 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 									<h2
 										key={b.id}
 										className={cn(
-											"mt-10 break-keep font-extrabold text-[#0a0a0a] text-xl leading-snug md:text-2xl",
+											"break-keep font-extrabold text-[#0a0a0a] text-xl leading-snug md:text-2xl",
+											b.gap ? "mt-10" : "mt-3",
 											alignClass,
 										)}
 									>
