@@ -34,7 +34,11 @@ const renderRuns = (runs?: CaseRun[]) =>
 		) : (
 			<span
 				key={r.k}
-				style={r.c ? { color: r.c } : undefined}
+				style={{
+					color: r.c || undefined,
+					fontSize: r.fs ? `${r.fs}px` : undefined,
+					backgroundColor: r.bg || undefined,
+				}}
 				className={cn(r.b && "font-bold", r.i && "italic", r.u && "underline")}
 			>
 				{r.t}
@@ -203,7 +207,8 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 								<p
 									key={b.id}
 									className={cn(
-										"mt-4 break-keep text-base text-slate-700 leading-relaxed md:text-lg",
+										"break-keep text-base text-slate-700 leading-relaxed md:text-lg",
+										b.gap ? "mt-7" : "mt-2",
 										alignClass,
 									)}
 								>

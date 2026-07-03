@@ -21,7 +21,9 @@ pnpm build   # /cases, /cases/[slug] 생성 확인
 ## 2. 파싱 규칙 (스크립트가 자동 처리)
 
 - **본문 컨테이너**: `.fr-view` 중 텍스트·이미지가 가장 많은 것. 그 안의 `div[class*=_comment_body]` 블록을 **문서 순서대로** 순회한다(없으면 `.fr-view` 자체).
-- **텍스트 → run 단위**: 블록을 순회하며 **색상(어두운색 제외)·굵기(`strong`/`font-weight`)·기울임(`em`/`font-style`)·밑줄·`<br>`**를 보존. `rgb(...)`는 hex로 변환. **`<table>` 콜아웃 박스 텍스트도 동일 규칙으로 수집**(font-size로 h/p 판별).
+- **텍스트 → run 단위**: 블록을 순회하며 **색상(어두운색 제외)·굵기(`strong`/`font-weight`)·기울임(`em`/`font-style`)·밑줄·글자 크기(`fs`, 17px 이상만)·형광펜 배경(`bg`, 흰색/투명 제외)·`<br>`**를 보존. `rgb(...)`는 hex로 변환. **`<table>` 콜아웃 박스 텍스트도 동일 규칙으로 수집**(font-size로 h/p 판별).
+- **문단 간격(gap 모델)**: 각 `<p>`는 자기만의 블록으로 방출(줄을 `<br>`로 병합하지 않는다). 빈 `<p><br></p>`는 다음 블록에 `gap: true`를 부여 → 렌더에서 더 큰 상단 여백(`mt-7` vs 기본 `mt-2`). 원문의 문단 그룹 구조가 그대로 재현된다. hr/img/video는 자체 여백이 있어 gap 플래그를 소비하지 않는다.
+- **중복 이미지 제거**: adresult는 같은 이미지를 imweb(`/upload/`)·naver(`pstatic`) 양쪽에 올려 두 번 나오는 경우가 있다. 다운로드 후 지각 해시(`img_dhash`)로 **글 내부** 중복(거리 ≤ 6)을 탐지해 파일을 지우고 블록에서 뺀다(글 간 반복은 유지).
 - **헤딩**: span `font-size ≥ 19px` → `h`(제목), 그 외 `p`.
 - **이미지**: 컨텐츠 이미지(`cdn.imweb.me/upload/` **또는** 네이버 `postfiles.pstatic.net`)만 채택 → `public/images/cases/{idx}/{n}.{ext}` 다운로드 + `sips`로 실측 `w/h`.
   - **Referer**: `/upload/` → `adresult.kr`, `pstatic` → `blog.naver.com`(네이버는 adresult referer 로 403).
@@ -39,8 +41,9 @@ pnpm build   # /cases, /cases/[slug] 생성 확인
 ## 3. 데이터 구조 (`src/data/success-cases.ts`)
 
 - `CASE_ARTICLES: CaseArticle[]` — `{ slug(=idx), title, excerpt, summary?, faq?, cover, coverW/H, blocks[] }`
-  - `blocks`: `{ type: "h"|"p"|"img"|"video", runs?, src?, w?, h?, alt?, videoId?, id }`
-  - `runs`: `{ t, b(굵게), i(기울임), u(밑줄), c(색상), br, k }`
+  - `blocks`: `{ type: "h"|"p"|"img"|"video"|"hr"|"callout", runs?, align?, gap?, src?, w?, h?, alt?, videoId?, id }`
+  - `runs`: `{ t, b(굵게), i(기울임), u(밑줄), c(색상), fs(글자 크기 px), bg(형광펜 배경 hex), br, k }`
+  - `gap`: 앞에 빈 `<p>`(개행)가 있던 문단 → 렌더 시 상단 여백 확대(`mt-7`).
   - `summary`: 리드 콜아웃(핵심 요약, 수치 포함). `LEADS[idx]`에서 주입 → 상세 상단·`description`에 사용.
   - `faq`: `CaseFaq[]`(`{ q, a }`). `FAQS[idx]`에서 주입 → 상세 하단 FAQ + FAQPage JSON-LD에 사용.
 - `SUCCESS_CASES: CardItem[]` — 목록 카드(제목·발췌·cover 썸네일·`/cases/{slug}` 링크)

@@ -60,7 +60,7 @@ export const PaginatedCards = ({ items, perPage = 9 }: { items: CardItem[]; perP
 				})}
 			</div>
 
-			<div className="mt-14 flex items-center justify-center gap-5 md:gap-6">
+			<div className="mt-14 flex items-center justify-center gap-6 md:gap-8">
 				<button
 					type="button"
 					onClick={() => setPage((p) => Math.max(1, p - 1))}
@@ -68,7 +68,7 @@ export const PaginatedCards = ({ items, perPage = 9 }: { items: CardItem[]; perP
 					aria-label="이전 페이지"
 					className="text-slate-300 transition-colors hover:text-slate-500 disabled:pointer-events-none disabled:opacity-40"
 				>
-					<ChevronLeft className="h-4 w-4" />
+					<ChevronLeft className="h-5 w-5" />
 				</button>
 				{Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
 					<button
@@ -77,7 +77,7 @@ export const PaginatedCards = ({ items, perPage = 9 }: { items: CardItem[]; perP
 						onClick={() => setPage(p)}
 						aria-current={p === page ? "page" : undefined}
 						className={cn(
-							"text-sm transition-colors",
+							"text-base transition-colors",
 							p === page ? "font-bold text-[#0a0a0a]" : "text-slate-400 hover:text-slate-600",
 						)}
 					>
@@ -91,7 +91,7 @@ export const PaginatedCards = ({ items, perPage = 9 }: { items: CardItem[]; perP
 					aria-label="다음 페이지"
 					className="text-slate-300 transition-colors hover:text-slate-500 disabled:pointer-events-none disabled:opacity-40"
 				>
-					<ChevronRight className="h-4 w-4" />
+					<ChevronRight className="h-5 w-5" />
 				</button>
 			</div>
 		</div>
