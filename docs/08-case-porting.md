@@ -1,86 +1,192 @@
-# 08 — adresult.kr 성공사례 → `/cases` 이식 워크플로우
+# 08 — adresult.kr 성공사례 → `/cases` 이식 플레이북
 
-사용자가 **adresult.kr 성공사례 게시판 글 링크**(`bmode=view&idx=...`)를 주며 "이식/가져와" 요청하면, 원문을 그대로(텍스트·색상·굵기·기울임·이미지·영상) `/cases`에 옮긴다. 매번 다시 설명받지 않고 아래 절차를 따른다.
+adresult.kr 성공사례 게시판 글을 **원문 그대로**(텍스트·색상·글자크기·형광펜·정렬·이미지·영상) `/cases/{idx}` 상세 페이지로 옮기는 절차. **다른 개발자도 이 문서만 보고 동일하게** 글을 추가할 수 있도록 정의한다.
 
-> 자동화 스크립트: **`scripts/port-cases.py`**. 결과물: **`src/data/success-cases.ts`** (자동 생성 — 손으로 blocks 편집 금지).
+- 자동화 스크립트: **`scripts/port-cases.py`**
+- 생성물(자동, **손으로 편집 금지**): **`src/data/success-cases.ts`**
+- 상세/목록 렌더러(수정 불필요): `src/app/cases/[slug]/page.tsx`, `src/components/shared/PaginatedCards.tsx`
+
+핵심 원리: 원문을 파싱해 `blocks`/`runs` JSON으로 만들고, 빌드 시 정적 생성(SSG)한다. **개발자가 손으로 넣는 건 `port-cases.py`의 몇 개 dict 뿐**이고 나머지는 스크립트가 자동 처리한다.
 
 ---
 
-## 1. 이식 실행
+## 0. 사용자가 주는 입력
+
+보통 아래 3가지를 준다:
+
+1. **게시판 view URL** — `https://adresult.kr/549265113/?...&bmode=view&idx={IDX}&t=board` → 여기서 `idx` 값만 쓴다.
+2. **본문 HTML** (선택) — 검증용. 스크립트는 URL의 idx로 직접 다시 fetch 하므로 HTML이 없어도 된다.
+3. **유튜브 임베드의 watch URL** (선택) — `<iframe embed>`는 스크립트가 자동 처리하므로 참고용.
+
+> URL이 없고 HTML만 있으면: 게시판 목록에서 제목으로 idx를 찾는다(§6 참고).
+
+---
+
+## 1. 최초 1회 환경 설정
 
 ```sh
-python3 -m venv .venv && . .venv/bin/activate && pip install beautifulsoup4
-# scripts/port-cases.py 의 IDXS 배열에 idx를 "노출 순서대로" 추가 (맨 앞 = 목록 첫 글)
-python3 scripts/port-cases.py
-pnpm build   # /cases, /cases/[slug] 생성 확인
+python3 -m venv .venv && . .venv/bin/activate
+pip install beautifulsoup4 Pillow imagehash
 ```
 
-- 게시판 view는 **서버렌더**라 `urllib`(curl)로 HTML을 받는다. (홈은 SPA라 안 됨 — view URL만 됨)
-- HTML은 `scripts/.cache/case-{idx}.html`에 캐시된다(재실행 시 재사용).
+- `beautifulsoup4` = 파싱, `Pillow`+`imagehash` = **중복 이미지 제거**용. 없으면 중복 제거만 생략된다.
+- 이미지 실측 크기는 macOS `sips`를 쓴다(로컬 실행 전제).
+- 이후 실행은 `.venv/bin/python3 scripts/port-cases.py`.
 
-## 2. 파싱 규칙 (스크립트가 자동 처리)
+---
 
-- **본문 컨테이너**: `.fr-view` 중 텍스트·이미지가 가장 많은 것. 그 안의 `div[class*=_comment_body]` 블록을 **문서 순서대로** 순회한다(없으면 `.fr-view` 자체).
-- **텍스트 → run 단위**: 블록을 순회하며 **색상(어두운색 제외)·굵기(`strong`/`font-weight`)·기울임(`em`/`font-style`)·밑줄·글자 크기(`fs`, 17px 이상만)·형광펜 배경(`bg`, 흰색/투명 제외)·`<br>`**를 보존. `rgb(...)`는 hex로 변환. **`<table>` 콜아웃 박스 텍스트도 동일 규칙으로 수집**(font-size로 h/p 판별).
-- **문단 간격(gap 모델)**: 각 `<p>`는 자기만의 블록으로 방출(줄을 `<br>`로 병합하지 않는다). 빈 `<p><br></p>`는 다음 블록에 `gap: true`를 부여 → 렌더에서 더 큰 상단 여백(`mt-7` vs 기본 `mt-2`). 원문의 문단 그룹 구조가 그대로 재현된다. hr/img/video는 자체 여백이 있어 gap 플래그를 소비하지 않는다.
-- **중복 이미지 제거**: adresult는 같은 이미지를 imweb(`/upload/`)·naver(`pstatic`) 양쪽에 올려 두 번 나오는 경우가 있다. 다운로드 후 지각 해시(`img_dhash`)로 **글 내부** 중복(거리 ≤ 6)을 탐지해 파일을 지우고 블록에서 뺀다(글 간 반복은 유지).
-- **헤딩**: span `font-size ≥ 19px` → `h`(제목), 그 외 `p`.
-- **이미지**: 컨텐츠 이미지(`cdn.imweb.me/upload/` **또는** 네이버 `postfiles.pstatic.net`)만 채택 → `public/images/cases/{idx}/{n}.{ext}` 다운로드 + `sips`로 실측 `w/h`.
-  - **Referer**: `/upload/` → `adresult.kr`, `pstatic` → `blog.naver.com`(네이버는 adresult referer 로 403).
-  - 네이버 URL의 `?type=w966` 쿼리는 받을 때는 유지, 확장자 판별 때만 제거(`src.split("?")[0]`).
-  - **다운로드 실패 시**: `IMGFAIL` 로그를 남기고 해당 이미지만 건너뛴다(실행은 중단하지 않음).
-  - 한 `<p>`에 이미지·텍스트가 함께 있으면 **텍스트 먼저, 이미지 다음** 순으로 방출(기존 순서 유지).
-- **영상**: `<iframe src=.../embed/{id}>`(보통 `<span class=fr-video>` 래핑) → `video` 블록. 기존 **유튜브 watch/단축 링크 썸네일**(`<a href=…watch><img>`)도 `video` 블록으로 계속 처리. id 는 11자.
-- **제외되는 것**(상세 페이지 공통 요소가 대체):
-  - 유튜브 **채널(@/channel/c) 링크 배너**(애드리절트 TV 등)
-  - `<img>` 를 감싼 `<a href>` 가 **`pf.kakao.com` / `map.naver.com` / 유튜브 채널**로 향하는 꼬리 배너
-  - **가로세로비 ≥ 2.0 인 꼬리 프로모 배너**(하단 CTA/광고 이미지)
-  - **추적/프로필/1x1 등 `/upload/`·`pstatic` 이 아닌 이미지**
+## 2. 글 하나 추가 — 체크리스트
+
+`scripts/port-cases.py` 상단의 dict만 수정한다. **한 글 = 아래 순서**.
+
+### ① `IDXS` 에 idx 추가 — **맨 끝에**
+```python
+IDXS = [ ..., "167542522", "167545669" ]   # ← 새 idx 를 배열 끝에 붙인다
+```
+- **정책**: `IDXS`는 오래된→최신 순(추가 순서). 사이트는 **최신이 맨 앞**에 오도록 출력을 역순으로 뒤집는다. → **끝에 붙이면 목록 맨 앞에 노출**된다.
+
+### ② `LEADS[idx]` 채우기 — **필수**
+```python
+LEADS = { ..., "167545669": "네트워크를 탈퇴하고 독립 개원한 … 개원 3개월 만에 예약이 꽉 찼습니다." }
+```
+- **수치를 포함한 1~2문장 요약**. 상세 상단 **리드 콜아웃**(빨간 좌측 보더 박스) + 메타 `description`에 쓰인다.
+- **이미지 속 핵심 수치**(신환 수·광고비·증가율 등)를 반드시 텍스트로 옮긴다 — 이미지 픽셀은 크롤러·답변엔진이 못 읽는다(AEO).
+
+### ③ `FAQS[idx]` 채우기 — **필수**
+```python
+FAQS = { ..., "167545669": [
+    {"q": "개원 3개월 만에 예약 마감이 어떻게 가능했나요?", "a": "개원 전부터 …"},
+    {"q": "개원 병원은 언제부터 준비해야 하나요?", "a": "개원 초가 …"},
+]}
+```
+- **2~3개 Q&A**. **각 답변은 독립적으로 완결**되게 쓴다(답변엔진이 그대로 인용). → 상세 하단 FAQ 섹션 + **FAQPage JSON-LD** 자동 생성.
+
+### ④ (선택) `COVERS[idx]` — 카드 썸네일 지정
+기본 썸네일은 **본문 첫 이미지**. 첫 이미지가 표지·배너·장식이라 부적절하면 지정한다.
+```python
+COVERS = {
+    "164427329": "last",   # 본문 마지막 이미지
+    "167232106": 3,         # 본문 n번째 이미지(1-based)
+    "167246533": 2,
+}
+```
+- 값: `"last"` 또는 **1-based 정수 n**.
+
+### ⑤ (선택) `DROP_IMAGES[idx]` — 특정 이미지 제외
+제목이 박힌 표지형 디자인 배너처럼 사이트 레이아웃(h1·리드)과 **중복되는 이미지**를 뺀다.
+```python
+DROP_IMAGES = { "167212324": {1, 2} }   # 본문 이미지 1·2번(문서 순서, 1-based) 제외
+```
+
+### ⑥ 스크립트 실행
+```sh
+.venv/bin/python3 scripts/port-cases.py
+```
+- 출력의 `{idx}: N text, M img | 제목` 과 `노출 순서:` 로 결과를 확인한다.
+- 원문은 `scripts/.cache/case-{idx}.html`에 캐시된다(재실행 시 재사용). **원문이 실제로 바뀌었다면 해당 캐시 파일을 지우고** 다시 실행한다.
+
+### ⑦ 썸네일 육안 확인
+```sh
+# cover 가 무엇인지 확인 후, 실제 이미지를 열어본다
+# (첫 이미지가 장식/배너면 ④ COVERS 로 좋은 이미지 번호를 지정하고 다시 실행)
+```
+- 원문 목록 카드에서 보이는 대표 이미지와 맞추는 걸 권장(보통 결과 차트·후기 카톡).
+
+### ⑧ 검증 → 커밋 → 배포 (§4, §5)
+
+---
+
+## 3. 스크립트가 자동 처리하는 것 (개발자가 신경 안 써도 됨)
+
+- **본문 컨테이너**: `.fr-view` 중 텍스트·이미지가 가장 많은 것 → 그 안 `div[class*=_comment_body]`의 블록을 **문서 순서대로** 순회.
+- **텍스트 → run**: 색상(어두운색 제외·rgb→hex)·굵기·기울임·밑줄·**글자크기(`fs`, 17px+)·형광펜 배경(`bg`, 흰색/투명 제외)**·`<br>` 보존.
+- **`<table>` 콜아웃**: 표 텍스트를 회색 박스(`callout` 블록)로 수집.
+- **`<hr>`**: 구분선(`hr` 블록).
+- **가운데/오른쪽 정렬**(`align`): `text-align` 보존.
+- **문단 간격(gap)**: 각 `<p>`는 자기 블록. **빈 `<p><br></p>`는 다음 블록에 `gap`을 줘서 큰 간격**(mt-7), 연속 `<p>`는 작은 간격(mt-2). → 원문의 줄/문단 그룹 구조 재현. (20px+ 강조 줄은 `h`로 분류되며, 헤딩도 gap을 따른다: 연속이면 mt-3, 빈 줄 뒤 mt-10.)
+- **이미지**: `cdn.imweb.me/upload/`(imweb) + `postfiles.pstatic.net`(네이버)만 다운로드 → `public/images/cases/{idx}/{n}.{ext}`(+실측 w/h). Referer: upload→adresult.kr, pstatic→blog.naver.com. 실패 시 `IMGFAIL` 로그 후 건너뜀.
+- **중복 이미지 제거**: 같은 이미지를 imweb·naver 양쪽에 올린 경우, 지각 해시로 **글 내부** 중복(거리≤6)을 지운다.
+- **영상**: `<iframe .../embed/{id}>`(fr-video) + 유튜브 watch/단축 링크 썸네일 → `video` 블록.
+- **블로그/칼럼 링크 이미지**: `<a href>`로 감싼 이미지 중 blog.naver·adresult.kr 등은 **클릭 가능한 이미지로 유지**(제자리 복원).
+- **제외되는 것**(상세 공통 하단이 대체):
+  - `<a href>`가 **`pf.kakao.com`(카톡) / `map.naver.com`(지도) / `tel:`(전화) / 유튜브 채널(@,channel,c)** 로 향하는 배너
+  - **가로세로비 ≥ 2.0** 꼬리 프로모 배너
+  - **카카오/OGQ 이모티콘 스티커**(`storep-phinf`, `/ogq_`) 등 콘텐츠 아닌 이미지
+  - `/upload/`·`pstatic` 이 아닌 이미지
   - **`og:title`과 동일한 첫 블록**(제목 중복)
 
-## 3. 데이터 구조 (`src/data/success-cases.ts`)
+---
 
-- `CASE_ARTICLES: CaseArticle[]` — `{ slug(=idx), title, excerpt, summary?, faq?, cover, coverW/H, blocks[] }`
-  - `blocks`: `{ type: "h"|"p"|"img"|"video"|"hr"|"callout", runs?, align?, gap?, src?, w?, h?, alt?, videoId?, id }`
-  - `runs`: `{ t, b(굵게), i(기울임), u(밑줄), c(색상), fs(글자 크기 px), bg(형광펜 배경 hex), br, k }`
-  - `gap`: 앞에 빈 `<p>`(개행)가 있던 문단 → 렌더 시 상단 여백 확대(`mt-7`).
-  - `summary`: 리드 콜아웃(핵심 요약, 수치 포함). `LEADS[idx]`에서 주입 → 상세 상단·`description`에 사용.
-  - `faq`: `CaseFaq[]`(`{ q, a }`). `FAQS[idx]`에서 주입 → 상세 하단 FAQ + FAQPage JSON-LD에 사용.
-- `SUCCESS_CASES: CardItem[]` — 목록 카드(제목·발췌·cover 썸네일·`/cases/{slug}` 링크)
-- `getCase(slug)`
-- **순서** = `IDXS` 배열 순서 = 목록 노출 순서.
+## 4. 검증 (커밋 전 필수)
 
-## 4. 렌더링 (수정 불필요, 자동)
+```sh
+# 1) 타입·빌드·린트 (린트는 CostBreakdown 경고 1개만 허용)
+pnpm check-types && pnpm build && pnpm lint
 
-- **`/cases`**: 카드 9개씩 + 페이지네이션(`PaginatedCards`).
-- **`/cases/[slug]`**: 상단 **브랜드 헤더**(PORTFOLIO / 애드리절트 병원마케팅 성공사례입니다. / 결과로 말하는 애드리절트) → 글 제목(h1) + "성공사례" → **리드 콜아웃**(`summary` 있을 때, 빨간 좌측 보더 박스) → 본문(runs 색상·강조 그대로, 이미지, 영상) → **FAQ 섹션**(`faq` 있을 때, 아코디언 없는 상시 노출 텍스트 — 크롤러 친화) → 하단 **공통 CTA**.
-- 컨테이너 `max-w-5xl`. `runs`의 색상은 인라인 `style`, 굵기/기울임/밑줄은 클래스.
+# 2) 새 글이 잘 들어갔는지 (영상 id·핵심 문구)
+grep -o "embed/{VIDEO_ID}\|자주 묻는 질문\|{핵심문구}" .next/server/app/cases/{idx}.html
 
-## 5. 자동 SEO/AEO
+# 3) 중복 이미지 0 확인 (지각 해시 전수 스캔)
+.venv/bin/python3 - <<'PY'
+from PIL import Image; import imagehash, os
+base="public/images/cases"; t=0
+for idx in sorted(os.listdir(base)):
+    d=os.path.join(base,idx)
+    if not os.path.isdir(d) or idx=="_footer": continue
+    seen=[]
+    for f in sorted(os.listdir(d), key=lambda x:(len(x),x)):
+        try: h=imagehash.dhash(Image.open(os.path.join(d,f)), hash_size=12)
+        except Exception: continue
+        if any((h-s)<=6 for s in seen): t+=1
+        else: seen.append(h)
+print("잔여 중복:", t)  # 0 이어야 함
+PY
+```
 
-- `generateStaticParams`로 전 글 **정적 생성(SSG)**.
-- 글별 `title`·`description(summary 있으면 summary, 없으면 발췌)`·`canonical`, **Article + BreadcrumbList JSON-LD**.
-- `faq`가 있으면 **FAQPage JSON-LD**를 Article·Breadcrumb와 함께 자동 출력.
-- `sitemap.ts`는 `/cases`(목록)와 **개별 `/cases/{idx}`를 모두 자동 포함**(`CASE_ARTICLES` 매핑).
-- 임웹 원문 view URL(`/549265113?idx=…`)은 `next.config.ts`가 **301로 `/cases/{idx}`에 자동 리다이렉트**.
+- **기존 글 회귀 확인**: 스크립트는 매 실행 시 IDXS 전체를 재생성한다. 기존 글의 핵심 문구가 그대로 있는지(예: `grep -c "0명 → 80명" src/data/success-cases.ts`) 스팟 체크.
+- Vercel **프리뷰 URL은 접근보호(302)**라 curl로 본문 확인 불가 → 위처럼 로컬 `.next` prerender HTML로 검증한다.
 
 ---
 
-## SEO/AEO 강화 (글 추가 시 필수)
-
-새 글을 이식할 때 `IDXS` 끝에 idx를 넣는 것 외에, **아래 두 dict도 함께 채운다**. 안 채우면 리드 콜아웃·FAQ·FAQPage가 비어 나온다.
-
-- `LEADS[idx]` — **수치를 포함한 1~2문장 요약**. 상세 상단 리드 콜아웃과 메타 `description`에 쓰인다.
-- `FAQS[idx]` — **2~3개 Q&A**. **각 답변은 독립적으로 완결**되게 쓴다(답변엔진이 그대로 인용).
-- **이미지 속 핵심 수치(신환 수·광고비·증가율 등)는 반드시 `LEADS`/`FAQS` 또는 본문 텍스트로도 적는다.** 이미지 픽셀은 크롤러·답변엔진이 못 읽는다.
-- `alt`는 가능하면 **서술형**으로 채운다(현재는 원문 alt 또는 제목 fallback).
-- 개별 `/cases/{idx}`는 sitemap이 자동 포함하고, 임웹 원문 URL은 `next.config`가 301로 자동 리다이렉트한다(별도 작업 불필요).
-
-## 6. 검증
+## 5. 커밋 & 배포
 
 ```sh
-# prerender HTML에서 본문·색상·이미지·영상 확인
-grep -oE "youtube.com/embed/|color:#|/images/cases/{idx}/" .next/server/app/cases/{idx}.html
+git add scripts/port-cases.py src/data/success-cases.ts public/images/cases scripts/.cache
+git commit -m "feat(cases): 성공사례 추가 — {주제}({idx})"
+git push origin feat/adresult-rebrand   # Vercel 이 브랜치를 자동 빌드
+```
+- 커밋 subject는 **한글로 시작**(commitlint가 대문자 시작 거부).
+- pre-commit(biome)·commit-msg(commitlint)·pre-push(knip) 훅이 자동 검사.
+
+---
+
+## 6. 부록
+
+### idx를 모를 때 (목록에서 제목으로 찾기)
+게시판 목록(`?page=N`)은 서버렌더라 curl 가능. `bmode=view` 앵커의 idx와 텍스트를 매칭해 제목으로 찾는다. (스크립트 예: 페이지 1~5 순회하며 제목 substring 매칭.)
+
+### 데이터 구조 (`src/data/success-cases.ts` — 자동 생성)
+```ts
+CaseRun   = { t?, b?, i?, u?, c?(색상), fs?(px), bg?(형광펜 hex), br?, k? }
+CaseBlock = { id?, type: "h"|"p"|"img"|"video"|"hr"|"callout", runs?, align?("center"|"right"), gap?, src?, href?, alt?, w?, h?, videoId? }
+CaseArticle = { slug(=idx), title, excerpt, summary?, faq?: {q,a}[], cover, coverW, coverH, blocks[] }
+CASE_ARTICLES / SUCCESS_CASES(카드) / getCase(slug)
 ```
 
-> 참고: Vercel **프리뷰 URL은 접근보호(302)**라 `curl`로 본문 확인이 안 됨 → 위처럼 로컬 prerender HTML로 검증한다.
+### 렌더링 (자동, 수정 불필요)
+- **`/cases`**: 카드 9개씩 + 페이지네이션. 페이지 번호는 **URL `?page=N`** 으로 관리(`PaginatedCards`).
+- **`/cases/[slug]`**: 브랜드 헤더 → 제목 → **리드 콜아웃**(summary) → 본문(색상·글자크기·형광펜·정렬·구분선·콜아웃·이미지·영상) → **FAQ 섹션**(faq) → 이전/다음 글 네비 → 공통 CTA 배너. 컨테이너 `max-w-5xl`, 영상은 `max-w-2xl` 중앙.
+- 이미지 `quality={90}`, 본문 이미지 `sizes` ~960px(업스케일 방지).
+
+### 자동 SEO/AEO
+- 전 글 **SSG**. 글별 `title`·`description`(summary 우선)·`canonical`.
+- **Article + BreadcrumbList JSON-LD**, `faq` 있으면 **FAQPage JSON-LD** 자동.
+- `sitemap.ts`가 개별 `/cases/{idx}` 자동 포함.
+- 임웹 원문 view URL(`/549265113?idx=…`) → `/cases/{idx}` **301 리다이렉트**(`next.config.ts`).
+
+### 자주 겪는 문제
+- **중복 이미지가 남음** → venv에 `Pillow imagehash` 설치됐는지 확인(없으면 dedup 생략됨).
+- **원문이 바뀌었는데 반영 안 됨** → `scripts/.cache/case-{idx}.html` 삭제 후 재실행(캐시 우선).
+- **썸네일이 장식 이미지** → `COVERS[idx]`로 좋은 이미지 번호 지정.
+- **표지/제목 배너가 본문에 중복** → `DROP_IMAGES[idx]`로 순번 제외.
+- **naver 이미지 403** → Referer가 blog.naver.com인지 확인(스크립트 기본 처리).
