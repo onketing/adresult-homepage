@@ -119,18 +119,35 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 					<div className="mt-8">
 						{a.blocks.map((b) => {
 							if (b.type === "img") {
-								return (
+								const img = (
 									<Image
-										key={b.id}
 										src={b.src ?? ""}
 										alt={b.alt ?? a.title}
 										width={b.w ?? 800}
 										height={b.h ?? 600}
 										quality={90}
-										sizes="(max-width: 768px) 100vw, 720px"
-										style={{ maxWidth: b.w }}
-										className="mx-auto mt-6 mb-6 h-auto w-full rounded-xl"
+										sizes="(max-width: 768px) 100vw, 960px"
+										className="h-auto w-full rounded-xl"
 									/>
+								);
+								if (b.href) {
+									return (
+										<a
+											key={b.id}
+											href={b.href}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="mx-auto mt-6 mb-6 block w-full transition-opacity hover:opacity-90"
+											style={{ maxWidth: b.w }}
+										>
+											{img}
+										</a>
+									);
+								}
+								return (
+									<div key={b.id} className="mx-auto mt-6 mb-6 w-full" style={{ maxWidth: b.w }}>
+										{img}
+									</div>
 								);
 							}
 							if (b.type === "video") {

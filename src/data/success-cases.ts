@@ -17,6 +17,7 @@ export type CaseBlock = {
 	runs?: CaseRun[];
 	align?: "center" | "right";
 	src?: string;
+	href?: string;
 	alt?: string;
 	w?: number;
 	h?: number;
@@ -37,10 +38,373 @@ export type CaseArticle = {
 
 export const CASE_ARTICLES: CaseArticle[] = [
 	{
+		slug: "167246533",
+		title: "[병원마케팅 성공사례] 병원마케팅 효과 어느 정도일까요?",
+		excerpt:
+			"병원마케팅의 효과가 언제 쯤부터 날까 많이 들 궁금해 하시는데요.실제로 상담을 진행하면서도 가장 많이 받는 질문 중 하나이기도 한 궁금증이죠. 사실 정확하게 딱 언제부터다 라고 말씀드리기가 정말 애매한 부분입니다.병원 매출이라는 게 지역,분과 그리고 병원의 규모 등등 정말 수많은 요인들",
+		summary:
+			"병원마케팅 효과는 지역·분과·규모에 따라 다르지만, 메디컬 패키지를 이용한 대부분의 병원이 2~3개월이면 인터넷 유입이 생겼다고 말합니다. 애드리절트는 월 단위로 내원율을 함께 체크하며 광고를 조정합니다.",
+		faq: [],
+		cover: "/images/cases/167246533/2.png",
+		coverW: 337,
+		coverH: 416,
+		blocks: [
+			{
+				type: "callout",
+				runs: [
+					{
+						t: "병원마케팅, 과연 언제부터 효과가 생길까?",
+						b: true,
+						c: "#ff0000",
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 0,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: "병원마케팅의 효과가 언제 쯤부터 날까 많이 들 궁금해 하시는데요.",
+						k: 0,
+					},
+					{
+						br: true,
+						k: 1,
+					},
+					{
+						t: "실제로 상담을 진행하면서도 가장 많이 받는 질문 중 하나이기도 한 궁금증이죠.",
+						k: 2,
+					},
+				],
+				align: "center",
+				id: 1,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: "사실 정확하게 딱 언제부터다 라고 말씀드리기가 정말 애매한 부분입니다.",
+						b: true,
+						k: 0,
+					},
+					{
+						br: true,
+						k: 1,
+					},
+					{
+						t: "병원 매출이라는 게 지역,분과 그리고 병원의 규모 등등 정말 수많은 요인들이 복합적으로 작용하기 때문인데요.",
+						k: 2,
+					},
+				],
+				align: "center",
+				id: 2,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: "그렇기에 저희 애드리절트와 함께하면 언제 효과가 생길 것이다.",
+						k: 0,
+					},
+					{
+						br: true,
+						k: 1,
+					},
+					{
+						t: "라고 딱 잘라서 말하기에는 무리가 있습니다.",
+						k: 2,
+					},
+					{
+						br: true,
+						k: 3,
+					},
+					{
+						t: "(관련한 칼럼은 아래를 참고해 주세요 ^^ 이미지 클릭 시 이동합니다.)",
+						k: 4,
+					},
+				],
+				align: "center",
+				id: 3,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167246533/1.png",
+				w: 1280,
+				h: 720,
+				alt: "병원마케팅성공사례",
+				href: "https://adresult.kr/93/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=167367530&t=board",
+				id: 4,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: "그래도 확답을 드릴 수는 없지만, 평균 정도는 내볼 수 있겠죠.",
+						k: 0,
+					},
+					{
+						br: true,
+						k: 1,
+					},
+					{
+						t: "대부분의 병원들은 메디컬패키지를 이용하시고 2~3개월 정도면 인터넷 유입이 생겼다고 많이들 말씀하십니다.",
+						k: 2,
+					},
+				],
+				align: "center",
+				id: 5,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: "직접 측정해 보는 원장님들도 계시고, 저희가 먼저 월 단위로 여쭈어 보아 내원율을 체크하고 있기도 합니다.",
+						c: "#ff0000",
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 6,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: "만일 저희 애드리절트와 병원 마케팅을 진행 해보실 예정이시라면,",
+						k: 0,
+					},
+					{
+						br: true,
+						k: 1,
+					},
+					{
+						t: "내부적으로 인터넷 유입을 측정, 공유를 해주시면 더욱 효율적인 광고가 가능",
+						b: true,
+						c: "#ff0000",
+						k: 2,
+					},
+					{
+						t: "하게 됩니다. 😀",
+						k: 3,
+					},
+				],
+				align: "center",
+				id: 7,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: "아래는 분과별 여러 원장님들께서 주신 카카오톡 피드백 모음입니다.",
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 8,
+			},
+			{
+				type: "h",
+				runs: [
+					{
+						t: "[정형외과광고 성공사례]",
+						b: true,
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 9,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167246533/2.png",
+				w: 337,
+				h: 416,
+				alt: "[병원마케팅 성공사례] 병원마케팅 효과 어느 정도일까요?",
+				id: 10,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167246533/3.jpg",
+				w: 330,
+				h: 483,
+				alt: "[병원마케팅 성공사례] 병원마케팅 효과 어느 정도일까요?",
+				id: 11,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167246533/4.png",
+				w: 337,
+				h: 416,
+				alt: "병원마케팅",
+				id: 12,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167246533/5.png",
+				w: 330,
+				h: 483,
+				alt: "1826954377530.png",
+				id: 13,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167246533/6.png",
+				w: 335,
+				h: 184,
+				alt: "병원광고",
+				id: 14,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167246533/7.png",
+				w: 329,
+				h: 334,
+				alt: "병원개원",
+				id: 15,
+			},
+			{
+				type: "h",
+				runs: [
+					{
+						t: "[피부과 성공사례]",
+						b: true,
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 16,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167246533/8.png",
+				w: 260,
+				h: 217,
+				alt: "강남병원마케팅",
+				id: 17,
+			},
+			{
+				type: "h",
+				runs: [
+					{
+						t: "[성형외과 성공사례]",
+						b: true,
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 18,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167246533/9.png",
+				w: 323,
+				h: 179,
+				alt: "서울병원마케팅",
+				id: 19,
+			},
+			{
+				type: "h",
+				runs: [
+					{
+						t: "[안과광고 성공사례]",
+						b: true,
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 20,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167246533/10.png",
+				w: 305,
+				h: 462,
+				alt: "병원마케팅대행",
+				id: 21,
+			},
+			{
+				type: "h",
+				runs: [
+					{
+						t: "[치과광고 성공사례]",
+						b: true,
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 22,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167246533/11.png",
+				w: 323,
+				h: 809,
+				alt: "병원광고마케팅",
+				id: 23,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167246533/12.png",
+				w: 353,
+				h: 202,
+				alt: "병원광고대행사",
+				id: 24,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167246533/13.png",
+				w: 339,
+				h: 681,
+				alt: "병원마케팅",
+				id: 25,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167246533/14.png",
+				w: 305,
+				h: 295,
+				alt: "병원홍보",
+				id: 26,
+			},
+			{
+				type: "video",
+				videoId: "IxiY7eS-DG8",
+				id: 27,
+			},
+			{
+				type: "h",
+				runs: [
+					{
+						t: "[암병원광고 성공사례]",
+						b: true,
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 28,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167246533/15.png",
+				w: 324,
+				h: 329,
+				alt: "병원마케팅대행",
+				id: 29,
+			},
+			{
+				type: "video",
+				videoId: "V52HQFA7v-8",
+				id: 30,
+			},
+		],
+	},
+	{
 		slug: "167246130",
 		title: '[병원마케팅] 애드리절트 직원들이 제일 듣고 싶은 말 "환자 늘었다"',
 		excerpt:
-			"애드리절트에서는 계약 전 센터장과의 상담을 하고, 계약이 진행되면 전담 팀이 배정됩니다. 이번에 A병원의 광고가 3개월이 되어 매니저들과 원장님 간의 미팅을 가지게 되었습니다. 이번 미팅을 끝마친 후, 앤(센터장)이 원장님께 어떠셨는지 여쭈어 보았는데 너무 잘 해주셨다는 피드백이 돌아왔",
+			"애드리절트에서는 계약 전 센터장과의 상담을 하고, 계약이 진행되면 전담 팀이 배정됩니다.이번에 A병원의 광고가 3개월이 되어 매니저들과 원장님 간의 미팅을 가지게 되었습니다.이번 미팅을 끝마친 후, 앤(센터장)이 원장님께 어떠셨는지 여쭈어 보았는데너무 잘 해주셨다는 피드백이 돌아왔습니다",
 		summary:
 			"타 광고회사에서 옮겨온 A병원은 애드리절트와 3개월 진행한 뒤 이전 대비 60~70% 더 나은 효과를 봤다는 피드백을 주셨습니다. 애드리절트가 가장 반기는 말은 '환자가 늘었다'입니다.",
 		faq: [
@@ -76,42 +440,33 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "애드리절트에서는 계약 전 센터장과의 상담을 하고, 계약이 진행되면 전담 팀이 배정됩니다.",
 						k: 0,
 					},
+					{
+						br: true,
+						k: 1,
+					},
+					{
+						t: "이번에 A병원의 광고가 3개월이 되어 매니저들과 원장님 간의 미팅을 가지게 되었습니다.",
+						k: 2,
+					},
+					{
+						br: true,
+						k: 3,
+					},
+					{
+						t: "이번 미팅을 끝마친 후, 앤(센터장)이 원장님께 어떠셨는지 여쭈어 보았는데",
+						k: 4,
+					},
+					{
+						br: true,
+						k: 5,
+					},
+					{
+						t: "너무 잘 해주셨다는 피드백이 돌아왔습니다~!",
+						k: 6,
+					},
 				],
 				align: "center",
 				id: 1,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "이번에 A병원의 광고가 3개월이 되어 매니저들과 원장님 간의 미팅을 가지게 되었습니다.",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 2,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "이번 미팅을 끝마친 후, 앤(센터장)이 원장님께 어떠셨는지 여쭈어 보았는데",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 3,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "너무 잘 해주셨다는 피드백이 돌아왔습니다~!",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 4,
 			},
 			{
 				type: "img",
@@ -119,7 +474,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 345,
 				h: 342,
 				alt: "병원블로그마케팅",
-				id: 5,
+				id: 2,
 			},
 			{
 				type: "p",
@@ -128,31 +483,25 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "A병원은 타 광고 회사 에서 광고를 진행하시다 애드리절트와 새로 함께 시작한 곳인데요",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 6,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "이전 광고 회사에 광고를 맡겼을 때보다 60~70% 정도 더 효과를 보신 것 같으시다고",
-						k: 0,
+						k: 2,
 					},
-				],
-				align: "center",
-				id: 7,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 3,
+					},
 					{
 						t: "피드백을 주셨어요~!",
-						k: 0,
+						k: 4,
 					},
 				],
 				align: "center",
-				id: 8,
+				id: 3,
 			},
 			{
 				type: "p",
@@ -163,7 +512,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 9,
+				id: 4,
 			},
 			{
 				type: "h",
@@ -180,7 +529,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 10,
+				id: 5,
 			},
 			{
 				type: "p",
@@ -189,20 +538,26 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "애드리절트 전 직원은 어제도 오늘도 내일까지도 항상",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 11,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "병원의 성공을 위해 최선을 다하고 또한 최선을 다할 예정입니다^^",
-						k: 0,
+						k: 2,
 					},
 				],
 				align: "center",
-				id: 12,
+				id: 6,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167246130/3.png",
+				w: 463,
+				h: 388,
+				alt: "병원광고관리",
+				href: "https://blog.naver.com/qpqp791/222660857898",
+				id: 7,
 			},
 		],
 	},
@@ -210,7 +565,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 		slug: "167232106",
 		title: "[병원마케팅성공사례] 병원 검색량 5배 증가",
 		excerpt:
-			"타 지역에서 10년 가까이 병원을 운영하다가 서울로 이전하신 A병원의 마케팅성공사례입니다. A병원은 기존 지역에서 이미 안정적으로 자리를 잡은 상태였기 때문에, 서울로 병원을 이전하는 결정은 쉽지 않은 선택이었을 것입니다. 이에 따라 마케팅을 함께할 회사를 매우 신중하고 꼼꼼하게 검토하",
+			"타 지역에서 10년 가까이 병원을 운영하다가 서울로 이전하신 A병원의 마케팅성공사례입니다.A병원은 기존 지역에서 이미 안정적으로 자리를 잡은 상태였기 때문에,서울로 병원을 이전하는 결정은 쉽지 않은 선택이었을 것입니다.이에 따라 마케팅을 함께할 회사를 매우 신중하고 꼼꼼하게 검토하셨다고",
 		summary:
 			"타 지역에서 10년 운영하다 서울로 이전한 A병원은, 애드리절트와 함께한 두 달 만에 병원명 검색량이 200건대에서 770건으로 3배 이상 늘었고, 1년 4개월 뒤에는 월 2천 건 가까이로 약 10배까지 증가했습니다.",
 		faq: [
@@ -238,42 +593,33 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "타 지역에서 10년 가까이 병원을 운영하다가 서울로 이전하신 A병원의 마케팅성공사례입니다.",
 						k: 0,
 					},
+					{
+						br: true,
+						k: 1,
+					},
+					{
+						t: "A병원은 기존 지역에서 이미 안정적으로 자리를 잡은 상태였기 때문에,",
+						k: 2,
+					},
+					{
+						br: true,
+						k: 3,
+					},
+					{
+						t: "서울로 병원을 이전하는 결정은 쉽지 않은 선택이었을 것입니다.",
+						k: 4,
+					},
+					{
+						br: true,
+						k: 5,
+					},
+					{
+						t: "이에 따라 마케팅을 함께할 회사를 매우 신중하고 꼼꼼하게 검토하셨다고 하셨습니다.",
+						k: 6,
+					},
 				],
 				align: "center",
 				id: 0,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "A병원은 기존 지역에서 이미 안정적으로 자리를 잡은 상태였기 때문에,",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 1,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "서울로 병원을 이전하는 결정은 쉽지 않은 선택이었을 것입니다.",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 2,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "이에 따라 마케팅을 함께할 회사를 매우 신중하고 꼼꼼하게 검토하셨다고 하셨습니다.",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 3,
 			},
 			{
 				type: "img",
@@ -281,7 +627,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 534,
 				h: 128,
 				alt: "병원마케팅성공사례",
-				id: 4,
+				id: 1,
 			},
 			{
 				type: "p",
@@ -290,53 +636,41 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "2020년 11월, 첫 미팅 이후 바로 계약을 진행하였고, 약 1년 4개월 정도를 함께하고 있습니다.",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 5,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "미팅을 진행한 게 엊그제 같은데 말이죠^^",
-						k: 0,
+						k: 2,
 					},
-				],
-				align: "center",
-				id: 6,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 3,
+					},
 					{
 						t: "원장님께서는 이전하기 전 지역에서도 광고를 진행하고 계셨지만",
-						k: 0,
+						k: 4,
 					},
-				],
-				align: "center",
-				id: 7,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 5,
+					},
 					{
 						t: "이전을 하며 소통의 어려움이 생기고, 그 외에 여러 아쉬웠던 점들을 말씀해 주시며,",
-						k: 0,
+						k: 6,
 					},
-				],
-				align: "center",
-				id: 8,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 7,
+					},
 					{
 						t: "앞으로의 마케팅 방향성에 대하여 함께 이야기를 나누었습니다.",
-						k: 0,
+						k: 8,
 					},
 				],
 				align: "center",
-				id: 9,
+				id: 2,
 			},
 			{
 				type: "h",
@@ -348,11 +682,11 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 10,
+				id: 3,
 			},
 			{
 				type: "hr",
-				id: 11,
+				id: 4,
 			},
 			{
 				type: "p",
@@ -361,36 +695,30 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "첫 달은 준비 기간에 가까웠습니다.",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 12,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "애드리절트의 메디컬패키지는 지역과 분과 등 여러가지 조건에 따라 다르지만, 시작과 동시에 눈에 띄는 효과가 나타나는 것은 아닙니다.",
-						k: 0,
+						k: 2,
 					},
-				],
-				align: "center",
-				id: 13,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 3,
+					},
 					{
 						t: "광고 콘텐츠가 충분히 노출되기까지는 어느 정도의 시간이 필요",
 						c: "#ff0000",
-						k: 0,
+						k: 4,
 					},
 					{
 						t: "하기 때문입니다.",
-						k: 1,
+						k: 5,
 					},
 				],
 				align: "center",
-				id: 14,
+				id: 5,
 			},
 			{
 				type: "p",
@@ -399,20 +727,17 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "특히 첫 달은 해당 병원을 주로 찾으시는 고객들의 니즈가 완벽히 파악된 상태가 아니고,",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 15,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "함께 콘텐츠 방향성을 계획하고 제작을 하는 과정이기에 완벽한 광고가 되지 않습니다.",
-						k: 0,
+						k: 2,
 					},
 				],
 				align: "center",
-				id: 16,
+				id: 6,
 			},
 			{
 				type: "img",
@@ -420,7 +745,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 329,
 				h: 228,
 				alt: "병원마케팅대행사",
-				id: 17,
+				id: 7,
 			},
 			{
 				type: "p",
@@ -429,43 +754,34 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "Ａ병원도 마찬가지로 이러한 과정이 있었고, 첫 달은 미비한 상태에서 진행을 하게 되었습니다.",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 18,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "하지만 원활한 소통을 통하여 점차 함께 발을 맞추어 나갔고,",
-						k: 0,
+						k: 2,
 					},
-				],
-				align: "center",
-				id: 19,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 3,
+					},
 					{
 						t: "2개월이 되었을 땐 불과 1달 전만 해도 200대였던 A병원의 병원명 검색 수가 무려 770으로 3배 이상 상승하는 놀라운 결과",
 						c: "#ff0000",
-						k: 0,
+						k: 4,
 					},
-				],
-				align: "center",
-				id: 20,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 5,
+					},
 					{
 						t: "를 만들어 냈습니다.",
-						k: 0,
+						k: 6,
 					},
 				],
 				align: "center",
-				id: 21,
+				id: 8,
 			},
 			{
 				type: "img",
@@ -473,7 +789,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 966,
 				h: 593,
 				alt: "병원블로그관리",
-				id: 22,
+				id: 9,
 			},
 			{
 				type: "p",
@@ -485,7 +801,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 23,
+				id: 10,
 			},
 			{
 				type: "h",
@@ -502,7 +818,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 24,
+				id: 11,
 			},
 			{
 				type: "p",
@@ -511,42 +827,33 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "효과를 본 A병원에서는 더욱더 적극적인 광고를 진행하고 싶어 하셨고,",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 25,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "원장님께서 직접 관리 하시는 블로그를 더욱 알리고 싶다고 하셨습니다.",
-						k: 0,
+						k: 2,
 					},
-				],
-				align: "center",
-				id: 26,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 3,
+					},
 					{
 						t: "해당 지역에는 비슷한 병원들이 많았기에 A병원만의 차별성을 찾는 것이 매우 중요했습니다.",
-						k: 0,
+						k: 4,
 					},
-				],
-				align: "center",
-				id: 27,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 5,
+					},
 					{
 						t: "그래서 병원에 오신 환자 분들이 원장님께 하시던 말씀들의 대부분을 정리하여 저희에게 전달을 해 주셨습니다.",
-						k: 0,
+						k: 6,
 					},
 				],
 				align: "center",
-				id: 28,
+				id: 12,
 			},
 			{
 				type: "img",
@@ -554,7 +861,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 535,
 				h: 374,
 				alt: "병원블로그광고",
-				id: 29,
+				id: 13,
 			},
 			{
 				type: "p",
@@ -565,7 +872,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 30,
+				id: 14,
 			},
 			{
 				type: "p",
@@ -574,20 +881,17 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "그렇게 원장님과 A병원을 찾는 환자 분들의 니즈를 파악 후 적절히 광고에 담은 결과,",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 31,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "원장님 블로그의 유입자가 점차 증가하였고, 실질적으로 광고를 본 후 내원하는 환자의 수도 증가하기 시작했습니다.",
-						k: 0,
+						k: 2,
 					},
 				],
 				align: "center",
-				id: 32,
+				id: 15,
 			},
 			{
 				type: "img",
@@ -595,7 +899,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 645,
 				h: 780,
 				alt: "병원블로그",
-				id: 33,
+				id: 16,
 			},
 			{
 				type: "p",
@@ -604,32 +908,26 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "광고를 처음 진행하였을 때 문의, 내원이 일어나지 않아 걱정하시던 원장님께서는",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 34,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "애드리절트를 믿고 기다려신 결과,",
-						k: 0,
+						k: 2,
 					},
-				],
-				align: "center",
-				id: 35,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 3,
+					},
 					{
 						t: "현재는 고객들이 좋은 후기들도 자발적으로 작성해 주시고, 소개 환자 또한 많이 늘어나며 확실하게 자리를 잡으시게 되었습니다.",
 						c: "#ff0000",
-						k: 0,
+						k: 4,
 					},
 				],
 				align: "center",
-				id: 36,
+				id: 17,
 			},
 			{
 				type: "img",
@@ -637,7 +935,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 336,
 				h: 311,
 				alt: "병원블로그홍보",
-				id: 37,
+				id: 18,
 			},
 			{
 				type: "p",
@@ -646,20 +944,17 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "병원 마케팅을 성공하기 위해서는 무엇보다 병원과 애드리절트 간의",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 38,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "원활한 소통이 필수라는 것을 A병원과 함께하며 강하게 느끼고 있습니다.",
-						k: 0,
+						k: 2,
 					},
 				],
 				align: "center",
-				id: 39,
+				id: 19,
 			},
 			{
 				type: "p",
@@ -671,7 +966,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 40,
+				id: 20,
 			},
 			{
 				type: "h",
@@ -702,7 +997,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 41,
+				id: 21,
 			},
 			{
 				type: "img",
@@ -710,7 +1005,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 965,
 				h: 443,
 				alt: "병원홍보",
-				id: 42,
+				id: 22,
 			},
 			{
 				type: "p",
@@ -719,20 +1014,17 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "A병원은 수많은 고객사들 중에서도 정말 애자일스럽게 일을 한 곳이라 할 수 있습니다.",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 43,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "저희 뿐만 아니라 원장님/직원 분들 모두가 적극적으로 참여를 해주셨기에 이런 엄청난 성과를 낼 수 있었던 것입니다.",
-						k: 0,
+						k: 2,
 					},
 				],
 				align: "center",
-				id: 44,
+				id: 23,
 			},
 			{
 				type: "p",
@@ -741,31 +1033,25 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "처음에는 자리를 잡을 수 있을지 걱정을 하던 A병원은",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 45,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "이제 '우리 병원을 어떻게 알릴까?'를 넘어서",
-						k: 0,
+						k: 2,
 					},
-				],
-				align: "center",
-				id: 46,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 3,
+					},
 					{
 						t: "'어떻게 하면 환자들에게 더 양질의 의료 서비스를 제공할까?'라는 고민을 하는 단계까지 올라오게 되었습니다.",
-						k: 0,
+						k: 4,
 					},
 				],
 				align: "center",
-				id: 47,
+				id: 24,
 			},
 			{
 				type: "p",
@@ -786,20 +1072,26 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						c: "#ff0000",
 						k: 2,
 					},
-				],
-				align: "center",
-				id: 48,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 3,
+					},
 					{
 						t: "병원의 기본인 치료를 잘하는 것은 물론 환자가 병원에서 치료 그 이상을 느끼도록 준비를 하는 것이죠.",
-						k: 0,
+						k: 4,
 					},
 				],
 				align: "center",
-				id: 49,
+				id: 25,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167232106/8.png",
+				w: 450,
+				h: 378,
+				alt: "병원광고대행사",
+				href: "https://blog.naver.com/qpqp791/222660857898",
+				id: 26,
 			},
 			{
 				type: "p",
@@ -808,31 +1100,25 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "병원을 더욱더 성장시키기 위해서는, 항상 마케턴트도 발전을 해 나가야 합니다.",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 50,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "그래서 애드리절트의 전 직원들은 여러 방법을 통해 발전을 하고 역량을 키워 나가고 있습니다.",
-						k: 0,
+						k: 2,
 					},
-				],
-				align: "center",
-				id: 51,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 3,
+					},
 					{
 						t: "저희 애드리절트는 짧고 굵게 보다는, 가늘고 길게 잘 유지되는 마케팅 방법을 사용 중입니다.",
-						k: 0,
+						k: 4,
 					},
 				],
 				align: "center",
-				id: 52,
+				id: 27,
 			},
 			{
 				type: "p",
@@ -850,20 +1136,17 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "로 일을 하기에 다소 시간이 걸릴 뿐,",
 						k: 2,
 					},
-				],
-				align: "center",
-				id: 53,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 3,
+					},
 					{
 						t: "밑바닥부터 차곡차곡 건축물 올리듯 진행하고 있습니다.",
-						k: 0,
+						k: 4,
 					},
 				],
 				align: "center",
-				id: 54,
+				id: 28,
 			},
 			{
 				type: "p",
@@ -874,7 +1157,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 55,
+				id: 29,
 			},
 			{
 				type: "p",
@@ -883,21 +1166,18 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "늘 공부하며 성장하는 애드리절트가 되겠습니다.",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 56,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "그리하여 더 많은 병원마케팅성공사례를 소개해 드리겠습니다.",
 						b: true,
-						k: 0,
+						k: 2,
 					},
 				],
 				align: "center",
-				id: 57,
+				id: 30,
 			},
 			{
 				type: "h",
@@ -908,7 +1188,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 58,
+				id: 31,
 			},
 		],
 	},
@@ -916,7 +1196,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 		slug: "167212324",
 		title: "[치과마케팅 성공사례] 광고 6개월만에 병원 확장까지 성공!",
 		excerpt:
-			"라고 생각들을 많이 하시죠, 하지만 이 글을 3분만 시간 내셔서 읽어보시면 가능하다는 생각이 들게 되실 겁니다. 오늘 소개해 드릴 사례를 보시면서 어떤 마케팅이 좋은 마케팅인지 살펴보시고, 지금까지 광고 효과를 못 보셔서 힘들어하신 분들에게 조그마한 도움이 되었으면 합니다. 사실 해당",
+			"라고 생각들을 많이 하시죠, 하지만 이 글을 3분만 시간 내셔서 읽어보시면 가능하다는 생각이 들게 되실 겁니다. 오늘 소개해 드릴 사례를 보시면서 어떤 마케팅이 좋은 마케팅인지 살펴보시고,지금까지 광고 효과를 못 보셔서 힘들어하신 분들에게 조그마한 도움이 되었으면 합니다. 사실 해당 치",
 		summary:
 			"개원 초 신규환자가 적고 근교에 대형 치과 오픈까지 앞둔 치과가, 애드리절트의 메디컬 패키지에 유튜브 광고·플레이스 상위노출·온라인 평판관리를 더한 결과 광고 6개월 만에 병원 확장까지 이뤘습니다.",
 		faq: [
@@ -981,21 +1261,18 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "오늘 소개해 드릴 사례를 보시면서 어떤 마케팅이 좋은 마케팅인지 살펴보시고,",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 4,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "지금까지 광고 효과를 못 보셔서 힘들어하신 분들에게 조그마한 도움이 되었으면 합니다.",
 						c: "#ff9900",
-						k: 0,
+						k: 2,
 					},
 				],
 				align: "center",
-				id: 5,
+				id: 4,
 			},
 			{
 				type: "img",
@@ -1003,7 +1280,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 800,
 				h: 850,
 				alt: "치과블로그마케팅",
-				id: 6,
+				id: 5,
 			},
 			{
 				type: "callout",
@@ -1022,7 +1299,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 7,
+				id: 6,
 			},
 			{
 				type: "p",
@@ -1033,7 +1310,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 8,
+				id: 7,
 			},
 			{
 				type: "p",
@@ -1053,7 +1330,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 9,
+				id: 8,
 			},
 			{
 				type: "p",
@@ -1064,7 +1341,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 10,
+				id: 9,
 			},
 			{
 				type: "img",
@@ -1072,7 +1349,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 800,
 				h: 800,
 				alt: "치과블로그",
-				id: 11,
+				id: 10,
 			},
 			{
 				type: "h",
@@ -1085,11 +1362,11 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 12,
+				id: 11,
 			},
 			{
 				type: "hr",
-				id: 13,
+				id: 12,
 			},
 			{
 				type: "p",
@@ -1098,20 +1375,17 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "저희의 첫 시작은 메디컬 패키지 (정보성 블로그/다채널 배포) 였습니다.",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 14,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "그리고 점차 플레이스 상위노출, 온라인 평판관리, 유튜브 광고까지 하나하나 그 영역을 넓혀 오게 되었습니다.",
-						k: 0,
+						k: 2,
 					},
 				],
 				align: "center",
-				id: 15,
+				id: 13,
 			},
 			{
 				type: "p",
@@ -1120,67 +1394,52 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "작은 지역이라면 메디컬 패키지(정보성 블로그/다채널 배포) 만으로도 충분할지 모르지만,",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 16,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "해당 지역은 경쟁이 치열한 곳이었기에 대형 치과가 오픈하기 전",
-						k: 0,
+						k: 2,
 					},
-				],
-				align: "center",
-				id: 17,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 3,
+					},
 					{
 						t: "1) 유튜브 광고",
 						b: true,
-						k: 0,
+						k: 4,
 					},
-				],
-				align: "center",
-				id: 18,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 5,
+					},
 					{
 						t: "2)플레이스 상위노출",
 						b: true,
-						k: 0,
+						k: 6,
 					},
-				],
-				align: "center",
-				id: 19,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 7,
+					},
 					{
 						t: "3)온라인 평판 관리",
 						b: true,
-						k: 0,
+						k: 8,
 					},
-				],
-				align: "center",
-				id: 20,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 9,
+					},
 					{
 						t: "이렇게 3가지를 추가로 준비하여 지역 내 환자들에게 신뢰를 심어주는 것에 심혈을 기울였습니다.",
-						k: 0,
+						k: 10,
 					},
 				],
 				align: "center",
-				id: 21,
+				id: 14,
 			},
 			{
 				type: "callout",
@@ -1196,12 +1455,12 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 22,
+				id: 15,
 			},
 			{
 				type: "video",
 				videoId: "z4rXIjQEQUw",
-				id: 23,
+				id: 16,
 			},
 			{
 				type: "img",
@@ -1209,7 +1468,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 800,
 				h: 799,
 				alt: "치과홍보",
-				id: 24,
+				id: 17,
 			},
 			{
 				type: "h",
@@ -1222,11 +1481,11 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 25,
+				id: 18,
 			},
 			{
 				type: "hr",
-				id: 26,
+				id: 19,
 			},
 			{
 				type: "p",
@@ -1235,75 +1494,57 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "신뢰를 위해 유튜브를 통해 전문적인 정보만 전달하며,",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 27,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "[키워드 관리 예시]",
-						k: 0,
+						k: 2,
 					},
-				],
-				align: "center",
-				id: 28,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 3,
+					},
 					{
 						t: "00치과",
-						k: 0,
+						k: 4,
 					},
-				],
-				align: "center",
-				id: 29,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 5,
+					},
 					{
 						t: "00스케일링",
-						k: 0,
+						k: 6,
 					},
-				],
-				align: "center",
-				id: 30,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 7,
+					},
 					{
 						t: "00사랑니발치",
-						k: 0,
+						k: 8,
 					},
-				],
-				align: "center",
-				id: 31,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 9,
+					},
 					{
 						t: "00잇몸치료",
-						k: 0,
+						k: 10,
 					},
-				],
-				align: "center",
-				id: 32,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 11,
+					},
 					{
 						t: "00치아미백",
-						k: 0,
+						k: 12,
 					},
 				],
 				align: "center",
-				id: 33,
+				id: 20,
 			},
 			{
 				type: "p",
@@ -1326,37 +1567,31 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						c: "#ff9900",
 						k: 3,
 					},
-				],
-				align: "center",
-				id: 34,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 4,
+					},
 					{
 						t: '"실제 환자들이 병원을 찾을 때 사용하는 키워드"를',
 						c: "#ff9900",
-						k: 0,
+						k: 5,
 					},
-				],
-				align: "center",
-				id: 35,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 6,
+					},
 					{
 						t: "네이버, 다음 등에 검색을 하면 저희 00치과가 나올 수 있도록 집중 관리",
 						c: "#ff9900",
-						k: 0,
+						k: 7,
 					},
 					{
 						t: "하였습니다.",
-						k: 1,
+						k: 8,
 					},
 				],
 				align: "center",
-				id: 36,
+				id: 21,
 			},
 			{
 				type: "p",
@@ -1365,36 +1600,30 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "이렇게 다채널 노출을 통하여 치과명을 지속적으로 확인하게 되면 환자는 무의식 중",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 37,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "'어라? 이 치과 어디서 들어본 거 같은데?'",
-						k: 0,
+						k: 2,
 					},
-				],
-				align: "center",
-				id: 38,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 3,
+					},
 					{
 						t: "라는 생각과 함께 친근함을 느끼게 됩니다. ",
-						k: 0,
+						k: 4,
 					},
 					{
 						t: "이 친근함의 시작이 바로 병원 매출 향상의 시작입니다.",
 						b: true,
-						k: 1,
+						k: 5,
 					},
 				],
 				align: "center",
-				id: 39,
+				id: 22,
 			},
 			{
 				type: "img",
@@ -1402,7 +1631,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 800,
 				h: 1700,
 				alt: "치과온라인마케팅",
-				id: 40,
+				id: 23,
 			},
 			{
 				type: "callout",
@@ -1414,7 +1643,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 41,
+				id: 24,
 			},
 			{
 				type: "p",
@@ -1423,42 +1652,33 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: '처음에는 "마이너스라도 버텨보겠다." 라고 말씀하시던 원장님께서',
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 42,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: '"계속 잘 돼요 ㅎㅎ 직원들이 너무 바쁘다 해요" 라며 카톡을 남겨 주셨습니다.',
-						k: 0,
+						k: 2,
 					},
-				],
-				align: "center",
-				id: 43,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 3,
+					},
 					{
 						t: "또한 실제 내원해 주신 환자분들께서 병원을 꾸준히 이용해 주시고는",
-						k: 0,
+						k: 4,
 					},
-				],
-				align: "center",
-				id: 44,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 5,
+					},
 					{
 						t: '"아프면 항상 오는 곳" 이라는 좋은 리뷰들을 남겨 주셨는데요.',
-						k: 0,
+						k: 6,
 					},
 				],
 				align: "center",
-				id: 45,
+				id: 25,
 			},
 			{
 				type: "p",
@@ -1474,7 +1694,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 46,
+				id: 26,
 			},
 			{
 				type: "img",
@@ -1482,13 +1702,298 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 800,
 				h: 850,
 				alt: "치과온라인광고",
-				id: 47,
+				id: 27,
 			},
 			{
 				type: "h",
 				runs: [
 					{
 						t: "실제로 얼마나 환자가 오는가? 에 집중합니다.",
+						b: true,
+						c: "#3d85c6",
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 28,
+			},
+			{
+				type: "hr",
+				id: 29,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: "많은 치과마케팅 대행사들이 광고하는 것을 보면",
+						k: 0,
+					},
+					{
+						br: true,
+						k: 1,
+					},
+					{
+						t: "보통 평균적으로 조회수 10,000 / 체류 시간 3-4분 유지를 이용하여 업체를 홍보하고는 합니다.",
+						k: 2,
+					},
+				],
+				align: "center",
+				id: 30,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: "물론 조회수가 높고, 체류 시간이 많으면 그만큼 병원을 많이 알리고 있다는 기준점으로도 삼을 수 있겠지요.",
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 31,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: "하지만 저희는 조회수, 체류 시간을 떠나",
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 32,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: '"이번달은 어떤 질환으로 집중할지?"',
+						b: true,
+						k: 0,
+					},
+					{
+						br: true,
+						k: 1,
+					},
+					{
+						t: '"효과는 어떤지?"',
+						b: true,
+						k: 2,
+					},
+					{
+						br: true,
+						k: 3,
+					},
+					{
+						t: '"어떠한 질환으로 환자들이 치료를 받으러 오는지?"',
+						b: true,
+						k: 4,
+					},
+				],
+				align: "center",
+				id: 33,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: "등을 지속적으로 여쭤보며 소통하고,",
+						k: 0,
+					},
+					{
+						br: true,
+						k: 1,
+					},
+					{
+						t: '치과마케팅에 있어 가장 중요한 "실제 환자가 얼마나 오는가?" 에 집중을 하고 있습니다.',
+						c: "#ff9900",
+						k: 2,
+					},
+				],
+				align: "center",
+				id: 34,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167212324/7.png",
+				w: 800,
+				h: 850,
+				alt: "치과마케팅성공사례",
+				id: 35,
+			},
+			{
+				type: "h",
+				runs: [
+					{
+						t: '"애드리절트 덕분에 병원확장까지 성공했습니다."',
+						b: true,
+						c: "#3d85c6",
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 36,
+			},
+			{
+				type: "hr",
+				id: 37,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: "병원마케팅 일을 하면서 가장 뿌듯한 순간이 바로",
+						k: 0,
+					},
+					{
+						t: "",
+						c: "#ff9900",
+						k: 1,
+					},
+					{
+						br: true,
+						k: 2,
+					},
+					{
+						t: '"저희 덕분이에요" 라는 말을 들었을 때',
+						c: "#ff9900",
+						k: 3,
+					},
+					{
+						t: "인데요.",
+						k: 4,
+					},
+				],
+				align: "center",
+				id: 38,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: "실제 해당 병원 원장님께서는 감사하다는 인사 뿐만 아니라,",
+						k: 0,
+					},
+					{
+						br: true,
+						k: 1,
+					},
+					{
+						t: "정말 감사하게도 다른 지인 분들도 소개를 해주셨습니다.",
+						k: 2,
+					},
+				],
+				align: "center",
+				id: 39,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: "사실 원장님 입장에서도 지인에게 마케팅 회사를 소개 한다는 게 쉽지는 않죠.",
+						k: 0,
+					},
+					{
+						br: true,
+						k: 1,
+					},
+					{
+						t: "한 번 생각해 보시면 소개를 한다는 것이 얼마나 많은 고민이 필요로 한지 아실 텐데요.",
+						k: 2,
+					},
+				],
+				align: "center",
+				id: 40,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: "하지만",
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 41,
+			},
+			{
+				type: "h",
+				runs: [
+					{
+						t: "1.관계에 대한 신뢰",
+						b: true,
+						c: "#ff0000",
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 42,
+			},
+			{
+				type: "h",
+				runs: [
+					{
+						t: "2.마케팅에 대한 신뢰",
+						b: true,
+						c: "#ff0000",
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 43,
+			},
+			{
+				type: "h",
+				runs: [
+					{
+						t: "3.내부 시스템에 대한 신뢰",
+						b: true,
+						c: "#ff0000",
+						k: 0,
+					},
+				],
+				align: "center",
+				id: 44,
+			},
+			{
+				type: "p",
+				runs: [
+					{
+						t: "이렇게 3가지에 만족을 하시는 분들께서",
+						k: 0,
+					},
+					{
+						br: true,
+						k: 1,
+					},
+					{
+						t: "저희를 다른 병원 원장님들께 권해주시고, 소개를 해주시기도 합니다.",
+						k: 2,
+					},
+				],
+				align: "center",
+				id: 45,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167212324/8.png",
+				w: 690,
+				h: 544,
+				alt: "병원마케팅대행사",
+				id: 46,
+			},
+			{
+				type: "img",
+				src: "/images/cases/167212324/9.png",
+				w: 800,
+				h: 1885,
+				alt: "애드리절트",
+				id: 47,
+			},
+			{
+				type: "h",
+				runs: [
+					{
+						t: "이유 없는 성공사례는 없다",
 						b: true,
 						c: "#3d85c6",
 						k: 0,
@@ -1505,8 +2010,22 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				type: "p",
 				runs: [
 					{
-						t: "많은 치과마케팅 대행사들이 광고하는 것을 보면",
+						t: "저희는 내부적으로 ",
 						k: 0,
+					},
+					{
+						t: "매 분기별 병원마케팅 성공사례를 공유하며",
+						c: "#ff9900",
+						k: 1,
+					},
+					{
+						br: true,
+						k: 2,
+					},
+					{
+						t: "더 나은 방법은 없는지? 더 효과적인 방법은 없는지? 서로의 지식을 나누고는 합니다.",
+						c: "#ff9900",
+						k: 3,
 					},
 				],
 				align: "center",
@@ -1516,8 +2035,25 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				type: "p",
 				runs: [
 					{
-						t: "보통 평균적으로 조회수 10,000 / 체류 시간 3-4분 유지를 이용하여 업체를 홍보하고는 합니다.",
+						t: "저희가 성공사례를 낼 수 있었던 다양한 이유들이 있지만 그중에서도",
 						k: 0,
+					},
+					{
+						br: true,
+						k: 1,
+					},
+					{
+						t: "'수 많은 병원 마케팅을 통한 지식 발견 및 나눔',",
+						b: true,
+						k: 2,
+					},
+					{
+						br: true,
+						k: 3,
+					},
+					{
+						t: "이것이 저희가 성공사례를 많이 낼 수 있었던 근본적인 이유입니다.",
+						k: 4,
 					},
 				],
 				align: "center",
@@ -1527,372 +2063,20 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				type: "p",
 				runs: [
 					{
-						t: "물론 조회수가 높고, 체류 시간이 많으면 그만큼 병원을 많이 알리고 있다는 기준점으로도 삼을 수 있겠지요.",
+						t: "현재 병원에만 집중하고 있지만, 병원은 매우 특수한 업종이라",
 						k: 0,
+					},
+					{
+						br: true,
+						k: 1,
+					},
+					{
+						t: "업종에 따라, 지역의 특징, 경쟁업체에 따라서도 전략이 천차만별로 달라질 수 있습니다.",
+						k: 2,
 					},
 				],
 				align: "center",
 				id: 52,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "하지만 저희는 조회수, 체류 시간을 떠나",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 53,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: '"이번달은 어떤 질환으로 집중할지?"',
-						b: true,
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 54,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: '"효과는 어떤지?"',
-						b: true,
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 55,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: '"어떠한 질환으로 환자들이 치료를 받으러 오는지?"',
-						b: true,
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 56,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "등을 지속적으로 여쭤보며 소통하고,",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 57,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: '치과마케팅에 있어 가장 중요한 "실제 환자가 얼마나 오는가?" 에 집중을 하고 있습니다.',
-						c: "#ff9900",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 58,
-			},
-			{
-				type: "img",
-				src: "/images/cases/167212324/7.png",
-				w: 800,
-				h: 850,
-				alt: "치과마케팅성공사례",
-				id: 59,
-			},
-			{
-				type: "h",
-				runs: [
-					{
-						t: '"애드리절트 덕분에 병원확장까지 성공했습니다."',
-						b: true,
-						c: "#3d85c6",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 60,
-			},
-			{
-				type: "hr",
-				id: 61,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "병원마케팅 일을 하면서 가장 뿌듯한 순간이 바로",
-						k: 0,
-					},
-					{
-						t: "",
-						c: "#ff9900",
-						k: 1,
-					},
-				],
-				align: "center",
-				id: 62,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: '"저희 덕분이에요" 라는 말을 들었을 때',
-						c: "#ff9900",
-						k: 0,
-					},
-					{
-						t: "인데요.",
-						k: 1,
-					},
-				],
-				align: "center",
-				id: 63,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "실제 해당 병원 원장님께서는 감사하다는 인사 뿐만 아니라,",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 64,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "정말 감사하게도 다른 지인 분들도 소개를 해주셨습니다.",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 65,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "사실 원장님 입장에서도 지인에게 마케팅 회사를 소개 한다는 게 쉽지는 않죠.",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 66,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "한 번 생각해 보시면 소개를 한다는 것이 얼마나 많은 고민이 필요로 한지 아실 텐데요.",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 67,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "하지만",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 68,
-			},
-			{
-				type: "h",
-				runs: [
-					{
-						t: "1.관계에 대한 신뢰",
-						b: true,
-						c: "#ff0000",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 69,
-			},
-			{
-				type: "h",
-				runs: [
-					{
-						t: "2.마케팅에 대한 신뢰",
-						b: true,
-						c: "#ff0000",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 70,
-			},
-			{
-				type: "h",
-				runs: [
-					{
-						t: "3.내부 시스템에 대한 신뢰",
-						b: true,
-						c: "#ff0000",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 71,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "이렇게 3가지에 만족을 하시는 분들께서",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 72,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "저희를 다른 병원 원장님들께 권해주시고, 소개를 해주시기도 합니다.",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 73,
-			},
-			{
-				type: "img",
-				src: "/images/cases/167212324/8.png",
-				w: 690,
-				h: 544,
-				alt: "병원마케팅대행사",
-				id: 74,
-			},
-			{
-				type: "img",
-				src: "/images/cases/167212324/9.png",
-				w: 800,
-				h: 1885,
-				alt: "애드리절트",
-				id: 75,
-			},
-			{
-				type: "h",
-				runs: [
-					{
-						t: "이유 없는 성공사례는 없다",
-						b: true,
-						c: "#3d85c6",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 76,
-			},
-			{
-				type: "hr",
-				id: 77,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "저희는 내부적으로 ",
-						k: 0,
-					},
-					{
-						t: "매 분기별 병원마케팅 성공사례를 공유하며",
-						c: "#ff9900",
-						k: 1,
-					},
-				],
-				align: "center",
-				id: 78,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "더 나은 방법은 없는지? 더 효과적인 방법은 없는지? 서로의 지식을 나누고는 합니다.",
-						c: "#ff9900",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 79,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "저희가 성공사례를 낼 수 있었던 다양한 이유들이 있지만 그중에서도",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 80,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "'수 많은 병원 마케팅을 통한 지식 발견 및 나눔',",
-						b: true,
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 81,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "이것이 저희가 성공사례를 많이 낼 수 있었던 근본적인 이유입니다.",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 82,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "현재 병원에만 집중하고 있지만, 병원은 매우 특수한 업종이라",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 83,
-			},
-			{
-				type: "p",
-				runs: [
-					{
-						t: "업종에 따라, 지역의 특징, 경쟁업체에 따라서도 전략이 천차만별로 달라질 수 있습니다.",
-						k: 0,
-					},
-				],
-				align: "center",
-				id: 84,
 			},
 			{
 				type: "p",
@@ -1908,7 +2092,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 85,
+				id: 53,
 			},
 			{
 				type: "p",
@@ -1917,20 +2101,17 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "환자가 병원 방문 직전에 검색하는 키워드에 잘해 줄 것 같고 신뢰할 수 있는 병원 이미지로 노출되는 것,",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 86,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "그것이 병원마케팅의 핵심입니다.",
-						k: 0,
+						k: 2,
 					},
 				],
 				align: "center",
-				id: 87,
+				id: 54,
 			},
 			{
 				type: "img",
@@ -1938,7 +2119,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 800,
 				h: 850,
 				alt: "병원마케팅애드리절트",
-				id: 88,
+				id: 55,
 			},
 			{
 				type: "callout",
@@ -1959,7 +2140,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 89,
+				id: 56,
 			},
 			{
 				type: "p",
@@ -1970,7 +2151,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 90,
+				id: 57,
 			},
 			{
 				type: "h",
@@ -1983,7 +2164,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 91,
+				id: 58,
 			},
 			{
 				type: "p",
@@ -1992,21 +2173,18 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "현재 꾸준히 병원마케팅 문의가 들어오는 중입니다.",
 						k: 0,
 					},
-				],
-				align: "center",
-				id: 92,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "감사한 마음이지만 기존 저희 고객사를 우선적으로 집중 케어하는 게 맞다고 생각하여 지역당, 분과별 1곳만 받고 있음을 안내드립니다.",
 						c: "#ff9900",
-						k: 0,
+						k: 2,
 					},
 				],
 				align: "center",
-				id: 93,
+				id: 59,
 			},
 			{
 				type: "p",
@@ -2017,7 +2195,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 94,
+				id: 60,
 			},
 			{
 				type: "p",
@@ -2028,7 +2206,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 				],
 				align: "center",
-				id: 95,
+				id: 61,
 			},
 		],
 	},
@@ -2749,18 +2927,16 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "광고비를 강남 한복판에 있는 병원들 만큼 쓰는데도 환자가 없으면, 무언가 잘못된게 분명했습니다.",
 						k: 0,
 					},
-				],
-				id: 2,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "D의원을 분석 해보니, 대부분 비용을 파워링크에 쓰고 있더군요.",
-						k: 0,
+						k: 2,
 					},
 				],
-				id: 3,
+				id: 2,
 			},
 			{
 				type: "h",
@@ -2772,7 +2948,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 4,
+				id: 3,
 			},
 			{
 				type: "p",
@@ -2782,7 +2958,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 5,
+				id: 4,
 			},
 			{
 				type: "img",
@@ -2790,7 +2966,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 382,
 				h: 441,
 				alt: "정형외과마케팅",
-				id: 6,
+				id: 5,
 			},
 			{
 				type: "p",
@@ -2800,7 +2976,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 7,
+				id: 6,
 			},
 			{
 				type: "p",
@@ -2810,7 +2986,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 8,
+				id: 7,
 			},
 			{
 				type: "p",
@@ -2820,7 +2996,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 9,
+				id: 8,
 			},
 			{
 				type: "img",
@@ -2828,7 +3004,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 375,
 				h: 141,
 				alt: "정형외과광고",
-				id: 10,
+				id: 9,
 			},
 			{
 				type: "p",
@@ -2838,7 +3014,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 11,
+				id: 10,
 			},
 			{
 				type: "h",
@@ -2850,7 +3026,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 12,
+				id: 11,
 			},
 			{
 				type: "p",
@@ -2860,7 +3036,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 13,
+				id: 12,
 			},
 			{
 				type: "p",
@@ -2870,7 +3046,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 14,
+				id: 13,
 			},
 			{
 				type: "img",
@@ -2878,7 +3054,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 391,
 				h: 526,
 				alt: "정형외과성공사례",
-				id: 15,
+				id: 14,
 			},
 			{
 				type: "p",
@@ -2888,7 +3064,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 16,
+				id: 15,
 			},
 			{
 				type: "p",
@@ -2898,7 +3074,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 17,
+				id: 16,
 			},
 			{
 				type: "img",
@@ -2906,7 +3082,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 396,
 				h: 234,
 				alt: "정형외과블로그",
-				id: 18,
+				id: 17,
 			},
 			{
 				type: "p",
@@ -2915,18 +3091,16 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "원장님으로 부터 다시 연락이 왔습니다. 광고를 다시 진행 해 줄 수 있는지 하시면서요.",
 						k: 0,
 					},
-				],
-				id: 19,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "지인분 께 광고를 맡긴 지 한 달 만에 환자 유입이 반토막이 나면서, 운영에 차질이 생겼다는 겁니다. 잊지 않고 연락 주신것에 너무 감사한 순간이었습니다.",
-						k: 0,
+						k: 2,
 					},
 				],
-				id: 20,
+				id: 18,
 			},
 			{
 				type: "h",
@@ -2938,7 +3112,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 21,
+				id: 19,
 			},
 			{
 				type: "p",
@@ -2948,7 +3122,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 22,
+				id: 20,
 			},
 			{
 				type: "img",
@@ -2956,7 +3130,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 969,
 				h: 693,
 				alt: "정형외과성공사례",
-				id: 23,
+				id: 21,
 			},
 			{
 				type: "p",
@@ -2966,7 +3140,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 24,
+				id: 22,
 			},
 			{
 				type: "p",
@@ -2976,7 +3150,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 25,
+				id: 23,
 			},
 		],
 	},
@@ -3031,28 +3205,24 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "한 달에 1,000만원 이상을 쓰는데도  온라인을 통한 신규환자가 없는 이유부터 찾아야 했습니다.",
 						k: 0,
 					},
-				],
-				id: 2,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "여러가지 문제점들이 보였는데요, 크게는 <검색노출>, <콘텐츠> 이 2가지에서 가장 두드러지게 문제점이 발견되었습니다.",
-						k: 0,
+						k: 2,
 					},
-				],
-				id: 3,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 3,
+					},
 					{
 						t: "분석 자료를 토대로 개선할 점들을 정리하여 마케팅 전략을 세웠습니다.",
-						k: 0,
+						k: 4,
 					},
 				],
-				id: 4,
+				id: 2,
 			},
 			{
 				type: "p",
@@ -3062,7 +3232,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 5,
+				id: 3,
 			},
 			{
 				type: "p",
@@ -3072,19 +3242,17 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						c: "#ff9900",
 						k: 0,
 					},
-				],
-				id: 6,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "둘째, 더 많은 신규환자의 확보를 기대할 수 있었습니다.",
 						c: "#ff9900",
-						k: 0,
+						k: 2,
 					},
 				],
-				id: 7,
+				id: 4,
 			},
 			{
 				type: "p",
@@ -3094,7 +3262,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 8,
+				id: 5,
 			},
 			{
 				type: "p",
@@ -3106,7 +3274,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 9,
+				id: 6,
 			},
 			{
 				type: "p",
@@ -3116,7 +3284,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 10,
+				id: 7,
 			},
 			{
 				type: "h",
@@ -3128,7 +3296,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 11,
+				id: 8,
 			},
 			{
 				type: "img",
@@ -3136,7 +3304,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 364,
 				h: 229,
 				alt: "정형외과마케팅",
-				id: 12,
+				id: 9,
 			},
 			{
 				type: "p",
@@ -3146,7 +3314,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 13,
+				id: 10,
 			},
 			{
 				type: "img",
@@ -3154,7 +3322,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 364,
 				h: 434,
 				alt: "정형외과광고",
-				id: 14,
+				id: 11,
 			},
 			{
 				type: "p",
@@ -3164,7 +3332,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 15,
+				id: 12,
 			},
 			{
 				type: "img",
@@ -3172,7 +3340,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 364,
 				h: 660,
 				alt: "정형외과마케팅성공사례",
-				id: 16,
+				id: 13,
 			},
 			{
 				type: "img",
@@ -3180,7 +3348,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				w: 364,
 				h: 528,
 				alt: "정형외과광고성공사례",
-				id: 17,
+				id: 14,
 			},
 			{
 				type: "p",
@@ -3199,7 +3367,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 2,
 					},
 				],
-				id: 18,
+				id: 15,
 			},
 			{
 				type: "p",
@@ -3209,7 +3377,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 19,
+				id: 16,
 			},
 			{
 				type: "p",
@@ -3219,7 +3387,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 				],
-				id: 20,
+				id: 17,
 			},
 			{
 				type: "p",
@@ -3228,23 +3396,21 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "우리 병원 맞춤 전략은 성공할 확률이 높습니다. 또 리스크를 줄일 수 있습니다.",
 						k: 0,
 					},
-				],
-				id: 21,
-			},
-			{
-				type: "p",
-				runs: [
+					{
+						br: true,
+						k: 1,
+					},
 					{
 						t: "아래 영상은 U정형외과 원장님의 동의를 받아 사례를 담은 것입니다. 함께 시청해보세요 😄",
-						k: 0,
+						k: 2,
 					},
 				],
-				id: 22,
+				id: 18,
 			},
 			{
 				type: "video",
 				videoId: "HSIv3ohfJpE",
-				id: 23,
+				id: 19,
 			},
 		],
 	},

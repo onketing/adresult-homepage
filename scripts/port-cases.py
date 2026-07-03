@@ -43,6 +43,7 @@ IDXS = [
     "167212324",
     "167232106",
     "167246130",
+    "167246533",
 ]
 
 # ── 카드 썸네일(cover) 지정 ──
@@ -52,6 +53,7 @@ IDXS = [
 COVERS = {
     "164427329": "last",
     "167232106": 3,  # 3번 이미지 = 병원명 검색량 200→770 차트
+    "167246533": 2,  # 1번은 칼럼 배너 → 2번(신환 증가 카톡 후기)으로
 }
 
 # ── 이식 제외 이미지 — idx → 제외할 "본문 이미지 순번" 집합(1-based, 문서 순서) ──
@@ -71,6 +73,7 @@ LEADS = {
     "167212324": "개원 초 신규환자가 적고 근교에 대형 치과 오픈까지 앞둔 치과가, 애드리절트의 메디컬 패키지에 유튜브 광고·플레이스 상위노출·온라인 평판관리를 더한 결과 광고 6개월 만에 병원 확장까지 이뤘습니다.",
     "167232106": "타 지역에서 10년 운영하다 서울로 이전한 A병원은, 애드리절트와 함께한 두 달 만에 병원명 검색량이 200건대에서 770건으로 3배 이상 늘었고, 1년 4개월 뒤에는 월 2천 건 가까이로 약 10배까지 증가했습니다.",
     "167246130": "타 광고회사에서 옮겨온 A병원은 애드리절트와 3개월 진행한 뒤 이전 대비 60~70% 더 나은 효과를 봤다는 피드백을 주셨습니다. 애드리절트가 가장 반기는 말은 '환자가 늘었다'입니다.",
+    "167246533": "병원마케팅 효과는 지역·분과·규모에 따라 다르지만, 메디컬 패키지를 이용한 대부분의 병원이 2~3개월이면 인터넷 유입이 생겼다고 말합니다. 애드리절트는 월 단위로 내원율을 함께 체크하며 광고를 조정합니다.",
 }
 
 # ── FAQ(자주 묻는 질문) — idx → [{"q","a"}] ──
@@ -327,10 +330,12 @@ def img_host(src):
 
 
 def is_cta_banner(href):
-    """이미지가 <a href> 로 감싸였으면 배너/CTA(카톡·전화·지도·블로그·유튜브 채널 등)로 보고 제외.
-    본문 콘텐츠 이미지는 링크 없이 lightbox(data-src)만 쓰므로, 링크로 감싼 이미지는 배너다.
+    """순수 CTA 배너(전화·카톡 채팅·지도·유튜브 채널)면 True → 제외(공통 하단이 대체).
+    블로그·칼럼 링크(blog.naver.com·adresult.kr 등)는 관련 글 링크로 살려 둔다(제외 안 함).
     (유튜브 watch 링크는 이 함수 호출 전에 영상 블록으로 먼저 처리되어 보존된다.)"""
-    return bool(href and not href.startswith("#"))
+    return bool(
+        re.search(r"^tel:|pf\.kakao\.com|map\.naver\.com|youtube\.com/(@|channel/|c/)", href or "")
+    )
 
 
 def watch_video_id(href):
@@ -396,13 +401,16 @@ def build(idx):
             print("IMGFAIL", src, e)
             counter["n"] -= 1  # 실패한 파일은 번호 되돌림 → 건너뛰기
             return None
-        return {
+        block = {
             "type": "img",
             "src": f"/images/cases/{idx}/{n}.{ext}",
             "w": w,
             "h": h,
             "alt": node.get("alt", "") or title,
         }
+        if href and not href.startswith("#"):
+            block["href"] = href  # 블로그·칼럼 링크 배너 → 클릭 가능한 이미지로 복원
+        return block
 
     def emit_text(node, kind=None):
         """node 의 텍스트를 walk → clean → 블록으로 반환. 빈 텍스트면 None.
@@ -421,17 +429,31 @@ def build(idx):
     if best:
         cbs = best.select('div[class*="_comment_body"]')
         body = cbs[0] if cbs else best
+        # 연속된 본문 <p> 는 한 문단(줄바꿈 <br>)으로 병합, 빈 <p>(개행)·헤딩·이미지·영상·표·hr 은 문단 구분.
+        pending = {"runs": None, "align": None}
+
+        def flush():
+            if pending["runs"]:
+                b = {"type": "p", "runs": pending["runs"]}
+                if pending["align"]:
+                    b["align"] = pending["align"]
+                blocks.append(b)
+            pending["runs"] = None
+            pending["align"] = None
+
         for node in body.children:
             if not isinstance(node, Tag):
                 continue
             if node.name in ("script", "style"):
                 continue
             if node.name == "hr":
+                flush()
                 blocks.append({"type": "hr"})
                 continue
             iframes = node.select('iframe[src*="/embed/"]')
             imgs = node.select("img")
             if iframes:
+                flush()
                 # 영상 iframe 블록(fr-video 등) → video 블록(문서 순서)
                 for ifr in iframes:
                     vid = embed_video_id(ifr.get("src", ""))
@@ -439,7 +461,8 @@ def build(idx):
                         blocks.append({"type": "video", "videoId": vid})
                 continue
             if imgs:
-                # 이미지 블록: 같은 블록에 텍스트가 섞여 있으면 텍스트 먼저(기존 .select preorder 재현)
+                flush()
+                # 이미지 블록: 같은 블록에 텍스트가 섞여 있으면 텍스트 먼저(기존 preorder 재현)
                 tb = emit_text(node)
                 if tb:
                     blocks.append(tb)
@@ -448,10 +471,29 @@ def build(idx):
                     if ib:
                         blocks.append(ib)
                 continue
-            # <table> 콜아웃 → 회색 박스(callout), 그 외 텍스트 → h/p (정렬 보존)
-            tb = emit_text(node, kind="callout" if node.name == "table" else None)
-            if tb:
-                blocks.append(tb)
+            if node.name == "table":
+                flush()
+                tb = emit_text(node, kind="callout")
+                if tb:
+                    blocks.append(tb)
+                continue
+            # 일반 텍스트 <p>/<div> 등
+            tb = emit_text(node)
+            if tb is None:
+                flush()  # 빈 <p>(개행) = 문단 구분 → 병합 종료
+                continue
+            if tb["type"] == "h":
+                flush()
+                blocks.append(tb)  # 헤딩은 독립 블록
+                continue
+            # 연속 본문 <p> → 줄바꿈(<br>)으로 병합
+            if pending["runs"] is None:
+                pending["runs"] = list(tb["runs"])
+                pending["align"] = tb.get("align")
+            else:
+                pending["runs"].append({"br": True})
+                pending["runs"].extend(tb["runs"])
+        flush()
 
     def _n(x):
         return re.sub(r"\s+", "", x or "")
@@ -532,6 +574,7 @@ export type CaseBlock = {
 	runs?: CaseRun[];
 	align?: "center" | "right";
 	src?: string;
+	href?: string;
 	alt?: string;
 	w?: number;
 	h?: number;
