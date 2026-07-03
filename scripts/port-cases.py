@@ -26,8 +26,7 @@ UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
 
 # ── 이식할 글 idx (노출 순서대로) ──
 IDXS = [
-    "164425283", "164427329", "164429049", "166883724", "167070308",
-    "167212324", "167232106", "167246130", "167246533",
+    "164425283",
 ]
 
 
@@ -304,6 +303,15 @@ export const getCase = (slug: string) => CASE_ARTICLES.find((a) => a.slug === sl
     )
     open(f"{REPO}/src/data/success-cases.ts", "w", encoding="utf-8").write(ts)
     print("WROTE src/data/success-cases.ts")
+    # biome 포맷에 맞춰 정리(생성물이 lint를 통과하도록)
+    try:
+        subprocess.run(
+            ["pnpm", "exec", "biome", "format", "--write", "src/data/success-cases.ts"],
+            cwd=REPO,
+            check=False,
+        )
+    except Exception:
+        pass
 
 
 if __name__ == "__main__":

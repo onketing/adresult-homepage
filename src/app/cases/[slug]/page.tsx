@@ -1,3 +1,4 @@
+import { ChevronDown, ChevronUp } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -45,6 +46,10 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 	const { slug } = await params;
 	const a = getCase(slug);
 	if (!a) notFound();
+
+	const idx = CASE_ARTICLES.findIndex((c) => c.slug === a.slug);
+	const prev = idx > 0 ? CASE_ARTICLES[idx - 1] : null;
+	const next = idx < CASE_ARTICLES.length - 1 ? CASE_ARTICLES[idx + 1] : null;
 
 	const articleSchema = {
 		"@context": "https://schema.org",
@@ -146,7 +151,7 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 					</div>
 
 					{/* 공통 하단 배너 — 매 글 마무리 (CTA + 애드리절트 TV) */}
-					<div className="mt-14 space-y-4">
+					<div className="mx-auto mt-14 max-w-xl space-y-4">
 						<a
 							href={`tel:${siteConfig.contact.tel}`}
 							className="block overflow-hidden rounded-2xl transition-transform hover:scale-[1.01]"
@@ -157,7 +162,7 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 								width={700}
 								height={300}
 								quality={90}
-								sizes="(max-width: 1024px) 100vw, 1024px"
+								sizes="(max-width: 640px) 100vw, 576px"
 								className="h-auto w-full"
 							/>
 						</a>
@@ -173,11 +178,41 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 								width={700}
 								height={262}
 								quality={90}
-								sizes="(max-width: 1024px) 100vw, 1024px"
+								sizes="(max-width: 640px) 100vw, 576px"
 								className="h-auto w-full"
 							/>
 						</a>
 					</div>
+
+					{/* 이전/다음 글 네비게이션 */}
+					<nav className="mt-16 border-slate-200 border-t">
+						{prev && (
+							<Link
+								href={`/cases/${prev.slug}`}
+								className="flex items-center gap-4 border-slate-200 border-b py-4 text-slate-600 transition-colors hover:text-[#e11d29]"
+							>
+								<ChevronUp className="h-4 w-4 shrink-0 text-slate-400" />
+								<span className="line-clamp-1 break-keep text-sm md:text-base">{prev.title}</span>
+							</Link>
+						)}
+						{next && (
+							<Link
+								href={`/cases/${next.slug}`}
+								className="flex items-center gap-4 border-slate-200 border-b py-4 text-slate-600 transition-colors hover:text-[#e11d29]"
+							>
+								<ChevronDown className="h-4 w-4 shrink-0 text-slate-400" />
+								<span className="line-clamp-1 break-keep text-sm md:text-base">{next.title}</span>
+							</Link>
+						)}
+						<div className="mt-5">
+							<Link
+								href="/cases"
+								className="inline-block rounded-full bg-[#e11d29] px-6 py-2.5 font-bold text-sm text-white transition-colors hover:bg-[#c11624]"
+							>
+								목록
+							</Link>
+						</div>
+					</nav>
 				</div>
 			</article>
 		</>

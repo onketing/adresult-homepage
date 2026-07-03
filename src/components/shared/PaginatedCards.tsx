@@ -59,41 +59,40 @@ export const PaginatedCards = ({ items, perPage = 9 }: { items: CardItem[]; perP
 				})}
 			</div>
 
-			{totalPages > 1 && (
-				<div className="mt-14 flex items-center justify-center gap-1.5">
+			<div className="mt-14 flex items-center justify-center gap-5 md:gap-6">
+				<button
+					type="button"
+					onClick={() => setPage((p) => Math.max(1, p - 1))}
+					disabled={page === 1}
+					aria-label="이전 페이지"
+					className="text-slate-300 transition-colors hover:text-slate-500 disabled:pointer-events-none disabled:opacity-40"
+				>
+					<ChevronLeft className="h-4 w-4" />
+				</button>
+				{Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
 					<button
 						type="button"
-						onClick={() => setPage((p) => Math.max(1, p - 1))}
-						disabled={page === 1}
-						aria-label="이전 페이지"
-						className="flex h-9 w-9 items-center justify-center rounded-full text-slate-400 transition-colors hover:bg-slate-100 disabled:opacity-40"
+						key={p}
+						onClick={() => setPage(p)}
+						aria-current={p === page ? "page" : undefined}
+						className={cn(
+							"text-sm transition-colors",
+							p === page ? "font-bold text-[#0a0a0a]" : "text-slate-400 hover:text-slate-600",
+						)}
 					>
-						<ChevronLeft className="h-5 w-5" />
+						{p}
 					</button>
-					{Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
-						<button
-							type="button"
-							key={p}
-							onClick={() => setPage(p)}
-							className={cn(
-								"h-9 w-9 rounded-full font-bold text-sm transition-colors",
-								p === page ? "bg-[#e11d29] text-white" : "text-slate-500 hover:bg-slate-100",
-							)}
-						>
-							{p}
-						</button>
-					))}
-					<button
-						type="button"
-						onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-						disabled={page === totalPages}
-						aria-label="다음 페이지"
-						className="flex h-9 w-9 items-center justify-center rounded-full text-slate-400 transition-colors hover:bg-slate-100 disabled:opacity-40"
-					>
-						<ChevronRight className="h-5 w-5" />
-					</button>
-				</div>
-			)}
+				))}
+				<button
+					type="button"
+					onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+					disabled={page === totalPages}
+					aria-label="다음 페이지"
+					className="text-slate-300 transition-colors hover:text-slate-500 disabled:pointer-events-none disabled:opacity-40"
+				>
+					<ChevronRight className="h-4 w-4" />
+				</button>
+			</div>
 		</div>
 	);
 };
