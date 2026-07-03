@@ -1,4 +1,3 @@
-import { Phone } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -146,17 +145,37 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 						})}
 					</div>
 
-					{/* CTA */}
-					<div className="mt-14 rounded-2xl bg-[#e11d29] px-6 py-10 text-center">
-						<p className="break-keep font-extrabold text-white text-xl md:text-2xl">
-							우리 병원도 이런 결과, 애드리절트와 시작하세요
-						</p>
+					{/* 공통 하단 배너 — 매 글 마무리 (CTA + 애드리절트 TV) */}
+					<div className="mt-14 space-y-4">
 						<a
 							href={`tel:${siteConfig.contact.tel}`}
-							className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#ffe14d] px-6 py-3.5 font-extrabold text-[#0a0a0a] text-lg transition-transform hover:scale-[1.03]"
+							className="block overflow-hidden rounded-2xl transition-transform hover:scale-[1.01]"
 						>
-							<Phone className="h-5 w-5 fill-[#e11d29] text-[#e11d29]" />
-							병원마케팅 문의 : {siteConfig.contact.tel}
+							<Image
+								src="/images/cases/_footer/cta.jpg"
+								alt={`애드리절트 병원마케팅 문의 ${siteConfig.contact.tel}`}
+								width={700}
+								height={300}
+								quality={90}
+								sizes="(max-width: 1024px) 100vw, 1024px"
+								className="h-auto w-full"
+							/>
+						</a>
+						<a
+							href="https://www.youtube.com/@adresult"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="block overflow-hidden rounded-2xl transition-transform hover:scale-[1.01]"
+						>
+							<Image
+								src="/images/cases/_footer/tv.jpg"
+								alt="애드리절트 TV 바로가기"
+								width={700}
+								height={262}
+								quality={90}
+								sizes="(max-width: 1024px) 100vw, 1024px"
+								className="h-auto w-full"
+							/>
 						</a>
 					</div>
 				</div>
