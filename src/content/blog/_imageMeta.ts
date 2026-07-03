@@ -1,5 +1,11 @@
 // 블로그 본문 이미지 실측 크기 (next/image width/height용). 파이프라인 생성.
 export const BLOG_IMAGE_META: Record<string, { w: number; h: number }> = {
+	"/images/blog/4p-stp-marketing-strategy/1.png": { w: 966, h: 966 },
+	"/images/blog/4p-stp-marketing-strategy/2.png": { w: 966, h: 966 },
+	"/images/blog/4p-stp-marketing-strategy/3.png": { w: 966, h: 966 },
+	"/images/blog/4p-stp-marketing-strategy/4.png": { w: 966, h: 966 },
+	"/images/blog/4p-stp-marketing-strategy/5.png": { w: 966, h: 966 },
+	"/images/blog/4p-stp-marketing-strategy/6.png": { w: 966, h: 966 },
 	"/images/blog/animal-hospital-marketing/1.png": { w: 966, h: 966 },
 	"/images/blog/animal-hospital-marketing/2.png": { w: 966, h: 966 },
 	"/images/blog/animal-hospital-marketing/3.png": { w: 966, h: 966 },
