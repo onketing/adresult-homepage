@@ -30,6 +30,7 @@ UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
 IDXS = [
     "164425283",
     "164427329",
+    "164429049",
 ]
 
 # ── 카드 썸네일(cover) 지정 ──
