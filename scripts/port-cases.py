@@ -27,6 +27,7 @@ UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
 # ── 이식할 글 idx (노출 순서대로) ──
 IDXS = [
     "164425283",
+    "167246533",
 ]
 
 
@@ -232,6 +233,14 @@ def build(idx):
             break
     while blocks and blocks[-1]["type"] == "img" and blocks[-1].get("h") and blocks[-1]["w"] / blocks[-1]["h"] >= 2.0:
         blocks.pop()
+    # 블록에서 제외된 이미지 파일(꼬리 배너·중복 등) 정리 → 고아 파일 방지
+    used = {b["src"].rsplit("/", 1)[-1] for b in blocks if b["type"] == "img"}
+    for f in os.listdir(folder):
+        if f not in used:
+            try:
+                os.remove(os.path.join(folder, f))
+            except OSError:
+                pass
     for bi, b in enumerate(blocks):
         b["id"] = bi
         if b.get("runs"):
