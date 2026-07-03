@@ -25,7 +25,7 @@ export const PaginatedCards = ({ items, perPage = 9 }: { items: CardItem[]; perP
 			<div className="grid gap-6 md:grid-cols-3 md:gap-7">
 				{visible.map((it) => {
 					const cardClass =
-						"group block overflow-hidden rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-black/5 transition-transform hover:-translate-y-1";
+						"group block overflow-hidden rounded-lg bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-black/5 transition-transform hover:-translate-y-1";
 					const inner = (
 						<>
 							<div className="relative aspect-[4/3] bg-slate-100">

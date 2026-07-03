@@ -269,10 +269,11 @@ def build(idx):
         cover_block = img_blocks[0]
     cover = cover_block["src"] if cover_block else ""
     cwh = (cover_block["w"], cover_block["h"]) if cover_block else (1000, 1000)
-    excerpt = next(
-        (runs_text(b["runs"])[:100] for b in blocks if b["type"] in ("p", "h") and len(runs_text(b["runs"])) > 10),
-        "",
+    # 목록 카드 excerpt: 본문 문단(p)을 순서대로 이어붙여 ~160자 (카드는 line-clamp-3로 3줄+말줄임).
+    body_text = " ".join(
+        runs_text(b["runs"]) for b in blocks if b["type"] == "p" and len(runs_text(b["runs"])) > 4
     )
+    excerpt = body_text[:160].rstrip()
     return {
         "slug": idx,
         "title": title,
