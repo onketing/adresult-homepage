@@ -24,10 +24,12 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BOARD = "https://adresult.kr/549265113/?bmode=view&t=board&idx="
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
 
-# ── 이식할 글 idx (노출 순서대로) ──
+# ── 이식할 글 idx (추가/생성 순서대로 — 오래된 → 최신) ──
+# 맨 뒤가 가장 최근에 추가한 글. 사이트에는 최신이 맨 앞에 노출되도록 출력 시 역순으로 뒤집는다.
+# 새 글을 추가할 때는 이 배열의 "맨 끝"에 idx 를 붙이면 자동으로 목록 맨 앞에 노출된다.
 IDXS = [
     "164425283",
-    "167246533",
+    "164427329",
 ]
 
 
@@ -269,7 +271,10 @@ def main():
         imgs = len([b for b in a["blocks"] if b["type"] == "img"])
         txt = len([b for b in a["blocks"] if b["type"] != "img"])
         print(f'{a["slug"]}: {txt} text, {imgs} img | {a["title"][:45]}')
-    body = json.dumps(arts, ensure_ascii=False, indent="\t")
+    # 사이트 노출은 최신(IDXS 맨 뒤)이 맨 앞 → 출력 배열을 역순으로 뒤집는다.
+    display = list(reversed(arts))
+    print("노출 순서:", " → ".join(a["slug"] for a in display))
+    body = json.dumps(display, ensure_ascii=False, indent="\t")
     ts = (
         '''import type { CardItem } from "@/components/shared/PaginatedCards";
 
