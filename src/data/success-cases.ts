@@ -36,9 +36,9 @@ export const CASE_ARTICLES: CaseArticle[] = [
 		slug: "164427329",
 		title: "[병원마케팅 성공사례] 병원장 월급도 못 가져 가던 D의원, 30% 환자 증가 사례",
 		excerpt: "수술하는 정형외과였던 D의원은 사모님의 권유로 애드리절트와 만나게 되었습니다.",
-		cover: "/images/cases/164427329/1.png",
-		coverW: 382,
-		coverH: 441,
+		cover: "/images/cases/164427329/5.png",
+		coverW: 969,
+		coverH: 693,
 		blocks: [
 			{
 				type: "p",

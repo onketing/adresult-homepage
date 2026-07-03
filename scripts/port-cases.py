@@ -32,6 +32,14 @@ IDXS = [
     "164427329",
 ]
 
+# ── 카드 썸네일(cover) 지정 ──
+# 기본값은 본문 "첫 이미지". 특정 글은 여기서 override 한다.
+#   "last"  → 본문 마지막 이미지
+#   정수 n  → 본문 n번째 이미지(1-based)
+COVERS = {
+    "164427329": "last",
+}
+
 
 def _get(url, referer="https://adresult.kr/"):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Referer": referer})
@@ -248,8 +256,18 @@ def build(idx):
         if b.get("runs"):
             for ri, r in enumerate(b["runs"]):
                 r["k"] = ri
-    cover = next((b["src"] for b in blocks if b["type"] == "img"), "")
-    cwh = next(((b["w"], b["h"]) for b in blocks if b["type"] == "img"), (1000, 1000))
+    img_blocks = [b for b in blocks if b["type"] == "img"]
+    ov = COVERS.get(idx)
+    if not img_blocks:
+        cover_block = None
+    elif ov == "last":
+        cover_block = img_blocks[-1]
+    elif isinstance(ov, int) and 1 <= ov <= len(img_blocks):
+        cover_block = img_blocks[ov - 1]
+    else:
+        cover_block = img_blocks[0]
+    cover = cover_block["src"] if cover_block else ""
+    cwh = (cover_block["w"], cover_block["h"]) if cover_block else (1000, 1000)
     excerpt = next(
         (runs_text(b["runs"])[:100] for b in blocks if b["type"] in ("p", "h") and len(runs_text(b["runs"])) > 10),
         "",
