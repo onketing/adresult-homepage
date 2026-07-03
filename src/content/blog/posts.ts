@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import { frontmatter as fourPStpFm } from "./4p-stp-marketing-strategy.mdx";
 import { frontmatter as aeoSeoFm } from "./aeo-seo-marketing.mdx";
 import { frontmatter as animalHospitalFm } from "./animal-hospital-marketing.mdx";
 import { frontmatter as blogMarketing2026Fm } from "./blog-marketing-2026.mdx";
@@ -38,6 +39,11 @@ type RegistryEntry = {
 
 // 새 글 추가 시: src/content/blog/{slug}.mdx 작성 후 아래에 한 항목만 등록한다.
 const REGISTRY: RegistryEntry[] = [
+	{
+		slug: "4p-stp-marketing-strategy",
+		frontmatter: fourPStpFm,
+		load: () => import("./4p-stp-marketing-strategy.mdx"),
+	},
 	{
 		slug: "blog-marketing-2026",
 		frontmatter: blogMarketing2026Fm,
