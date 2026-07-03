@@ -98,6 +98,14 @@ const nextConfig: NextConfig = {
 				destination: "https://tally.so/r/gDQkzJ",
 				permanent: false,
 			},
+			// 임웹 성공사례 view URL(?idx=…) → 새 개별 상세로 301
+			// 목록 URL(?bmode=list 등, idx 없음)은 매칭되지 않음
+			{
+				source: "/549265113",
+				has: [{ type: "query", key: "idx", value: "(?<idx>\\d+)" }],
+				destination: "/cases/:idx",
+				permanent: true,
+			},
 		];
 	},
 

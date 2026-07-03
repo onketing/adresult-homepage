@@ -3,6 +3,7 @@ import { siteConfig } from "@/config/site";
 import { getTotalPages, POSTS } from "@/content/blog/posts";
 import { SHORTFORM_PRO_SLUGS } from "@/data/shortform-professions";
 import { SPECIALTY_SLUGS } from "@/data/specialties";
+import { CASE_ARTICLES } from "@/data/success-cases";
 
 const staticRoutes = [
 	{ path: "", priority: 1.0, changeFrequency: "weekly" as const },
@@ -62,7 +63,22 @@ export const sitemap = (): MetadataRoute.Sitemap => {
 		priority: 0.8,
 	}));
 
-	return [...staticEntries, ...pageEntries, ...postEntries, ...proEntries, ...specialtyEntries];
+	// 개별 성공사례 상세 (/cases/{idx})
+	const caseEntries = CASE_ARTICLES.map((a) => ({
+		url: `${siteConfig.url}/cases/${a.slug}`,
+		lastModified: now,
+		changeFrequency: "monthly" as const,
+		priority: 0.7,
+	}));
+
+	return [
+		...staticEntries,
+		...pageEntries,
+		...postEntries,
+		...proEntries,
+		...specialtyEntries,
+		...caseEntries,
+	];
 };
 
 export default sitemap;

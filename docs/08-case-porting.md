@@ -32,9 +32,11 @@ pnpm build   # /cases, /cases/[slug] 생성 확인
 
 ## 3. 데이터 구조 (`src/data/success-cases.ts`)
 
-- `CASE_ARTICLES: CaseArticle[]` — `{ slug(=idx), title, excerpt, cover, coverW/H, blocks[] }`
+- `CASE_ARTICLES: CaseArticle[]` — `{ slug(=idx), title, excerpt, summary?, faq?, cover, coverW/H, blocks[] }`
   - `blocks`: `{ type: "h"|"p"|"img"|"video", runs?, src?, w?, h?, alt?, videoId?, id }`
   - `runs`: `{ t, b(굵게), i(기울임), u(밑줄), c(색상), br, k }`
+  - `summary`: 리드 콜아웃(핵심 요약, 수치 포함). `LEADS[idx]`에서 주입 → 상세 상단·`description`에 사용.
+  - `faq`: `CaseFaq[]`(`{ q, a }`). `FAQS[idx]`에서 주입 → 상세 하단 FAQ + FAQPage JSON-LD에 사용.
 - `SUCCESS_CASES: CardItem[]` — 목록 카드(제목·발췌·cover 썸네일·`/cases/{slug}` 링크)
 - `getCase(slug)`
 - **순서** = `IDXS` 배열 순서 = 목록 노출 순서.
@@ -42,14 +44,28 @@ pnpm build   # /cases, /cases/[slug] 생성 확인
 ## 4. 렌더링 (수정 불필요, 자동)
 
 - **`/cases`**: 카드 9개씩 + 페이지네이션(`PaginatedCards`).
-- **`/cases/[slug]`**: 상단 **브랜드 헤더**(PORTFOLIO / 애드리절트 병원마케팅 성공사례입니다. / 결과로 말하는 애드리절트) → 글 제목(h1) + "성공사례" → 본문(runs 색상·강조 그대로, 이미지, 영상) → 하단 **공통 CTA**.
+- **`/cases/[slug]`**: 상단 **브랜드 헤더**(PORTFOLIO / 애드리절트 병원마케팅 성공사례입니다. / 결과로 말하는 애드리절트) → 글 제목(h1) + "성공사례" → **리드 콜아웃**(`summary` 있을 때, 빨간 좌측 보더 박스) → 본문(runs 색상·강조 그대로, 이미지, 영상) → **FAQ 섹션**(`faq` 있을 때, 아코디언 없는 상시 노출 텍스트 — 크롤러 친화) → 하단 **공통 CTA**.
 - 컨테이너 `max-w-5xl`. `runs`의 색상은 인라인 `style`, 굵기/기울임/밑줄은 클래스.
 
 ## 5. 자동 SEO/AEO
 
 - `generateStaticParams`로 전 글 **정적 생성(SSG)**.
-- 글별 `title`·`description(발췌)`·`canonical`, **Article + BreadcrumbList JSON-LD**.
-- `sitemap.ts`는 `/cases`를 정적 라우트로 포함(개별 글은 필요 시 추가).
+- 글별 `title`·`description(summary 있으면 summary, 없으면 발췌)`·`canonical`, **Article + BreadcrumbList JSON-LD**.
+- `faq`가 있으면 **FAQPage JSON-LD**를 Article·Breadcrumb와 함께 자동 출력.
+- `sitemap.ts`는 `/cases`(목록)와 **개별 `/cases/{idx}`를 모두 자동 포함**(`CASE_ARTICLES` 매핑).
+- 임웹 원문 view URL(`/549265113?idx=…`)은 `next.config.ts`가 **301로 `/cases/{idx}`에 자동 리다이렉트**.
+
+---
+
+## SEO/AEO 강화 (글 추가 시 필수)
+
+새 글을 이식할 때 `IDXS` 끝에 idx를 넣는 것 외에, **아래 두 dict도 함께 채운다**. 안 채우면 리드 콜아웃·FAQ·FAQPage가 비어 나온다.
+
+- `LEADS[idx]` — **수치를 포함한 1~2문장 요약**. 상세 상단 리드 콜아웃과 메타 `description`에 쓰인다.
+- `FAQS[idx]` — **2~3개 Q&A**. **각 답변은 독립적으로 완결**되게 쓴다(답변엔진이 그대로 인용).
+- **이미지 속 핵심 수치(신환 수·광고비·증가율 등)는 반드시 `LEADS`/`FAQS` 또는 본문 텍스트로도 적는다.** 이미지 픽셀은 크롤러·답변엔진이 못 읽는다.
+- `alt`는 가능하면 **서술형**으로 채운다(현재는 원문 alt 또는 제목 fallback).
+- 개별 `/cases/{idx}`는 sitemap이 자동 포함하고, 임웹 원문 URL은 `next.config`가 301로 자동 리다이렉트한다(별도 작업 불필요).
 
 ## 6. 검증
 

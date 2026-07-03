@@ -5,7 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BreadcrumbJsonLd } from "@/components/shared/BreadcrumbJsonLd";
 import { siteConfig } from "@/config/site";
-import { CASE_ARTICLES, type CaseRun, getCase } from "@/data/success-cases";
+import { CASE_ARTICLES, type CaseFaq, type CaseRun, getCase } from "@/data/success-cases";
 import { cn } from "@/lib/utils";
 
 export const generateStaticParams = () => CASE_ARTICLES.map((a) => ({ slug: a.slug }));
@@ -20,7 +20,7 @@ export const generateMetadata = async ({
 	if (!a) return {};
 	return {
 		title: `${a.title} | 애드리절트(ADRESULT)`,
-		description: a.excerpt,
+		description: a.summary || a.excerpt,
 		alternates: { canonical: `/cases/${a.slug}` },
 		keywords: ["병원마케팅 성공사례", "병원마케팅 사례", "애드리절트 성공사례"],
 		openGraph: a.cover ? { images: [{ url: a.cover }] } : undefined,
@@ -59,12 +59,25 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 		author: { "@type": "Organization", name: "애드리절트(ADRESULT)" },
 		publisher: { "@type": "Organization", name: "애드리절트(ADRESULT)", url: siteConfig.url },
 		mainEntityOfPage: `${siteConfig.url}/cases/${a.slug}`,
-		description: a.excerpt,
+		description: a.summary || a.excerpt,
 	};
+
+	const faqSchema = a.faq?.length
+		? {
+				"@context": "https://schema.org",
+				"@type": "FAQPage",
+				mainEntity: a.faq.map((f: CaseFaq) => ({
+					"@type": "Question",
+					name: f.q,
+					acceptedAnswer: { "@type": "Answer", text: f.a },
+				})),
+			}
+		: null;
 
 	return (
 		<>
 			<script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+			{faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
 			<BreadcrumbJsonLd
 				items={[
 					{ name: "홈", path: "" },
@@ -96,6 +109,12 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 							성공사례
 						</Link>
 					</div>
+
+					{a.summary && (
+						<p className="mt-8 break-keep rounded-r-lg border-[#e11d29] border-l-4 bg-[#fef2f2] px-5 py-4 font-medium text-[#0a0a0a] leading-relaxed">
+							{a.summary}
+						</p>
+					)}
 
 					<div className="mt-8">
 						{a.blocks.map((b) => {
@@ -149,6 +168,20 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 							);
 						})}
 					</div>
+
+					{a.faq?.length ? (
+						<section className="mt-14">
+							<h2 className="break-keep font-extrabold text-[#0a0a0a] text-xl md:text-2xl">
+								자주 묻는 질문
+							</h2>
+							{a.faq.map((f) => (
+								<div key={f.q}>
+									<h3 className="mt-6 break-keep font-bold text-[#0a0a0a]">{f.q}</h3>
+									<p className="mt-2 break-keep text-slate-700 leading-relaxed">{f.a}</p>
+								</div>
+							))}
+						</section>
+					) : null}
 
 					{/* 공통 하단 배너 — 매 글 마무리 (CTA + 애드리절트 TV) */}
 					<div className="mx-auto mt-14 max-w-xl space-y-4">
