@@ -1,5 +1,6 @@
 "use client";
 
+import { Extension } from "@tiptap/core";
 import { Color } from "@tiptap/extension-color";
 import { Highlight } from "@tiptap/extension-highlight";
 import { Image as TiptapImage } from "@tiptap/extension-image";
@@ -15,6 +16,7 @@ import {
 	ArrowLeft,
 	Bold,
 	Braces,
+	ChevronDown,
 	Code,
 	Eraser,
 	Highlighter,
@@ -24,6 +26,8 @@ import {
 	List,
 	ListOrdered,
 	Minus,
+	Pipette,
+	Plus,
 	Quote,
 	Redo2,
 	Strikethrough,
@@ -37,12 +41,120 @@ import { cn } from "@/lib/utils";
 const DRAFT_KEY = "cases-draft";
 const PUBLISHED_KEY = "cases-published-draft";
 
-const COLOR_SWATCHES = [
-	{ label: "기본", value: null },
-	{ label: "브랜드 레드", value: "#e11d29" },
-	{ label: "레드", value: "#ff0000" },
-	{ label: "블루", value: "#0b5394" },
-	{ label: "다크", value: "#111827" },
+// textStyle 마크에 font-size 속성을 등록하는 커스텀 확장 (px 지정용).
+// 실제 적용/해제는 내장 setMark("textStyle", { fontSize }) 커맨드로 처리한다.
+const FontSize = Extension.create({
+	name: "fontSize",
+	addOptions() {
+		return { types: ["textStyle"] };
+	},
+	addGlobalAttributes() {
+		return [
+			{
+				types: this.options.types,
+				attributes: {
+					fontSize: {
+						default: null,
+						parseHTML: (element) => element.style.fontSize || null,
+						renderHTML: (attributes) =>
+							attributes.fontSize ? { style: `font-size: ${attributes.fontSize}` } : {},
+					},
+				},
+			},
+		];
+	},
+});
+
+// 구글독스 색상 팔레트 (10열 × 8행)
+const PALETTE = [
+	"#000000",
+	"#434343",
+	"#666666",
+	"#999999",
+	"#b7b7b7",
+	"#cccccc",
+	"#d9d9d9",
+	"#efefef",
+	"#f3f3f3",
+	"#ffffff",
+	"#980000",
+	"#ff0000",
+	"#ff9900",
+	"#ffff00",
+	"#00ff00",
+	"#00ffff",
+	"#4a86e8",
+	"#0000ff",
+	"#9900ff",
+	"#ff00ff",
+	"#e6b8af",
+	"#f4cccc",
+	"#fce5cd",
+	"#fff2cc",
+	"#d9ead3",
+	"#d0e0e3",
+	"#c9daf8",
+	"#cfe2f3",
+	"#d9d2e9",
+	"#ead1dc",
+	"#dd7e6b",
+	"#ea9999",
+	"#f9cb9c",
+	"#ffe599",
+	"#b6d7a8",
+	"#a2c4c9",
+	"#a4c2f4",
+	"#9fc5e8",
+	"#b4a7d6",
+	"#d5a6bd",
+	"#cc4125",
+	"#e06666",
+	"#f6b26b",
+	"#ffd966",
+	"#93c47d",
+	"#76a5af",
+	"#6d9eeb",
+	"#6fa8dc",
+	"#8e7cc3",
+	"#c27ba0",
+	"#a61c00",
+	"#cc0000",
+	"#e69138",
+	"#f1c232",
+	"#6aa84f",
+	"#45818e",
+	"#3c78d8",
+	"#3d85c6",
+	"#674ea7",
+	"#a64d79",
+	"#85200c",
+	"#990000",
+	"#b45f06",
+	"#bf9000",
+	"#38761d",
+	"#134f5c",
+	"#1155cc",
+	"#0b5394",
+	"#351c75",
+	"#741b47",
+	"#5b0f00",
+	"#660000",
+	"#783f04",
+	"#7f6000",
+	"#274e13",
+	"#0c343d",
+	"#1c4587",
+	"#073763",
+	"#20124d",
+	"#4c1130",
+];
+
+const BLOCK_STYLES = [
+	{ level: 0, label: "본문", className: "text-sm text-slate-700" },
+	{ level: 1, label: "제목 1", className: "font-extrabold text-lg text-[#0a0a0a]" },
+	{ level: 2, label: "제목 2", className: "font-bold text-base text-[#0a0a0a]" },
+	{ level: 3, label: "제목 3", className: "font-bold text-sm text-[#0a0a0a]" },
+	{ level: 4, label: "제목 4", className: "font-semibold text-sm text-slate-800" },
 ] as const;
 
 type Draft = { title: string; tags: string[]; doc: JSONContent | null };
@@ -73,7 +185,8 @@ const buildExtensions = (placeholder: string) => [
 	}),
 	TextStyle,
 	Color,
-	Highlight,
+	FontSize,
+	Highlight.configure({ multicolor: true }),
 	TextAlign.configure({ types: ["heading", "paragraph"] }),
 	TiptapImage,
 	Placeholder.configure({ placeholder }),
@@ -103,12 +216,102 @@ const ToolbarButton = ({ onClick, active, label, children }: ToolbarButtonProps)
 
 const Divider = () => <span className="mx-1 h-5 w-px shrink-0 bg-slate-200" />;
 
+// 구글독스식 색상 팔레트 팝오버
+type ColorPopoverProps = {
+	current?: string;
+	onPick: (color: string) => void;
+	onReset: () => void;
+};
+
+const ColorPopover = ({ current, onPick, onReset }: ColorPopoverProps) => (
+	<div className="absolute top-full left-0 z-30 mt-1 w-max rounded-lg border border-slate-200 bg-white p-3 shadow-[0_8px_24px_rgba(15,23,42,0.14)]">
+		<button
+			type="button"
+			onClick={onReset}
+			className="flex items-center gap-2 rounded-md px-1 py-0.5 text-slate-600 text-xs hover:bg-slate-100"
+		>
+			<span className="relative flex h-4 w-4 items-center justify-center rounded-sm border border-slate-300 bg-white">
+				<span className="absolute h-px w-5 rotate-45 bg-rose-500" />
+			</span>
+			없음
+		</button>
+		<div className="mt-2 grid grid-cols-10 gap-1">
+			{PALETTE.map((c) => (
+				<button
+					key={c}
+					type="button"
+					onClick={() => onPick(c)}
+					aria-label={c}
+					className={cn(
+						"h-5 w-5 rounded-sm border border-black/10 transition-transform hover:scale-110",
+						current?.toLowerCase() === c && "ring-2 ring-[#1a73e8] ring-offset-1",
+					)}
+					style={{ backgroundColor: c }}
+				/>
+			))}
+		</div>
+		<div className="mt-3 flex items-center gap-2 border-slate-100 border-t pt-2">
+			<span className="text-slate-500 text-xs">맞춤</span>
+			<label className="flex cursor-pointer items-center gap-1 rounded-md border border-slate-200 px-2 py-1 text-slate-600 text-xs hover:bg-slate-50">
+				<Pipette className="h-3.5 w-3.5" />
+				직접 선택
+				<input
+					type="color"
+					value={current ?? "#000000"}
+					onChange={(e) => onPick(e.target.value)}
+					className="h-4 w-4 cursor-pointer border-0 bg-transparent p-0"
+				/>
+			</label>
+		</div>
+	</div>
+);
+
 type ToolbarProps = {
 	editor: Editor;
 	onImageFile: () => void;
 };
 
 const Toolbar = ({ editor, onImageFile }: ToolbarProps) => {
+	const rootRef = useRef<HTMLDivElement>(null);
+	const [menu, setMenu] = useState<null | "block" | "color" | "highlight">(null);
+
+	// 팝오버 바깥 클릭 시 닫기
+	useEffect(() => {
+		if (!menu) return;
+		const onDown = (e: PointerEvent) => {
+			if (rootRef.current && !rootRef.current.contains(e.target as Node)) setMenu(null);
+		};
+		document.addEventListener("pointerdown", onDown);
+		return () => document.removeEventListener("pointerdown", onDown);
+	}, [menu]);
+
+	const currentColor = editor.getAttributes("textStyle").color as string | undefined;
+	const currentHighlight = editor.getAttributes("highlight").color as string | undefined;
+
+	const headingLevel = ([1, 2, 3, 4] as const).find((l) =>
+		editor.isActive("heading", { level: l }),
+	);
+	const blockLabel = headingLevel ? `제목 ${headingLevel}` : "본문";
+
+	const fontSizeRaw = editor.getAttributes("textStyle").fontSize as string | undefined;
+	const fontSize = fontSizeRaw ? Number.parseInt(fontSizeRaw, 10) : 16;
+
+	const applyBlock = (level: number) => {
+		const chain = editor.chain().focus();
+		if (level === 0) chain.setParagraph().run();
+		else chain.setHeading({ level: level as 1 | 2 | 3 | 4 }).run();
+		setMenu(null);
+	};
+
+	const applyFontSize = (px: number) => {
+		const clamped = Math.min(96, Math.max(8, px));
+		editor
+			.chain()
+			.focus()
+			.setMark("textStyle", { fontSize: `${clamped}px` })
+			.run();
+	};
+
 	const setLink = () => {
 		const previous = editor.getAttributes("link").href as string | undefined;
 		const url = window.prompt("링크 URL을 입력하세요", previous ?? "");
@@ -127,7 +330,10 @@ const Toolbar = ({ editor, onImageFile }: ToolbarProps) => {
 	};
 
 	return (
-		<div className="sticky top-0 z-20 flex flex-wrap items-center gap-0.5 border-slate-200 border-b bg-white/95 px-2 py-2 backdrop-blur-sm">
+		<div
+			ref={rootRef}
+			className="sticky top-0 z-20 flex flex-wrap items-center gap-0.5 border-slate-200 border-b bg-white/95 px-2 py-2 backdrop-blur-sm"
+		>
 			<ToolbarButton onClick={() => editor.chain().focus().undo().run()} label="실행 취소">
 				<Undo2 className="h-4 w-4" />
 			</ToolbarButton>
@@ -137,34 +343,57 @@ const Toolbar = ({ editor, onImageFile }: ToolbarProps) => {
 
 			<Divider />
 
-			<ToolbarButton
-				onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
-				active={editor.isActive("heading", { level: 1 })}
-				label="제목 1"
-			>
-				H1
-			</ToolbarButton>
-			<ToolbarButton
-				onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
-				active={editor.isActive("heading", { level: 2 })}
-				label="제목 2"
-			>
-				H2
-			</ToolbarButton>
-			<ToolbarButton
-				onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
-				active={editor.isActive("heading", { level: 3 })}
-				label="제목 3"
-			>
-				H3
-			</ToolbarButton>
-			<ToolbarButton
-				onClick={() => editor.chain().focus().toggleHeading({ level: 4 }).run()}
-				active={editor.isActive("heading", { level: 4 })}
-				label="제목 4"
-			>
-				H4
-			</ToolbarButton>
+			{/* 단락 스타일 드롭다운 */}
+			<div className="relative">
+				<button
+					type="button"
+					onClick={() => setMenu(menu === "block" ? null : "block")}
+					className="flex h-8 items-center gap-1 rounded-md px-2 font-semibold text-[13px] text-slate-700 transition-colors hover:bg-slate-100"
+				>
+					{blockLabel}
+					<ChevronDown className="h-3.5 w-3.5 text-slate-400" />
+				</button>
+				{menu === "block" && (
+					<div className="absolute top-full left-0 z-30 mt-1 w-32 rounded-lg border border-slate-200 bg-white py-1 shadow-[0_8px_24px_rgba(15,23,42,0.14)]">
+						{BLOCK_STYLES.map((b) => (
+							<button
+								key={b.level}
+								type="button"
+								onClick={() => applyBlock(b.level)}
+								className={cn(
+									"block w-full px-3 py-1.5 text-left hover:bg-slate-50",
+									b.className,
+									blockLabel === b.label && "bg-[#fef2f2]",
+								)}
+							>
+								{b.label}
+							</button>
+						))}
+					</div>
+				)}
+			</div>
+
+			<Divider />
+
+			{/* 글자 크기 (px) */}
+			<div className="flex items-center gap-0.5">
+				<ToolbarButton onClick={() => applyFontSize(fontSize - 1)} label="글자 작게">
+					<Minus className="h-4 w-4" />
+				</ToolbarButton>
+				<input
+					value={fontSize}
+					onChange={(e) => {
+						const n = Number.parseInt(e.target.value, 10);
+						if (!Number.isNaN(n)) applyFontSize(n);
+					}}
+					aria-label="글자 크기(px)"
+					className="h-8 w-11 rounded-md border border-slate-200 text-center text-slate-700 text-sm outline-none focus:border-[#e11d29]"
+					inputMode="numeric"
+				/>
+				<ToolbarButton onClick={() => applyFontSize(fontSize + 1)} label="글자 크게">
+					<Plus className="h-4 w-4" />
+				</ToolbarButton>
+			</div>
 
 			<Divider />
 
@@ -196,9 +425,6 @@ const Toolbar = ({ editor, onImageFile }: ToolbarProps) => {
 			>
 				<Strikethrough className="h-4 w-4" />
 			</ToolbarButton>
-
-			<Divider />
-
 			<ToolbarButton
 				onClick={() => editor.chain().focus().toggleCode().run()}
 				active={editor.isActive("code")}
@@ -206,45 +432,77 @@ const Toolbar = ({ editor, onImageFile }: ToolbarProps) => {
 			>
 				<Code className="h-4 w-4" />
 			</ToolbarButton>
-			<ToolbarButton
-				onClick={() => editor.chain().focus().toggleCodeBlock().run()}
-				active={editor.isActive("codeBlock")}
-				label="코드 블록"
-			>
-				<Braces className="h-4 w-4" />
-			</ToolbarButton>
 
 			<Divider />
 
-			{COLOR_SWATCHES.map((swatch) =>
-				swatch.value === null ? (
-					<ToolbarButton
-						key="color-reset"
-						onClick={() => editor.chain().focus().unsetColor().run()}
-						label="글자색 초기화"
-					>
-						<span className="h-4 w-4 rounded-full border border-slate-300 bg-white" />
-					</ToolbarButton>
-				) : (
-					<ToolbarButton
-						key={swatch.value}
-						onClick={() => editor.chain().focus().setColor(swatch.value).run()}
-						active={editor.isActive("textStyle", { color: swatch.value })}
-						label={`글자색 ${swatch.label}`}
-					>
-						<span
-							className="h-4 w-4 rounded-full border border-black/10"
-							style={{ backgroundColor: swatch.value }}
-						/>
-					</ToolbarButton>
-				),
-			)}
-			<ToolbarButton
-				onClick={() => editor.chain().focus().toggleHighlight().run()}
-				active={editor.isActive("highlight")}
-				label="형광펜"
-			>
-				<Highlighter className="h-4 w-4" />
+			{/* 글자색 — 구글독스식 팔레트 */}
+			<div className="relative">
+				<button
+					type="button"
+					onClick={() => setMenu(menu === "color" ? null : "color")}
+					aria-label="글자색"
+					className="flex h-8 min-w-8 flex-col items-center justify-center rounded-md px-1.5 transition-colors hover:bg-slate-100"
+				>
+					<span className="font-bold text-[13px] text-slate-700 leading-none">가</span>
+					<span
+						className="mt-0.5 h-1 w-4 rounded"
+						style={{ backgroundColor: currentColor ?? "#0a0a0a" }}
+					/>
+				</button>
+				{menu === "color" && (
+					<ColorPopover
+						current={currentColor}
+						onPick={(c) => {
+							editor.chain().focus().setColor(c).run();
+							setMenu(null);
+						}}
+						onReset={() => {
+							editor.chain().focus().unsetColor().run();
+							setMenu(null);
+						}}
+					/>
+				)}
+			</div>
+
+			{/* 형광펜 — 팔레트 */}
+			<div className="relative">
+				<button
+					type="button"
+					onClick={() => setMenu(menu === "highlight" ? null : "highlight")}
+					aria-label="형광펜"
+					className="flex h-8 min-w-8 flex-col items-center justify-center rounded-md px-1.5 transition-colors hover:bg-slate-100"
+				>
+					<Highlighter className="h-4 w-4 text-slate-600" />
+					<span
+						className="mt-0.5 h-1 w-4 rounded"
+						style={{ backgroundColor: currentHighlight ?? "#fff2cc" }}
+					/>
+				</button>
+				{menu === "highlight" && (
+					<ColorPopover
+						current={currentHighlight}
+						onPick={(c) => {
+							editor.chain().focus().setHighlight({ color: c }).run();
+							setMenu(null);
+						}}
+						onReset={() => {
+							editor.chain().focus().unsetHighlight().run();
+							setMenu(null);
+						}}
+					/>
+				)}
+			</div>
+
+			<Divider />
+
+			<ToolbarButton onClick={setLink} active={editor.isActive("link")} label="링크">
+				<Link2 className="h-4 w-4" />
+			</ToolbarButton>
+			<ToolbarButton onClick={setImageUrl} label="이미지 URL">
+				<ImageIcon className="h-4 w-4" />
+			</ToolbarButton>
+			<ToolbarButton onClick={onImageFile} label="이미지 파일 업로드">
+				<ImageIcon className="h-4 w-4 opacity-60" />
 			</ToolbarButton>
 
 			<Divider />
@@ -269,6 +527,13 @@ const Toolbar = ({ editor, onImageFile }: ToolbarProps) => {
 				label="번호 목록"
 			>
 				<ListOrdered className="h-4 w-4" />
+			</ToolbarButton>
+			<ToolbarButton
+				onClick={() => editor.chain().focus().toggleCodeBlock().run()}
+				active={editor.isActive("codeBlock")}
+				label="코드 블록"
+			>
+				<Braces className="h-4 w-4" />
 			</ToolbarButton>
 
 			<Divider />
@@ -297,24 +562,12 @@ const Toolbar = ({ editor, onImageFile }: ToolbarProps) => {
 
 			<Divider />
 
-			<ToolbarButton onClick={setLink} active={editor.isActive("link")} label="링크">
-				<Link2 className="h-4 w-4" />
-			</ToolbarButton>
-			<ToolbarButton onClick={setImageUrl} label="이미지 URL">
-				<ImageIcon className="h-4 w-4" />
-			</ToolbarButton>
-			<ToolbarButton onClick={onImageFile} label="이미지 파일 업로드">
-				<ImageIcon className="h-4 w-4 opacity-60" />
-			</ToolbarButton>
 			<ToolbarButton
 				onClick={() => editor.chain().focus().setHorizontalRule().run()}
 				label="구분선"
 			>
 				<Minus className="h-4 w-4" />
 			</ToolbarButton>
-
-			<Divider />
-
 			<ToolbarButton
 				onClick={() => editor.chain().focus().unsetAllMarks().clearNodes().run()}
 				label="서식 지우기"
@@ -334,6 +587,8 @@ export const CaseEditor = () => {
 	const [tags, setTags] = useState<string[]>(initialDraft.tags);
 	const [tagInput, setTagInput] = useState("");
 	const [doc, setDoc] = useState<JSONContent | null>(initialDraft.doc);
+	// 커서/선택 변경 시 툴바 활성 상태·글자크기 표시를 갱신하기 위한 리렌더 트리거.
+	const [, setSelTick] = useState(0);
 	const [notice, setNotice] = useState("");
 	const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -345,6 +600,7 @@ export const CaseEditor = () => {
 			attributes: { class: "case-preview min-h-full px-1 py-4 focus:outline-none" },
 		},
 		onUpdate: ({ editor: e }) => setDoc(e.getJSON()),
+		onSelectionUpdate: () => setSelTick((t) => t + 1),
 	});
 
 	const previewEditor = useEditor({
