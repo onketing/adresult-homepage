@@ -7,7 +7,7 @@ export const robots = (): MetadataRoute.Robots => {
 			{
 				userAgent: "*",
 				allow: "/",
-				disallow: ["/api/"],
+				disallow: ["/api/", "/cases/create"],
 			},
 			// AI 검색 엔진 크롤러 명시적 허용
 			{ userAgent: "OAI-SearchBot", allow: "/" },
