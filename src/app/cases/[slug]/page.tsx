@@ -126,6 +126,7 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 										alt={b.alt ?? a.title}
 										width={b.w ?? 800}
 										height={b.h ?? 600}
+										quality={90}
 										sizes="(max-width: 768px) 100vw, 720px"
 										style={{ maxWidth: b.w }}
 										className="mx-auto mt-6 mb-6 h-auto w-full rounded-xl"
