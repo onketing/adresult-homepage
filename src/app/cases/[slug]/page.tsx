@@ -182,9 +182,13 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 									<div
 										key={b.id}
 										className={cn(
-											"my-6 break-keep rounded-xl border border-slate-200 bg-slate-50 px-6 py-5 text-base text-slate-700 leading-relaxed md:text-lg",
+											"my-6 break-keep rounded-xl px-6 py-5 text-base leading-relaxed md:text-lg",
+											b.boxBg
+												? "text-[#0a0a0a]"
+												: "border border-slate-200 bg-slate-50 text-slate-700",
 											alignClass || "text-center",
 										)}
+										style={b.boxBg ? { backgroundColor: b.boxBg } : undefined}
 									>
 										{renderRuns(b.runs)}
 									</div>

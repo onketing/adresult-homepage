@@ -582,6 +582,9 @@ def walk(node, st, runs, sizes):
                 continue
             if ch.name in ("script", "style"):
                 continue
+            # 블록 경계(문단·표 행·목록) → 줄바꿈. 표 여러 줄이 한 줄로 붙는 것 방지.
+            if ch.name in ("p", "div", "tr", "li", "blockquote") and runs and not runs[-1].get("br"):
+                runs.append({"br": True})
             style = ch.get("style", "") or ""
             nst = dict(st)
             if ch.name in ("strong", "b") or weight(style) >= 600:
@@ -595,9 +598,11 @@ def walk(node, st, runs, sizes):
                 nst["c"] = c
             elif c:
                 nst.pop("c", None)
-            bg = bg_color(style)
-            if bg:
-                nst["bg"] = bg
+            # 형광펜은 인라인 요소(span/strong 등)에서만 — 표 셀·컨테이너 배경은 제외(박스 배경으로 별도 처리).
+            if ch.name in ("span", "strong", "b", "em", "i", "u", "mark", "a", "font"):
+                bg = bg_color(style)
+                if bg:
+                    nst["bg"] = bg
             fs = px(style, "font-size")
             if fs:
                 sizes.append(fs)
@@ -781,6 +786,11 @@ def build(idx):
         al = node_align(node) or ("center" if kind == "callout" else None)
         if al:
             b["align"] = al
+        if kind == "callout":
+            td = node.find("td")
+            cbg = bg_color(td.get("style", "")) if td else None
+            if cbg:
+                b["boxBg"] = cbg  # 표 셀 배경색 → 콜아웃 박스 배경
         return b
 
     if best:
@@ -922,6 +932,7 @@ export type CaseBlock = {
 	runs?: CaseRun[];
 	align?: "center" | "right";
 	gap?: boolean;
+	boxBg?: string;
 	src?: string;
 	href?: string;
 	alt?: string;

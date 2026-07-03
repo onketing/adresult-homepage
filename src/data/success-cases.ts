@@ -19,6 +19,7 @@ export type CaseBlock = {
 	runs?: CaseRun[];
 	align?: "center" | "right";
 	gap?: boolean;
+	boxBg?: string;
 	src?: string;
 	href?: string;
 	alt?: string;
@@ -145,11 +146,11 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						b: true,
 						c: "#ff0000",
 						fs: 18,
-						bg: "#cccccc",
 						k: 0,
 					},
 				],
 				align: "center",
+				boxBg: "#cccccc",
 				gap: true,
 				id: 6,
 			},
@@ -258,22 +259,29 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					{
 						t: "매일매일 꼼꼼한 평판관리",
 						b: true,
-						bg: "#ead1dc",
 						k: 0,
+					},
+					{
+						br: true,
+						k: 1,
 					},
 					{
 						t: "변하는 상황에 따라 맞춘 맞춤형 전략",
 						b: true,
-						k: 1,
+						k: 2,
+					},
+					{
+						br: true,
+						k: 3,
 					},
 					{
 						t: "오래 함께할 수 있는 든든한 지원",
 						b: true,
-						bg: "#ead1dc",
-						k: 2,
+						k: 4,
 					},
 				],
 				align: "center",
+				boxBg: "#ead1dc",
 				gap: true,
 				id: 16,
 			},
@@ -341,7 +349,6 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					{
 						t: "하지만 저희 애드리절트에서는",
 						fs: 20,
-						bg: "#cccccc",
 						k: 0,
 					},
 					{
@@ -349,11 +356,11 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						b: true,
 						c: "#ff0000",
 						fs: 20,
-						bg: "#cccccc",
 						k: 1,
 					},
 				],
 				align: "center",
+				boxBg: "#cccccc",
 				gap: true,
 				id: 2,
 			},
@@ -747,11 +754,11 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					{
 						t: "광고 3개월 만에 풀 예약을 만든 3가지 비결?",
 						b: true,
-						bg: "#cccccc",
 						k: 0,
 					},
 				],
 				align: "center",
+				boxBg: "#cccccc",
 				gap: true,
 				id: 20,
 			},
@@ -1683,22 +1690,29 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				runs: [
 					{
 						t: "즉 정리하자면, ",
-						bg: "#cccccc",
 						k: 0,
 					},
 					{
-						t: "꾸준한 노출과 콘텐츠의 관리 그리고 원활한 피드백 수용이 고객사로부터 감사를 받은 비결",
+						t: "꾸준한 노출과 콘텐츠의 관리 그리고 ",
 						b: true,
-						bg: "#cccccc",
 						k: 1,
 					},
 					{
-						t: "이라고 할 수 있는 것이죠.",
-						bg: "#cccccc",
+						br: true,
 						k: 2,
+					},
+					{
+						t: "원활한 피드백 수용이 고객사로부터 감사를 받은 비결",
+						b: true,
+						k: 3,
+					},
+					{
+						t: "이라고 할 수 있는 것이죠.",
+						k: 4,
 					},
 				],
 				align: "center",
+				boxBg: "#cccccc",
 				gap: true,
 				id: 40,
 			},
@@ -7479,14 +7493,12 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						b: true,
 						c: "#ff0000",
 						fs: 30,
-						bg: "#f3f3f3",
 						k: 0,
 					},
 					{
 						t: "&nbsp= ",
 						b: true,
 						fs: 30,
-						bg: "#f3f3f3",
 						k: 1,
 					},
 					{
@@ -7494,14 +7506,12 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						b: true,
 						c: "#6fa8dc",
 						fs: 30,
-						bg: "#f3f3f3",
 						k: 2,
 					},
 					{
 						t: " ÷ ",
 						b: true,
 						fs: 30,
-						bg: "#f3f3f3",
 						k: 3,
 					},
 					{
@@ -7509,18 +7519,17 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						b: true,
 						c: "#93c47d",
 						fs: 30,
-						bg: "#f3f3f3",
 						k: 4,
 					},
 					{
 						t: " x 100",
 						b: true,
 						fs: 30,
-						bg: "#f3f3f3",
 						k: 5,
 					},
 				],
 				align: "center",
+				boxBg: "#f3f3f3",
 				gap: true,
 				id: 33,
 			},
@@ -8263,7 +8272,6 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "※메디컬패키지※ ",
 						b: true,
 						fs: 24,
-						bg: "#f3f3f3",
 						k: 0,
 					},
 					{
@@ -8271,12 +8279,44 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 1,
 					},
 					{
-						t: "1.환자가 병원을 가기위해 검색하는 세부키워드에 우리 병원을 많이 노출시키는 전략2. 어떤 키워드를 검색해도 우리 병원이 보여짐3. 수천만원을 절약할 수 있는 마케팅 상품4. 마케팅 팀장 1명의 인건비면 충분5. 병원과 마케터가 함께하면 더욱 시너지가 나는 상품",
-						bg: "#f3f3f3",
+						t: "1.환자가 병원을 가기위해 검색하는 세부키워드에 우리 병원을 많이 노출시키는 전략",
 						k: 2,
+					},
+					{
+						br: true,
+						k: 3,
+					},
+					{
+						t: "2. 어떤 키워드를 검색해도 우리 병원이 보여짐",
+						k: 4,
+					},
+					{
+						br: true,
+						k: 5,
+					},
+					{
+						t: "3. 수천만원을 절약할 수 있는 마케팅 상품",
+						k: 6,
+					},
+					{
+						br: true,
+						k: 7,
+					},
+					{
+						t: "4. 마케팅 팀장 1명의 인건비면 충분",
+						k: 8,
+					},
+					{
+						br: true,
+						k: 9,
+					},
+					{
+						t: "5. 병원과 마케터가 함께하면 더욱 시너지가 나는 상품",
+						k: 10,
 					},
 				],
 				align: "center",
+				boxBg: "#f3f3f3",
 				gap: true,
 				id: 40,
 			},
@@ -9516,11 +9556,11 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					{
 						t: "병원마케팅 매출공식 = 잠재고객이 검색하는 유의미한 키워드 x 콘텐츠 x 노출",
 						b: true,
-						bg: "#f3f3f3",
 						k: 0,
 					},
 				],
 				align: "center",
+				boxBg: "#f3f3f3",
 				gap: true,
 				id: 24,
 			},
@@ -10131,14 +10171,24 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				type: "callout",
 				runs: [
 					{
-						t: '"타 지역 한의원 운영중인 지인의 소개로 애드리절트를 알게 되어 진행했습니다.확실히 신환 유입이 늘었다고 하셔서요."',
+						t: '"타 지역 한의원 운영중인 지인의 소개로 애드리절트를 알게 되어 진행했습니다.',
 						c: "#ff0000",
 						fs: 20,
-						bg: "#f3f3f3",
 						k: 0,
+					},
+					{
+						br: true,
+						k: 1,
+					},
+					{
+						t: '확실히 신환 유입이 늘었다고 하셔서요."',
+						c: "#ff0000",
+						fs: 20,
+						k: 2,
 					},
 				],
 				align: "center",
+				boxBg: "#f3f3f3",
 				gap: true,
 				id: 1,
 			},
@@ -10157,11 +10207,11 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "한의원마케팅 진행 전후 차이는 확실하다.",
 						c: "#ff0000",
 						fs: 20,
-						bg: "#f3f3f3",
 						k: 0,
 					},
 				],
 				align: "center",
+				boxBg: "#f3f3f3",
 				gap: true,
 				id: 3,
 			},
@@ -11882,11 +11932,11 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						t: "병원마케팅, 과연 언제부터 효과가 생길까?",
 						b: true,
 						c: "#ff0000",
-						bg: "#f3f3f3",
 						k: 0,
 					},
 				],
 				align: "center",
+				boxBg: "#f3f3f3",
 				gap: true,
 				id: 0,
 			},
@@ -13277,7 +13327,6 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				runs: [
 					{
 						t: '"개원했는데 신규 환자가 많이 없고 게다가 곧 대형 치과가 근교에 오픈 예정이라서 그 전에 저희 치과에 대해 많이 알리고 싶어요" ',
-						bg: "#f3f3f3",
 						k: 0,
 					},
 					{
@@ -13286,11 +13335,11 @@ export const CASE_ARTICLES: CaseArticle[] = [
 					},
 					{
 						t: "- 고객사 처음 미팅 내용 -",
-						bg: "#f3f3f3",
 						k: 2,
 					},
 				],
 				align: "center",
+				boxBg: "#f3f3f3",
 				gap: true,
 				id: 6,
 			},
@@ -13487,9 +13536,18 @@ export const CASE_ARTICLES: CaseArticle[] = [
 						k: 0,
 					},
 					{
-						t: "가 궁금하시다면,아래 영상을 확인해 주세요.",
+						t: "가 궁금하시다면,",
 						fs: 22,
 						k: 1,
+					},
+					{
+						br: true,
+						k: 2,
+					},
+					{
+						t: "아래 영상을 확인해 주세요.",
+						fs: 22,
+						k: 3,
 					},
 				],
 				align: "center",
