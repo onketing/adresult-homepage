@@ -148,11 +148,34 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 									</div>
 								);
 							}
+							if (b.type === "hr") {
+								return <hr key={b.id} className="my-10 border-slate-200" />;
+							}
+							const alignClass = cn(
+								b.align === "center" && "text-center",
+								b.align === "right" && "text-right",
+							);
+							if (b.type === "callout") {
+								return (
+									<div
+										key={b.id}
+										className={cn(
+											"my-6 break-keep rounded-xl border border-slate-200 bg-slate-50 px-6 py-5 text-base text-slate-700 leading-relaxed md:text-lg",
+											alignClass || "text-center",
+										)}
+									>
+										{renderRuns(b.runs)}
+									</div>
+								);
+							}
 							if (b.type === "h") {
 								return (
 									<h2
 										key={b.id}
-										className="mt-10 break-keep font-extrabold text-[#0a0a0a] text-xl leading-snug md:text-2xl"
+										className={cn(
+											"mt-10 break-keep font-extrabold text-[#0a0a0a] text-xl leading-snug md:text-2xl",
+											alignClass,
+										)}
 									>
 										{renderRuns(b.runs)}
 									</h2>
@@ -161,7 +184,10 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 							return (
 								<p
 									key={b.id}
-									className="mt-4 break-keep text-base text-slate-700 leading-relaxed md:text-lg"
+									className={cn(
+										"mt-4 break-keep text-base text-slate-700 leading-relaxed md:text-lg",
+										alignClass,
+									)}
 								>
 									{renderRuns(b.runs)}
 								</p>

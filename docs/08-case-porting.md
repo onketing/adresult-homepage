@@ -20,14 +20,20 @@ pnpm build   # /cases, /cases/[slug] 생성 확인
 
 ## 2. 파싱 규칙 (스크립트가 자동 처리)
 
-- **본문 컨테이너**: `.fr-view` 중 텍스트·이미지가 가장 많은 것.
-- **텍스트 → run 단위**: `<p>`를 순회하며 **색상(어두운색 제외)·굵기(`strong`/`font-weight`)·기울임(`em`/`font-style`)·밑줄·`<br>`**를 보존. `rgb(...)`는 hex로 변환.
+- **본문 컨테이너**: `.fr-view` 중 텍스트·이미지가 가장 많은 것. 그 안의 `div[class*=_comment_body]` 블록을 **문서 순서대로** 순회한다(없으면 `.fr-view` 자체).
+- **텍스트 → run 단위**: 블록을 순회하며 **색상(어두운색 제외)·굵기(`strong`/`font-weight`)·기울임(`em`/`font-style`)·밑줄·`<br>`**를 보존. `rgb(...)`는 hex로 변환. **`<table>` 콜아웃 박스 텍스트도 동일 규칙으로 수집**(font-size로 h/p 판별).
 - **헤딩**: span `font-size ≥ 19px` → `h`(제목), 그 외 `p`.
-- **이미지**: `/upload/` 이미지 → `public/images/cases/{idx}/{n}.{ext}` 다운로드 + `sips`로 실측 `w/h`.
-- **유튜브 watch 링크 썸네일** → `video` 블록(iframe 임베딩).
+- **이미지**: 컨텐츠 이미지(`cdn.imweb.me/upload/` **또는** 네이버 `postfiles.pstatic.net`)만 채택 → `public/images/cases/{idx}/{n}.{ext}` 다운로드 + `sips`로 실측 `w/h`.
+  - **Referer**: `/upload/` → `adresult.kr`, `pstatic` → `blog.naver.com`(네이버는 adresult referer 로 403).
+  - 네이버 URL의 `?type=w966` 쿼리는 받을 때는 유지, 확장자 판별 때만 제거(`src.split("?")[0]`).
+  - **다운로드 실패 시**: `IMGFAIL` 로그를 남기고 해당 이미지만 건너뛴다(실행은 중단하지 않음).
+  - 한 `<p>`에 이미지·텍스트가 함께 있으면 **텍스트 먼저, 이미지 다음** 순으로 방출(기존 순서 유지).
+- **영상**: `<iframe src=.../embed/{id}>`(보통 `<span class=fr-video>` 래핑) → `video` 블록. 기존 **유튜브 watch/단축 링크 썸네일**(`<a href=…watch><img>`)도 `video` 블록으로 계속 처리. id 는 11자.
 - **제외되는 것**(상세 페이지 공통 요소가 대체):
   - 유튜브 **채널(@/channel/c) 링크 배너**(애드리절트 TV 등)
+  - `<img>` 를 감싼 `<a href>` 가 **`pf.kakao.com` / `map.naver.com` / 유튜브 채널**로 향하는 꼬리 배너
   - **가로세로비 ≥ 2.0 인 꼬리 프로모 배너**(하단 CTA/광고 이미지)
+  - **추적/프로필/1x1 등 `/upload/`·`pstatic` 이 아닌 이미지**
   - **`og:title`과 동일한 첫 블록**(제목 중복)
 
 ## 3. 데이터 구조 (`src/data/success-cases.ts`)
