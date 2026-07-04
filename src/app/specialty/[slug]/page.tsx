@@ -41,10 +41,20 @@ export const SpecialtyPage = async ({ params }: { params: Promise<{ slug: string
 		areaServed: "KR",
 		serviceType: `${s.name} 병원마케팅 (숏폼·AIO)`,
 	};
+	const faqSchema = {
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		mainEntity: s.faq.map((f) => ({
+			"@type": "Question",
+			name: f.q,
+			acceptedAnswer: { "@type": "Answer", text: f.a },
+		})),
+	};
 
 	return (
 		<>
 			<script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+			<script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
 			<BreadcrumbJsonLd
 				items={[
 					{ name: "홈", path: "" },
@@ -162,6 +172,32 @@ export const SpecialtyPage = async ({ params }: { params: Promise<{ slug: string
 								</span>
 							</Link>
 						</Reveal>
+					</div>
+				</div>
+			</section>
+
+			{/* FAQ — AEO(FAQPage 스키마 + 본문 노출) */}
+			<section className="bg-white px-4 py-24 md:px-8 md:py-28">
+				<div className="mx-auto max-w-3xl">
+					<Reveal>
+						<p className="mb-4 text-center font-bold text-[#e11d29] text-sm uppercase tracking-[0.25em] md:text-base">
+							FAQ
+						</p>
+						<h2 className="break-keep text-center font-extrabold text-2xl text-[#0a0a0a] leading-snug tracking-tight md:text-4xl">
+							{s.name} 마케팅, 자주 묻는 질문
+						</h2>
+					</Reveal>
+					<div className="mt-12 space-y-4">
+						{s.faq.map((f, i) => (
+							<Reveal key={f.q} delay={i * 0.06}>
+								<div className="rounded-2xl bg-slate-50 p-6 ring-1 ring-black/5 md:p-8">
+									<h3 className="break-keep font-bold text-[#0a0a0a] text-lg md:text-xl">
+										Q. {f.q}
+									</h3>
+									<p className="mt-3 break-keep text-slate-600 leading-relaxed">{f.a}</p>
+								</div>
+							</Reveal>
+						))}
 					</div>
 				</div>
 			</section>

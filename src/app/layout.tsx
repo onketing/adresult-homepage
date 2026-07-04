@@ -76,8 +76,8 @@ export const metadata: Metadata = {
 
 const DUMMY_TEL = "02-000-0000";
 
-// GA4 측정 ID. Vercel/로컬 env에 NEXT_PUBLIC_GA_ID=G-XXXXXXXX 설정 시에만 로드된다.
-const gaId = process.env.NEXT_PUBLIC_GA_ID;
+// GA4 측정 ID. env 미설정 시 프로덕션 측정 ID로 폴백한다(빌드 env 누락과 무관하게 로드).
+const gaId = process.env.NEXT_PUBLIC_GA_ID ?? "G-DD7505420W";
 
 const jsonLd = {
 	"@context": "https://schema.org",
