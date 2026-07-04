@@ -113,7 +113,6 @@ export const siteConfig = {
 				{ label: "고객후기", href: "/reviews", icon: "Star" },
 			],
 		},
-		{ label: "블로그", href: "/blog" },
 		{ label: "FAQ", href: "/faq" },
 	] as NavItem[],
 };
