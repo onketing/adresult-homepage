@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CompanyHero } from "@/components/sections/CompanyHero";
+import { BreadcrumbJsonLd } from "@/components/shared/BreadcrumbJsonLd";
 import { CompanyTabs } from "@/components/shared/CompanyTabs";
 import { Reveal } from "@/components/shared/Reveal";
 
@@ -27,6 +28,12 @@ const BOOK_VIDEOS: { id: string; title: string }[] = [
 export const CeoPage = () => {
 	return (
 		<>
+			<BreadcrumbJsonLd
+				items={[
+					{ name: "홈", path: "" },
+					{ name: "CEO 인사말", path: "/ceo" },
+				]}
+			/>
 			<CompanyHero videoSrc="/ceo-hero-video.mp4" />
 			<CompanyTabs />
 
