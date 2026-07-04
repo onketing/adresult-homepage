@@ -56,11 +56,13 @@ export const metadata: Metadata = {
 		siteName: siteConfig.name,
 		title: siteConfig.title,
 		description: siteConfig.description,
+		images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: siteConfig.name }],
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: siteConfig.title,
 		description: siteConfig.description,
+		images: [siteConfig.ogImage],
 	},
 	robots: {
 		index: true,
@@ -77,10 +79,7 @@ export const metadata: Metadata = {
 			"msvalidate.01": "FEADAB9A050D08C9269521AB466C6271",
 		},
 	},
-	// 파비콘은 src/app/icon.png(=title-logo) 컨벤션이 자동 처리
-	icons: {
-		apple: "/title-logo.png",
-	},
+	// 파비콘·아이콘은 src/app/icon.png · src/app/apple-icon.png(=애드리절트 aL) 컨벤션이 자동 처리
 };
 
 const DUMMY_TEL = "02-000-0000";
