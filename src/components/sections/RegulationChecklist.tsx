@@ -24,7 +24,7 @@ export const RegulationChecklist = () => {
 	const inView = useInView(ref, { once: true, margin: "-60px" });
 
 	return (
-		<section className="bg-white px-4 py-24 md:py-28">
+		<section className="bg-white px-4 py-16 md:py-28">
 			<div className="mx-auto max-w-6xl">
 				<div className="grid grid-cols-1 items-start gap-12 md:grid-cols-[1fr_540px]">
 					{/* 우측 헤더 (모바일에서는 위) */}

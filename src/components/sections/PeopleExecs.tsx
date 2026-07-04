@@ -271,7 +271,7 @@ export const PeopleExecs = () => {
 	}, [openIdx]);
 
 	return (
-		<section className="bg-slate-50 px-4 py-24 md:py-28">
+		<section className="bg-slate-50 px-4 py-16 md:py-28">
 			<div className="mx-auto max-w-[1600px]">
 				<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
 					ADRESULT People

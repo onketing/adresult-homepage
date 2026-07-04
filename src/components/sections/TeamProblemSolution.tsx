@@ -18,7 +18,7 @@ const SOLUTIONS = [
 
 export const TeamProblemSolution = () => {
 	return (
-		<section className="bg-slate-50 px-4 py-20 md:py-28">
+		<section className="bg-slate-50 px-4 py-14 md:py-28">
 			<div className="mx-auto max-w-3xl">
 				{/* Problems */}
 				<Reveal className="mb-10">

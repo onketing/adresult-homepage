@@ -37,7 +37,7 @@ export const PageHero = ({
 	return (
 		<section
 			className={cn(
-				"bg-[radial-gradient(ellipse_at_top_right,rgba(239,60,57,0.06),transparent_60%)] px-4 py-24 pt-32 text-center md:py-32 md:pt-40",
+				"bg-[radial-gradient(ellipse_at_top_right,rgba(239,60,57,0.06),transparent_60%)] px-4 py-16 pt-28 text-center md:py-32 md:pt-40",
 				className,
 			)}
 		>

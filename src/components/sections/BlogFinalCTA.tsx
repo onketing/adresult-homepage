@@ -8,7 +8,7 @@ const spring = { type: "spring", stiffness: 280, damping: 18 } as const;
 
 export const BlogFinalCTA = () => {
 	return (
-		<section className="relative overflow-hidden bg-[#3a0509] px-4 py-24 md:py-32">
+		<section className="relative overflow-hidden bg-[#3a0509] px-4 py-16 md:py-32">
 			{/* Grid overlay */}
 			<div
 				className="pointer-events-none absolute inset-0 opacity-[0.07]"

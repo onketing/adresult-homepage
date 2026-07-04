@@ -69,7 +69,7 @@ export const FaqDirectory = () => {
 	};
 
 	return (
-		<section className="bg-white py-20 md:py-28">
+		<section className="bg-white py-14 md:py-28">
 			{/* 모바일 sticky pill nav */}
 			<div className="sticky top-16 z-30 border-slate-100 border-b bg-white/95 backdrop-blur-sm md:hidden">
 				<div className="mx-auto max-w-6xl px-6">

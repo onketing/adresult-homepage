@@ -3,7 +3,7 @@ import { Reveal } from "@/components/shared/Reveal";
 
 export const CloseUpManagement = () => {
 	return (
-		<section className="bg-white px-4 py-24 md:py-32">
+		<section className="bg-white px-4 py-16 md:py-32">
 			<div className="mx-auto max-w-5xl">
 				<Reveal>
 					<p className="mb-4 font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">

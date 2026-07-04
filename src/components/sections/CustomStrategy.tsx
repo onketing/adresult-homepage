@@ -2,7 +2,7 @@ import { Reveal } from "@/components/shared/Reveal";
 
 export const CustomStrategy = () => {
 	return (
-		<section className="bg-[#e11d29] px-4 py-24 md:py-32">
+		<section className="bg-[#e11d29] px-4 py-16 md:py-32">
 			<div className="mx-auto max-w-6xl text-center">
 				<Reveal>
 					<p

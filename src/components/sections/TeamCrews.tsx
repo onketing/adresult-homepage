@@ -64,7 +64,7 @@ const CrewBlock = ({
 
 export const TeamCrews = () => {
 	return (
-		<section className="bg-white px-4 py-24 md:py-28">
+		<section className="bg-white px-4 py-16 md:py-28">
 			<div className="mx-auto max-w-7xl">
 				<Reveal>
 					<SectionHeading

@@ -327,7 +327,7 @@ export const AboutPage = () => {
 			</section>
 
 			{/* CUSTOMER REVIEW — 무한 스크롤 후기 */}
-			<section className="border-slate-100 border-t bg-white py-24 md:py-28">
+			<section className="border-slate-100 border-t bg-white py-16 md:py-28">
 				<div className="mx-auto max-w-[1600px] px-4 md:px-8">
 					<Reveal>
 						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">

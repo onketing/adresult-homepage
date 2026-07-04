@@ -11,7 +11,7 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
 
 export const WhyUsBold = () => {
 	return (
-		<section className="relative bg-[#3a0509] px-4 py-20 md:py-24">
+		<section className="relative bg-[#3a0509] px-4 py-14 md:py-24">
 			<div
 				className="pointer-events-none absolute inset-x-0 top-0 h-[400px]"
 				aria-hidden="true"

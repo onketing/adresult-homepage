@@ -17,7 +17,7 @@ const ScoreDots = ({ score }: { score: number }) => (
 
 export const ServiceComparison = () => {
 	return (
-		<section className="bg-slate-50 px-4 py-20 md:py-28">
+		<section className="bg-slate-50 px-4 py-14 md:py-28">
 			<div className="mx-auto max-w-5xl">
 				<Reveal className="mb-14 text-center">
 					<p className="mb-3 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">

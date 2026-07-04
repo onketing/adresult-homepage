@@ -138,7 +138,7 @@ const SingleCaseCard = ({
 // ── 메인 컴포넌트 ─────────────────────────────────────────────
 export const CaseHighlight = () => {
 	return (
-		<section className="bg-slate-50 py-20 md:py-28">
+		<section className="bg-slate-50 py-14 md:py-28">
 			<div className="mx-auto max-w-6xl px-4 md:px-8">
 				{/* 섹션 헤더 */}
 				<Reveal className="mb-12">

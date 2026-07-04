@@ -11,7 +11,7 @@ const spring = { type: "spring", stiffness: 280, damping: 18 } as const;
 
 export const AboutMidCTA = () => {
 	return (
-		<section className="relative overflow-hidden bg-[#3a0509] px-4 py-20 md:py-24">
+		<section className="relative overflow-hidden bg-[#3a0509] px-4 py-14 md:py-24">
 			{DESK_PHOTO_READY && (
 				<>
 					<Image

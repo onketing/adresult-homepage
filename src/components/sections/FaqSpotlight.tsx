@@ -26,7 +26,7 @@ const SPOTLIGHT_ITEMS = FAQ_ITEMS.filter((item) => item.featured)
 
 export const FaqSpotlight = () => {
 	return (
-		<section className="bg-slate-50 px-4 py-20 md:py-28">
+		<section className="bg-slate-50 px-4 py-14 md:py-28">
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<p className="mb-3 font-mono text-slate-500 text-xs uppercase tracking-[0.25em]">

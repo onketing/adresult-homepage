@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 
 export const FAQContact = () => {
 	return (
-		<section className="bg-slate-50 px-4 py-20 md:py-24">
+		<section className="bg-slate-50 px-4 py-14 md:py-24">
 			<div className="mx-auto max-w-5xl">
 				<div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[260px_1fr] md:gap-14">
 					{/* 좌: 헤딩 */}

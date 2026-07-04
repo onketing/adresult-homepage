@@ -10,7 +10,7 @@ export const RegulationLawSwitcher = () => {
 	const reg = REGULATIONS[selected];
 
 	return (
-		<section className="bg-white px-4 py-24 md:py-28">
+		<section className="bg-white px-4 py-16 md:py-28">
 			<div className="mx-auto max-w-6xl">
 				{/* 헤더 — 좌측 정렬 */}
 				<div className="mb-10">

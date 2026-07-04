@@ -36,7 +36,7 @@ export const RegulationStats = () => {
 	const barsInView = useInView(barRef, { once: true, margin: "-60px" });
 
 	return (
-		<section className="bg-[#0d0202] py-20 md:py-28">
+		<section className="bg-[#0d0202] py-14 md:py-28">
 			<div className="mx-auto max-w-5xl px-4 md:px-8">
 				<Reveal className="mb-12 text-center">
 					<p className="mb-3 font-semibold text-[#fca5a5] text-sm uppercase tracking-[0.25em]">

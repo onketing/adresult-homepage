@@ -10,7 +10,7 @@ const PLEDGES = [
 
 export const RegulationPledge = () => {
 	return (
-		<section className="bg-[#3a0509] px-4 py-24 md:py-28">
+		<section className="bg-[#3a0509] px-4 py-16 md:py-28">
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">

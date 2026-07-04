@@ -46,7 +46,7 @@ const VideoCard = ({ id }: { id: string }) => {
 
 export const AdresultYouTube = () => {
 	return (
-		<section className="bg-white px-4 py-24 md:py-32">
+		<section className="bg-white px-4 py-16 md:py-32">
 			<div className="mx-auto max-w-6xl">
 				{/* 헤더 */}
 				<Reveal>

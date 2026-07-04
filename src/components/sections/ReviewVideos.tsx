@@ -10,7 +10,7 @@ const watchUrl = (id: string) => `https://www.youtube.com/watch?v=${id}`;
 
 export const ReviewVideos = () => {
 	return (
-		<section className="overflow-hidden bg-white py-24 md:py-32">
+		<section className="overflow-hidden bg-white py-16 md:py-32">
 			{/* 헤더 */}
 			<Reveal>
 				<div className="mx-auto mb-12 max-w-7xl px-4 md:mb-16 md:px-8">

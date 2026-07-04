@@ -36,7 +36,7 @@ export const CTACard = ({
 		return (
 			<section
 				id={triggerContactOnView ? "final-cta" : undefined}
-				className="gradient-brand relative overflow-hidden px-4 py-24 md:py-32"
+				className="gradient-brand relative overflow-hidden px-4 py-16 md:py-32"
 			>
 				{/* Radial glow */}
 				<div

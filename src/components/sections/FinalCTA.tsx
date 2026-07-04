@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 
 export const FinalCTA = () => {
 	return (
-		<section className="relative overflow-hidden bg-[#140505] px-4 py-28 md:py-36">
+		<section className="relative overflow-hidden bg-[#140505] px-4 py-16 md:py-36">
 			{/* CSS aurora — 4개 블롭이 각자 다른 속도로 천천히 궤도를 돌며 프리미엄 마무리 느낌 */}
 			<div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
 				<div

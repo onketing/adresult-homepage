@@ -79,7 +79,7 @@ export const BlogHero = () => {
 					</motion.p>
 
 					<motion.h1
-						className="mb-6 font-bold text-5xl text-[#0a0a0a] leading-[1.06] tracking-tight md:text-[5.5rem]"
+						className="mb-6 font-bold text-4xl text-[#0a0a0a] leading-[1.06] tracking-tight md:text-[5.5rem]"
 						initial={{ opacity: 0, y: 28 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.7, delay: 0.1, ease }}

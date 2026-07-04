@@ -3,7 +3,7 @@ import { Reveal } from "@/components/shared/Reveal";
 
 export const TmapPartner = () => {
 	return (
-		<section className="bg-white px-4 py-20 md:py-28">
+		<section className="bg-white px-4 py-14 md:py-28">
 			<div className="mx-auto max-w-4xl text-center">
 				<Reveal>
 					<h2 className="break-keep font-bold text-2xl text-[#0a0a0a] tracking-tight md:text-4xl">
