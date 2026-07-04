@@ -1,1292 +1,217 @@
 # 04 — Pages Reference
 
-Claude Code용 참조 문서. 각 페이지의 섹션 순서·카피(verbatim)·애니메이션·데이터 출처를 담는다.
-이 파일 하나로 모든 현재 텍스트·구조·애니메이션을 파악할 수 있어야 한다.
+애드리절트(ADRESULT) 병원마케팅 사이트의 각 페이지 섹션 순서·주요 카피·메타·JSON-LD·데이터 출처를 정리한다.
 
 **표기 규칙**
-- 카피는 코드에 적힌 문자열 그대로 (verbatim)
-- `\n` = h1/h2 내 `<br />` 줄바꿈
-- *(highlight: "word")* = `gradient-text` 클래스 span
-- `{siteConfig.xxx}` = 런타임 주입값 (src/config/site.ts)
-- `[DATA: path]` = 외부 데이터 파일 출처
+- 카피는 코드 문자열 그대로 (verbatim). `\n`/`<br />` = 줄바꿈.
+- *(highlight: "…")* = 레드 강조 span (`text-[#ef3c39]` 또는 `text-[#e11d29]`).
+- `{siteConfig.xxx}` = 런타임 주입값. `[DATA: path]` = 데이터 파일 출처.
+- 서비스·진료과 페이지는 **인라인 JSX**가 많아 별도 섹션 컴포넌트로 분리돼 있지 않다.
+
+## 라우트 트리
+
+```
+/                       홈
+/about /history /ceo /people   회사소개 (CompanyHero + CompanyTabs 공유)
+/services/aio           병원 AIO·AI검색(GEO) 마케팅
+/services/shortform     끝장숏폼 (숏폼·릴스·쇼츠 올인원)
+/specialty/[slug]       진료과 랜딩 6종 (SSG)
+/cases                  성공사례 목록
+/cases/[slug]           성공사례 상세 27편 (SSG)
+/cases/create           관리자 케이스 에디터 (robots noindex)
+/reviews                고객후기
+/regulation             의료광고 규정 가이드
+/faq                    자주 묻는 질문
+(/contact → 외부 Tally 폼으로 302 리다이렉트, 실제 라우트 없음)
+(기타: sitemap.ts, robots.ts, manifest.ts, icon.png, apple-icon.png)
+```
+
+전역: RootLayout이 Header · Footer · StickyCTA · FloatingActions · PageTransition · Organization/WebSite JSON-LD · GA4를 마운트.
 
 ---
 
 ## / — 홈
 
-**metadata:** siteConfig 기본값 사용 (별도 `export const metadata` 없음)
+**metadata:** `title: "병원마케팅 애드리절트(ADRESULT) | 결과로 말하는 광고회사"`
+**JSON-LD:** 페이지 자체 `homeFaqSchema`(FAQPage, Q&A 5개: 회사 소개 / 비용 / 계약 기간 / 의료광고법 / 효과).
 
 **섹션 순서:**
-Hero → PainPoints → ProfessionRotator → KPIShowcase → CaseHighlight → CaseGrid → WhyUsBold → ServiceCards → ProcessSteps → RealReviews → TeamPreview → FinalCTA
+Hero → ExcellentCompany → ReviewVideos → CustomStrategy → CaseHighlight → CostBreakdown → CloseUpManagement → AdresultYouTube → ProcessSteps → TmapPartner → FinalCTA
 
----
-
-### 1. Hero
-**file:** `src/components/sections/Hero.tsx`  
-**background:** `bg-white` + purple orb top-left (`bg-[#7c3aed] opacity-[0.06] blur-[160px]`) + cyan orb bottom-right (`bg-[#06b6d4] opacity-[0.04] blur-[140px]`) + fine grid with radial mask  
-**layout:** `min-h-screen` center, 좌우 split (text left, visual right on lg+)
-
-**copy:**
-- eyebrow (mono, violet): `"전문직 12개 직군 · 광고 위반 0건"`
-- h1: `"전문직 마케팅은\n"` + *(highlight: "달라야")* + `" 합니다"`
-- sub: `"고객이 먼저 찾아옵니다"`
-- proof strip (3 items): `"누적 200+ 콘텐츠"` / `"재계약율 90%+"` / `"의료광고 심의 통과 100%"`
-- cta button: `"마케팅 컨설팅"` → `/contact`
-
-**visual (right):** browser mockup with naver search bar, search term `"변호사 이혼 의뢰"`, 3 result cards  
-**animations:** `motion/react` — eyebrow `{opacity:0,y:16}→{1,0}` delay 0, h1 delay 0.1, sub delay 0.25, proof delay 0.4, cta delay 0.5, visual delay 0.3 (ease `[0.22,1,0.36,1]`)
-
----
-
-### 2. PainPoints
-**file:** `src/components/sections/PainPoints.tsx`  
-**background:** `bg-slate-50`  
-**layout:** center, grid 2-col on md+
-
-**copy:**
-- eyebrow: `"이런 경험 있으신가요?"`
-- h2: *(highlight: "일반 대행사")* + `"에 맡겨봤지만..."`
-- 6 items `[DATA: src/data/painPoints.ts → PAIN_POINTS]`:
-  1. `"노출 수는 많은데, 정작 상담 문의는 없어요."`
-  2. `"광고 규정을 모르는 담당자가 콘텐츠를 만들어요."`
-  3. `"매달 비슷한 글만 반복해서 올라와요."`
-  4. `"계약 전엔 적극적이었는데, 계약 후엔 연락이 뜸해요."`
-  5. `"담당자가 바뀔 때마다 처음으로 돌아가요."`
-  6. `"계획서는 그럴싸한데, 막상 진행하면 얘기가 달라져요."`
-
-**animations:** `Reveal` (scroll-triggered entrance)
-
----
-
-### 3. ProfessionRotator
-**file:** `src/components/sections/ProfessionRotator.tsx`  
-**background:** `bg-white`  
-**layout:** center, rotating label in h2
-
-**copy:**
-- eyebrow (mono): `"Specialized"`
-- h2: `"오직 ["` + *rotating_label* + `"]를 위해\n만들어졌습니다."`
-- rotating labels `[DATA: src/data/professions.ts → PROFESSIONS]`: `"변호사"` / `"의사"` / `"한의사"` / `"수의사"` / `"노무사"` / `"세무사"`
-- sub: `"직군의 언어와 광고 규정 위에서 시작합니다."`
-
-**animations:** label swap — `AnimatePresence` with `{opacity:0,y:12}→{1,0}` exit `{opacity:0,y:-12}`, interval 2000ms
-
----
-
-### 4. KPIShowcase
-**file:** `src/components/sections/KPIShowcase.tsx`  
-**background:** `bg-[#0a0a0a]` (dark)  
-**layout:** center, 4-col grid
-
-**copy:**
-- eyebrow (mono, white/40): `"운영 데이터"`
-- h2: `"숫자가 증명합니다."`
-- 4 KPI items (inline data):
-  - `[01]` label `"재계약율"`, value `"90%+"` (CountUp)
-  - `[02]` label `"평균 월 상담 증가"`, value `"3배+"` (CountUp)
-  - `[03]` label `"광고 심의 통과율"`, value `"100%"` (CountUp)
-  - `[04]` label `"전담 직군"`, value `"12개"` (CountUp)
-
-**animations:** `CountUp` component (animated number), `Reveal` scroll entrance
-
----
-
-### 5. CaseHighlight
-**file:** `src/components/sections/CaseHighlight.tsx`  
-**background:** `bg-white`  
-**layout:** featured case left (chart) + quote right
-
-**copy:**
-- eyebrow: `"성공 사례"`
-- h2: `"직군별 실제 운영 결과입니다."`
-- featured case name: `"사례 1. K 법무법인"`
-- chart label: `"월 상담 건수 (6개월)"`
-- before value: `3건`, after value: `18건`, multiplier badge: `"6배"`
-- h3: `"광고비 줄이는 동안,\n상담은 "` + *(highlight: "6배")* + `" 늘었습니다"`
-- ad saving badge label: `"광고비 절감율"` / value: `"65% 절감"`
-- quote: `"광고비 줄이면서 상담이 늘 수 있다는 게 처음엔 이해가 안 됐어요. 근데 지금은 설명이 되네요."` — `"K 법무법인 대표"`
-
-**animations:** `Reveal`, bar chart CountUp
-
----
-
-### 6. CaseGrid
-**file:** `src/components/sections/CaseGrid.tsx`  
-**background:** `bg-slate-50`  
-**layout:** 2×2 grid
-
-**copy:**
-- eyebrow: `"운영 사례"`
-- h2: `"6개월이면 달라집니다."`
-- sub: `"직군별 실제 운영 데이터입니다. 숫자는 가상이며 실데이터로 교체 예정입니다."`
-- 4 cases (inline):
-  1. `"K법무법인"` → `"6배"` 상담 증가
-  2. `"D정형외과"` → `"3.4배"` 상담 증가
-  3. `"J한방병원"` → `"3.3배"` 상담 증가
-  4. `"S세무사무소"` → `"3.8배"` 상담 증가
-
-**animations:** `Reveal` per card
-
----
-
-### 7. WhyUsBold
-**file:** `src/components/sections/WhyUsBold.tsx`  
-**background:** `bg-white`  
-**layout:** center, 3-card comparison grid
-
-**copy:**
-- eyebrow: `"Why Us"`
-- h2: `"대부분의 대행사는 노출 수에 집착합니다."`
-- sub: `"수임 전환, 그것만 봅니다."`
-- 3 cards with before/after comparison table `[DATA: src/data/whyUs.ts]`
-
-**animations:** `Reveal`
-
----
-
-### 8. ServiceCards
-**file:** `src/components/sections/ServiceCards.tsx`  
-**background:** `bg-slate-50`  
-**layout:** 3-card grid
-
-**copy:**
-- eyebrow: `"Services"`
-- h2: `"전문직 마케팅, "` + *(highlight: "세 가지")* + `"로 합니다."`
-- 3 service cards `[DATA: src/data/services.ts → SERVICE_CARDS]`
-
-**animations:** `Reveal` per card
-
----
-
-### 9. ProcessSteps
-**file:** `src/components/sections/ProcessSteps.tsx`  
-**background:** `bg-white`  
-**layout:** vertical numbered steps
-
-**copy:**
-- eyebrow: `"Process"`
-- h2: `"이렇게 함께합니다."`
-- sub: `"상담부터 발행까지, 규정 검토가 모든 단계에 있습니다."`
-- 4 steps `[DATA: src/data/process.ts → PROCESS_STEPS]`
-
-**animations:** `Reveal` staggered
-
----
-
-### 10. RealReviews
-**file:** `src/components/sections/RealReviews.tsx`  
-**background:** `bg-slate-50`  
-**layout:** review cards (Marquee)
-
-**copy:**
-- eyebrow: `"Real Voices"`
-- h2: `"직접 겪은 "` + *(highlight: "이야기입니다")*
-- sub: `"상담 문의가 늘어난 전문직 대표들의 실제 후기입니다."`
-- bottom link: `"마케팅 컨설팅 받기 →"` → `/contact`
-- reviews `[DATA: src/data/reviews.ts → REVIEWS]`
-
-**animations:** `Marquee` (react-fast-marquee) scrolling strip, `Reveal`
-
----
-
-### 11. TeamPreview
-**file:** `src/components/sections/TeamPreview.tsx`  
-**background:** `bg-white`  
-**layout:** center, team photo mosaic
-
-**copy:**
-- eyebrow: `"Team"`
-- h2: `"규정을 아는 사람들이 직접 만듭니다."`
-- sub: `"운영팀이 아니라 기획자가 콘텐츠를 씁니다."`
-- bottom link: `"팀 전체 보기 →"` → `/team`
-
-**animations:** `Reveal`, photo hover scale
-
----
-
-### 12. FinalCTA
-**file:** `src/components/sections/FinalCTA.tsx`  
-**background:** `bg-[#0a0a0a]` (dark) + violet/cyan orbs  
-**layout:** center
-
-**copy:**
-- eyebrow (mono): `"마케팅 컨설팅"`
-- h2: `"광고비, 더 태우기 전에."`
-- sub: `"3분이면 컨설팅 요청이 끝납니다.\n24시간 안으로 답변드립니다."`
-- btn1: `"마케팅 컨설팅"` → `/contact`
-- btn2: `"카카오톡 1:1 문의"` → `{siteConfig.contact.kakaoOpenChat}` (external `target="_blank"`)
-- note (mono): `"영업일 1일 내 회신 · 광고 규정 위반 항목 즉시 확인"`
-
-**animations:** `Reveal`
+| # | 섹션 (file) | bg | 카피·데이터·이미지 |
+|---|---|---|---|
+| 1 | `Hero` | `#0b1220` (영상 배경) | h1 `"결과로 말하는 광고회사 / 애드리절트 ADRESULT"`. 배경 영상 `home-hero-video.mp4`(+poster), 소리 토글, 스크롤 인디케이터 |
+| 2 | `ExcellentCompany` | white | eyebrow `Excellent Company`, 리드 `"병원마케팅, 어디서 해요?"`, h2 `"잘 나가는 병원은 애드리절트에서 병원마케팅합니다."`, 스탯 4카드 CountUp `[DATA: kpi-showcase.ts]` (132개월/200+/1,272곳/3,800+) |
+| 3 | `ReviewVideos` | white | h2 `"애드리절트 고객사 의사들의 리얼 병원마케팅 후기"`. Marquee 캐러셀 `[DATA: adresult-reviews.ts → ADRESULT_REVIEWS]`, 유튜브 영상 라이트박스, 썸네일 `images/reviews-video/review-*.png` |
+| 4 | `CustomStrategy` | `#e11d29` (레드) | 손글씨(`--font-hand`) 강조 + h2 `"… 맞춤 전략을 제시 합니다"`. Win-Win 전략 서술 |
+| 5 | `CaseHighlight` | slate-50 | h2 `"실제 병원마케팅 결과입니다."`. CountUp 바 차트 `[DATA: case-highlight.ts → CASE_HIGHLIGHTS(2) + CASE_HIGHLIGHTS_SINGLE(1)]` (U의원 40%↑ · D의원 20%↑ · B의원 333%↑) |
+| 6 | `CostBreakdown` | white | eyebrow `Customization Strategies`, h2 `"같은 비용이어도 병원마케팅 상품 구성이 달라집니다!"`. 비용 구성 비교 (인라인 데이터) |
+| 7 | `CloseUpManagement` | white | eyebrow `Close-up Management`, 리드 `"애드리절트는 결과에 집착합니다."`, h2 `"결과로 말하는 병원마케팅"`. 이미지 `adresult-diagram.png` |
+| 8 | `AdresultYouTube` | white | eyebrow `ADRESULT YOUTUBE`, h2 `"우리는 당신의 마지막 병원마케팅 회사입니다."`. 유튜브 그리드 + 대표 영상 임베드 `[DATA: adresult-youtube.ts]`, 채널 링크 |
+| 9 | `ProcessSteps` | slate-50 | eyebrow `진행방식`, h2 `"이렇게 진행합니다."`. 4단계 `[DATA: process-steps.ts → PROCESS_STEPS]` (마케팅 상담 → 병원 맞춤 전략 → 콘텐츠 발행 → 성과 점검) |
+| 10 | `TmapPartner` | white | h2 `"애드리절트는 T-Map 공식 파트너사입니다."`. 이미지 `adresult-tmap.png` |
+| 11 | `FinalCTA` | `#140505` (다크) | eyebrow `문의하기`, h2 `"잘나가는 병원은, 애드리절트에서 합니다."`. 버튼: 문의하기(`/contact`) + 카카오톡(`{siteConfig.contact.kakaoOpenChat}`) |
 
 ---
 
 ## /about — 회사소개
 
-**metadata:** `title: "회사소개 | 온세상이마케팅이다"`
+**metadata:** `title: "회사소개 | 애드리절트(ADRESULT)"` · BreadcrumbJsonLd
+**섹션 순서:** CompanyHero → CompanyTabs → 다음 인라인 섹션들
 
-**섹션 순서:**
-AboutHero → AboutFoundingStory → AboutTrustCounter → AboutHowWeWork → AboutClientStrip → AESlogan → AboutSignature → AboutCaseHighlight → AboutCEOMessage → AboutCEOTimeline → AboutMission → OrgChart → Comparison → AboutMidCTA → CTACard(gradient)
+| 섹션 | bg | 카피·이미지 |
+|---|---|---|
+| Intro | white | eyebrow `Introduce ADRESULT` — 회사 소개 블록 (이미지 `about/about-*.jpg`, `AboutOperator` +/= 애니메이션 포함) |
+| Know-how | white | eyebrow `ADRESULT Marketing Know-how` — 마케팅 노하우 카드(`about/about-marketing.jpg`·`about-seo.jpg`·`about-contents.jpg`·`about-study.jpg`) |
+| Customized Strategy | white | eyebrow `Customized Strategy` — 원형 스텝 플로우 |
+| Customer Review | white | eyebrow `Customer Review`, h2 `"애드리절트의 병원마케팅 실력"` → `AboutReviewMarquee`(`about/review-1~11.jpg` 롤링) |
+| Floor Information | white | eyebrow `Floor Information`, h2 `"애드리절트 층별 안내"` (`title-logo.png` + 주소, `floor-information.jpg`) |
+| 참고 note | white | `"참고해주세요!"` 안내 |
 
----
-
-### 1. AboutHero
-**file:** `src/components/sections/AboutHero.tsx`  
-**background:** `bg-slate-900` (dark) + diagonal violet overlay + floating orbs  
-**layout:** `min-h-screen` center
-
-**copy:**
-- eyebrow (mono, white/40, letter-spaced): `"회 사 소 개"`
-- h1: `"규정을 모르면,\n"` + *(highlight: "마케팅이")* + `"\n아닙니다."`
-- sub: `"대부분의 대행사는 변호사법·의료법·세무사법을 검토하지 않습니다.\n8년간 그걸 처음부터 당연한 일로 했습니다."`
-- proof strip (hairline): `"전문직 12개 직군 · 광고 위반 0건 · 재계약율 90%+"`
-
-**animations:** `motion/react` — h1 `{opacity:0,y:28}→{1,0}` delay 0.1, eyebrow delay 0, sub delay 0.25, strip delay 0.6
-
----
-
-### 2. AboutFoundingStory
-**file:** `src/components/sections/AboutFoundingStory.tsx`  
-**background:** `bg-white`  
-**layout:** prose left + stat cards right
-
-**copy:**
-- eyebrow: `"Why we started"`
-- h2: `"왜 온세상이마케팅이다가 만들어졌나"`
-- 3 paragraphs `[DATA: src/data/about.ts → FOUNDING_STORY.paragraphs]`
-- blockquote: `"규정을 모르면 콘텐츠가 아니라 위험을 만듭니다."` — `"김태훈 / 온세상이마케팅이다 대표"`
-- 3 stat cards (inline):
-  - `"8년"` / `"규정 검토 경력"`
-  - `"12개"` / `"전문직 직군"`
-  - `"0건"` / `"광고 규정 위반"`
-
-**animations:** `Reveal`
-
----
-
-### 3. AboutTrustCounter
-**file:** `src/components/sections/AboutTrustCounter.tsx`  
-**background:** `bg-slate-50`  
-**layout:** 4-col stat grid
-
-**copy:**
-- eyebrow: `"Numbers"`
-- h2: `"숫자로 "` + *(highlight: "증명합니다")*
-- 4 stats (inline):
-  - `"200+"` / `"누적 콘텐츠"` (CountUp)
-  - `"12"` / `"전담 직군"` (CountUp)
-  - `"90%+"` / `"재계약율"` (CountUp)
-  - `"0"` / `"광고 규정 위반"` (CountUp)
-
-**animations:** `CountUp`, `Reveal`
-
----
-
-### 4. AboutHowWeWork
-**file:** `src/components/sections/AboutHowWeWork.tsx`  
-**background:** `bg-white`  
-**layout:** vertical numbered steps
-
-**copy:**
-- eyebrow: `"Process"`
-- h2: `"콘텐츠 한 편, "` + *(highlight: "이렇게")* + `" 만듭니다."`
-- sub: `"규정 검토 없는 콘텐츠는 발행하지 않습니다."`
-- 5 steps `[DATA: src/data/process.ts → WORK_PROCESS]`
-- footnote: `"5단계 모두 대표가 직접 검수합니다."`
-
-**animations:** `Reveal` staggered
-
----
-
-### 5. AboutClientStrip
-**file:** `src/components/sections/AboutClientStrip.tsx`  
-**background:** `bg-slate-50`  
-**layout:** Marquee strip
-
-**copy:**
-- eyebrow: `"Disciplines"`
-- h2: *(highlight: "12개")* + `" 전문직 직군"`
-- sub: `"각 직군의 광고 규정과 검색 의도를 직접 학습한 팀"`
-- 12 discipline chips `[DATA: src/data/disciplines.ts → CLIENT_DISCIPLINES]`
-
-**animations:** `Marquee` (react-fast-marquee)
-
----
-
-### 6. AESlogan
-**file:** `src/components/sections/AESlogan.tsx`  
-**background:** `bg-[#0a0a0a]` (dark full-bleed)  
-**layout:** center, large text
-
-**copy:**
-- line1: `"노출은 만들 수 있습니다. 상담을 만드는 건 다릅니다."`
-- line2: `"광고 규정을 모르는 콘텐츠는 발행하지 않습니다."`
-- footer (mono): `"온세상이마케팅이다 / Since 2026"`
-
-**animations:** `Reveal` with stagger, text clip reveal
-
----
-
-### 7. AboutSignature
-**file:** `src/components/sections/AboutSignature.tsx`  
-**background:** `bg-white`  
-**layout:** 4-card grid
-
-**copy:**
-- eyebrow: `"Our Method"`
-- h2: `"처음부터 "` + *(highlight: "달랐습니다.")*
-- sub: `"8년간 전문직 광고 규정만 봤습니다."`
-- 4 cards `[DATA: src/data/about.ts → SIGNATURE_POINTS]`:
-  1. `"규정부터 봅니다"`
-  2. `"노출이 아닌 의뢰를 봅니다"`
-  3. `"대표가 직접 보고합니다"`
-  4. `"담당자가 바뀌지 않습니다"`
-
-**animations:** `Reveal`
-
----
-
-### 8. AboutCaseHighlight
-**file:** `src/components/sections/AboutCaseHighlight.tsx`  
-**background:** `bg-slate-50`  
-**layout:** 3-case card grid
-
-**copy:**
-- eyebrow: `"Case Studies"`
-- h2: `"직군별 "` + *(highlight: "결과")* + `"입니다."`
-- sub: `"광고비 줄이는 동안, 의뢰가 늘었습니다."`
-- 3 cases `[DATA: src/data/about.ts → ABOUT_CASES]`
-- disclaimer: `"클라이언트 정보는 익명 처리합니다."`
-
-**animations:** `Reveal`
-
----
-
-### 9. AboutCEOMessage
-**file:** `src/components/sections/AboutCEOMessage.tsx`  
-**background:** `bg-white`  
-**layout:** photo left + text right (split)
-
-**copy:**
-- eyebrow: `"CEO Message"`
-- h2: `"퍼포먼스 마케팅으로 시작했습니다."`
-- expertise tags (inline): `"퍼포먼스 마케팅"` / `"AI 영상 활용"` / `"브랜드 마케팅"`
-- 6 paragraphs `[DATA: src/data/about.ts → MESSAGE_PARAGRAPHS]`
-- signature: `"― 김태훈 / 온세상이마케팅이다 대표"`
-- photo: `/images/team/taehoon-kim.png`
-
-**animations:** `Reveal`
-
----
-
-### 10. AboutCEOTimeline
-**file:** `src/components/sections/AboutCEOTimeline.tsx`  
-**background:** `bg-slate-50`  
-**layout:** vertical timeline
-
-**copy:**
-- eyebrow: `"Career"`
-- h2: `"지나온 길"`
-- 5 milestones (inline):
-  1. `"졸업"` / `"한신대학교 정보통신학부"`
-  2. `"2023"` / `"T사 퍼포먼스 마케터"`
-  3. `"2024"` / `"마케팅 플랫폼 '그룸힘' 창업"`
-  4. `"2025"` / `"중앙대학교 캠퍼스타운 입주"`
-  5. `"2026"` / `"온세상이마케팅이다 정식 운영"`
-
-**animations:** `Reveal` staggered
-
----
-
-### 11. AboutMission
-**file:** `src/components/sections/AboutMission.tsx`  
-**background:** `bg-white`  
-**layout:** center prose block
-
-**copy:**
-- eyebrow: `"Mission"`
-- h2: `"전문직 광고 규정을 직접 검토하는 마케팅 팀"`
-- body: `"변호사·의사·세무사 등 12개 직군 각각의 광고 허용 범위를 직접 검토합니다.\n규정을 통과한 콘텐츠로, 의뢰인이 먼저 찾아오는 구조를 만듭니다."`
-
-**animations:** `Reveal`
-
----
-
-### 12. OrgChart
-**file:** `src/components/sections/OrgChart.tsx`  
-**background:** `bg-slate-50`  
-**layout:** org tree (CEO → 3 depts)
-
-**copy:**
-- eyebrow: `"Organization"`, title: `"조직도"`
-- CEO box: `"대표"` / `"전문직 마케팅 전략 총괄"`
-- 3 departments `[DATA: src/data/about.ts → DEPARTMENTS]`:
-  - `"마케팅팀"` with sub-teams
-  - `"영상팀"` with sub-teams
-  - `"편집팀"` with sub-teams
-
-**animations:** `Reveal`
-
----
-
-### 13. Comparison
-**file:** `src/components/sections/Comparison.tsx`  
-**background:** `bg-white`  
-**layout:** comparison table + rejection note
-
-**copy:**
-- title: `"일반 대행사 vs 온세상이마케팅이다"`
-- 6 rows `[DATA: src/data/about.ts → COMPARISON_ROWS]`
-- rejection note heading: `"이런 분들은 정중히 거절하고 있습니다"`
-- rejection items (inline): `"단기간 1위만 원하시는 분"` / `"컨펌 없이 전체 위임 원하시는 분"` / `"광고 규정을 무시하시는 분"`
-
-**animations:** `Reveal`
-
----
-
-### 14. AboutMidCTA
-**file:** `src/components/sections/AboutMidCTA.tsx`  
-**background:** `bg-[#0a0a0a]` (dark)  
-**layout:** center, 3 CTA buttons
-
-**copy:**
-- eyebrow (mono): `"Direct Contact"`
-- h2: `"마케팅 컨설팅"`
-- sub: `"광고비 더 태우기 전에, 위반 항목부터 점검하세요."`
-- btn1: `"마케팅 컨설팅"` → `/contact`
-- btn2: `"카카오톡 1:1 문의"` → `https://pf.kakao.com/_FwExjX` (external)
-- btn3: `"회사소개서 PDF"` → `/onketing-brochure.pdf` (download)
-- note (mono): `"영업일 1일 내 회신 · 24시간 카카오 응답 · 즉시 다운로드"`
-
-**animations:** `Reveal`
-
----
-
-### 15. CTACard (gradient)
-**file:** `src/components/shared/CTACard.tsx`  
-**variant:** `"gradient"`  
-**props:**
-- `headline`: `"전문직 마케팅, 우리에게 맡기세요."`
-- `sub`: `"광고 규정 위반 항목 즉시 확인"`
-- `buttonText`: `"마케팅 컨설팅"`
-- `eyebrow`: (default) `"{siteConfig.nameKo} · 마케팅 컨설팅"`
-
-**trust stats (hardcoded in CTACard):**
-- `"1일"` / `"영업일 내 회신"`
-- `"0원"` / `"컨설팅 비용"`
-- `"없음"` / `"계약 의무"`
-
----
-
-## /team — 팀
-
-**metadata:** `title: "팀 | 온세상이마케팅이다"`
-
-**섹션 순서:**
-TeamHero → TeamStats → TeamMemberFeature → TeamPrinciples → TeamCrews → TeamScene → CTACard(gradient)
-
----
-
-### 1. TeamHero
-**file:** `src/components/sections/TeamHero.tsx`  
-**background:** `bg-[#eef2f7]`  
-**layout:** left text (lg: 58%) + right photo mosaic (lg: 44%, desktop only)
-
-**copy:**
-- eyebrow (mono, violet): `"Our Team"`
-- h1: `"처음 맡은 팀이,\n끝까지 "` + *(highlight: "갑니다.")*
-- sub: `"규정 검수부터 발행까지, 외주 없이 한 공간에서."`
-- btn: `"팀 소개 보기"` (scrolls `window.scrollTo({top: window.innerHeight})`)
-- scroll indicator: `"scroll"` + bouncing ArrowDown
-
-**visual (right mosaic, 3×2 grid):**
-- `/images/team/video-01.jpg` (촬영 현장)
-- `/images/team/video-02.jpg` (촬영 현장)
-- `/images/team/video-05.jpg` (촬영 현장)
-- `/images/team/video-07.jpg` (촬영 현장)
-- `/images/team/edit-01.jpg` (편집실)
-- `/images/team/edit-02.jpg` (편집실)
-
-**animations:** `motion/react` — eyebrow delay 0, h1 delay 0.1, sub delay 0.25, btn delay 0.35, photos stagger `0.15 + i*0.09`
-
----
-
-### 2. TeamStats
-**file:** `src/components/sections/TeamStats.tsx`  
-**background:** `bg-white`  
-**layout:** 3-stat grid
-
-**copy:**
-- eyebrow: `"Why us"`
-- h2: `"숫자가 증명합니다."`
-- sub: `"발행 전 직접 검토합니다. 규정 위반, 단 한 건도 없었습니다."`
-- 3 stats (inline):
-  - `"200+"` / `"누적 검토 건"` (color: emerald)
-  - `"0건"` / `"위반 적발"` (color: rose)
-  - `"8년"` / `"대표 광고 검토 경력"` (color: purple)
-
-**animations:** `CountUp`, `Reveal`
-
----
-
-### 3. TeamMemberFeature
-**file:** `src/components/sections/TeamMemberFeature.tsx`  
-**background:** alternating `bg-white` / `bg-slate-50`  
-**layout:** alternating left/right image+text per member
-
-**copy — 3 members `[DATA: src/data/team.ts → TEAM_MEMBERS]`:**
-
-**김태훈 (대표)**
-- quote: `"심의 통과가 먼저, 성과는 그 다음입니다."`
-- careers: 3개
-
-**김성민 (블로그 마케터)**
-- quote: `"제가 쓴 글이 전화 한 통을 만들면 됩니다."`
-- careers: 5개
-
-**김도현 (퍼포먼스 마케터)**
-- quote: `"같은 예산으로 상담이 더 나와야 합니다."`
-- careers: 4개
-
-**animations:** `Reveal` direction alternates left/right
-
----
-
-### 4. TeamPrinciples
-**file:** `src/components/sections/TeamPrinciples.tsx`  
-**background:** `bg-[#0a0a0a]` (dark)  
-**layout:** 3 numbered principle blocks
-
-**copy (inline data):**
-
-**01**
-- title: `"규정을 모르면 손대지 않습니다."`
-- body, anecdote, meta (verbatim in data)
-
-**02**
-- title: `"조회수는 시작, 상담이 결과입니다."`
-- body, anecdote, meta
-
-**03**
-- title: `"기획자가 직접 씁니다."`
-- body, anecdote, meta
-
-**animations:** `Reveal` staggered
-
----
-
-### 5. TeamCrews
-**file:** `src/components/sections/TeamCrews.tsx`  
-**background:** `bg-white`  
-**layout:** 2-col crew cards
-
-**copy:**
-- eyebrow: `"Crews"`
-- title: `"현장과 편집실 모두 직접 운영"`
-- sub: `"촬영부터 발행까지 외주 없이 한 팀이 책임합니다."`
-
-- **영상팀** card:
-  - h3: `"현장 촬영부터 편집까지\n직접 갑니다"`
-  - body: `"의뢰인이 카메라 앞에서 편안하게 말할 수 있도록 촬영팀이 직접 현장에 갑니다. 조명·사운드·디렉팅을 한 팀이 책임집니다."`
-
-- **편집팀** card:
-  - h3: `"초안부터 발행까지 한 팀에서"`
-  - body: `"숏폼·릴스의 호흡과 블로그 비주얼을 함께 책임지는 인하우스 편집팀이 컷·자막·썸네일을 일관된 톤으로 다듬습니다."`
-
-**animations:** `Reveal`
-
----
-
-### 6. TeamScene
-**file:** `src/components/sections/TeamScene.tsx`  
-**background:** dark full-bleed image  
-**layout:** full-width image with overlay text
-
-**copy:**
-- eyebrow (mono): `"Studio"`
-- h2: `"같은 공간에서 같이 만듭니다."`
-- sub: `"촬영·편집·발행이 한 팀, 한 공간에서 끝납니다."`
-- feature overlay: `"@onketing"` / `"스튜디오"`
-
-**animations:** `Reveal`
-
----
-
-### 7. CTACard (gradient)
-**file:** `src/components/shared/CTACard.tsx`  
-**variant:** `"gradient"`  
-**props:**
-- `headline`: `"팀이 직접 검토합니다."`
-- `sub`: `"첫 미팅에서 직군·채널·법령 조항까지 같이 봅니다."`
-- `buttonText`: `"마케팅 컨설팅"`
-- `eyebrow`: (default) `"{siteConfig.nameKo} · 마케팅 컨설팅"`
-
----
-
-## /contact — 마케팅 컨설팅
-
-**metadata:** `title: "마케팅 컨설팅 | 온세상이마케팅이다"`, `description: "온세상이마케팅이다에 전문직 마케팅을 문의하세요. 영업일 1일 내 회신드립니다."`
-
-**섹션 순서:**
-ContactHero → ContactProcess → ContactSplit → ContactFAQ → CTACard(gradient)
-
----
-
-### 1. ContactHero
-**file:** `src/components/sections/ContactHero.tsx`  
-**background:** `bg-white` + purple orb top-left + cyan orb bottom-right + fine grid with radial mask  
-**layout:** `min-h-screen` center
-
-**copy:**
-- eyebrow (mono, violet): `"Marketing Consultation"`
-- h1: `"결정 전에\n"` + *(highlight: "먼저 물어보세요.")*
-- sub: `"묻는 것만으로 충분합니다. 결정은 나중에 하세요."`
-- trust stats (3):
-  - `"1일"` / `"영업일 내 회신"`
-  - `"0원"` / `"컨설팅 비용"`
-  - `"100%"` / `"광고 규정 검토"`
-- cta button: `"문의 작성하기"` (scrolls to `#contact-form`, offset 80px)
-- top hairline: `"{siteConfig.nameKo} · Consultation — 2026"`
-- bottom hairline: `{siteConfig.contact.businessHours}` (with Clock icon)
-- scroll indicator: `"scroll"` + bouncing ArrowDown
-
-**animations:** `motion/react` — eyebrow delay 0, h1 delay 0.1, sub delay 0.25, stats delay 0.35, btn delay 0.45, bottom delay 0.6, scroll delay 0.8
-
----
-
-### 2. ContactProcess
-**file:** `src/components/sections/ContactProcess.tsx`  
-**background:** `bg-white`  
-**layout:** 4-step horizontal/vertical flow
-
-**copy (inline):**
-- **01 폼 작성:** `"3분이면 작성 완료. 현황·직군·목표만 간단히 적어주세요."`
-- **02 영업일 1일 내 회신:** `"담당자가 직접 확인하고 연락드립니다."`
-- **03 마케팅 컨설팅:** `"영상·전화·대면 중 편한 방식으로 진행합니다."`
-- **04 규정 검토 리포트:** `"현재 채널의 광고 규정 위반 항목을 즉시 정리해 드립니다."`
-
-**animations:** `Reveal` staggered
-
----
-
-### 3. ContactSplit
-**file:** `src/components/sections/ContactSplit.tsx`  
-**background:** `bg-slate-50`  
-**layout:** left (Why us reasons + direct contact) + right (ContactForm)
-
-**copy — Left:**
-- eyebrow: `"Why us"`
-- h2: `"왜 온세상이마케팅이다에\n의뢰하나"`
-- 3 reasons (inline):
-  1. `"광고 규정 직접 검토"`
-  2. `"노출이 아닌 상담 수 보고"`
-  3. `"직군 전담 팀"`
-- Direct Contact label: `"카카오톡 1:1 문의"` + `"이메일"` (`{siteConfig.contact.email}`)
-
-**right:** ContactForm component (see below)
-
-**animations:** `Reveal`
-
----
-
-### 3a. ContactForm
-**file:** `src/components/sections/ContactForm.tsx`  
-**id:** `"contact-form"` (anchor target from ContactHero CTA)  
-**layout:** form card, white bg, violet accent
-
-**form header:**
-- eyebrow (mono, violet): `"마케팅 컨설팅"`
-- h2: `"자세히 알려주세요"`
-
-**fields:**
-- `"회사/소속명"` (required) — placeholder: `"예: OO 한의원, 홍길동 변호사"`
-- `"직군"` (custom dropdown) — options: `"변호사"` / `"의사"` / `"한의사"` / `"수의사"` / `"노무사"` / `"세무사"` / `"기타"`; placeholder: `"선택해주세요"`
-- `"담당자 이름"` (required) — placeholder: `"홍길동"`
-- `"연락처"` (required, tel) — placeholder: `"010-0000-0000"`
-- `"이메일"` (optional, email) — placeholder: `"name@example.com"`
-- `"유입 경로"` (chip toggle) — options: `"인스타그램"` / `"네이버 검색"` / `"지인 소개"` / `"블로그"` / `"기타"`
-- `"문의 내용"` (textarea, 4 rows) — placeholder: `"현재 마케팅 상황이나 궁금한 점을 자유롭게 적어주세요."`
-- privacy checkbox: `"개인정보 수집·이용에 동의합니다. 수집된 정보는 컨설팅 목적으로만 사용됩니다."`
-- submit button: `"마케팅 컨설팅 신청"` (gradient-brand)
-
-**success state (after submit):**
-- h2: `"신청이 완료되었습니다"`
-- p: `"영업일 1일 내로 직접 연락드리겠습니다."`
-- kakao btn: `"카카오로 바로 연락하기"` → `{siteConfig.contact.kakaoOpenChat}` (external)
-
-**submit behavior:** `mailto:{siteConfig.contact.email}` with subject `[상담 신청] {company} · {name}` and pre-filled body; then `setSent(true)`
-
-**animations:** `AnimatePresence` form→success `{opacity:0,scale:0.96}→{1,1}`, profession dropdown `{opacity:0,y:-6}→{1,0}`
-
----
-
-### 4. ContactFAQ
-**file:** `src/components/sections/ContactFAQ.tsx`  
-**background:** `bg-white`  
-**layout:** 3-item accordion
-
-**copy (inline):**
-1. Q: `"비용은 어떻게 되나요?"` — A: (verbatim in component)
-2. Q: `"계약하지 않아도 상담을 받을 수 있나요?"` — A: (verbatim in component)
-3. Q: `"성과까지 얼마나 걸리나요?"` — A: (verbatim in component)
-
-**animations:** `AnimatePresence` accordion expand/collapse
-
----
-
-### 5. CTACard (gradient)
-**file:** `src/components/shared/CTACard.tsx`  
-**variant:** `"gradient"`  
-**props:**
-- `eyebrow`: `"온세상이마케팅이다의 약속"`
-- `headline`: `"처음 맡은 팀이\n끝까지 갑니다."`
-- `sub`: `"규정 검수부터 성과 보고까지, 외주 없이 한 팀이 담당합니다."`
-- `buttonText`: (default) `"마케팅 컨설팅"`
+**서브 컴포넌트:** `AboutOperator`(Plus/Equal 아이콘 모션), `AboutReviewMarquee`(리뷰 이미지 마퀴).
 
 ---
 
-## /faq — FAQ
+## /history — 연혁·수상
 
-**metadata:** `title: "FAQ | 온세상이마케팅이다"`  
-**JSON-LD schema:** uses `FAQ_ITEMS` from `[DATA: src/data/faq.ts]`
+**metadata:** `title: "연혁·수상 | 애드리절트(ADRESULT)"`
+**섹션:** CompanyHero(`history-hero-video.mp4`) → CompanyTabs → 수상(white, eyebrow `Excellent Company`, h2 `"대외적으로 인정받은 우수기업"`, 이미지 `history/awards.png`) → 연혁 타임라인(레드 `#e11d29`, eyebrow `ADRESULT History`, h2 `"애드리절트 연혁"`, 인라인 타임라인 데이터).
 
-**섹션 순서:**
-FaqHero → FaqSpotlight → FaqDirectory → FAQContact
-
----
-
-### 1. FaqHero
-**file:** `src/components/sections/FaqHero.tsx`  
-**background:** `bg-[#fafbfc]` + purple blob top-left + cyan blob bottom-right + fine grid + SVG noise (`mix-blend-multiply opacity-[0.18]`)  
-**layout:** `min-h-screen` center
-
-**copy:**
-- top hairline: `"온세상이마케팅이다 · Knowledge — 2026"`
-- eyebrow (semibold, violet): `"FAQ"`
-- h1: `"묻기 전에,\n"` + *(highlight: "답")* + `"을 봅니다."`
-- sub: `"자주 묻는 질문을 여섯 카테고리로 정리했습니다."`
-- category chips (6): `"비용"` / `"진행 안내"` / `"광고규정"` / `"운영보고"` / `"성과"` / `"해지환불"` (each scrolls to `#faq-{slug}`)
-- bottom hairline: `"6 Categories · 25 Q&A"`
-- scroll indicator: `"scroll"` + bouncing ChevronDown
-
-**animations:** `motion/react` — eyebrow delay 0, h1 delay 0.1, sub delay 0.25, chips stagger `0.4 + i*0.05`, hairline delay 0.6, scroll delay 0.8
-
----
-
-### 2. FaqSpotlight
-**file:** `src/components/sections/FaqSpotlight.tsx`  
-**background:** `bg-white`  
-**layout:** 5-item featured FAQ list
-
-**copy:**
-- eyebrow: `"Most asked"`
-- h2: `"이런 질문을 가장 많이 받습니다."`
-- sub: `"자주 묻는 항목은 미리 정리했습니다."`
-- 5 items where `featured: true` `[DATA: src/data/faq.ts → FAQ_ITEMS]`
-
-**animations:** `Reveal`
-
----
-
-### 3. FaqDirectory
-**file:** `src/components/sections/FaqDirectory.tsx`  
-**background:** `bg-slate-50`  
-**layout:** sticky sidebar (categories) + main content (grouped Q&A)
-
-**copy:**
-- All FAQ items grouped by category `[DATA: src/data/faq.ts → FAQ_ITEMS, FAQ_CATEGORIES]`
-- Category icons (Lucide) per category
-- Section anchor IDs: `faq-{slug}`
-
-**animations:** `AnimatePresence` accordion per item, sticky category highlight on scroll
-
----
-
-### 4. FAQContact
-**file:** `src/components/sections/FAQContact.tsx`  
-**background:** `bg-white`  
-**layout:** center, 4 CTA tiles
-
-**copy:**
-- eyebrow: `"Contact"`
-- h2: `"답을 못 찾으셨나요?"`
-- sub: `"직접 물어보시면 영업일 1일 내로 답변드립니다."`
-- 4 CTAs (inline):
-  1. `"카카오톡 1:1"` — `{siteConfig.contact.kakaoOpenChat}` (external)
-  2. `"전화 문의"` — sub: `"평일 09:00–18:00"`
-  3. `"이메일"` — `{siteConfig.contact.email}`
-  4. `"마케팅 컨설팅"` → `/contact`
-
-**animations:** `Reveal`
-
----
-
-## /regulation — 광고 규정 가이드
-
-**metadata:** `title: "광고 규정 가이드 | 온세상이마케팅이다"`
-
-**섹션 순서:**
-RegulationHero → RegulationStats → RegulationLawSwitcher → RegulationBeforeAfter → RegulationChecklist → RegulationPledge → AboutMidCTA
-
----
-
-### 1. RegulationHero
-**file:** `src/components/sections/RegulationHero.tsx`  
-**background:** dark (similar to AboutHero) + orbs  
-**layout:** left text + right document visual
-
-**copy:**
-- eyebrow (mono): `"Ad Regulation Compliance"`
-- h1: *(highlight: "규정")* + `"에\n걸리지 않습니다."`
-- sub: `"12개 직군 법령을 발행 전 직접 검토합니다."`
-- trust strip (3): `"12개 직군"` / `"200+ 검토 누적"` / `"0건 위반"`
-
-**visual (right):** 3 document cards with stamps:
-- `"위반"` (rose) — law label `"변호사법§23"`
-- `"통과"` (emerald) — law label `"의료법§56"`
-- `"보완"` (amber) — law label `"세무사법§22"`
-
-**animations:** `motion/react`
-
----
-
-### 2. RegulationStats
-**file:** `src/components/sections/RegulationStats.tsx`  
-**background:** `bg-white`  
-**layout:** 3-stat grid + trend chart
-
-**copy:**
-- eyebrow: `"Why it matters"`
-- h2: `"규정 위반, 생각보다 "` + *(rose text: "가깝습니다")*
-- sub: `"광고 위반은 행정처분·징계·형사처벌로 이어집니다. 아래 수치는 모두 공식 출처입니다."`
-- 3 stats `[DATA: src/data/regulation.ts → REGULATION_STATS]`:
-  1. `"366건"` / `"의료광고 위법 적발"`
-  2. `"39%"` / `"변호사 징계 사유 1위"`
-  3. `"25배"` / `"변호사 광고규정 위반 증가(10년)"`
-- trend chart label: `"10년 새 25배 증가"` / `"위반 광고 적발 건수"`
-
-**animations:** `CountUp`, `Reveal`
-
----
-
-### 3. RegulationLawSwitcher
-**file:** `src/components/sections/RegulationLawSwitcher.tsx`  
-**background:** `bg-slate-50`  
-**layout:** tab bar (12 professions) + content panel (allowed/prohibited)
-
-**copy:**
-- eyebrow: `"Regulation"`
-- h2: `"12개 직군, 항목별 점검 기준입니다."`
-- sub: `"직군을 누르면 가능한 표현과 금지된 표현을 확인할 수 있습니다."`
-- 12 profession tabs + per-tab allowed/prohibited lists `[DATA: src/data/regulation.ts → REGULATIONS]`
-
-**animations:** `AnimatePresence` tab content swap
-
----
-
-### 4. RegulationBeforeAfter
-**file:** `src/components/sections/RegulationBeforeAfter.tsx`  
-**background:** `bg-white`  
-**layout:** 4 side-by-side before/after cards
-
-**copy:**
-- eyebrow: `"Before / After"`
-- h2: `"이런 카피는 "` + *(rose text: "위반")* + `"입니다"`
-- sub: `"실제 위반 사례와 수정 카피를 직접 비교합니다."`
-- 4 cases `[DATA: src/data/regulation.ts → REGULATION_CASES]`
-
-**animations:** `Reveal`
-
----
-
-### 5. RegulationChecklist
-**file:** `src/components/sections/RegulationChecklist.tsx`  
-**background:** `bg-slate-50`  
-**layout:** 12-item checklist grid
-
-**copy:**
-- eyebrow: `"Checklist"`
-- h2: `"발행 전, 항목별로 점검합니다."`
-- sub: `"콘텐츠 한 편마다 12개 항목을 확인합니다. 직군·채널에 따라 추가 항목을 적용합니다."`
-- 12 items (inline data in component)
-- footer: `"온세상이마케팅이다 자체 체크리스트 — 직군별 항목 보강"`
-
-**animations:** `Reveal` staggered per item
-
----
-
-### 6. RegulationPledge
-**file:** `src/components/sections/RegulationPledge.tsx`  
-**background:** `bg-[#0a0a0a]` (dark)  
-**layout:** center, pledge list
-
-**copy:**
-- h2: `"이런 카피는 쓰지 않습니다."`
-- sub tag: `"온세상이마케팅이다 약속"`
-- 5 pledges `[DATA: src/data/regulation.ts → PLEDGES]`
-- footer: `"대표 검수 — 김도현"`
-
-**animations:** `Reveal`
-
----
-
-### 7. AboutMidCTA
-(same as /about section 14 — see above)
-
----
-
-## /services — 서비스
-
-**metadata:** `title: "서비스 | 온세상이마케팅이다"`
-
-**섹션 순서:**
-PageHero → ServiceMatrix → ServiceComparison → WhyUsBold → CaseHighlight → CTACard(gradient)
-
----
-
-### 1. PageHero
-**file:** `src/components/shared/PageHero.tsx`  
-**props:**
-- `eyebrow`: `"서비스"`
-- `title`: `"원하는 결과부터"`
-- `titleHighlight`: `"정해주세요"`
-- `sub`: `"검색에서 발견되는 글, 신뢰가 쌓이는 영상, 직군에 맞춘 통합 운영. 채널마다 다릅니다."`
-- `ctaText`: `"마케팅 컨설팅"`
-
----
-
-### 2. ServiceMatrix
-**file:** `src/components/sections/ServiceMatrix.tsx`  
-**background:** `bg-white`  
-**layout:** 3-card grid
-
-**copy:**
-- eyebrow: `"Channels"`
-- h2: `"어떤 결과를 "` + *(highlight: "원하세요?")*
-- sub: `"채널마다 강점이 다릅니다. 원하는 결과부터 선택하세요."`
-- 3 cards `[DATA: src/data/services.ts → SERVICE_MATRIX]`
-
-**animations:** `Reveal`
-
 ---
 
-### 3. ServiceComparison
-**file:** `src/components/sections/ServiceComparison.tsx`  
-**background:** `bg-slate-50`  
-**layout:** table (3 channels × 5 rows)
+## /ceo — CEO 인사말
 
-**copy:**
-- eyebrow: `"Comparison"`
-- h2: `"채널별 "` + *(highlight: "비교")*
-- columns: `"블로그"` / `"숏폼"` / `"전문직 통합"`
-- 5 rows `[DATA: src/data/services.ts → SERVICE_COMPARISON]`
+**metadata:** `title: "CEO 인사말 | 애드리절트(ADRESULT)"`
+**섹션:** CompanyHero(`ceo-hero-video.mp4`) → CompanyTabs → 인사말(white, 좌 사진 `ceo/ceo.jpg` + 우 eyebrow `CEO's Greeting` / h2 `"CEO 인사말"`) → 레드 밴드(`#e11d29`, 유튜브 링크 버튼 `youtube-logo.png`) → CEO 저서(white, eyebrow `CEO's Book`, h2 `"마케팅 때문에 고민입니다"`, 이미지 `ceo/book.png`) → slate-50 마무리 섹션.
 
-**animations:** `Reveal`
-
----
-
-### 4. WhyUsBold
-(same component as home page section 7)
-
----
-
-### 5. CaseHighlight
-(same component as home page section 5)
-
----
-
-### 6. CTACard (gradient)
-**variant:** `"gradient"`  
-**props:**
-- `headline`: `"어떤 채널이 맞는지 모르겠다면."`
-- `sub`: `"직군에 맞는 채널을 찾아드립니다."`
-- `buttonText`: `"마케팅 컨설팅"`
-
----
-
-## /services/professional — 전문직 마케팅
-
-**metadata:** `title: "전문직 마케팅 | 온세상이마케팅이다"`
-
-**섹션 순서:**
-ProfessionalHero → ServiceProofStrip(PROFESSIONAL_PROOF) → DisciplineGrid → ServicePainPoints(PROFESSIONAL_PAIN) → ServiceWhatWeDo(PROFESSIONAL_PILLARS) → CaseTestimonial(PROFESSIONAL_CASES) → ServiceProcess(WORK_PROCESS) → ServiceEngagementPolicy → AboutMidCTA
-
----
-
-### 1. ProfessionalHero
-**file:** `src/components/sections/ProfessionalHero.tsx`  
-**background:** dark + orbs  
-**layout:** left text + right discipline chips visual
-
-**copy:**
-- eyebrow: `"Professional Marketing"`
-- h1: `"전문직 마케팅으로 "` + *(highlight: "의뢰")* + `"가 옵니다."`
-- sub: `"12개 직군 법령을 직접 검토합니다."`
-- visual: 12 discipline chips grid `[DATA: src/data/disciplines.ts → CLIENT_DISCIPLINES]`
-
-**animations:** `motion/react`
-
----
-
-### 2. ServiceProofStrip
-**file:** `src/components/sections/ServiceProofStrip.tsx`  
-**data:** `PROFESSIONAL_PROOF` `[DATA: src/data/services.ts]`  
-**layout:** 4-stat strip (dark or light variant)
-
----
-
-### 3. DisciplineGrid
-**file:** `src/components/sections/DisciplineGrid.tsx`  
-**background:** `bg-white`  
-**layout:** 12-chip grid
-
-**copy:**
-- eyebrow: `"Coverage"`
-- h2: `"12개 직군, "` + *(highlight: "규정별로 구분합니다")*
-- sub: `"직군마다 적용되는 법령이 다릅니다. 섞지 않습니다."`
-- 12 discipline items `[DATA: src/data/disciplines.ts → CLIENT_DISCIPLINES]`
-
----
-
-### 4. ServicePainPoints
-**file:** `src/components/sections/ServicePainPoints.tsx`  
-**data:** `PROFESSIONAL_PAIN` `[DATA: src/data/services.ts]`
-
-**copy:**
-- eyebrow: `"Pain Points"`
-- h2: `"이런 경험, "` + *(highlight: "있으시죠.")*
-
----
-
-### 5. ServiceWhatWeDo
-**file:** `src/components/sections/ServiceWhatWeDo.tsx`  
-**data:** `PROFESSIONAL_PILLARS` `[DATA: src/data/services.ts]`
-
-**copy:**
-- eyebrow: `"What We Do"`
-- h2: `"3가지로 "` + *(highlight: "구분합니다")*
-
----
-
-### 6. CaseTestimonial
-**file:** `src/components/sections/CaseTestimonial.tsx`  
-**data:** `PROFESSIONAL_CASES` `[DATA: src/data/services.ts]`
-
-**copy:**
-- eyebrow: `"성공 사례"`
-- h2: `"직접 확인한 결과입니다."`
-
----
-
-### 7. ServiceProcess
-**file:** `src/components/sections/ServiceProcess.tsx`  
-**data:** `WORK_PROCESS` `[DATA: src/data/process.ts]`
-
-**copy:**
-- eyebrow: `"Process"`
-- h2: `"이렇게 "` + *(highlight: "진행합니다")*
-- footnote: `"5단계 모두 대표가 직접 검수합니다."`
-
----
-
-### 8. ServiceEngagementPolicy
-**file:** `src/components/sections/ServiceEngagementPolicy.tsx`  
-**background:** `bg-slate-50`  
-**layout:** left (rejection policy) + right (signature)
-
-**copy — Left:**
-- eyebrow: `"Engagement Policy"`
-- h2 `[DATA: src/data/services.ts → ENGAGEMENT_POLICY.heading]`: `"진행하지 않는 의뢰"`
-- sub: `"시작 전에 미리 알려드립니다."`
-- 3 rejection items `[DATA: src/data/services.ts → ENGAGEMENT_POLICY.items]`
-
-**copy — Right:**
-- eyebrow: `"Our Signature"`
-- h2: `"대신, 이것은 반드시 합니다."`
-- 4 cards `[DATA: src/data/about.ts → SIGNATURE_POINTS]`
-
----
-
-### 9. AboutMidCTA
-(same as /about section 14 — see above)
-
 ---
-
-## /services/blog — 블로그 마케팅
 
-**metadata:** `title: "블로그 마케팅 | 온세상이마케팅이다"`
+## /people — 조직도·구성원
 
-**섹션 순서:**
-BlogHero → BlogVsAds → BlogPain → ServiceProofStrip(BLOG_PROOF) → ServiceWhatWeDo(BLOG_PILLARS) → CaseTestimonial(BLOG_CASES) → ServiceProcess(BLOG_PROCESS) → ServiceEngagementPolicy → AboutMidCTA
+**metadata:** `title: "조직도·구성원 | 애드리절트(ADRESULT)"`
+**섹션:** CompanyHero(`people-hero-video.mp4`) → CompanyTabs → 조직도(white, eyebrow `Organization Chart`, h2 `"애드리절트 조직도"`, 이미지 `people/organization.jpg`) → `PeopleExecs`(eyebrow `ADRESULT People`, h2 `"임원진"`, 구성원 9명 카드 `people/member-1~9.jpg`, 인라인 데이터).
 
 ---
 
-### 1. BlogHero
-**file:** `src/components/sections/BlogHero.tsx`  
-**background:** `bg-white` + orbs  
-**layout:** left text + right browser mockup
+## /services/aio — 병원 AIO·AI검색(GEO) 마케팅
 
-**copy:**
-- eyebrow: `"Blog Marketing"`
-- h1: `"검색이 "` + *(highlight: "전화")* + `"가 됩니다."`
-- sub: `"의뢰 직전 키워드만 선별해 씁니다."`
+**metadata:** `title: "병원 AIO마케팅·AI 검색 노출(GEO) | 애드리절트(ADRESULT)"`, `canonical: /services/aio`, 키워드 다수.
+**JSON-LD:** BreadcrumbJsonLd (홈 → 마케팅(/services/aio) → …).
 
-**visual (right):** browser mockup with:
-- naver search bar, query: `"변호사 이혼 의뢰 방법"`
-- 3 search result cards
-- bottom stat badge: `"+3배"`
+**섹션(인라인, 약 15개):**
+1. HERO (white, 2컬럼) — eyebrow `AIO 마케팅`, 리드 `"우리 병원이 AI에 안뜨나요?"` + 대형 `"AIO마케팅이면 해결!"`(레드), h2 `"AI가 우리 병원을 추천하게 하려면?"`. 이미지 `aio/gemini-search.png`
+2. 대표 사례 선언 밴드 (slate-50)
+3. 세미나 개최 (레드 `#e11d29`, 강조 `#ffe14d`)
+4~5. BEST CASE gif + 고객사 AI 노출 사례 (slate-50) — `aio/gemini-1~5.gif`
+6. AI 추천 → 문의 연결 (white) — `aio/recommendation.png` + 전화 CTA(`#ffe14d`)
+7. AI검색 유입 증가율 (레드) — `aio/rate-of-increase.png`
+8. AIO 병원 사례 3카드 (white) — `aio/hospital-exposure-1~6.png`
+9. 구글·네이버 노출 시너지 (slate-50) — `aio/google-exposure-1~6.png`
+10. 노출 비보장 고지 + 전화 CTA (white)
+11. `"혹시.."` 밴드 (레드)
+12. AIRANK 유튜브 임베드 (white)
+13. AIRANK 기능 4가지 (white) — `aio/aio-check-1~4`
+14. AI 마케팅 지금 시작 (레드)
+15. AIO 마케팅 진행절차 (white) — eyebrow `ADRESULT Marketing Process`, h2 `"AIO 마케팅 진행절차"` (인라인 `AIO_PROCESS`)
 
-**animations:** `motion/react`
+이미지 자산: `public/aio/*` (gemini/hospital-exposure/google-exposure/aio-check/aio-exam/rate-of-increase/recommendation 등).
 
 ---
 
-### 2. BlogVsAds
-**file:** `src/components/sections/BlogVsAds.tsx`  
-**background:** `bg-slate-50`  
-**layout:** comparison table (blog vs ads)
+## /services/shortform — 끝장숏폼
 
-**copy:**
-- eyebrow: `"Blog vs Ads"`
-- h2: `"광고비와 블로그의 "` + *(highlight: "차이")*
-- 5 rows `[DATA: src/data/services.ts → BLOG_VS_ADS]`
+**metadata:** `title: "병원 숏폼·릴스·쇼츠 마케팅 끝장숏폼 | 애드리절트(ADRESULT)"`, `canonical: /services/shortform`.
+**JSON-LD:** `shortformServiceSchema`(Service) + BreadcrumbJsonLd(홈 → 마케팅(/services/aio) → …).
 
----
-
-### 3. BlogPain
-**file:** `src/components/sections/BlogPain.tsx`  
-**background:** `bg-white`  
-**layout:** 4-item grid (keyword → result pairs)
-
-**copy:**
-- eyebrow: `"Pain Points"`
-- h2: `"노출이 아닌, 의뢰가 목표입니다."`
-- 4 items (inline in component, keyword/result format)
-
----
+**섹션(인라인, 약 14개):**
+1. HERO (white, 2컬럼) — eyebrow `숏폼올인원마케팅 끝장숏폼`, h1 `"조회수에서 끝나는 영상이 아닌 / 예약을 만드는 숏폼"`, h2 `"영상은 쌓이는데, 왜 환자는 늘지 않을까요?"`. 이미지 `shortform/background.png`, PAIN_QUOTES 인라인
+2. 문제는 영상만 (레드) — PROBLEM_STEPS `["기획없이 찍고","편집해서 올리고","조회수만 기다리는 구조"]`
+3. 전환 중심 숏폼 기획 4컷 (white) — `shortform/shortform-exam-1~4`
+4. 01 현직 인플루언서 (white) — `shortform/direct-1.jpg`·`direct-2.gif`
+5. VS 접근 자체가 다릅니다 (레드) — 일반(편집/업로드/조회수) vs 끝장(후킹/행동유도/전환)
+6. 02 전환구조 + 스토리 연동 (slate-50) — `shortform/step2-1~3.png`
+7. 03 검색+알고리즘 바이럴 (white) — `shortform/step3-1~4.png`, YT/IG 칩
+8. 04 진료과목별 콘텐츠 + 유입 퍼널 (레드) — SPECIALTY/FUNNEL 인라인
+9. 05 브랜딩+전환 채널 통합 (white) — `shortform/step5-1~5.png`, CHANNELS
+10. 신뢰형성 퍼널 (레드)
+11. 예약 마감 캘린더 (white) — `shortform/calendar.png`
+12. 채널 성장 흐름 (white) — GROWTH
+13. 월 최대 3곳 (레드)
+14. 촬영 현장 (white) — `shortform/site.png` + `"T/O 마감 시 추가 접수 불가"` 고지
 
-### 4–8. (same pattern as /services/professional sections 2–8)
-- ServiceProofStrip: `BLOG_PROOF`
-- ServiceWhatWeDo: `BLOG_PILLARS`
-- CaseTestimonial: `BLOG_CASES`
-- ServiceProcess: `BLOG_PROCESS` (no footnote)
-- ServiceEngagementPolicy: same
-- AboutMidCTA: same
+이미지 자산: `public/shortform/*`.
 
 ---
 
-## /services/shortform — 숏폼 마케팅
+## /specialty/[slug] — 진료과 랜딩 (SSG)
 
-**metadata:** `title: "숏폼 마케팅 | 온세상이마케팅이다"`
+**데이터:** `[DATA: specialties.ts → SPECIALTIES]` 6종 — `dermatology`(피부과) · `plastic-surgery`(성형외과) · `orthopedics`(정형외과) · `pain-medicine`(통증의학과) · `dentistry`(치과) · `oriental-medicine`(한의원).
+**generateStaticParams:** `SPECIALTY_SLUGS`. **generateMetadata:** `s.metaTitle` / `s.metaDescription` / `s.keywords` / `canonical: /specialty/{slug}`.
+**JSON-LD:** `Service`(provider 애드리절트) + BreadcrumbJsonLd(홈 → 마케팅 → `{name} 마케팅`).
 
-**섹션 순서:**
-ShortformHero → ShortformAccumulation → ServiceProofStrip(SHORTFORM_PROOF) → ShortformPain → ServiceWhatWeDo(SHORTFORM_PILLARS) → CaseTestimonial(SHORTFORM_CASES, dark) → ServiceProcess(SHORTFORM_PROCESS) → ServiceEngagementPolicy → AboutMidCTA
+**섹션(공통 템플릿, `{name}`/`{heroSub}`/`{psych}`/`{pains}` 주입):**
+1. HERO (white) — eyebrow `"{name} 병원마케팅"`, h1 `"{name} 신환은 검색·AI·숏폼으로 만듭니다"`, sub `{s.heroSub}`, 전화 + 카카오 CTA
+2. PAIN (레드 `#e11d29`) — `"환자 심리: {psych}"`, h2 `"{name} 원장님, 이런 고민 있으신가요?"`, `{pains}` 카드
+3. APPROACH (white) — eyebrow `How we do`, h2 `"{name} 맞춤 병원마케팅, 애드리절트는 이렇게 합니다"`. AIO(`/services/aio`) + 끝장숏폼(`/services/shortform`) 카드
+4. 다른 진료과 내부 링크 (slate-50)
+5. CTA 밴드 (레드) — h2 `"{name} 신환, 지금 애드리절트와 시작하세요"`, 전화 CTA(`#ffe14d`)
 
 ---
-
-### 1. ShortformHero
-**file:** `src/components/sections/ShortformHero.tsx`  
-**background:** dark  
-**layout:** left text + right 3 phone mockups
 
-**copy:**
-- eyebrow: `"Shortform Marketing"`
-- h1: `"대본부터 "` + *(highlight: "손동작")* + `"까지 알려드립니다."`
-- sub: `"한 번 촬영으로 여러 채널에 동시 발행합니다."`
+## /cases — 성공사례 목록
 
-**visual (right):** 3 phone mockups labeled `"릴스"` / `"쇼츠"` / `"틱톡"`
+**metadata:** `title: "병원마케팅 성공사례 | 애드리절트(ADRESULT)"` · BreadcrumbJsonLd(홈 → 고객사례 → 성공사례)
+**본문:** eyebrow(레드) + h1 + `<PaginatedCards items={SUCCESS_CASES} />` (9개씩, `?page=N`). `[DATA: success-cases.ts → SUCCESS_CASES]` (27편, `scripts/port-cases.py`로 생성 — 08-case-porting.md 참고).
 
----
+## /cases/[slug] — 성공사례 상세 (SSG)
 
-### 2. ShortformAccumulation
-**file:** `src/components/sections/ShortformAccumulation.tsx`  
-**background:** `bg-white`  
-**layout:** bar chart visualization
-
-**copy:**
-- eyebrow: `"Accumulation"`
-- h2: `"광고는 멈추면 0, "` + *(highlight: "숏폼은 누적됩니다")*
-- sub: `"한 편이 6-12개월 동안 검색에서 발견됩니다."`
-- chart data `[DATA: src/data/services.ts → SHORTFORM_ACCUMULATION]`:
-  - x-axis labels: `"발행"` / `"1개월"` / `"3개월"` / `"6개월"` / `"8개월+"`
-  - with percentage bars
+**generateStaticParams:** `CASE_ARTICLES`. **generateMetadata:** `title: "{a.title} | 애드리절트(ADRESULT)"`, `description: a.summary || a.excerpt`, `canonical`.
+**JSON-LD:** `Article` + (있으면) `FAQPage` + BreadcrumbJsonLd.
+**본문:** 제목 → 리드 콜아웃(`summary`, 레드 좌측 보더) → blocks 렌더(텍스트/이미지/영상/hr/callout) → FAQ 섹션(`a.faq`) → 이전/다음 글 네비 → 공통 CTA. `.case-preview` 타이포그래피. 컨테이너 `max-w-5xl`.
 
----
+## /cases/create — 관리자 케이스 에디터
 
-### 3. ServiceProofStrip
-**data:** `SHORTFORM_PROOF` `[DATA: src/data/services.ts]`
+**metadata:** `robots: { index: false, follow: false }`. `CaseEditorGate`(비밀번호 클라이언트 상수 비교 — 실보안 아님) → 통과 시 `CaseEditor`(Tiptap 리치 에디터). robots.ts에서도 `/cases/create` disallow.
 
 ---
 
-### 4. ShortformPain
-**file:** `src/components/sections/ShortformPain.tsx`  
-**background:** `bg-slate-50`  
-**layout:** 4 chat bubble cards
-
-**copy:**
-- eyebrow: `"Pain Points"`
-- h2: `"이런 말, 들어보셨나요."`
-- 4 chat bubbles `[DATA: src/data/services.ts → BUBBLES]`:
-  - `"K치과원장"` quote
-  - `"L변호사"` quote
-  - `"M한의사"` quote
-  - `"P세무사"` quote
+## /reviews — 고객후기
 
----
-
-### 5–8. (same pattern as /services/professional)
-- ServiceWhatWeDo: `SHORTFORM_PILLARS`
-- CaseTestimonial: `SHORTFORM_CASES` (variant: `dark`)
-- ServiceProcess: `SHORTFORM_PROCESS`, footnote: `"5단계 모두 대표가 직접 검수합니다."`
-- ServiceEngagementPolicy: same
-- AboutMidCTA: same
+**metadata:** `title: "병원마케팅 고객후기 | 애드리절트(ADRESULT)"` · BreadcrumbJsonLd(홈 → 고객사례 → 고객후기)
+**본문:** eyebrow(레드) + sub `"애드리절트 고객후기입니다."` + h1 + `<PaginatedCards items={CUSTOMER_REVIEWS} />`. `[DATA: customer-reviews.ts → CUSTOMER_REVIEWS]` (원장 영상 후기 텍스트화, 썸네일 `images/reviews-video/review-*.png`).
 
 ---
-
-## 공통 컴포넌트 — CTACard
-
-**file:** `src/components/shared/CTACard.tsx`
 
-### variant: "dark" (default)
-**background:** `bg-[#0a0a0a]` rounded card inside `px-4 py-24` section  
-**layout:** center text + single CTA button
+## /regulation — 의료광고 규정 가이드
 
-**default props:**
-- `headline`: `"마케팅 컨설팅으로 시작하세요"`
-- `sub`: `"진행 의무 없음 · 영업일 1일 내 회신"`
-- `buttonText`: `"마케팅 컨설팅"`
+**metadata:** `title: "의료광고 규정 가이드 | 애드리절트"`
+**JSON-LD:** `regulationSchema`(WebPage) + BreadcrumbJsonLd.
+**섹션 순서:** RegulationHero → RegulationStats → RegulationLawSwitcher → RegulationBeforeAfter → RegulationChecklist → RegulationPledge → AboutMidCTA
 
-**button:** → `/contact` (white bg, dark text)
+| 섹션 | bg | 내용 |
+|---|---|---|
+| `RegulationHero` | `#3a0509` (딥 레드, min-h-screen) | eyebrow(영문) + h1 + 도장 문서 비주얼 (위반/통과/보완) |
+| `RegulationStats` | `#0d0202` (다크) | 3스탯 CountUp `[DATA: regulation-stats.ts → REGULATION_STATS, TREND_DATA]` (366건 / 60% / 5천만원) + 트렌드 차트 |
+| `RegulationLawSwitcher` | white | 진료과 탭 + 허용/금지 표현 `[DATA: regulations.ts → REGULATIONS]` (피부과·성형외과·정형외과·치과·한의원 등, 의료법 §56) |
+| `RegulationBeforeAfter` | white | eyebrow(레드) + before/after 카드 `[DATA: regulation-cases.ts → REGULATION_CASES]` |
+| `RegulationChecklist` | white | 발행 전 체크리스트 (인라인) |
+| `RegulationPledge` | `#3a0509` | 애드리절트 약속 리스트 |
+| `AboutMidCTA` | `#3a0509` | 공통 다크 CTA (문의/카카오/소개서) |
 
-### variant: "gradient"
-**background:** `gradient-brand` full-section with radial glow + subtle grid + SVG noise  
-**layout:** center text + trust stats + (no button rendered — button passed via `buttonText` but not currently rendered in gradient variant; trust stats always shown)
-
-**default eyebrow:** `"{siteConfig.nameKo} · 마케팅 컨설팅"`
-
-**hardcoded trust stats (always shown in gradient variant):**
-- `"1일"` / `"영업일 내 회신"`
-- `"0원"` / `"컨설팅 비용"`
-- `"없음"` / `"계약 의무"`
-
-**animations:** `Reveal`
-
 ---
-
-## 공통 컴포넌트 — AboutMidCTA (재사용)
 
-Used on: `/about`, `/regulation`, `/services/professional`, `/services/blog`, `/services/shortform`
+## /faq — 자주 묻는 질문
 
-**file:** `src/components/sections/AboutMidCTA.tsx`  
-**background:** `bg-[#0a0a0a]` (dark)
+**metadata:** `title: "병원마케팅 자주 묻는 질문(FAQ) | 애드리절트(ADRESULT)"`
+**JSON-LD:** `faqSchema`(FAQPage, `[DATA: faq.ts → FAQ_ITEMS]`) + BreadcrumbJsonLd.
+**섹션 순서:** FaqHero → FaqSpotlight → FaqDirectory → FAQContact
 
-**copy:**
-- eyebrow (mono): `"Direct Contact"`
-- h2: `"마케팅 컨설팅"`
-- sub: `"광고비 더 태우기 전에, 위반 항목부터 점검하세요."`
-- btn1: `"마케팅 컨설팅"` → `/contact`
-- btn2: `"카카오톡 1:1 문의"` → `https://pf.kakao.com/_FwExjX` (external)
-- btn3: `"회사소개서 PDF"` → `/onketing-brochure.pdf` (download)
-- note (mono): `"영업일 1일 내 회신 · 24시간 카카오 응답 · 즉시 다운로드"`
+| 섹션 | bg | 내용 |
+|---|---|---|
+| `FaqHero` | `#fafbfc` (min-h-screen, orb) | 히어로 + 카테고리 칩 |
+| `FaqSpotlight` | slate-50 | `featured: true` 항목(5개) 스포트라이트 |
+| `FaqDirectory` | white | 카테고리별 그룹 아코디언 + sticky 사이드바. `[DATA: faq.ts → FAQ_ITEMS(25), FAQ_CATEGORIES(6): 비용·진행 안내·광고규정·운영보고·성과·해지환불]` |
+| `FAQContact` | slate-50 | eyebrow(레드) + h2 `"답을 못 찾으셨나요?"` — 카카오/전화/이메일/문의 타일 |
 
 ---
 
@@ -1294,15 +219,18 @@ Used on: `/about`, `/regulation`, `/services/professional`, `/services/blog`, `/
 
 | 파일 | Export | 사용처 |
 |------|--------|--------|
-| `src/data/painPoints.ts` | `PAIN_POINTS` | `/` PainPoints |
-| `src/data/professions.ts` | `PROFESSIONS` | `/` ProfessionRotator |
-| `src/data/process.ts` | `PROCESS_STEPS`, `WORK_PROCESS` | `/` ProcessSteps, `/about` AboutHowWeWork, `/services/professional` ServiceProcess |
-| `src/data/services.ts` | `SERVICE_CARDS`, `SERVICE_MATRIX`, `SERVICE_COMPARISON`, `PROFESSIONAL_PROOF/PAIN/PILLARS/CASES`, `BLOG_PROOF/PILLARS/CASES/PROCESS`, `BLOG_VS_ADS`, `SHORTFORM_PROOF/PILLARS/CASES/PROCESS/ACCUMULATION`, `BUBBLES`, `ENGAGEMENT_POLICY` | 각 서비스 페이지 |
-| `src/data/about.ts` | `FOUNDING_STORY`, `SIGNATURE_POINTS`, `ABOUT_CASES`, `MESSAGE_PARAGRAPHS`, `DEPARTMENTS`, `COMPARISON_ROWS` | `/about` |
-| `src/data/team.ts` | `TEAM_MEMBERS` | `/team` TeamMemberFeature |
-| `src/data/disciplines.ts` | `CLIENT_DISCIPLINES` | `/about` AboutClientStrip, `/services/professional` |
-| `src/data/regulation.ts` | `REGULATIONS`, `REGULATION_STATS`, `REGULATION_CASES`, `PLEDGES` | `/regulation` |
-| `src/data/faq.ts` | `FAQ_ITEMS`, `FAQ_CATEGORIES` | `/faq` |
-| `src/data/reviews.ts` | `REVIEWS` | `/` RealReviews |
-| `src/data/whyUs.ts` | (comparison data) | `/` WhyUsBold |
-| `src/config/site.ts` | `siteConfig` | 전 페이지 (연락처·메타·이름) |
+| `kpi-showcase.ts` | `KPI_SHOWCASE` | 홈 ExcellentCompany |
+| `adresult-reviews.ts` | `ADRESULT_REVIEWS` | 홈 ReviewVideos |
+| `adresult-youtube.ts` | `ADRESULT_YOUTUBE_CHANNEL`, `ADRESULT_FEATURED_VIDEO`, `ADRESULT_VIDEOS` | 홈 AdresultYouTube |
+| `case-highlight.ts` | `CASE_HIGHLIGHTS`, `CASE_HIGHLIGHTS_SINGLE` | 홈 CaseHighlight |
+| `process-steps.ts` | `PROCESS_STEPS` | 홈 ProcessSteps |
+| `specialties.ts` | `SPECIALTIES`, `SPECIALTY_SLUGS`, `getSpecialty` | /specialty/[slug], sitemap |
+| `success-cases.ts` | `CASE_ARTICLES`, `SUCCESS_CASES`, `getCase` | /cases, /cases/[slug], sitemap |
+| `customer-reviews.ts` | `CUSTOMER_REVIEWS` | /reviews |
+| `regulations.ts` | `REGULATIONS` | RegulationLawSwitcher |
+| `regulation-stats.ts` | `REGULATION_STATS`, `TREND_DATA` | RegulationStats |
+| `regulation-cases.ts` | `REGULATION_CASES` | RegulationBeforeAfter |
+| `faq.ts` | `FAQ_ITEMS`, `FAQ_CATEGORIES` | /faq (+ 홈은 자체 FAQPage 스키마) |
+| `src/config/site.ts` | `siteConfig` | 전 페이지 (연락처·메타·nav) |
+
+> `/services/aio`·`/services/shortform`·`/specialty/[slug]` 및 대부분의 회사소개 섹션은 데이터를 **페이지/컴포넌트 파일 내 인라인 상수**로 둔다.

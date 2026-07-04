@@ -153,7 +153,7 @@ PY
 ```sh
 git add scripts/port-cases.py src/data/success-cases.ts public/images/cases scripts/.cache
 git commit -m "feat(cases): 성공사례 추가 — {주제}({idx})"
-git push origin feat/adresult-rebrand   # Vercel 이 브랜치를 자동 빌드
+git push origin main   # Vercel 이 자동 빌드
 ```
 - 커밋 subject는 **한글로 시작**(commitlint가 대문자 시작 거부).
 - pre-commit(biome)·commit-msg(commitlint)·pre-push(knip) 훅이 자동 검사.
