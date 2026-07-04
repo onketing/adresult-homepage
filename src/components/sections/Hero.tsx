@@ -3,8 +3,11 @@
 import { Volume2, VolumeX } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { preload } from "react-dom";
 
 export const Hero = () => {
+	// LCP 요소인 히어로 poster를 우선순위로 프리로드 (영상 다운로드보다 먼저 페인트)
+	preload("/home-hero-video-poster.jpg", { as: "image", fetchPriority: "high" });
 	const videoRef = useRef<HTMLVideoElement>(null);
 	const [muted, setMuted] = useState(true);
 	const [showHint, setShowHint] = useState(true);
@@ -88,7 +91,7 @@ export const Hero = () => {
 					autoPlay
 					loop
 					playsInline
-					preload="auto"
+					preload="metadata"
 					poster="/home-hero-video-poster.jpg"
 					onEnded={(e) => {
 						// loop 속성이 동작하지 않는 브라우저 대비 — 끝나면 처음으로 되감아 재생
