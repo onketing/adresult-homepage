@@ -44,7 +44,6 @@ const PieChart = ({ slices }: { slices: Slice[] }) => {
 	}, []);
 	return (
 		<svg viewBox="0 0 220 220" className="h-52 w-52 shrink-0 md:h-60 md:w-60" aria-hidden="true">
-			<title>병원마케팅 상품 구성 비율</title>
 			{segments.map(({ s, start, end }) => {
 				const [sx, sy] = point(start, R);
 				const [ex, ey] = point(end, R);

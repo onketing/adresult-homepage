@@ -162,9 +162,9 @@ export const AioPage = () => {
 						<p className="font-semibold text-2xl text-[#0a0a0a] md:text-3xl">
 							우리 병원이 AI에 안뜨나요?
 						</p>
-						<p className="mt-2 font-extrabold text-5xl text-[#e11d29] leading-tight tracking-tight md:text-6xl">
+						<h1 className="mt-2 font-extrabold text-5xl text-[#e11d29] leading-tight tracking-tight md:text-6xl">
 							AIO마케팅이면 해결!
-						</p>
+						</h1>
 
 						<p className="mt-12 text-lg text-slate-500 md:text-xl">
 							“AI가 우리 병원을 추천 안해줘요. 옆 병원은 잘 나오는데..”

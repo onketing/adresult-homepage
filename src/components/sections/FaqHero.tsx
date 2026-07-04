@@ -53,7 +53,6 @@ export const FaqHero = () => {
 				aria-hidden="true"
 				className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.18] mix-blend-multiply"
 			>
-				<title>noise texture</title>
 				<filter id="faq-hero-noise-light">
 					<feTurbulence
 						type="fractalNoise"

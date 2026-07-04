@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { CompanyHero } from "@/components/sections/CompanyHero";
 import { PeopleExecs } from "@/components/sections/PeopleExecs";
+import { BreadcrumbJsonLd } from "@/components/shared/BreadcrumbJsonLd";
 import { CompanyTabs } from "@/components/shared/CompanyTabs";
 import { Reveal } from "@/components/shared/Reveal";
 
@@ -14,6 +15,12 @@ export const metadata: Metadata = {
 export const PeoplePage = () => {
 	return (
 		<>
+			<BreadcrumbJsonLd
+				items={[
+					{ name: "홈", path: "" },
+					{ name: "조직도·구성원", path: "/people" },
+				]}
+			/>
 			<CompanyHero videoSrc="/people-hero-video.mp4" />
 			<CompanyTabs />
 

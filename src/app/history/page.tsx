@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { CompanyHero } from "@/components/sections/CompanyHero";
+import { BreadcrumbJsonLd } from "@/components/shared/BreadcrumbJsonLd";
 import { CompanyTabs } from "@/components/shared/CompanyTabs";
 import { Reveal } from "@/components/shared/Reveal";
 import { cn } from "@/lib/utils";
@@ -105,6 +106,12 @@ const HISTORY_MILESTONES: { year: string; items: string[] }[] = [
 export const HistoryPage = () => {
 	return (
 		<>
+			<BreadcrumbJsonLd
+				items={[
+					{ name: "홈", path: "" },
+					{ name: "연혁·수상", path: "/history" },
+				]}
+			/>
 			<CompanyHero videoSrc="/history-hero-video.mp4" />
 			<CompanyTabs />
 
