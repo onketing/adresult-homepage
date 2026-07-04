@@ -8,19 +8,31 @@ export const CompanyHero = ({ videoSrc = "/home-hero-video.mp4" }: { videoSrc?: 
 	const videoRef = useRef<HTMLVideoElement>(null);
 	const [muted, setMuted] = useState(true);
 
-	// 브라우저 자동재생 정책상 초기엔 반드시 음소거 상태여야 한다.
+	// 자동재생 정책상 항상 음소거로 시작하되, 사용자가 켜둔 상태는 페이지 이동에도 유지한다.
+	// effect 본문은 외부 시스템(video)만 갱신하고, muted 상태는 volumechange 콜백에서 동기화한다.
 	useEffect(() => {
-		if (videoRef.current) videoRef.current.muted = true;
+		const v = videoRef.current;
+		if (!v) return;
+		const sync = () => setMuted(v.muted);
+		v.addEventListener("volumechange", sync);
+		// 이전에 소리를 켜뒀으면 복원. 자동재생 정책으로 막히면 다시 음소거로 폴백.
+		v.muted = localStorage.getItem("heroSound") !== "on";
+		if (!v.muted) {
+			v.play().catch(() => {
+				v.muted = true;
+			});
+		}
+		return () => v.removeEventListener("volumechange", sync);
 	}, []);
 
 	const toggleMuted = () => {
 		const v = videoRef.current;
 		if (!v) return;
-		const next = !muted;
-		v.muted = next;
+		const next = !v.muted;
+		v.muted = next; // volumechange 이벤트가 muted 상태를 동기화한다
 		// 소리를 켤 때 정지 상태면 재생(사용자 제스처라 오디오 허용됨)
 		if (!next) v.play().catch(() => {});
-		setMuted(next);
+		localStorage.setItem("heroSound", next ? "off" : "on");
 	};
 
 	return (
