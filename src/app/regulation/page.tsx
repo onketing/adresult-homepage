@@ -7,18 +7,19 @@ import { RegulationLawSwitcher } from "@/components/sections/RegulationLawSwitch
 import { RegulationPledge } from "@/components/sections/RegulationPledge";
 import { RegulationStats } from "@/components/sections/RegulationStats";
 import { BreadcrumbJsonLd } from "@/components/shared/BreadcrumbJsonLd";
+import { siteConfig } from "@/config/site";
 
 const regulationSchema = {
 	"@context": "https://schema.org",
 	"@type": "WebPage",
 	name: "의료광고 규정 가이드",
-	url: "https://onketing.kr/regulation",
+	url: `${siteConfig.url}/regulation`,
 	description:
 		"의료법 §56 의료광고 사전심의 기준을 진료과별로 정리합니다. 피부과·성형외과·정형외과·치과·한의원 등 병원 광고의 허용 표현, 금지 표현, 위반 사례, 수정 카피를 제공합니다.",
 	publisher: {
 		"@type": "Organization",
 		name: "애드리절트",
-		url: "https://onketing.kr",
+		url: siteConfig.url,
 	},
 	about: [
 		{

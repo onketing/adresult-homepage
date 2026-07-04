@@ -14,7 +14,7 @@ import { TmapPartner } from "@/components/sections/TmapPartner";
 export const metadata: Metadata = {
 	title: "병원마케팅 애드리절트(ADRESULT) | 결과로 말하는 광고회사",
 	description:
-		"애드리절트(ADRESULT)는 업력 11년, 누적 1,272곳의 병원마케팅 전문 대행사입니다. 상품에 병원을 맞추지 않고, 진료과별 1:1 맞춤 전략으로 신환을 늘립니다. 병원 AI마케팅·숏폼·바이럴·유튜브까지 한 곳에서.",
+		"병원마케팅 대행사 애드리절트 — 진료과별 1:1 맞춤 AIO·숏폼·바이럴 마케팅으로 신환을 늘립니다. 업력 11년·누적 1,272곳.",
 	keywords: [
 		"병원마케팅",
 		"병원마케팅 대행사",

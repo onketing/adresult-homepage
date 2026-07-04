@@ -11,7 +11,7 @@ export type WhyUsCard = {
 
 export type ComparisonRow = {
 	general: string;
-	onketing: string;
+	adresult: string;
 };
 
 export type ServiceStep = {
