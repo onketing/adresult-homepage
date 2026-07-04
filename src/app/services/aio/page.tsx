@@ -140,10 +140,40 @@ const SEMINAR_BODY = [
 	"앞서나가는 병원 마케팅을 준비하고 싶다면,\n꼭 참석하시어 새로운 변화를 직접 경험해보시기 바랍니다.",
 ];
 
+const AIO_FAQ: { q: string; a: string }[] = [
+	{
+		q: "AIO마케팅이 무엇인가요?",
+		a: "AIO(AI Optimization) 마케팅은 ChatGPT·Gemini·구글 AI 등 AI 검색이 병원을 추천하도록 콘텐츠와 노출 구조를 최적화하는 마케팅입니다. 환자가 AI에게 병원을 물었을 때 우리 병원이 답변에 포함되도록 만듭니다.",
+	},
+	{
+		q: "AIO마케팅과 기존 검색(SEO)은 어떻게 다른가요?",
+		a: "기존 검색은 링크 목록을 보여주지만, AI 검색은 하나의 답변으로 병원을 추천합니다. AIO마케팅은 이 답변에 병원이 포함되도록 설계하며, 애드리절트는 5개 AI 엔진의 추천 여부를 매일 추적·관리합니다.",
+	},
+	{
+		q: "우리 병원이 AI에 추천되는지 어떻게 확인하나요?",
+		a: "애드리절트는 AI 분석 프로그램 AIRANK로 병원이 어느 AI에서 어떤 질의어에 언급되는지 매일 체크하고, 추천 시점을 캡처해 저장합니다. 경쟁 병원과의 추천 추이도 함께 확인할 수 있습니다.",
+	},
+	{
+		q: "AIO마케팅 효과는 언제부터 나타나나요?",
+		a: "AI 엔진이 콘텐츠를 학습·반영하는 데 시간이 필요해, 초기 몇 개월은 기반을 쌓는 기간입니다. 콘텐츠가 누적될수록 AI 추천 빈도가 늘고, 진료과·경쟁 상황에 따라 노출이 안정화됩니다.",
+	},
+];
+
+const aioFaqSchema = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	mainEntity: AIO_FAQ.map((f) => ({
+		"@type": "Question",
+		name: f.q,
+		acceptedAnswer: { "@type": "Answer", text: f.a },
+	})),
+};
+
 export const AioPage = () => {
 	return (
 		<>
 			<script type="application/ld+json">{JSON.stringify(aioServiceSchema)}</script>
+			<script type="application/ld+json">{JSON.stringify(aioFaqSchema)}</script>
 			<BreadcrumbJsonLd
 				items={[
 					{ name: "홈", path: "" },
@@ -593,6 +623,32 @@ export const AioPage = () => {
 									<p className="mt-4 whitespace-pre-line break-keep text-slate-500 leading-relaxed">
 										{s.desc}
 									</p>
+								</div>
+							</Reveal>
+						))}
+					</div>
+				</div>
+			</section>
+
+			{/* FAQ — AEO(FAQPage 스키마 + 본문 노출) */}
+			<section className="bg-slate-50 px-4 py-24 md:px-8 md:py-28">
+				<div className="mx-auto max-w-3xl">
+					<Reveal>
+						<p className="mb-4 text-center font-bold text-[#e11d29] text-sm uppercase tracking-[0.25em] md:text-base">
+							FAQ
+						</p>
+						<h2 className="break-keep text-center font-extrabold text-2xl text-[#0a0a0a] leading-snug tracking-tight md:text-4xl">
+							AIO 마케팅, 자주 묻는 질문
+						</h2>
+					</Reveal>
+					<div className="mt-12 space-y-4">
+						{AIO_FAQ.map((f, i) => (
+							<Reveal key={f.q} delay={i * 0.06}>
+								<div className="rounded-2xl bg-white p-6 ring-1 ring-black/5 md:p-8">
+									<h3 className="break-keep font-bold text-[#0a0a0a] text-lg md:text-xl">
+										Q. {f.q}
+									</h3>
+									<p className="mt-3 break-keep text-slate-600 leading-relaxed">{f.a}</p>
 								</div>
 							</Reveal>
 						))}

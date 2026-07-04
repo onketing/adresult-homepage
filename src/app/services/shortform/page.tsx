@@ -127,10 +127,40 @@ const GROWTH = [
 	},
 ];
 
+const SHORTFORM_FAQ: { q: string; a: string }[] = [
+	{
+		q: "병원 숏폼 마케팅은 조회수만 높으면 되나요?",
+		a: "아닙니다. 애드리절트 끝장숏폼은 조회수가 아니라 예약·상담으로 이어지는 전환을 목표로 합니다. 현직 인플루언서가 기획·촬영·관리까지 맡아 신환을 만드는 영상을 제작합니다.",
+	},
+	{
+		q: "숏폼은 어떤 채널에 올리나요?",
+		a: "인스타그램 릴스·유튜브 쇼츠·틱톡 등 여러 채널에 동시 발행합니다. 한 번 촬영한 콘텐츠를 채널별로 최적화해 노출 범위를 넓힙니다.",
+	},
+	{
+		q: "원장이 영상 촬영에 자신이 없어도 되나요?",
+		a: "됩니다. 대본부터 손동작·표정·카메라 방향까지 현직 인플루언서가 현장에서 직접 디렉팅합니다. 촬영이 처음인 원장님도 자연스럽게 찍을 수 있습니다.",
+	},
+	{
+		q: "숏폼 마케팅 효과는 언제부터 나타나나요?",
+		a: "숏폼은 발행할수록 누적되는 자산입니다. 1~2개월은 계정 구조를 설계하고 콘텐츠를 쌓는 단계이며, 3~6개월 차에 검색·영상 동시 노출이 안정화되며 상담 유입이 늘기 시작합니다.",
+	},
+];
+
+const shortformFaqSchema = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	mainEntity: SHORTFORM_FAQ.map((f) => ({
+		"@type": "Question",
+		name: f.q,
+		acceptedAnswer: { "@type": "Answer", text: f.a },
+	})),
+};
+
 export const ShortformServicePage = () => {
 	return (
 		<>
 			<script type="application/ld+json">{JSON.stringify(shortformServiceSchema)}</script>
+			<script type="application/ld+json">{JSON.stringify(shortformFaqSchema)}</script>
 			<BreadcrumbJsonLd
 				items={[
 					{ name: "홈", path: "" },
@@ -778,6 +808,32 @@ export const ShortformServicePage = () => {
 							*T/O가 마감되었을 경우, 현재 진행 중인 계약이 종료될 때까지 추가 접수 절대 불가
 						</p>
 					</Reveal>
+				</div>
+			</section>
+
+			{/* FAQ — AEO(FAQPage 스키마 + 본문 노출) */}
+			<section className="bg-slate-50 px-4 py-24 md:px-8 md:py-28">
+				<div className="mx-auto max-w-3xl">
+					<Reveal>
+						<p className="mb-4 text-center font-bold text-[#e11d29] text-sm uppercase tracking-[0.25em] md:text-base">
+							FAQ
+						</p>
+						<h2 className="break-keep text-center font-extrabold text-2xl text-[#0a0a0a] leading-snug tracking-tight md:text-4xl">
+							숏폼 마케팅, 자주 묻는 질문
+						</h2>
+					</Reveal>
+					<div className="mt-12 space-y-4">
+						{SHORTFORM_FAQ.map((f, i) => (
+							<Reveal key={f.q} delay={i * 0.06}>
+								<div className="rounded-2xl bg-white p-6 ring-1 ring-black/5 md:p-8">
+									<h3 className="break-keep font-bold text-[#0a0a0a] text-lg md:text-xl">
+										Q. {f.q}
+									</h3>
+									<p className="mt-3 break-keep text-slate-600 leading-relaxed">{f.a}</p>
+								</div>
+							</Reveal>
+						))}
+					</div>
 				</div>
 			</section>
 		</>
