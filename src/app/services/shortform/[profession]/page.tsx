@@ -39,7 +39,7 @@ export const generateMetadata = async ({
 					url: `${siteConfig.url}/og-image.png`,
 					width: 1200,
 					height: 630,
-					alt: "온세상이마케팅이다",
+					alt: "애드리절트",
 				},
 			],
 		},
@@ -255,7 +255,7 @@ export const ProShortformPage = async ({ params }: { params: Promise<{ professio
 
 			<CTACard
 				variant="gradient"
-				eyebrow="온세상이마케팅이다 · 마케팅 컨설팅"
+				eyebrow="애드리절트 · 마케팅 컨설팅"
 				headline={`${pro.profession} 마케팅, 지금 시작하세요.`}
 				sub="첫 상담은 무료입니다. 광고 규정 검토부터 함께 봅니다."
 			/>

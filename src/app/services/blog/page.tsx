@@ -12,7 +12,7 @@ import { BreadcrumbJsonLd } from "@/components/shared/BreadcrumbJsonLd";
 import { BLOG_PILLARS, BLOG_PROCESS, BLOG_PROOF } from "@/data/service-blog";
 
 export const metadata: Metadata = {
-	title: "전문직 블로그 마케팅 | 온세상이마케팅이다",
+	title: "전문직 블로그 마케팅 | 애드리절트",
 	alternates: { canonical: "/services/blog" },
 	description:
 		"변호사·의사·한의사·수의사·노무사·세무사 등 전문직 블로그 마케팅 대행사. 의뢰로 이어지는 키워드를 선별하고 광고 규정을 검토한 콘텐츠를 발행합니다. 보고는 노출 수가 아닌 상담 신청 수로 합니다.",
@@ -37,7 +37,7 @@ const blogServiceSchema = {
 	url: "https://onketing.kr/services/blog",
 	provider: {
 		"@type": "Organization",
-		name: "온세상이마케팅이다",
+		name: "애드리절트",
 		url: "https://onketing.kr",
 	},
 	description:
@@ -75,7 +75,7 @@ const blogFaqSchema = {
 			name: "블로그 마케팅 전문 대행사가 필요한 이유는 무엇인가요?",
 			acceptedAnswer: {
 				"@type": "Answer",
-				text: "전문직 블로그는 일반 블로그와 달리 직군별 광고 규정(변호사법·의료법·세무사법 등)을 반드시 검토해야 합니다. 규정을 모르는 대행사가 작성한 콘텐츠는 행정처분·징계로 이어질 수 있습니다. 온세상이마케팅이다는 발행 전 직군별 법령을 직접 검토합니다.",
+				text: "전문직 블로그는 일반 블로그와 달리 직군별 광고 규정(변호사법·의료법·세무사법 등)을 반드시 검토해야 합니다. 규정을 모르는 대행사가 작성한 콘텐츠는 행정처분·징계로 이어질 수 있습니다. 애드리절트는 발행 전 직군별 법령을 직접 검토합니다.",
 			},
 		},
 		{

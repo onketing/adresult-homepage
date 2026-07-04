@@ -7,7 +7,8 @@ import { Reveal } from "@/components/shared/Reveal";
 
 export const metadata: Metadata = {
 	title: "조직도·구성원 | 애드리절트(ADRESULT)",
-	description: "강남 본사를 포함한 전국 6개 지사, 애드리절트의 조직도와 임원진을 소개합니다.",
+	description:
+		"강남 본사 등 전국 6개 지사로 운영하는 병원마케팅 대행사 애드리절트의 조직도·임원진 소개. 진료과별 전담팀이 숏폼·AIO·바이럴까지 병원마케팅을 책임집니다.",
 };
 
 export const PeoplePage = () => {

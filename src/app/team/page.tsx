@@ -9,13 +9,13 @@ import { CTACard } from "@/components/shared/CTACard";
 const teamPageSchema = {
 	"@context": "https://schema.org",
 	"@type": "AboutPage",
-	name: "온세상이마케팅이다 팀 소개",
+	name: "애드리절트 팀 소개",
 	url: "https://onketing.kr/team",
 	description:
 		"처음 맡은 팀이 끝까지 책임집니다. 규정·전략·기획·발행을 한 팀이 담당합니다. 200건 이상 검토, 위반 0건.",
 	mainEntity: {
 		"@type": "Organization",
-		name: "온세상이마케팅이다",
+		name: "애드리절트",
 		url: "https://onketing.kr",
 		employee: [
 			{
@@ -29,12 +29,12 @@ const teamPageSchema = {
 };
 
 export const metadata: Metadata = {
-	title: "팀 소개 | 온세상이마케팅이다",
+	title: "팀 소개 | 애드리절트",
 	alternates: { canonical: "/team" },
 	description:
 		"규정·전략·기획·발행을 한 팀이 끝까지 책임집니다. 200건 이상 검토, 위반 0건의 인하우스 팀을 소개합니다.",
 	keywords: [
-		"온세상이마케팅이다 팀",
+		"애드리절트 팀",
 		"전문직 마케팅 팀",
 		"인하우스 콘텐츠 팀",
 		"광고 규정 검수",

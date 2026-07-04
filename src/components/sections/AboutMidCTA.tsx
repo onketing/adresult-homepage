@@ -16,7 +16,7 @@ export const AboutMidCTA = () => {
 				<>
 					<Image
 						src="/images/about/desk.jpg"
-						alt="온세상이마케팅이다 업무 환경"
+						alt="애드리절트 업무 환경"
 						fill
 						className="object-cover object-center"
 					/>

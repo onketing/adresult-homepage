@@ -7,7 +7,8 @@ import { Reveal } from "@/components/shared/Reveal";
 
 export const metadata: Metadata = {
 	title: "CEO 인사말 | 애드리절트(ADRESULT)",
-	description: "결과로 말하는 광고회사 애드리절트, 이승민 대표의 인사말입니다.",
+	description:
+		"병원마케팅 대행사 애드리절트 이승민 대표 인사말입니다. 상품에 병원을 맞추지 않고 진료과별 1:1 맞춤 전략으로 신환을 늘려온 11년, 결과로 증명하는 병원마케팅 철학을 전합니다.",
 };
 
 const GREETING = [

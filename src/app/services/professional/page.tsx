@@ -18,7 +18,7 @@ import {
 import { WORK_PROCESS } from "@/data/work-process";
 
 export const metadata: Metadata = {
-	title: "전문직 마케팅 대행사 | 온세상이마케팅이다",
+	title: "전문직 마케팅 대행사 | 애드리절트",
 	alternates: { canonical: "/services/professional" },
 	description:
 		"변호사·의사·한의사·수의사·노무사·세무사 등 12개 전문직 전용 마케팅 대행사. 광고 규정을 직접 검토하고 수임·의뢰 전환을 설계합니다. 재계약율 90%+, 광고 규정 위반 0건.",
@@ -44,7 +44,7 @@ const professionalServiceSchema = {
 	url: "https://onketing.kr/services/professional",
 	provider: {
 		"@type": "Organization",
-		name: "온세상이마케팅이다",
+		name: "애드리절트",
 		url: "https://onketing.kr",
 	},
 	description:
@@ -78,7 +78,7 @@ const professionalFaqSchema = {
 			name: "전문직 마케팅 전문 대행사를 사용해야 하는 이유가 무엇인가요?",
 			acceptedAnswer: {
 				"@type": "Answer",
-				text: "전문직 광고는 변호사법·의료법·세무사법 등 직군별 법령에 따라 허용·금지 표현이 다릅니다. 위반 시 행정처분·징계·형사처벌로 이어질 수 있습니다. 온세상이마케팅이다는 발행 전 직군별 규정을 직접 검토하며, 광고 규정 위반 0건을 유지하고 있습니다.",
+				text: "전문직 광고는 변호사법·의료법·세무사법 등 직군별 법령에 따라 허용·금지 표현이 다릅니다. 위반 시 행정처분·징계·형사처벌로 이어질 수 있습니다. 애드리절트는 발행 전 직군별 규정을 직접 검토하며, 광고 규정 위반 0건을 유지하고 있습니다.",
 			},
 		},
 		{
@@ -86,7 +86,7 @@ const professionalFaqSchema = {
 			name: "변호사 마케팅 대행사를 선택할 때 무엇을 봐야 하나요?",
 			acceptedAnswer: {
 				"@type": "Answer",
-				text: "변호사법 제23조 광고 규정 이해 여부, 담당자 교체 빈도, 보고 지표(노출 수 vs 상담 신청 수)를 확인하세요. 온세상이마케팅이다는 규정 검토 → 기획 → 발행 → 보고 전 과정을 한 팀이 담당합니다.",
+				text: "변호사법 제23조 광고 규정 이해 여부, 담당자 교체 빈도, 보고 지표(노출 수 vs 상담 신청 수)를 확인하세요. 애드리절트는 규정 검토 → 기획 → 발행 → 보고 전 과정을 한 팀이 담당합니다.",
 			},
 		},
 		{

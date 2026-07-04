@@ -7,21 +7,21 @@ import { siteConfig } from "@/config/site";
 import { getPagePosts, getTotalPages, POSTS } from "@/content/blog/posts";
 
 export const metadata: Metadata = {
-	title: "블로그 | 온세상이마케팅이다",
+	title: "블로그 | 애드리절트",
 	description:
-		"전문직 마케팅·네이버 블로그·숏폼 운영 인사이트. 변호사·의사·한의사 등 12개 직군 마케팅 노하우를 온케팅(온세상이마케팅이다)이 공유합니다.",
+		"전문직 마케팅·네이버 블로그·숏폼 운영 인사이트. 변호사·의사·한의사 등 12개 직군 마케팅 노하우를 애드리절트가 공유합니다.",
 	alternates: { canonical: `${siteConfig.url}/blog` },
 	openGraph: {
 		type: "website",
 		url: `${siteConfig.url}/blog`,
-		title: "블로그 | 온세상이마케팅이다",
-		description: "전문직 마케팅·네이버 블로그·숏폼 운영 인사이트를 온케팅이 공유합니다.",
+		title: "블로그 | 애드리절트",
+		description: "전문직 마케팅·네이버 블로그·숏폼 운영 인사이트를 애드리절트가 공유합니다.",
 		images: [
 			{
 				url: `${siteConfig.url}/og-image.png`,
 				width: 1200,
 				height: 630,
-				alt: "온세상이마케팅이다",
+				alt: "애드리절트",
 			},
 		],
 	},

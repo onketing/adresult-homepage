@@ -89,6 +89,7 @@ export const Hero = () => {
 					loop
 					playsInline
 					preload="auto"
+					poster="/home-hero-video-poster.jpg"
 					onEnded={(e) => {
 						// loop 속성이 동작하지 않는 브라우저 대비 — 끝나면 처음으로 되감아 재생
 						const v = e.currentTarget;

@@ -7,7 +7,8 @@ import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
 	title: "연혁·수상 | 애드리절트(ADRESULT)",
-	description: "대외적으로 인정받은 우수기업, 애드리절트의 연혁과 수상·인증 이력입니다.",
+	description:
+		"업력 11년·누적 1,272곳의 병원마케팅 대행사 애드리절트 연혁과 수상·인증 이력입니다. 중기부 우수기업 등 대외 인증으로 검증된 병원마케팅 성과를 확인하세요.",
 };
 
 const AWARDS_TIMELINE: { year: string; items: string[] }[] = [

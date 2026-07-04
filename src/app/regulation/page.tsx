@@ -17,7 +17,7 @@ const regulationSchema = {
 		"변호사법 §23, 의료법 §56, 수의사법 §12, 공인노무사법, 세무사법 §22의2 등 12개 전문직 직군의 광고 규정을 항목별로 정리합니다. 허용 표현, 금지 표현, 위반 사례, 수정 카피를 제공합니다.",
 	publisher: {
 		"@type": "Organization",
-		name: "온세상이마케팅이다",
+		name: "애드리절트",
 		url: "https://onketing.kr",
 	},
 	about: [
@@ -39,7 +39,7 @@ const regulationSchema = {
 };
 
 export const metadata: Metadata = {
-	title: "전문직 광고 규정 가이드 | 온세상이마케팅이다",
+	title: "전문직 광고 규정 가이드 | 애드리절트",
 	alternates: { canonical: "/regulation" },
 	description:
 		"변호사법 §23·의료법 §56·세무사법 §22의2 등 12개 전문직 광고 규정 완전 정리. 허용 표현, 금지 표현, 위반 사례를 직군별로 확인하세요.",

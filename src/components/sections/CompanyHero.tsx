@@ -33,6 +33,7 @@ export const CompanyHero = ({ videoSrc = "/home-hero-video.mp4" }: { videoSrc?: 
 				loop
 				playsInline
 				preload="auto"
+				poster={videoSrc.replace(/\.mp4$/, "-poster.jpg")}
 			>
 				<source src={videoSrc} type="video/mp4" />
 				<track kind="captions" />

@@ -8,7 +8,7 @@ import { CTACard } from "@/components/shared/CTACard";
 import { PageHero } from "@/components/shared/PageHero";
 
 export const metadata: Metadata = {
-	title: "전문직 마케팅 서비스 — 블로그·숏폼·인스타그램 | 온케팅",
+	title: "전문직 마케팅 서비스 — 블로그·숏폼·인스타그램 | 애드리절트",
 	alternates: { canonical: "/services" },
 	description:
 		"전문직 마케팅 서비스 — 네이버 블로그, 숏폼·인스타그램 릴스, 직군 통합 운영. 변호사·의사·한의사 등 직군에 맞는 채널을 비교하고 선택하세요. 보고는 노출 수가 아닌 상담 신청 수로 합니다.",

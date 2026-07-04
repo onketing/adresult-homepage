@@ -44,7 +44,7 @@ export const ContactNotification = ({
 				<Section style={header}>
 					<Row>
 						<Column>
-							<Text style={eyebrow}>온세상이마케팅이다 · 새 문의</Text>
+							<Text style={eyebrow}>애드리절트 · 새 문의</Text>
 							<Text style={title}>{name}님이 문의했습니다</Text>
 							<Text style={date}>{sentAt}</Text>
 						</Column>
@@ -114,7 +114,7 @@ export const ContactNotification = ({
 				{/* 푸터 */}
 				<Section style={footer}>
 					<Text style={footerText}>
-						온세상이마케팅이다 · onketing.kr
+						애드리절트 · onketing.kr
 						<br />
 						영업일 1일 내 회신 · 이 메일은 자동 발송됩니다
 					</Text>

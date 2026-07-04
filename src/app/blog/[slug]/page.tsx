@@ -21,7 +21,7 @@ export const generateMetadata = async ({
 	const url = `${siteConfig.url}/blog/${slug}`;
 	const cover = `${siteConfig.url}${post.cover}`;
 	return {
-		title: `${post.title} | 온세상이마케팅이다`,
+		title: `${post.title} | 애드리절트`,
 		description: post.description,
 		keywords: post.tags,
 		alternates: { canonical: url },
@@ -176,7 +176,7 @@ export const BlogPostPage = async ({ params }: { params: Promise<{ slug: string 
 			{/* 전환 CTA (내부 링크) */}
 			<CTACard
 				variant="gradient"
-				eyebrow="온세상이마케팅이다 · 마케팅 컨설팅"
+				eyebrow="애드리절트 · 마케팅 컨설팅"
 				headline="우리 직군엔 어떤 전략이 맞을까요?"
 				sub="첫 상담은 무료입니다. 직군·채널·광고 규정까지 함께 봅니다."
 			/>
