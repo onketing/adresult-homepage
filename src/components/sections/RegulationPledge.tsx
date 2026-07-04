@@ -1,7 +1,7 @@
 import { Reveal } from "@/components/shared/Reveal";
 
 const PLEDGES = [
-	"결과·승소율을 보장하지 않습니다.",
+	"치료 효과·완치를 보장하지 않습니다.",
 	"비교 광고를 쓰지 않습니다.",
 	"검증되지 않은 후기를 인용하지 않습니다.",
 	"출처 없는 수치를 쓰지 않습니다.",
@@ -23,7 +23,7 @@ export const RegulationPledge = () => {
 								이런 카피는 쓰지 않습니다.
 							</h2>
 							<p className="mt-4 font-semibold text-[#fca5a5] text-sm tracking-[0.15em]">
-								Onketing 약속
+								애드리절트 약속
 							</p>
 							<p className="mt-8 font-mono text-white/60 text-xs tracking-[0.15em]">
 								대표 검수 — 김태훈

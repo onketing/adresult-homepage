@@ -73,7 +73,7 @@ export const FaqHero = () => {
 			<div className="absolute top-24 right-0 left-0 z-10 mx-auto flex max-w-4xl items-center gap-3 px-6 md:top-28 md:px-10">
 				<div className="h-px flex-1 bg-slate-200" />
 				<p className="font-mono text-[10px] text-slate-500 uppercase tracking-[0.3em]">
-					Onketing · Knowledge — 2026
+					ADRESULT · Knowledge — 2026
 				</p>
 				<div className="h-px flex-1 bg-slate-200" />
 			</div>

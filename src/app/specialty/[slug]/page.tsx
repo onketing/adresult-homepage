@@ -48,7 +48,7 @@ export const SpecialtyPage = async ({ params }: { params: Promise<{ slug: string
 			<BreadcrumbJsonLd
 				items={[
 					{ name: "홈", path: "" },
-					{ name: "마케팅", path: "/services" },
+					{ name: "마케팅", path: "/services/aio" },
 					{ name: `${s.name} 마케팅`, path: `/specialty/${s.slug}` },
 				]}
 			/>

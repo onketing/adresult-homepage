@@ -45,7 +45,7 @@ export const BlogListHero = ({ count }: { count: number }) => {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.55, delay: 0.18, ease }}
 				>
-					네이버 블로그와 숏폼까지, 12개 전문직 직군 마케팅을 직접 운영하며 쌓은 기록입니다.
+					네이버 블로그와 숏폼까지, 진료과별 병원마케팅을 직접 운영하며 쌓은 기록입니다.
 				</motion.p>
 				<motion.div
 					className="mt-6 flex items-center gap-2 text-slate-400 text-sm"

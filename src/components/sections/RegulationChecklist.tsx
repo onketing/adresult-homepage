@@ -5,18 +5,18 @@ import { useRef } from "react";
 import { Reveal } from "@/components/shared/Reveal";
 
 const ITEMS = [
-	{ text: "결과 보장·성공률 표현 없음", law: "변호사법·의료법 공통" },
-	{ text: "비교·우열 표현 없음", law: "각 직군 광고 규정 공통" },
-	{ text: "환자/의뢰인 후기 사전 심의 확인", law: "의료법 §56" },
-	{ text: "학력·경력 사실 확인", law: "변호사법 §23" },
+	{ text: "치료 효과·완치 보장 표현 없음", law: "의료법 §56" },
+	{ text: "비교·우열 표현 없음", law: "의료광고 규정 공통" },
+	{ text: "환자 후기·경험담 사전 심의 확인", law: "의료법 §56" },
+	{ text: "의료진 학력·경력 사실 확인", law: "의료법 §56" },
 	{ text: "인용 통계 출처 명시", law: "표시광고법 §3" },
 	{ text: "시술·처치 부작용 안내", law: "의료법 §56 (3)" },
-	{ text: "가격·수수료 표시 정확성", law: "표시광고법 §4" },
+	{ text: "가격·이벤트 표시 정확성", law: "표시광고법 §4" },
 	{ text: "채널 플랫폼 광고 표시 여부", law: "표시광고법 §3 (2)" },
-	{ text: "의약품·기기 효능 과장 없음", law: "약사법 §68" },
+	{ text: "의약품·의료기기 효능 과장 없음", law: "의료기기법 §24" },
 	{ text: "사진·이미지 출처 권리 확인", law: "저작권법 §35의5" },
-	{ text: "키워드·해시태그 금지어 점검", law: "각 직군 세부 규정" },
-	{ text: "발행 직전 최종 검수자 서명", law: "Onketing 내부 기준" },
+	{ text: "키워드·해시태그 금지어 점검", law: "진료과별 세부 규정" },
+	{ text: "발행 직전 최종 검수자 서명", law: "애드리절트 내부 기준" },
 ] as const;
 
 export const RegulationChecklist = () => {
@@ -37,7 +37,7 @@ export const RegulationChecklist = () => {
 								발행 전, 항목별로 점검합니다.
 							</h2>
 							<p className="mt-4 break-keep text-slate-600 text-sm leading-relaxed">
-								콘텐츠 한 편마다 12개 항목을 확인합니다. 직군·채널에 따라 추가 항목을 적용합니다.
+								콘텐츠 한 편마다 12개 항목을 확인합니다. 진료과·채널에 따라 추가 항목을 적용합니다.
 							</p>
 						</Reveal>
 					</div>
@@ -58,7 +58,7 @@ export const RegulationChecklist = () => {
 									{/* 양식 메타 */}
 									<div className="mb-5 border-slate-100 border-b px-6 pb-5">
 										<div className="flex items-center gap-6 font-mono text-slate-500 text-xs tracking-[0.12em]">
-											<span>직군 _________</span>
+											<span>진료과 _________</span>
 											<span>콘텐츠 유형 _________</span>
 											<span>채널 _________</span>
 										</div>
@@ -114,7 +114,7 @@ export const RegulationChecklist = () => {
 									{/* 하단 라벨 */}
 									<div className="mt-4 px-6 text-right">
 										<p className="font-mono text-slate-500 text-xs tracking-[0.12em]">
-											Onketing 자체 체크리스트 — 직군별 항목 보강
+											애드리절트 자체 체크리스트 — 진료과별 항목 보강
 										</p>
 									</div>
 								</div>

@@ -18,10 +18,10 @@ export const RegulationLawSwitcher = () => {
 						Regulation
 					</p>
 					<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-4xl">
-						12개 직군, 항목별 점검 기준입니다.
+						진료과별, 항목별 점검 기준입니다.
 					</h2>
 					<p className="mt-3 text-slate-600 text-sm">
-						직군을 누르면 가능한 표현과 금지된 표현을 확인할 수 있습니다.
+						진료과를 누르면 가능한 표현과 금지된 표현을 확인할 수 있습니다.
 					</p>
 				</div>
 

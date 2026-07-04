@@ -4,7 +4,7 @@ import { Reveal } from "@/components/shared/Reveal";
 // images/현장 + images/team 중 서로 다른 장면만 선별 (유사·중복 제외).
 // 균일 그리드(md 4열 × 2행 = 8장)로 빈칸 없이 깔끔하게 채운다.
 const SCENE_PHOTOS = [
-	{ src: "/images/onsite/onsite-1.jpg", alt: "전문직 인터뷰 촬영 현장" },
+	{ src: "/images/onsite/onsite-1.jpg", alt: "병원 인터뷰 촬영 현장" },
 	{ src: "/images/team/video-02.jpg", alt: "촬영 감독 카메라 작업" },
 	{ src: "/images/onsite/onsite-2.jpg", alt: "콘텐츠 기획 미팅" },
 	{ src: "/images/team/video-05.jpg", alt: "팀 모니터링 현장" },

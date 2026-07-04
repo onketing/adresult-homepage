@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 const DOCS = [
 	{
 		slug: "violation",
-		lawLabel: "변호사법 §23",
+		lawLabel: "의료법 §56",
 		lines: [
 			{ id: "v1", w: "w-full" },
 			{ id: "v2", w: "w-4/5" },
@@ -50,7 +50,7 @@ const DOCS = [
 	},
 	{
 		slug: "revise",
-		lawLabel: "세무사법 §22",
+		lawLabel: "의료광고 심의",
 		lines: [
 			{ id: "r1", w: "w-full" },
 			{ id: "r2", w: "w-3/5" },
@@ -73,7 +73,7 @@ const DOCS = [
 ] as const;
 
 const STATS = [
-	{ value: "12개", label: "직군" },
+	{ value: "8개", label: "진료과" },
 	{ value: "200+", label: "누적 콘텐츠" },
 	{ value: "즉시", label: "리스크 대응" },
 ] as const;
@@ -127,7 +127,7 @@ export const RegulationHero = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.2 }}
 					>
-						12개 직군 법령을 발행 전 직접 검토합니다.
+						진료과별 의료광고 규정을 발행 전 직접 검토합니다.
 					</motion.p>
 
 					{/* 신뢰 지표 스트립 */}

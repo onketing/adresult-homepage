@@ -177,8 +177,8 @@ export const BlogPostPage = async ({ params }: { params: Promise<{ slug: string 
 			<CTACard
 				variant="gradient"
 				eyebrow="애드리절트 · 마케팅 컨설팅"
-				headline="우리 직군엔 어떤 전략이 맞을까요?"
-				sub="첫 상담은 무료입니다. 직군·채널·광고 규정까지 함께 봅니다."
+				headline="우리 병원엔 어떤 전략이 맞을까요?"
+				sub="첫 상담은 무료입니다. 진료과·채널·의료광고 규정까지 함께 봅니다."
 			/>
 		</article>
 	);

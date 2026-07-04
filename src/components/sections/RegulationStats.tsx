@@ -82,7 +82,7 @@ export const RegulationStats = () => {
 						<div className="mb-6 flex items-start justify-between">
 							<div>
 								<p className="font-bold text-lg text-white tracking-tight">10년 새 25배 증가</p>
-								<p className="mt-0.5 text-sm text-white/70">위반 광고 적발 건수</p>
+								<p className="mt-0.5 text-sm text-white/70">의료광고 위반 적발 건수</p>
 							</div>
 							<p className="font-mono text-white/50 text-xs tracking-[0.12em]">
 								출처: {TREND_DATA.source}

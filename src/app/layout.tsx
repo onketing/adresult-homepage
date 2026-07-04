@@ -154,8 +154,8 @@ const jsonLd = {
 				"@type": "Offer",
 				itemOffered: {
 					"@type": "Service",
-					name: "병원 통합 마케팅",
-					url: `${siteConfig.url}/services/professional`,
+					name: "병원 AIO마케팅",
+					url: `${siteConfig.url}/services/aio`,
 				},
 			},
 			{
@@ -164,14 +164,6 @@ const jsonLd = {
 					"@type": "Service",
 					name: "병원 숏폼·영상 마케팅",
 					url: `${siteConfig.url}/services/shortform`,
-				},
-			},
-			{
-				"@type": "Offer",
-				itemOffered: {
-					"@type": "Service",
-					name: "병원 바이럴·블로그 마케팅",
-					url: `${siteConfig.url}/services/blog`,
 				},
 			},
 		],

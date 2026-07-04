@@ -25,7 +25,7 @@ export const generateMetadata = async ({
 	return {
 		title: `블로그 (${n}페이지) | 애드리절트`,
 		description:
-			"전문직 마케팅·네이버 블로그·숏폼 운영 인사이트. 12개 직군 마케팅 노하우를 애드리절트가 공유합니다.",
+			"병원마케팅·네이버 블로그·숏폼 운영 인사이트. 진료과별 마케팅 노하우를 애드리절트가 공유합니다.",
 		alternates: { canonical: url },
 		openGraph: {
 			type: "website",

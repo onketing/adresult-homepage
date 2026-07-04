@@ -147,7 +147,7 @@ export const AioPage = () => {
 			<BreadcrumbJsonLd
 				items={[
 					{ name: "홈", path: "" },
-					{ name: "마케팅", path: "/services" },
+					{ name: "마케팅", path: "/services/aio" },
 					{ name: "AIO마케팅", path: "/services/aio" },
 				]}
 			/>

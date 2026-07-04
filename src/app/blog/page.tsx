@@ -9,13 +9,13 @@ import { getPagePosts, getTotalPages, POSTS } from "@/content/blog/posts";
 export const metadata: Metadata = {
 	title: "블로그 | 애드리절트",
 	description:
-		"전문직 마케팅·네이버 블로그·숏폼 운영 인사이트. 변호사·의사·한의사 등 12개 직군 마케팅 노하우를 애드리절트가 공유합니다.",
+		"병원마케팅·네이버 블로그·숏폼 운영 인사이트. 피부과·성형외과·정형외과 등 진료과별 마케팅 노하우를 애드리절트가 공유합니다.",
 	alternates: { canonical: `${siteConfig.url}/blog` },
 	openGraph: {
 		type: "website",
 		url: `${siteConfig.url}/blog`,
 		title: "블로그 | 애드리절트",
-		description: "전문직 마케팅·네이버 블로그·숏폼 운영 인사이트를 애드리절트가 공유합니다.",
+		description: "병원마케팅·네이버 블로그·숏폼 운영 인사이트를 애드리절트가 공유합니다.",
 		images: [
 			{
 				url: `${siteConfig.url}/og-image.png`,

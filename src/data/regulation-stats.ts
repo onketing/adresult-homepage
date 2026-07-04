@@ -20,18 +20,18 @@ export const REGULATION_STATS: RegulationStat[] = [
 		source: "보건복지부 '24.02",
 	},
 	{
-		id: "law1",
-		value: 39,
+		id: "med2",
+		value: 60,
 		suffix: "%",
-		label: "변호사 징계 사유 1위 (10명 중 4명)",
-		source: "시사저널 '25.09",
+		label: "미심의 의료광고 비중",
+		source: "의료광고 심의위원회",
 	},
 	{
-		id: "law2",
-		value: 25,
-		suffix: "배",
-		label: "변호사 광고규정 위반 증가 (10년)",
-		source: "한국일보 '25.03",
+		id: "med3",
+		value: 5,
+		suffix: "천만",
+		label: "의료법 위반 시 최대 과태료(원)",
+		source: "의료법 §56·§89",
 	},
 ];
 
@@ -46,5 +46,5 @@ export const TREND_DATA = {
 	] as TrendBar[],
 	startLabel: "'14년 4건",
 	endLabel: "'24년 101건",
-	source: "한국일보 '25.03",
+	source: "보건복지부 '24.02",
 };
