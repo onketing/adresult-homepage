@@ -73,9 +73,9 @@ export const metadata: Metadata = {
 		canonical: siteConfig.url,
 	},
 	verification: {
-		google: "RHFjIItqXfDsghUkllvYdjx__JO2c9HTgLrsMAm_N4M",
+		google: "cSZexxUigLS0oxD7ZRL4S7rhbPk52Yptqa7EkbBTD-I",
 		other: {
-			"naver-site-verification": "d4226bbbaae73c2c62b9327693fac4b373595e3a",
+			"naver-site-verification": "81ff776caa018aeef4adce150257d25546b9137a",
 			"msvalidate.01": "FEADAB9A050D08C9269521AB466C6271",
 		},
 	},
