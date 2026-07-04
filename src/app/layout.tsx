@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Nanum_Pen_Script, Roboto_Mono } from "next/font/google";
-import localFont from "next/font/local";
 import "./globals.css";
+import "./pretendard-subset.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -11,14 +11,6 @@ import { FloatingActions } from "@/components/shared/FloatingActions";
 import { PageTransition } from "@/components/shared/PageTransition";
 import { StickyCTA } from "@/components/shared/StickyCTA";
 import { siteConfig } from "@/config/site";
-
-const pretendard = localFont({
-	src: "../../node_modules/pretendard/dist/web/variable/woff2/PretendardVariable.woff2",
-	variable: "--font-pretendard",
-	display: "swap",
-	weight: "45 920",
-	adjustFontFallback: "Arial",
-});
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -185,7 +177,7 @@ export const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<html
 			lang="ko"
-			className={`${pretendard.variable} ${inter.variable} ${robotoMono.variable} ${nanumPen.variable} h-full`}
+			className={`${inter.variable} ${robotoMono.variable} ${nanumPen.variable} h-full`}
 			suppressHydrationWarning
 		>
 			<body

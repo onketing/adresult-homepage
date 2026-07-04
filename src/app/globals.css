@@ -36,6 +36,8 @@
 }
 
 :root {
+	/* 폰트 — Pretendard dynamic-subset (@font-face는 pretendard-subset.css) */
+	--font-pretendard: "Pretendard Variable";
 	/* Base */
 	--background: #ffffff;
 	--foreground: #0f172a;
