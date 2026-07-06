@@ -92,30 +92,30 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 
 			<article className="bg-white px-4 pt-28 pb-24 md:px-8 md:pt-36 md:pb-28">
 				<div className="mx-auto max-w-5xl">
-					<p className="font-bold text-[#e11d29] text-sm uppercase tracking-[0.25em] md:text-base">
+					<p className="font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 						Portfolio
 					</p>
 					<p className="mt-4 text-lg text-slate-600 md:text-xl">
 						애드리절트 병원마케팅 성공사례입니다.
 					</p>
-					<p className="mt-1 break-keep font-extrabold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
-						결과로 말하는 <span className="text-[#e11d29]">애드리절트</span>
+					<p className="mt-1 break-keep font-extrabold text-3xl text-[#111111] tracking-tight md:text-5xl">
+						결과로 말하는 <span className="text-[#C8102E]">애드리절트</span>
 					</p>
 
 					<div className="mt-14 border-slate-200 border-b pb-6">
-						<h1 className="break-keep font-extrabold text-[#0a0a0a] text-xl leading-snug tracking-tight md:text-2xl">
+						<h1 className="break-keep font-extrabold text-[#111111] text-xl leading-snug tracking-tight md:text-2xl">
 							{a.title}
 						</h1>
 						<Link
 							href="/cases"
-							className="mt-3 inline-block text-slate-400 text-sm transition-colors hover:text-[#e11d29]"
+							className="mt-3 inline-block text-slate-400 text-sm transition-colors hover:text-[#C8102E]"
 						>
 							성공사례
 						</Link>
 					</div>
 
 					{a.summary && (
-						<p className="mt-8 break-keep rounded-r-lg border-[#e11d29] border-l-4 bg-[#fef2f2] px-5 py-4 font-medium text-[#0a0a0a] leading-relaxed">
+						<p className="mt-8 break-keep rounded-r-lg border-[#C8102E] border-l-4 bg-[#fef2f2] px-5 py-4 font-medium text-[#111111] leading-relaxed">
 							{a.summary}
 						</p>
 					)}
@@ -184,7 +184,7 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 										className={cn(
 											"my-6 break-keep rounded-xl px-6 py-5 text-base leading-relaxed md:text-lg",
 											b.boxBg
-												? "text-[#0a0a0a]"
+												? "text-[#111111]"
 												: "border border-slate-200 bg-slate-50 text-slate-700",
 											alignClass || "text-center",
 										)}
@@ -199,7 +199,7 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 									<h2
 										key={b.id}
 										className={cn(
-											"break-keep font-extrabold text-[#0a0a0a] text-xl leading-snug md:text-2xl",
+											"break-keep font-extrabold text-[#111111] text-xl leading-snug md:text-2xl",
 											b.gap ? "mt-10" : "mt-3",
 											alignClass,
 										)}
@@ -225,12 +225,12 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 
 					{a.faq?.length ? (
 						<section className="mt-14">
-							<h2 className="break-keep font-extrabold text-[#0a0a0a] text-xl md:text-2xl">
+							<h2 className="break-keep font-extrabold text-[#111111] text-xl md:text-2xl">
 								자주 묻는 질문
 							</h2>
 							{a.faq.map((f) => (
 								<div key={f.q}>
-									<h3 className="mt-6 break-keep font-bold text-[#0a0a0a]">{f.q}</h3>
+									<h3 className="mt-6 break-keep font-bold text-[#111111]">{f.q}</h3>
 									<p className="mt-2 break-keep text-slate-700 leading-relaxed">{f.a}</p>
 								</div>
 							))}
@@ -276,7 +276,7 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 						{prev && (
 							<Link
 								href={`/cases/${prev.slug}`}
-								className="flex items-center gap-4 border-slate-200 border-b py-4 text-slate-600 transition-colors hover:text-[#e11d29]"
+								className="flex items-center gap-4 border-slate-200 border-b py-4 text-slate-600 transition-colors hover:text-[#C8102E]"
 							>
 								<ChevronUp className="h-4 w-4 shrink-0 text-slate-400" />
 								<span className="line-clamp-1 break-keep text-sm md:text-base">{prev.title}</span>
@@ -285,7 +285,7 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 						{next && (
 							<Link
 								href={`/cases/${next.slug}`}
-								className="flex items-center gap-4 border-slate-200 border-b py-4 text-slate-600 transition-colors hover:text-[#e11d29]"
+								className="flex items-center gap-4 border-slate-200 border-b py-4 text-slate-600 transition-colors hover:text-[#C8102E]"
 							>
 								<ChevronDown className="h-4 w-4 shrink-0 text-slate-400" />
 								<span className="line-clamp-1 break-keep text-sm md:text-base">{next.title}</span>
@@ -294,7 +294,7 @@ export const CaseDetailPage = async ({ params }: { params: Promise<{ slug: strin
 						<div className="mt-5">
 							<Link
 								href="/cases"
-								className="inline-block rounded-full bg-[#e11d29] px-6 py-2.5 font-bold text-sm text-white transition-colors hover:bg-[#c11624]"
+								className="inline-block bg-[#C8102E] px-6 py-2.5 font-bold text-sm text-white transition-colors hover:bg-[#A50D26]"
 							>
 								목록
 							</Link>

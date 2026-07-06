@@ -96,7 +96,7 @@ const EXECS: Exec[] = [
 				text: "부모님 사업을 도와 문의를 80배 늘리고,\n제가 가진 모든 돈을 투자하여\n18평 요식업 매장을 오픈, 월 매출 1억 1천을 찍으며\n직접 마케팅 결과를 증명했습니다.",
 			},
 			{
-				text: "애드리절트 마포지사는 늘 ‘어떻게’라는 질문과\n‘할 수 있다’는 긍정 에너지로 확실한 결과물을 만듭니다.",
+				text: "애드리절트는 늘 ‘어떻게’라는 질문과\n‘할 수 있다’는 긍정 에너지로 확실한 결과물을 만듭니다.",
 			},
 			{
 				text: "그동안 효과 없는 마케팅에 지치셨다면,\n마지막은 저희와 함께하세요.\n성공을 위한 여정에 당신의 날개가 되어드리겠습니다.",
@@ -109,12 +109,12 @@ const EXECS: Exec[] = [
 				kind: "video",
 			},
 			{
-				label: "마포지사 인스타그램 바로가기",
+				label: "애드리절트 인스타그램 바로가기",
 				href: "https://www.instagram.com/adresult_mapo?igsh=MXBqN2gzcjVlaDN1",
 				kind: "instagram",
 			},
 			{
-				label: "마포지사 유튜브 바로가기",
+				label: "애드리절트 유튜브 바로가기",
 				href: "https://www.youtube.com/@adreuslt_mapo?si=vsA_pK_03gNSD1kV",
 				kind: "youtube",
 			},
@@ -273,10 +273,10 @@ export const PeopleExecs = () => {
 	return (
 		<section className="bg-slate-50 px-4 py-16 md:py-28">
 			<div className="mx-auto max-w-[1600px]">
-				<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
+				<p className="mb-4 text-center font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 					ADRESULT People
 				</p>
-				<h2 className="text-center font-extrabold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
+				<h2 className="text-center font-extrabold text-3xl text-[#111111] tracking-tight md:text-5xl">
 					임원진
 				</h2>
 				<p className="mt-5 text-center text-slate-500 text-sm md:text-base">
@@ -351,10 +351,10 @@ export const PeopleExecs = () => {
 													target="_blank"
 													rel="noopener noreferrer"
 													className={cn(
-														"inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-center font-bold text-sm transition-transform hover:scale-[1.03] md:text-base",
+														"inline-flex items-center justify-center gap-2 px-5 py-3 text-center font-bold text-sm transition-opacity hover:opacity-85 md:text-base",
 														l.kind === "video"
-															? "bg-[#e11d29] text-white"
-															: "border border-[#e11d29] bg-white text-[#e11d29]",
+															? "bg-[#C8102E] text-white"
+															: "border border-[#C8102E] bg-white text-[#C8102E]",
 													)}
 												>
 													{l.kind === "instagram" && <Instagram className="h-4 w-4 shrink-0" />}
@@ -367,11 +367,11 @@ export const PeopleExecs = () => {
 								</div>
 
 								<div>
-									<p className="mb-2 font-bold text-[#ef3c39] text-sm">
+									<p className="mb-2 font-bold text-[#C8102E] text-sm">
 										{active.name} {active.title}
 									</p>
 									{active.headline && (
-										<h3 className="mb-6 whitespace-pre-line break-keep font-extrabold text-2xl text-[#0a0a0a] leading-snug md:text-3xl">
+										<h3 className="mb-6 whitespace-pre-line break-keep font-extrabold text-2xl text-[#111111] leading-snug md:text-3xl">
 											{active.headline}
 										</h3>
 									)}
@@ -382,7 +382,7 @@ export const PeopleExecs = () => {
 												className={cn(
 													"whitespace-pre-line break-keep leading-relaxed",
 													p.bold
-														? "font-bold text-[#0a0a0a] text-lg md:text-xl"
+														? "font-bold text-[#111111] text-lg md:text-xl"
 														: "text-base text-slate-600 md:text-lg",
 												)}
 											>

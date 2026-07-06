@@ -48,7 +48,7 @@ const VALUE_BLOCKS: ValueBlock[] = [
 				고객과 진정성 있게 소통하며
 				<br />
 				그들의 마케팅 고민을 깊이 이해하고{" "}
-				<strong className="font-bold text-[#0a0a0a]">함께 해결책을 찾습니다.</strong>
+				<strong className="font-bold text-[#111111]">함께 해결책을 찾습니다.</strong>
 			</>
 		),
 	},
@@ -63,7 +63,7 @@ const VALUE_BLOCKS: ValueBlock[] = [
 			<>
 				우리는 고객의 목표 달성과 성장을 위해 끊임없이 연구하며
 				<br />그 과정에서{" "}
-				<strong className="font-bold text-[#0a0a0a]">
+				<strong className="font-bold text-[#111111]">
 					3,500여 개의 마케팅 지식을 축적한 전문가들
 				</strong>
 				입니다.
@@ -80,7 +80,7 @@ const VALUE_BLOCKS: ValueBlock[] = [
 		desc: (
 			<>
 				우리는 고객의 목표를 함께 달성하기 위해{" "}
-				<strong className="font-bold text-[#0a0a0a]">끊임없이 성장합니다.</strong>
+				<strong className="font-bold text-[#111111]">끊임없이 성장합니다.</strong>
 			</>
 		),
 	},
@@ -96,7 +96,7 @@ const VALUE_BLOCKS: ValueBlock[] = [
 				우리의 경험과 노하우를 바탕으로 한 마케팅 전략은
 				<br />
 				고객의 지속적인 성장과 만족을 이끌어내며{" "}
-				<strong className="font-bold text-[#0a0a0a]">확실한 성과를 만들어냅니다.</strong>
+				<strong className="font-bold text-[#111111]">확실한 성과를 만들어냅니다.</strong>
 			</>
 		),
 	},
@@ -165,7 +165,7 @@ const FLOORS: { no: string; desc: string; top: string }[] = [
 const BRANCHES: { name: string; address: string; tel: string }[] = [
 	{ name: "강남본사", address: "서울시 강남구 헌릉로618길 9", tel: "1661-4829" },
 	{ name: "서초지사", address: "서울시 서초구 양재동 215", tel: "1555-4829" },
-	{ name: "마포지사", address: "서울시 마포구 서교동 395-131", tel: "1600-4805" },
+	{ name: "애드리절트", address: "서울시 마포구 서교동 395-131", tel: "1600-4805" },
 	{ name: "이룸지사", address: "서울시 강서구 마곡동 797-14", tel: "0507-1419-8037" },
 	{ name: "중부지사", address: "대전 서구 둔산동 1091", tel: "1522-4805" },
 	{ name: "부산지사", address: "부산 남구 대연동 72-7", tel: "0507-1317-5916" },
@@ -189,7 +189,7 @@ export const AboutPage = () => {
 					{/* LEFT — sticky */}
 					<div>
 						<div className="md:sticky md:top-[30vh]">
-							<p className="mb-5 font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
+							<p className="mb-5 font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 								Introduce ADRESULT
 							</p>
 							<p className="break-keep text-slate-600 text-xl leading-relaxed md:text-2xl">
@@ -197,10 +197,10 @@ export const AboutPage = () => {
 								<br />
 								멈추지 않고 성장하며, 당신의 성공을 함께 만들어가는
 							</p>
-							<p className="mt-4 break-keep font-extrabold text-4xl text-[#0a0a0a] leading-tight tracking-tight md:text-5xl">
+							<p className="mt-4 break-keep font-extrabold text-4xl text-[#111111] leading-tight tracking-tight md:text-5xl">
 								결과로 말하는 광고회사
 								<br />
-								<span className="text-[#ef3c39]">애드리절트</span>입니다.
+								<span className="text-[#C8102E]">애드리절트</span>입니다.
 							</p>
 						</div>
 					</div>
@@ -223,7 +223,7 @@ export const AboutPage = () => {
 									<p
 										className={cn(
 											"mt-5 font-extrabold text-3xl tracking-tight md:text-4xl",
-											b.red ? "text-[#ef3c39]" : "text-[#0a0a0a]",
+											b.red ? "text-[#C8102E]" : "text-[#111111]",
 										)}
 									>
 										{b.en}
@@ -243,11 +243,11 @@ export const AboutPage = () => {
 			<section className="bg-white px-4 pb-28 md:px-8 md:pb-32">
 				<div className="mx-auto max-w-[1600px]">
 					<Reveal>
-						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
+						<p className="mb-4 text-center font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 							ADRESULT Marketing Know-how
 						</p>
-						<h2 className="text-center font-extrabold text-3xl text-[#0a0a0a] leading-tight tracking-tight md:text-5xl">
-							전국에서 가장 탁월한 <span className="text-[#ef3c39]">병원마케팅 노하우</span>
+						<h2 className="text-center font-extrabold text-3xl text-[#111111] leading-tight tracking-tight md:text-5xl">
+							전국에서 가장 탁월한 <span className="text-[#C8102E]">병원마케팅 노하우</span>
 						</h2>
 					</Reveal>
 
@@ -280,11 +280,11 @@ export const AboutPage = () => {
 			<section className="border-slate-100 border-t bg-white px-4 py-24 md:px-8 md:py-32">
 				<div className="mx-auto max-w-[1600px]">
 					<Reveal>
-						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
+						<p className="mb-4 text-center font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 							Customized Strategy
 						</p>
-						<h2 className="text-center font-extrabold text-3xl text-[#0a0a0a] leading-tight tracking-tight md:text-5xl">
-							<span className="text-[#ef3c39]">병원마케팅 맞춤 전략</span>으로
+						<h2 className="text-center font-extrabold text-3xl text-[#111111] leading-tight tracking-tight md:text-5xl">
+							<span className="text-[#C8102E]">병원마케팅 맞춤 전략</span>으로
 							<br />
 							리스크 최소화 및 목표 달성 극대화
 						</h2>
@@ -297,14 +297,14 @@ export const AboutPage = () => {
 									delay={i * 0.1}
 									className="flex w-full max-w-xs flex-col items-center text-center lg:w-80"
 								>
-									<div className="group flex h-32 w-32 items-center justify-center rounded-full border-2 border-[#e11d29] bg-[#e11d29] transition-colors duration-300 hover:bg-white md:h-40 md:w-40">
+									<div className="group flex h-32 w-32 items-center justify-center rounded-full border-2 border-[#C8102E] bg-[#C8102E] transition-colors duration-300 hover:bg-white md:h-40 md:w-40">
 										<step.Icon
-											className="h-14 w-14 text-white transition-colors duration-300 group-hover:text-[#e11d29] md:h-16 md:w-16"
+											className="h-14 w-14 text-white transition-colors duration-300 group-hover:text-[#C8102E] md:h-16 md:w-16"
 											strokeWidth={1.75}
 											aria-hidden="true"
 										/>
 									</div>
-									<p className="mt-6 whitespace-nowrap font-bold text-[#e11d29] text-xl md:text-2xl">
+									<p className="mt-6 whitespace-nowrap font-bold text-[#C8102E] text-xl md:text-2xl">
 										{step.no}. {step.title}
 									</p>
 									<p className="mt-3 break-keep text-base text-slate-500 leading-relaxed md:text-lg">
@@ -315,7 +315,7 @@ export const AboutPage = () => {
 								</Reveal>
 								{i < STRATEGY_STEPS.length - 1 && (
 									<ChevronRight
-										className="hidden h-9 w-9 shrink-0 text-[#e11d29] lg:mt-16 lg:block"
+										className="hidden h-9 w-9 shrink-0 text-[#C8102E] lg:mt-16 lg:block"
 										strokeWidth={3}
 										aria-hidden="true"
 									/>
@@ -330,10 +330,10 @@ export const AboutPage = () => {
 			<section className="border-slate-100 border-t bg-white py-16 md:py-28">
 				<div className="mx-auto max-w-[1600px] px-4 md:px-8">
 					<Reveal>
-						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
+						<p className="mb-4 text-center font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 							Customer Review
 						</p>
-						<h2 className="text-center font-extrabold text-3xl text-[#0a0a0a] leading-tight tracking-tight md:text-5xl">
+						<h2 className="text-center font-extrabold text-3xl text-[#111111] leading-tight tracking-tight md:text-5xl">
 							애드리절트의 병원마케팅 실력
 							<br />
 							수많은 후기가 검증합니다.
@@ -349,10 +349,10 @@ export const AboutPage = () => {
 			<section className="border-slate-100 border-t bg-white pt-24 pb-16 md:pt-28 md:pb-20">
 				<div className="mx-auto max-w-[1600px] px-4 md:px-8">
 					<Reveal>
-						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
+						<p className="mb-4 text-center font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 							Floor Information
 						</p>
-						<h2 className="text-center font-extrabold text-3xl text-[#0a0a0a] leading-tight tracking-tight md:text-5xl">
+						<h2 className="text-center font-extrabold text-3xl text-[#111111] leading-tight tracking-tight md:text-5xl">
 							애드리절트 층별 안내
 						</h2>
 					</Reveal>
@@ -376,14 +376,14 @@ export const AboutPage = () => {
 								style={{ top: f.top, left: "27%", right: "14%" }}
 							>
 								<div className="flex items-end justify-end gap-2 pr-1 pb-1.5">
-									<span className="font-extrabold text-[#ef3c39] text-xl lg:text-2xl">{f.no}</span>
-									<span className="font-semibold text-[#0a0a0a] text-base lg:text-xl">
+									<span className="font-extrabold text-[#C8102E] text-xl lg:text-2xl">{f.no}</span>
+									<span className="font-semibold text-[#111111] text-base lg:text-xl">
 										{f.desc}
 									</span>
 								</div>
 								<div className="flex items-center">
-									<span className="h-3 w-3 shrink-0 rounded-full bg-[#ef3c39]" />
-									<span className="h-0.5 flex-1 bg-[#ef3c39]" />
+									<span className="h-3 w-3 shrink-0 rounded-full bg-[#C8102E]" />
+									<span className="h-0.5 flex-1 bg-[#C8102E]" />
 								</div>
 							</div>
 						))}
@@ -394,8 +394,8 @@ export const AboutPage = () => {
 				<div className="mx-auto mt-8 max-w-md space-y-3 px-6 md:hidden">
 					{FLOORS.map((f) => (
 						<div key={f.no} className="flex items-baseline gap-2 border-slate-100 border-b pb-2">
-							<span className="font-extrabold text-[#ef3c39]">{f.no}</span>
-							<span className="break-keep font-medium text-[#0a0a0a]">{f.desc}</span>
+							<span className="font-extrabold text-[#C8102E]">{f.no}</span>
+							<span className="break-keep font-medium text-[#111111]">{f.desc}</span>
 						</div>
 					))}
 				</div>
@@ -405,10 +405,10 @@ export const AboutPage = () => {
 			<section className="border-slate-100 border-t bg-white px-4 py-24 md:px-8 md:py-28">
 				<div className="mx-auto max-w-[1600px]">
 					<Reveal>
-						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
+						<p className="mb-4 text-center font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 							Branch-Office Information
 						</p>
-						<h2 className="text-center font-extrabold text-3xl text-[#0a0a0a] leading-tight tracking-tight md:text-5xl">
+						<h2 className="text-center font-extrabold text-3xl text-[#111111] leading-tight tracking-tight md:text-5xl">
 							애드리절트 지사안내
 						</h2>
 					</Reveal>
@@ -425,11 +425,11 @@ export const AboutPage = () => {
 											height={28}
 											className="h-7 w-7 object-contain"
 										/>
-										<p className="font-bold text-[#0a0a0a] text-lg">{b.name}</p>
+										<p className="font-bold text-[#111111] text-lg">{b.name}</p>
 									</div>
 									<p className="mt-6 break-keep text-slate-500 text-sm md:text-base">{b.address}</p>
 									<p className="mt-2 text-slate-500 text-sm md:text-base">
-										Tel : <span className="font-bold text-[#0a0a0a]">{b.tel}</span>
+										Tel : <span className="font-bold text-[#111111]">{b.tel}</span>
 									</p>
 								</div>
 							</Reveal>
@@ -442,8 +442,8 @@ export const AboutPage = () => {
 			<section className="border-slate-100 border-t bg-white px-4 py-20 md:px-8 md:py-24">
 				<div className="mx-auto max-w-[1600px]">
 					<Reveal>
-						<p className="font-bold text-[#ef3c39] text-lg">참고해주세요!</p>
-						<p className="mt-8 break-keep font-bold text-[#0a0a0a] text-base md:text-lg">
+						<p className="font-bold text-[#C8102E] text-lg">참고해주세요!</p>
+						<p className="mt-8 break-keep font-bold text-[#111111] text-base md:text-lg">
 							- 애드리절트는 무조건 원장님과의 직접 만나 충분히 병원마케팅 상담 후 계약합니다.
 						</p>
 						<p className="mt-3 break-keep text-slate-500 text-sm leading-relaxed md:text-base">
@@ -452,7 +452,7 @@ export const AboutPage = () => {
 							병원마케팅 업체인지, 안정적 규모를 가진 곳인지도 꼭 확인하십시오. 그 한번의 검증을
 							게을리하여 몇달 동안 괴로워하며 피해를 보는 원장님들이 참 많습니다.
 						</p>
-						<p className="mt-8 break-keep font-bold text-[#0a0a0a] text-base md:text-lg">
+						<p className="mt-8 break-keep font-bold text-[#111111] text-base md:text-lg">
 							- 애드리절트의 병원마케팅은 저가형 상품이 아닌, 효율성 높은 상품입니다. 단순히 저렴한
 							상품을 찾으신다면 문의를 남기지 말아주십시오.
 						</p>

@@ -119,10 +119,10 @@ export const HistoryPage = () => {
 			<section className="bg-white px-4 py-24 md:px-8 md:py-32">
 				<div className="mx-auto max-w-[1600px]">
 					<Reveal>
-						<p className="mb-4 text-center font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
+						<p className="mb-4 text-center font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 							Excellent Company
 						</p>
-						<h2 className="text-center font-extrabold text-3xl text-[#0a0a0a] leading-tight tracking-tight md:text-5xl">
+						<h2 className="text-center font-extrabold text-3xl text-[#111111] leading-tight tracking-tight md:text-5xl">
 							대외적으로 인정받은 우수기업
 						</h2>
 					</Reveal>
@@ -142,7 +142,7 @@ export const HistoryPage = () => {
 						<div className="space-y-7">
 							{AWARDS_TIMELINE.map((t, i) => (
 								<Reveal key={t.year} direction="right" delay={i * 0.1} className="flex gap-6">
-									<span className="w-16 shrink-0 font-extrabold text-[#0a0a0a] text-xl md:text-2xl">
+									<span className="w-16 shrink-0 font-extrabold text-[#111111] text-xl md:text-2xl">
 										{t.year}
 									</span>
 									<div className="space-y-1.5 pt-0.5">
@@ -163,7 +163,7 @@ export const HistoryPage = () => {
 			</section>
 
 			{/* ADRESULT HISTORY — 풀폭 연혁 타임라인 */}
-			<section className="w-full bg-[#e11d29] px-4 py-24 md:px-8 md:py-32">
+			<section className="w-full bg-[#C8102E] px-4 py-24 md:px-8 md:py-32">
 				<Reveal>
 					<p className="mb-4 text-center font-bold text-sm text-white/80 uppercase tracking-[0.25em] md:text-base">
 						ADRESULT History
@@ -189,7 +189,7 @@ export const HistoryPage = () => {
 								>
 									{/* 노드 */}
 									<span
-										className="absolute top-1.5 left-6 z-10 h-4 w-4 -translate-x-1/2 rounded-full border-2 border-[#e11d29] bg-white shadow-[0_0_0_5px_rgba(255,255,255,0.25)] md:left-1/2"
+										className="absolute top-1.5 left-6 z-10 h-4 w-4 -translate-x-1/2 rounded-full border-2 border-[#C8102E] bg-white shadow-[0_0_0_5px_rgba(255,255,255,0.25)] md:left-1/2"
 										aria-hidden="true"
 									/>
 									{/* 커넥터 */}

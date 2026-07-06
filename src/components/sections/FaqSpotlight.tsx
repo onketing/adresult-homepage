@@ -1,27 +1,47 @@
 "use client";
 
-import { BarChart3, ClipboardList, LogOut, ShieldCheck, Target, Wallet } from "lucide-react";
+import {
+	AtSign,
+	BarChart3,
+	Clapperboard,
+	ClipboardList,
+	LogOut,
+	MapPin,
+	MessagesSquare,
+	PenLine,
+	ShieldCheck,
+	Sparkles,
+	Target,
+	Wallet,
+} from "lucide-react";
 import type { ComponentType, SVGProps } from "react";
 import { Reveal } from "@/components/shared/Reveal";
-import { FAQ_ITEMS } from "@/data/faq";
+import { FAQ_CATEGORY_SLUGS, FAQ_ITEMS } from "@/data/faq";
 import type { FaqCategory } from "@/types";
 
 type IconType = ComponentType<SVGProps<SVGSVGElement>>;
 
-const CATEGORY_MAP: Record<FaqCategory, { slug: string; Icon: IconType }> = {
-	비용: { slug: "cost", Icon: Wallet },
-	"진행 안내": { slug: "guide", Icon: ClipboardList },
-	광고규정: { slug: "regulation", Icon: ShieldCheck },
-	운영보고: { slug: "operation", Icon: BarChart3 },
-	성과: { slug: "results", Icon: Target },
-	해지환불: { slug: "exit", Icon: LogOut },
+const CATEGORY_ICONS: Record<FaqCategory, IconType> = {
+	비용: Wallet,
+	"진행 안내": ClipboardList,
+	광고규정: ShieldCheck,
+	운영보고: BarChart3,
+	성과: Target,
+	해지환불: LogOut,
+	"AIO 마케팅": Sparkles,
+	"숏폼 마케팅": Clapperboard,
+	"스레드 마케팅": AtSign,
+	카페바이럴: MessagesSquare,
+	"블로그 마케팅": PenLine,
+	"상담 안내": MapPin,
 };
 
 const SPOTLIGHT_ITEMS = FAQ_ITEMS.filter((item) => item.featured)
 	.slice(0, 5)
 	.map((item) => ({
 		...item,
-		...CATEGORY_MAP[item.category],
+		slug: FAQ_CATEGORY_SLUGS[item.category],
+		Icon: CATEGORY_ICONS[item.category],
 	}));
 
 export const FaqSpotlight = () => {
@@ -47,9 +67,9 @@ export const FaqSpotlight = () => {
 							<Reveal key={item.question} delay={i * 0.08}>
 								<a
 									href={`#faq-${item.slug}`}
-									className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-[#ef3c39]/40 hover:shadow-[0_8px_24px_rgba(239,60,57,0.08)]"
+									className="group 16, 46,0.08)] flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-[#C8102E]/40 hover:shadow-[0_8px_24px_rgba(200,"
 								>
-									<p className="mb-3 flex items-center gap-1.5 font-mono text-[#ef3c39] text-xs uppercase tracking-[0.2em]">
+									<p className="mb-3 flex items-center gap-1.5 font-mono text-[#C8102E] text-xs uppercase tracking-[0.2em]">
 										<Icon className="h-3.5 w-3.5" aria-hidden="true" />
 										{item.category}
 									</p>
@@ -59,7 +79,7 @@ export const FaqSpotlight = () => {
 									<p className="line-clamp-3 break-keep text-slate-600 text-sm leading-relaxed">
 										{item.answer}
 									</p>
-									<p className="mt-5 text-right font-semibold text-[#ef3c39] text-sm">
+									<p className="mt-5 text-right font-semibold text-[#C8102E] text-sm">
 										전체 보기{" "}
 										<span className="inline-block transition-transform duration-200 group-hover:translate-x-1">
 											→

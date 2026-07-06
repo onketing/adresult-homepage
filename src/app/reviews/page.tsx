@@ -29,12 +29,12 @@ export const ReviewsPage = () => {
 			/>
 			<section className="bg-white px-4 pt-28 pb-24 md:px-8 md:pt-36 md:pb-28">
 				<div className="mx-auto max-w-7xl">
-					<p className="font-bold text-[#e11d29] text-sm uppercase tracking-[0.25em] md:text-base">
+					<p className="font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 						Customer Reviews
 					</p>
 					<p className="mt-4 text-lg text-slate-600 md:text-xl">애드리절트 고객후기입니다.</p>
-					<h1 className="mt-1 break-keep font-extrabold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
-						결과로 말하는 <span className="text-[#e11d29]">애드리절트</span>
+					<h1 className="mt-1 break-keep font-extrabold text-3xl text-[#111111] tracking-tight md:text-5xl">
+						결과로 말하는 <span className="text-[#C8102E]">애드리절트</span>
 					</h1>
 
 					<div className="mt-14 md:mt-16">

@@ -1,0 +1,17 @@
+{
+	"version": "0.0.1",
+	"configurations": [
+		{
+			"name": "adresult-prod",
+			"runtimeExecutable": "pnpm",
+			"runtimeArgs": ["start"],
+			"port": 3000
+		},
+		{
+			"name": "adresult-prod-3100",
+			"runtimeExecutable": "pnpm",
+			"runtimeArgs": ["start", "-p", "3100"],
+			"port": 3100
+		}
+	]
+}

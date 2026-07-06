@@ -151,9 +151,9 @@ const PALETTE = [
 
 const BLOCK_STYLES = [
 	{ level: 0, label: "본문", className: "text-sm text-slate-700" },
-	{ level: 1, label: "제목 1", className: "font-extrabold text-lg text-[#0a0a0a]" },
-	{ level: 2, label: "제목 2", className: "font-bold text-base text-[#0a0a0a]" },
-	{ level: 3, label: "제목 3", className: "font-bold text-sm text-[#0a0a0a]" },
+	{ level: 1, label: "제목 1", className: "font-extrabold text-lg text-[#111111]" },
+	{ level: 2, label: "제목 2", className: "font-bold text-base text-[#111111]" },
+	{ level: 3, label: "제목 3", className: "font-bold text-sm text-[#111111]" },
 	{ level: 4, label: "제목 4", className: "font-semibold text-sm text-slate-800" },
 ] as const;
 
@@ -207,7 +207,7 @@ const ToolbarButton = ({ onClick, active, label, children }: ToolbarButtonProps)
 		aria-pressed={active}
 		className={cn(
 			"flex h-8 min-w-8 items-center justify-center rounded-md px-1.5 font-semibold text-[13px] transition-colors hover:bg-slate-100",
-			active ? "bg-[#fef2f2] text-[#e11d29]" : "text-slate-600",
+			active ? "bg-[#fef2f2] text-[#C8102E]" : "text-slate-600",
 		)}
 	>
 		{children}
@@ -387,7 +387,7 @@ const Toolbar = ({ editor, onImageFile }: ToolbarProps) => {
 						if (!Number.isNaN(n)) applyFontSize(n);
 					}}
 					aria-label="글자 크기(px)"
-					className="h-8 w-11 rounded-md border border-slate-200 text-center text-slate-700 text-sm outline-none focus:border-[#e11d29]"
+					className="h-8 w-11 rounded-md border border-slate-200 text-center text-slate-700 text-sm outline-none focus:border-[#C8102E]"
 					inputMode="numeric"
 				/>
 				<ToolbarButton onClick={() => applyFontSize(fontSize + 1)} label="글자 크게">
@@ -446,7 +446,7 @@ const Toolbar = ({ editor, onImageFile }: ToolbarProps) => {
 					<span className="font-bold text-[13px] text-slate-700 leading-none">가</span>
 					<span
 						className="mt-0.5 h-1 w-4 rounded"
-						style={{ backgroundColor: currentColor ?? "#0a0a0a" }}
+						style={{ backgroundColor: currentColor ?? "#111111" }}
 					/>
 				</button>
 				{menu === "color" && (
@@ -680,9 +680,9 @@ export const CaseEditor = () => {
 							value={title}
 							onChange={(e) => setTitle(e.target.value)}
 							placeholder="제목을 입력하세요"
-							className="w-full break-keep border-0 font-extrabold text-2xl text-[#0a0a0a] tracking-tight outline-none placeholder:text-slate-300 md:text-3xl"
+							className="w-full break-keep border-0 font-extrabold text-2xl text-[#111111] tracking-tight outline-none placeholder:text-slate-300 md:text-3xl"
 						/>
-						<div className="mt-3 h-1 w-12 rounded-full bg-[#e11d29]" />
+						<div className="mt-3 h-1 w-12 rounded-full bg-[#C8102E]" />
 
 						<div className="mt-4 flex flex-wrap items-center gap-2">
 							{tags.map((tag) => (
@@ -690,10 +690,10 @@ export const CaseEditor = () => {
 									key={tag}
 									type="button"
 									onClick={() => removeTag(tag)}
-									className="group inline-flex items-center gap-1 rounded-full bg-[#fef2f2] px-3 py-1 font-medium text-[#e11d29] text-sm transition-colors hover:bg-[#fde0e0]"
+									className="group inline-flex items-center gap-1 rounded-full bg-[#fef2f2] px-3 py-1 font-medium text-[#C8102E] text-sm transition-colors hover:bg-[#fde0e0]"
 								>
 									{tag}
-									<span className="text-[#e11d29]/60 group-hover:text-[#e11d29]">×</span>
+									<span className="text-[#C8102E]/60 group-hover:text-[#C8102E]">×</span>
 								</button>
 							))}
 							<input
@@ -724,7 +724,7 @@ export const CaseEditor = () => {
 				{/* RIGHT — 미리보기 */}
 				<div className="hidden min-h-0 flex-1 overflow-y-auto bg-slate-50 px-6 py-8 md:px-10 lg:block lg:w-1/2">
 					<div className="mx-auto max-w-2xl">
-						<h1 className="break-keep font-extrabold text-[#0a0a0a] text-xl leading-snug tracking-tight md:text-2xl">
+						<h1 className="break-keep font-extrabold text-[#111111] text-xl leading-snug tracking-tight md:text-2xl">
 							{title || "제목을 입력하세요"}
 						</h1>
 						{tags.length > 0 && (
@@ -732,7 +732,7 @@ export const CaseEditor = () => {
 								{tags.map((tag) => (
 									<span
 										key={tag}
-										className="rounded-full bg-[#fef2f2] px-3 py-1 font-medium text-[#e11d29] text-sm"
+										className="rounded-full bg-[#fef2f2] px-3 py-1 font-medium text-[#C8102E] text-sm"
 									>
 										{tag}
 									</span>
@@ -751,7 +751,7 @@ export const CaseEditor = () => {
 				<button
 					type="button"
 					onClick={() => router.push("/cases")}
-					className="inline-flex items-center gap-1.5 font-medium text-slate-600 text-sm transition-colors hover:text-[#0a0a0a]"
+					className="inline-flex items-center gap-1.5 font-medium text-slate-600 text-sm transition-colors hover:text-[#111111]"
 				>
 					<ArrowLeft className="h-4 w-4" />
 					나가기
@@ -762,7 +762,7 @@ export const CaseEditor = () => {
 					<button
 						type="button"
 						onClick={saveDraft}
-						className="font-medium text-slate-600 text-sm transition-colors hover:text-[#0a0a0a]"
+						className="font-medium text-slate-600 text-sm transition-colors hover:text-[#111111]"
 					>
 						임시저장
 					</button>

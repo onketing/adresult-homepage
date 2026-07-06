@@ -2,6 +2,7 @@
 
 import { Volume2, VolumeX } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { preload } from "react-dom";
 
@@ -82,7 +83,7 @@ export const Hero = () => {
 	};
 
 	return (
-		<section className="relative w-full overflow-hidden bg-[#0b1220] pt-16 md:flex md:min-h-screen md:items-center md:justify-center md:pt-0">
+		<section className="relative w-full overflow-hidden bg-[#0B0B0B] pt-16 md:flex md:min-h-screen md:items-center md:justify-center md:pt-0">
 			{/* 모바일: 헤더 아래 16:9 블록 / 데스크톱: 풀스크린 풀블리드 */}
 			<div className="relative aspect-video w-full md:absolute md:inset-0 md:aspect-auto">
 				<video
@@ -107,11 +108,74 @@ export const Hero = () => {
 
 				{/* 좌측 중앙 텍스트 오버레이 */}
 				<div className="pointer-events-none absolute inset-0 z-20 flex items-center">
-					<h1 className="px-5 font-extrabold text-2xl text-white leading-[1.25] tracking-tight [text-shadow:0_2px_18px_rgba(0,0,0,0.5)] sm:px-8 sm:text-4xl md:px-16 md:text-5xl lg:px-24 lg:text-6xl">
-						결과로 말하는 광고회사
-						<br />
-						애드리절트 ADRESULT
-					</h1>
+					<div className="px-5 sm:px-8 md:px-16 lg:px-24">
+						<p className="mb-4 hidden font-mono text-white/60 text-xs tracking-[0.16em] [text-shadow:0_2px_12px_rgba(0,0,0,0.6)] md:block">
+							ADRESULT MAPO — 본사 직영
+						</p>
+						<h1 className="font-extrabold text-2xl text-white leading-[1.2] tracking-[-0.02em] [text-shadow:0_2px_18px_rgba(0,0,0,0.5)] sm:text-4xl md:text-5xl lg:text-6xl">
+							결과로 말하는 회사
+							<br />
+							애드리절트
+						</h1>
+						<p className="mt-4 hidden max-w-xl text-base text-white/85 leading-[1.8] [text-shadow:0_2px_12px_rgba(0,0,0,0.6)] md:block md:text-lg">
+							마포지사 — 본사의 병원마케팅 시스템으로,
+							<br />
+							병원 상황에 맞는 채널 조합을 설계합니다.
+						</p>
+						<div className="pointer-events-auto mt-6 hidden flex-wrap gap-3 md:flex">
+							<Link
+								href="/contact"
+								className="whitespace-nowrap bg-[#C8102E] px-7 py-3.5 font-bold text-[15px] text-white transition-colors hover:bg-[#A50D26]"
+							>
+								병원 마케팅 진단받기
+							</Link>
+							<Link
+								href="/#products"
+								className="whitespace-nowrap border border-white/40 bg-black/20 px-7 py-3.5 font-semibold text-[15px] text-white backdrop-blur-sm transition-colors hover:border-white hover:bg-black/40"
+							>
+								우리 병원에 맞는 상품 보기
+							</Link>
+							<Link
+								href="/cases"
+								className="whitespace-nowrap border border-white/40 bg-black/20 px-7 py-3.5 font-semibold text-[15px] text-white backdrop-blur-sm transition-colors hover:border-white hover:bg-black/40"
+							>
+								성공사례 보기
+							</Link>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{/* 모바일 전용 서브카피 + CTA (영상 아래) */}
+			<div className="relative z-20 px-5 pt-6 pb-8 md:hidden">
+				<p className="break-keep text-sm text-white/80 leading-[1.8]">
+					마포지사 — 본사의 병원마케팅 시스템으로, 병원 상황에 맞는{" "}
+					<strong className="font-bold text-white">채널 조합</strong>을 설계합니다.
+				</p>
+				<p className="mt-2.5 font-semibold text-white/70 text-xs">
+					우리 병원에 지금 필요한 마케팅만 먼저 진단받아보세요.
+				</p>
+				<div className="mt-5 flex flex-col gap-2.5">
+					<Link
+						href="/contact"
+						className="bg-[#C8102E] px-6 py-3.5 text-center font-bold text-[15px] text-white transition-colors hover:bg-[#A50D26]"
+					>
+						병원 마케팅 진단받기
+					</Link>
+					<div className="grid grid-cols-2 gap-2.5">
+						<Link
+							href="/#products"
+							className="border border-white/30 px-4 py-3 text-center font-semibold text-sm text-white"
+						>
+							맞는 상품 보기
+						</Link>
+						<Link
+							href="/cases"
+							className="border border-white/30 px-4 py-3 text-center font-semibold text-sm text-white"
+						>
+							성공사례 보기
+						</Link>
+					</div>
 				</div>
 			</div>
 

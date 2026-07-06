@@ -85,8 +85,8 @@ const jsonLd = {
 	"@id": `${siteConfig.url}/#organization`,
 	name: siteConfig.nameKo,
 	legalName: "애드리절트",
-	alternateName: ["ADRESULT", "adresult", "애드리절트"],
-	slogan: "결과로 말하는 광고회사",
+	alternateName: ["ADRESULT", "adresult"],
+	slogan: "병원 상황에 맞게 설계하는 병원마케팅 회사",
 	description: siteConfig.description,
 	url: siteConfig.url,
 	logo: {
@@ -99,13 +99,32 @@ const jsonLd = {
 	...(siteConfig.contact.tel !== DUMMY_TEL && { telephone: siteConfig.contact.tel }),
 	faxNumber: siteConfig.contact.fax,
 	email: siteConfig.contact.email,
+	contactPoint: {
+		"@type": "ContactPoint",
+		telephone: siteConfig.contact.tel,
+		contactType: "customer service",
+		areaServed: "KR",
+		availableLanguage: "Korean",
+	},
 	founder: { "@type": "Person", name: siteConfig.contact.owner },
 	address: {
 		"@type": "PostalAddress",
-		streetAddress: siteConfig.contact.address,
-		addressLocality: "강남구",
+		streetAddress: siteConfig.contact.branchAddress,
+		addressLocality: "마포구",
 		addressRegion: "서울특별시",
 		addressCountry: "KR",
+	},
+	parentOrganization: {
+		"@type": "Organization",
+		name: "애드리절트 본사",
+		url: "https://adresult.kr",
+		address: {
+			"@type": "PostalAddress",
+			streetAddress: siteConfig.contact.address,
+			addressLocality: "강남구",
+			addressRegion: "서울특별시",
+			addressCountry: "KR",
+		},
 	},
 	areaServed: { "@type": "Country", name: "대한민국" },
 	serviceType: [
@@ -146,16 +165,28 @@ const jsonLd = {
 				"@type": "Offer",
 				itemOffered: {
 					"@type": "Service",
+					"@id": `${siteConfig.url}/services/aio#service`,
 					name: "병원 AIO마케팅",
 					url: `${siteConfig.url}/services/aio`,
+					description:
+						"ChatGPT·Gemini·구글 AI 검색에서 병원이 추천되도록 콘텐츠를 구조화하는 AI 검색 노출(GEO) 서비스",
+					serviceType: "병원 AIO마케팅·AI 검색 노출",
+					areaServed: { "@type": "Country", name: "대한민국" },
+					provider: { "@id": `${siteConfig.url}/#organization` },
 				},
 			},
 			{
 				"@type": "Offer",
 				itemOffered: {
 					"@type": "Service",
+					"@id": `${siteConfig.url}/services/shortform#service`,
 					name: "병원 숏폼·영상 마케팅",
 					url: `${siteConfig.url}/services/shortform`,
+					description:
+						"조회수보다 상담 전환을 고려해 기획·촬영·편집·업로드까지 운영하는 병원 숏폼·릴스·쇼츠 마케팅 서비스",
+					serviceType: "병원 숏폼·릴스·쇼츠 마케팅",
+					areaServed: { "@type": "Country", name: "대한민국" },
+					provider: { "@id": `${siteConfig.url}/#organization` },
 				},
 			},
 		],
@@ -170,7 +201,16 @@ const websiteSchema = {
 	name: "애드리절트",
 	alternateName: "ADRESULT",
 	description: siteConfig.description,
+	inLanguage: "ko-KR",
 	publisher: { "@id": `${siteConfig.url}/#organization` },
+	potentialAction: {
+		"@type": "SearchAction",
+		target: {
+			"@type": "EntryPoint",
+			urlTemplate: `${siteConfig.url}/insights?q={search_term_string}`,
+		},
+		"query-input": "required name=search_term_string",
+	},
 };
 
 export const RootLayout = ({ children }: { children: React.ReactNode }) => {

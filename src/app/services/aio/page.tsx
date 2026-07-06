@@ -186,27 +186,27 @@ export const AioPage = () => {
 			<section className="bg-white px-4 pt-28 pb-20 md:px-8 md:pt-36 md:pb-28">
 				<div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2 md:gap-16">
 					<Reveal direction="left">
-						<p className="mb-5 font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
+						<p className="mb-5 font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 							AIO 마케팅
 						</p>
-						<p className="font-semibold text-2xl text-[#0a0a0a] md:text-3xl">
+						<p className="font-semibold text-2xl text-[#111111] md:text-3xl">
 							우리 병원이 AI에 안뜨나요?
 						</p>
-						<h1 className="mt-2 font-extrabold text-5xl text-[#e11d29] leading-tight tracking-tight md:text-6xl">
+						<h1 className="mt-2 font-extrabold text-5xl text-[#C8102E] leading-tight tracking-tight md:text-6xl">
 							AIO마케팅이면 해결!
 						</h1>
 
 						<p className="mt-12 text-lg text-slate-500 md:text-xl">
 							“AI가 우리 병원을 추천 안해줘요. 옆 병원은 잘 나오는데..”
 						</p>
-						<h2 className="mt-4 break-keep font-extrabold text-2xl text-[#0a0a0a] md:text-3xl">
+						<h2 className="mt-4 break-keep font-extrabold text-2xl text-[#111111] md:text-3xl">
 							AI가 우리 병원을 추천하게 하려면?
 						</h2>
 						<p className="mt-5 break-keep text-base text-slate-600 leading-relaxed md:text-lg">
-							환자의 검색이 AI로 바뀌고 있습니다. AIO(AI Optimization)마케팅은 이제 병원마케팅에
-							필수입니다. 고민하면 늦습니다.
+							검색되는 병원에서, 추천되는 병원으로 — 환자의 검색이 AI로 바뀌고 있습니다. AIO(AI
+							Optimization)마케팅은 이제 병원마케팅에 필수입니다. 고민하면 늦습니다.
 						</p>
-						<p className="mt-3 break-keep font-bold text-[#0a0a0a] text-base leading-relaxed md:text-lg">
+						<p className="mt-3 break-keep font-bold text-[#111111] text-base leading-relaxed md:text-lg">
 							지금 바로, AI가 우리 병원을 추천할 수 있게 준비하세요.
 						</p>
 					</Reveal>
@@ -227,11 +227,11 @@ export const AioPage = () => {
 			{/* 2. 대표 사례 선언 밴드 */}
 			<section className="w-full bg-slate-50 px-4 py-20 text-center md:py-24">
 				<Reveal>
-					<h2 className="break-keep font-extrabold text-3xl text-[#0a0a0a] leading-snug tracking-tight md:text-5xl">
-						AIO마케팅 하면, <span className="text-[#e11d29]">정말 추천 되나</span>요?
+					<h2 className="break-keep font-extrabold text-3xl text-[#111111] leading-snug tracking-tight md:text-5xl">
+						AIO마케팅 하면, <span className="text-[#C8102E]">정말 추천 되나</span>요?
 					</h2>
-					<h2 className="mt-4 break-keep font-extrabold text-3xl text-[#0a0a0a] leading-snug tracking-tight md:text-5xl">
-						<span className="text-[#e11d29]">네, 됩니다.</span> 애드리절트가 대표 사례입니다.
+					<h2 className="mt-4 break-keep font-extrabold text-3xl text-[#111111] leading-snug tracking-tight md:text-5xl">
+						<span className="text-[#C8102E]">네, 됩니다.</span> 애드리절트가 대표 사례입니다.
 					</h2>
 					<div className="mx-auto mt-8 max-w-2xl space-y-1.5 break-keep text-base text-slate-600 md:text-lg">
 						<p>저희도 자사 광고 중 하나로 AIO마케팅을 합니다.</p>
@@ -241,12 +241,12 @@ export const AioPage = () => {
 			</section>
 
 			{/* 3. 세미나 개최 — 레드 풀폭 밴드 */}
-			<section className="w-full bg-[#e11d29] px-4 py-24 text-center md:py-28">
+			<section className="w-full bg-[#C8102E] px-4 py-24 text-center md:py-28">
 				<Reveal>
 					<p className="text-4xl" aria-hidden="true">
 						📢
 					</p>
-					<h2 className="mt-5 break-keep font-extrabold text-2xl text-[#ffe14d] leading-snug md:text-4xl">
+					<h2 className="mt-5 break-keep font-extrabold text-2xl text-[#FFFFFF] leading-snug md:text-4xl">
 						26년 6월 21일(일) 오후 1시~4시
 						<br />
 						AI 병원마케팅 세미나 개최
@@ -268,10 +268,10 @@ export const AioPage = () => {
 			<section className="bg-slate-50 px-4 py-24 text-center md:px-8 md:py-32">
 				<div className="mx-auto max-w-[1400px]">
 					<Reveal>
-						<p className="mb-4 font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
+						<p className="mb-4 font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 							Best Case
 						</p>
-						<h2 className="break-keep font-extrabold text-2xl text-[#0a0a0a] tracking-tight md:text-4xl">
+						<h2 className="break-keep font-extrabold text-2xl text-[#111111] tracking-tight md:text-4xl">
 							AI가 애드리절트를 직접 추천합니다.
 						</h2>
 					</Reveal>
@@ -287,7 +287,7 @@ export const AioPage = () => {
 					</Reveal>
 
 					<Reveal className="mt-24 md:mt-32">
-						<h2 className="break-keep font-extrabold text-[#0a0a0a] text-xl md:text-3xl">
+						<h2 className="break-keep font-extrabold text-[#111111] text-xl md:text-3xl">
 							[AIO마케팅 진행하는 병원 고객사의 AI 노출 사례]
 						</h2>
 						<p className="mt-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-bold text-base md:text-lg">
@@ -323,10 +323,10 @@ export const AioPage = () => {
 			<section className="bg-white px-4 py-24 text-center md:px-8 md:py-32">
 				<div className="mx-auto max-w-6xl">
 					<Reveal>
-						<h2 className="break-keep font-extrabold text-3xl text-[#0a0a0a] leading-snug tracking-tight md:text-5xl">
+						<h2 className="break-keep font-extrabold text-3xl text-[#111111] leading-snug tracking-tight md:text-5xl">
 							AI에서의 추천은
 							<br />
-							<span className="text-[#e11d29]">실제 문의로 연결</span>됩니다.
+							<span className="text-[#C8102E]">실제 문의로 연결</span>됩니다.
 						</h2>
 						<div className="mx-auto mt-6 max-w-2xl space-y-1.5 break-keep text-base text-slate-600 md:text-lg">
 							<p>실제로 AI에서 병원마케팅 회사를 추천받아</p>
@@ -346,14 +346,14 @@ export const AioPage = () => {
 					</Reveal>
 
 					<Reveal className="mt-16">
-						<p className="break-keep font-extrabold text-2xl text-[#0a0a0a] md:text-3xl">
-							나도 애드리절트에 <span className="text-[#e11d29]">병원마케팅 문의</span>하기
+						<p className="break-keep font-extrabold text-2xl text-[#111111] md:text-3xl">
+							나도 애드리절트에 <span className="text-[#C8102E]">병원마케팅 문의</span>하기
 						</p>
 						<a
 							href={`tel:${siteConfig.contact.tel}`}
-							className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#ffe14d] px-6 py-3 font-extrabold text-[#0a0a0a] text-xl transition-transform hover:scale-[1.03] md:text-2xl"
+							className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#FFFFFF] px-6 py-3 font-extrabold text-[#111111] text-xl transition-transform hover:scale-[1.03] md:text-2xl"
 						>
-							<Phone className="h-6 w-6 fill-[#e11d29] text-[#e11d29]" />
+							<Phone className="h-6 w-6 fill-[#C8102E] text-[#C8102E]" />
 							{siteConfig.contact.tel}
 						</a>
 					</Reveal>
@@ -361,7 +361,7 @@ export const AioPage = () => {
 			</section>
 
 			{/* 7. AI검색 유입 증가율 — 레드 풀폭 밴드 */}
-			<section className="w-full bg-[#e11d29] px-4 py-24 text-center md:py-28">
+			<section className="w-full bg-[#C8102E] px-4 py-24 text-center md:py-28">
 				<div className="mx-auto max-w-4xl">
 					<Reveal>
 						<div className="space-y-1.5 break-keep text-base text-white/90 leading-relaxed md:text-lg">
@@ -412,10 +412,10 @@ export const AioPage = () => {
 			<section className="bg-white px-4 py-24 md:px-8 md:py-32">
 				<div className="mx-auto max-w-[1600px]">
 					<Reveal>
-						<h2 className="text-center font-extrabold text-3xl text-[#0a0a0a] leading-snug tracking-tight md:text-5xl">
+						<h2 className="text-center font-extrabold text-3xl text-[#111111] leading-snug tracking-tight md:text-5xl">
 							애드리절트
 							<br />
-							<span className="text-[#e11d29]">AIO마케팅 병원 사례</span>
+							<span className="text-[#C8102E]">AIO마케팅 병원 사례</span>
 						</h2>
 					</Reveal>
 					<div className="mt-14 grid gap-6 md:mt-16 md:grid-cols-3 md:gap-7">
@@ -439,10 +439,10 @@ export const AioPage = () => {
 			<section className="bg-slate-50 px-4 py-24 text-center md:px-8 md:py-32">
 				<div className="mx-auto max-w-[1400px]">
 					<Reveal>
-						<h2 className="break-keep font-extrabold text-3xl text-[#0a0a0a] leading-snug tracking-tight md:text-5xl">
+						<h2 className="break-keep font-extrabold text-3xl text-[#111111] leading-snug tracking-tight md:text-5xl">
 							AIO마케팅을 했더니,
 							<br />
-							<span className="text-[#e11d29]">구글과 네이버 노출은 덤!</span>
+							<span className="text-[#C8102E]">구글과 네이버 노출은 덤!</span>
 						</h2>
 						<div className="mx-auto mt-8 max-w-3xl space-y-1.5 break-keep text-base text-slate-600 leading-relaxed md:text-lg">
 							<p>애드리절트의 AIO마케팅은 SEO(검색엔진 최적화) 기술을 기반으로 설계되었습니다.</p>
@@ -454,7 +454,7 @@ export const AioPage = () => {
 					</Reveal>
 
 					<Reveal className="mt-12 md:mt-14">
-						<p className="font-bold text-[#0a0a0a] text-base md:text-lg">
+						<p className="font-bold text-[#111111] text-base md:text-lg">
 							[애드리절트 구글 키워드 노출 사례]
 						</p>
 					</Reveal>
@@ -474,7 +474,7 @@ export const AioPage = () => {
 					</div>
 
 					<Reveal className="mt-16">
-						<p className="font-bold text-[#0a0a0a] text-base md:text-lg">
+						<p className="font-bold text-[#111111] text-base md:text-lg">
 							[AIO마케팅 진행하는 병원 고객사의 네이버 노출 사례]
 						</p>
 					</Reveal>
@@ -502,16 +502,16 @@ export const AioPage = () => {
 						<p className="text-slate-400 text-sm md:text-base">
 							※구글 및 네이버 노출은 보장이 아닙니다.
 						</p>
-						<h2 className="mt-16 break-keep font-extrabold text-2xl text-[#0a0a0a] leading-snug tracking-tight md:mt-24 md:text-4xl">
-							애드리절트 <span className="text-[#e11d29]">AIO마케팅</span>을 하면
+						<h2 className="mt-16 break-keep font-extrabold text-2xl text-[#111111] leading-snug tracking-tight md:mt-24 md:text-4xl">
+							애드리절트 <span className="text-[#C8102E]">AIO마케팅</span>을 하면
 							<br />
-							<span className="text-[#e11d29]">AI가 우리 병원을 진짜 추천</span>하기 시작합니다.
+							<span className="text-[#C8102E]">AI가 우리 병원을 진짜 추천</span>하기 시작합니다.
 						</h2>
 						<a
 							href={`tel:${siteConfig.contact.tel}`}
-							className="mt-8 inline-flex items-center gap-2 rounded-lg bg-[#ffe14d] px-6 py-3 font-extrabold text-[#0a0a0a] text-lg transition-transform hover:scale-[1.03] md:text-xl"
+							className="mt-8 inline-flex items-center gap-2 rounded-lg bg-[#FFFFFF] px-6 py-3 font-extrabold text-[#111111] text-lg transition-transform hover:scale-[1.03] md:text-xl"
 						>
-							<Phone className="h-5 w-5 fill-[#e11d29] text-[#e11d29]" />
+							<Phone className="h-5 w-5 fill-[#C8102E] text-[#C8102E]" />
 							AIO마케팅 문의 : {siteConfig.contact.tel}
 						</a>
 					</Reveal>
@@ -519,7 +519,7 @@ export const AioPage = () => {
 			</section>
 
 			{/* 11. 혹시.. — 레드 풀폭 밴드 */}
-			<section className="w-full bg-[#e11d29] px-4 py-24 text-center md:py-28">
+			<section className="w-full bg-[#C8102E] px-4 py-24 text-center md:py-28">
 				<Reveal>
 					<h2 className="font-extrabold text-2xl text-white md:text-3xl">혹시..</h2>
 					<div className="mx-auto mt-10 max-w-3xl space-y-2 break-keep text-lg text-white/90 md:text-xl">
@@ -537,10 +537,10 @@ export const AioPage = () => {
 			<section className="bg-white px-4 pt-24 pb-16 text-center md:px-8 md:pt-32 md:pb-20">
 				<div className="mx-auto max-w-5xl">
 					<Reveal>
-						<h2 className="break-keep font-extrabold text-3xl text-[#0a0a0a] leading-snug tracking-tight md:text-5xl">
+						<h2 className="break-keep font-extrabold text-3xl text-[#111111] leading-snug tracking-tight md:text-5xl">
 							업계 최초! AI 분석 프로그램
 							<br />
-							<span className="text-[#e11d29]">AIRANK</span>
+							<span className="text-[#C8102E]">AIRANK</span>
 						</h2>
 						<p className="mt-8 text-slate-500 text-sm md:text-base">▼ 영상으로 확인하세요</p>
 					</Reveal>
@@ -564,7 +564,7 @@ export const AioPage = () => {
 					{AIRANK_CHECKS.map((c) => (
 						<div key={c.img} className="mt-16 first:mt-0 md:mt-24">
 							<Reveal>
-								<h3 className="break-keep text-left font-extrabold text-[#0a0a0a] text-lg md:text-2xl">
+								<h3 className="break-keep text-left font-extrabold text-[#111111] text-lg md:text-2xl">
 									{c.text}
 								</h3>
 							</Reveal>
@@ -589,7 +589,7 @@ export const AioPage = () => {
 			</section>
 
 			{/* 14. AI 마케팅 지금 시작 — 레드 밴드 */}
-			<section className="w-full bg-[#e11d29] px-4 py-24 text-center md:py-28">
+			<section className="w-full bg-[#C8102E] px-4 py-24 text-center md:py-28">
 				<Reveal>
 					<h2 className="break-keep font-extrabold text-3xl text-white leading-relaxed md:text-5xl md:leading-relaxed">
 						AI 마케팅
@@ -605,19 +605,19 @@ export const AioPage = () => {
 			<section className="bg-white px-4 py-24 md:px-8 md:py-32">
 				<div className="mx-auto max-w-[1400px]">
 					<Reveal>
-						<p className="mb-4 font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
+						<p className="mb-4 font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 							ADRESULT Marketing Process
 						</p>
-						<h2 className="font-extrabold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
-							AIO 마케팅 <span className="text-[#e11d29]">진행절차</span>
+						<h2 className="font-extrabold text-3xl text-[#111111] tracking-tight md:text-5xl">
+							AIO 마케팅 <span className="text-[#C8102E]">진행절차</span>
 						</h2>
 					</Reveal>
 					<div className="mt-14 grid gap-6 md:mt-16 md:grid-cols-3 md:gap-7">
 						{AIO_PROCESS.map((s, i) => (
 							<Reveal key={s.no} delay={i * 0.1} direction="up">
 								<div className="h-full rounded-2xl bg-slate-100 p-8 text-left ring-1 ring-black/5 md:p-10">
-									<p className="font-bold text-[#e11d29] text-lg">{s.no}</p>
-									<h3 className="mt-1 font-extrabold text-[#0a0a0a] text-xl md:text-2xl">
+									<p className="font-bold text-[#C8102E] text-lg">{s.no}</p>
+									<h3 className="mt-1 font-extrabold text-[#111111] text-xl md:text-2xl">
 										{s.title}
 									</h3>
 									<p className="mt-4 whitespace-pre-line break-keep text-slate-500 leading-relaxed">
@@ -634,10 +634,10 @@ export const AioPage = () => {
 			<section className="bg-slate-50 px-4 py-24 md:px-8 md:py-28">
 				<div className="mx-auto max-w-3xl">
 					<Reveal>
-						<p className="mb-4 text-center font-bold text-[#e11d29] text-sm uppercase tracking-[0.25em] md:text-base">
+						<p className="mb-4 text-center font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 							FAQ
 						</p>
-						<h2 className="break-keep text-center font-extrabold text-2xl text-[#0a0a0a] leading-snug tracking-tight md:text-4xl">
+						<h2 className="break-keep text-center font-extrabold text-2xl text-[#111111] leading-snug tracking-tight md:text-4xl">
 							AIO 마케팅, 자주 묻는 질문
 						</h2>
 					</Reveal>
@@ -645,7 +645,7 @@ export const AioPage = () => {
 						{AIO_FAQ.map((f, i) => (
 							<Reveal key={f.q} delay={i * 0.06}>
 								<div className="rounded-2xl bg-white p-6 ring-1 ring-black/5 md:p-8">
-									<h3 className="break-keep font-bold text-[#0a0a0a] text-lg md:text-xl">
+									<h3 className="break-keep font-bold text-[#111111] text-lg md:text-xl">
 										Q. {f.q}
 									</h3>
 									<p className="mt-3 break-keep text-slate-600 leading-relaxed">{f.a}</p>

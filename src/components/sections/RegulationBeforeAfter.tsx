@@ -13,7 +13,7 @@ const ArrowPath = ({ inView }: { inView: boolean }) => (
 	>
 		<motion.path
 			d="M2 12 H34 M26 4 L38 12 L26 20"
-			stroke="#ef3c39"
+			stroke="#C8102E"
 			strokeWidth="2.5"
 			strokeLinecap="round"
 			strokeLinejoin="round"
@@ -33,10 +33,10 @@ export const RegulationBeforeAfter = () => {
 		<section className="bg-white px-4 py-14 md:py-28">
 			<div className="mx-auto max-w-5xl">
 				<Reveal className="mb-14 text-center">
-					<p className="mb-3 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]">
+					<p className="mb-3 font-semibold text-[#C8102E] text-sm uppercase tracking-[0.25em]">
 						Before / After
 					</p>
-					<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
+					<h2 className="font-bold text-3xl text-[#111111] tracking-tight md:text-5xl">
 						이런 카피는 <span className="text-rose-500">위반</span>입니다
 					</h2>
 					<p className="mx-auto mt-4 max-w-xl break-keep text-slate-500 leading-relaxed">

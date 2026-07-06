@@ -33,7 +33,7 @@ const CardGrid = ({ items }: { items: CardItem[] }) => (
 						/>
 					</div>
 					<div className="p-5 text-left md:p-6">
-						<h3 className="line-clamp-2 break-keep font-bold text-[#0a0a0a] text-base md:text-lg">
+						<h3 className="line-clamp-2 break-keep font-bold text-[#111111] text-base md:text-lg">
 							{it.title}
 						</h3>
 						<p className="mt-2 line-clamp-3 break-keep text-slate-500 text-sm leading-relaxed">
@@ -98,7 +98,7 @@ const PaginatedCardsInner = ({ items, perPage }: { items: CardItem[]; perPage: n
 						aria-current={p === page ? "page" : undefined}
 						className={cn(
 							"text-base transition-colors",
-							p === page ? "font-bold text-[#0a0a0a]" : "text-slate-400 hover:text-slate-600",
+							p === page ? "font-bold text-[#111111]" : "text-slate-400 hover:text-slate-600",
 						)}
 					>
 						{p}

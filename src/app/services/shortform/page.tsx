@@ -42,6 +42,7 @@ export const metadata: Metadata = {
 		"정형외과쇼츠마케팅",
 		"치과숏폼마케팅",
 		"치과릴스마케팅",
+		"치과쇼츠마케팅",
 		"한의원숏폼마케팅",
 		"한의원릴스마케팅",
 	],
@@ -173,16 +174,19 @@ export const ShortformServicePage = () => {
 			<section className="bg-white px-4 pt-28 pb-20 md:px-8 md:pt-36 md:pb-28">
 				<div className="mx-auto grid max-w-[1400px] items-center gap-12 md:grid-cols-2 md:gap-16">
 					<Reveal direction="left">
-						<p className="mb-5 font-bold text-[#e11d29] text-sm tracking-tight md:text-base">
+						<p className="mb-5 font-bold text-[#C8102E] text-sm tracking-tight md:text-base">
 							숏폼올인원마케팅 끝장숏폼
 						</p>
-						<h1 className="break-keep font-extrabold text-3xl text-[#0a0a0a] leading-tight tracking-tight md:text-5xl">
+						<h1 className="break-keep font-extrabold text-3xl text-[#111111] leading-tight tracking-tight md:text-5xl">
 							조회수에서 끝나는 영상이 아닌
 							<br />
-							<span className="text-[#e11d29]">예약을 만드는</span> 숏폼
+							<span className="text-[#C8102E]">예약을 만드는</span> 숏폼
 						</h1>
-						<h2 className="mt-14 break-keep font-extrabold text-[#0a0a0a] text-xl md:text-2xl">
-							영상은 쌓이는데, <span className="text-[#e11d29]">왜 환자는 늘지 않을까요?</span>
+						<p className="mt-6 break-keep font-semibold text-[#111111] text-base md:text-lg">
+							조회수보다 중요한 건, 병원을 기억하게 만드는 숏폼입니다.
+						</p>
+						<h2 className="mt-10 break-keep font-extrabold text-[#111111] text-xl md:text-2xl">
+							영상은 쌓이는데, <span className="text-[#C8102E]">왜 환자는 늘지 않을까요?</span>
 						</h2>
 						<div className="mt-6 space-y-1 text-base text-slate-500 md:text-lg">
 							{PAIN_QUOTES.map((q) => (
@@ -210,7 +214,7 @@ export const ShortformServicePage = () => {
 			</section>
 
 			{/* 2. 문제는 영상만 — 레드 밴드 */}
-			<section className="w-full bg-[#e11d29] px-4 py-24 text-center md:py-28">
+			<section className="w-full bg-[#C8102E] px-4 py-24 text-center md:py-28">
 				<Reveal>
 					<p className="text-lg text-white/80 md:text-xl">기존 숏폼이 효과 없는 이유?</p>
 					<h2 className="mt-3 break-keep font-extrabold text-2xl text-white leading-snug md:text-4xl">
@@ -247,8 +251,8 @@ export const ShortformServicePage = () => {
 						<p className="text-base text-slate-600 md:text-lg">
 							영상편집 + 업로드만 하는 제작대행 시대는 끝!
 						</p>
-						<h2 className="mt-2 break-keep font-extrabold text-2xl text-[#0a0a0a] leading-snug tracking-tight md:text-4xl">
-							애드리절트는 <span className="text-[#e11d29]">전환 중심의 숏폼을 기획</span>합니다
+						<h2 className="mt-2 break-keep font-extrabold text-2xl text-[#111111] leading-snug tracking-tight md:text-4xl">
+							애드리절트는 <span className="text-[#C8102E]">전환 중심의 숏폼을 기획</span>합니다
 						</h2>
 					</Reveal>
 					<div className="mt-14 grid grid-cols-2 gap-4 md:mt-16 md:grid-cols-4 md:gap-6">
@@ -279,13 +283,13 @@ export const ShortformServicePage = () => {
 				<div className="mx-auto max-w-[1400px]">
 					<Reveal>
 						<div className="flex items-start gap-5 text-left md:gap-8">
-							<span className="shrink-0 font-extrabold text-5xl text-[#e11d29] leading-none md:text-7xl">
+							<span className="shrink-0 font-extrabold text-5xl text-[#C8102E] leading-none md:text-7xl">
 								01
 							</span>
 							<div>
 								<p className="text-lg text-slate-500 md:text-xl">조회수 → 문의 → 예약까지</p>
-								<h3 className="mt-2 break-keep font-extrabold text-2xl text-[#0a0a0a] leading-snug md:text-4xl">
-									<span className="text-[#e11d29]">전환을 만들어본 현직 인플루언서</span>가 기획부터
+								<h3 className="mt-2 break-keep font-extrabold text-2xl text-[#111111] leading-snug md:text-4xl">
+									<span className="text-[#C8102E]">전환을 만들어본 현직 인플루언서</span>가 기획부터
 									관리까지!
 								</h3>
 							</div>
@@ -315,7 +319,7 @@ export const ShortformServicePage = () => {
 						</Reveal>
 					</div>
 					<Reveal className="mt-12">
-						<p className="whitespace-pre-line break-keep font-bold text-[#0a0a0a] text-base leading-relaxed md:text-xl">
+						<p className="whitespace-pre-line break-keep font-bold text-[#111111] text-base leading-relaxed md:text-xl">
 							{
 								"애드리절트의 끝장숏폼은 현직 인플루언서가 기획부터 관리까지 함께 합니다.\n터지는 숏폼을 위해 촬영 시 손동작 하나, 대사 하나까지 옆에서 코칭해 드립니다."
 							}
@@ -325,7 +329,7 @@ export const ShortformServicePage = () => {
 			</section>
 
 			{/* 5. VS — 접근 자체가 다릅니다 (레드 밴드) */}
-			<section className="w-full bg-[#e11d29] px-4 py-24 text-center md:py-28">
+			<section className="w-full bg-[#C8102E] px-4 py-24 text-center md:py-28">
 				<Reveal>
 					<h2 className="break-keep font-extrabold text-2xl text-white leading-snug md:text-4xl">
 						애드리절트 끝장숏폼은
@@ -337,7 +341,7 @@ export const ShortformServicePage = () => {
 				<Reveal className="mt-14 md:mt-16">
 					<div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 md:flex-row md:items-start md:gap-10">
 						<div className="w-full max-w-md">
-							<div className="rounded-xl bg-white px-8 py-5 text-center font-bold text-[#0a0a0a] text-lg md:text-xl">
+							<div className="rounded-xl bg-white px-8 py-5 text-center font-bold text-[#111111] text-lg md:text-xl">
 								일반 영상 제작 대행
 							</div>
 							<ul className="mt-6 space-y-2 text-left text-lg text-white md:pl-10 md:text-xl">
@@ -348,7 +352,7 @@ export const ShortformServicePage = () => {
 						</div>
 						<span className="font-extrabold text-4xl text-white md:mt-2 md:text-5xl">VS</span>
 						<div className="w-full max-w-md">
-							<div className="rounded-xl bg-white px-8 py-5 text-center font-bold text-[#e11d29] text-lg md:text-xl">
+							<div className="rounded-xl bg-white px-8 py-5 text-center font-bold text-[#C8102E] text-lg md:text-xl">
 								끝장숏폼
 							</div>
 							<ul className="mt-6 space-y-2 text-left text-lg text-white md:pl-10 md:text-xl">
@@ -373,13 +377,13 @@ export const ShortformServicePage = () => {
 				<div className="mx-auto max-w-[1400px]">
 					<Reveal>
 						<div className="flex items-start gap-5 text-left md:gap-8">
-							<span className="shrink-0 font-extrabold text-5xl text-[#e11d29] leading-none md:text-7xl">
+							<span className="shrink-0 font-extrabold text-5xl text-[#C8102E] leading-none md:text-7xl">
 								02
 							</span>
 							<div>
 								<p className="text-lg text-slate-500 md:text-xl">노출 → 댓글유도 → 예약</p>
-								<h3 className="mt-2 break-keep font-extrabold text-2xl text-[#0a0a0a] leading-snug md:text-4xl">
-									<span className="text-[#e11d29]">전환구조</span>를 만듭니다
+								<h3 className="mt-2 break-keep font-extrabold text-2xl text-[#111111] leading-snug md:text-4xl">
+									<span className="text-[#C8102E]">전환구조</span>를 만듭니다
 								</h3>
 							</div>
 						</div>
@@ -396,7 +400,7 @@ export const ShortformServicePage = () => {
 						/>
 					</Reveal>
 					<Reveal className="mt-10">
-						<p className="whitespace-pre-line break-keep font-bold text-[#0a0a0a] text-base leading-relaxed md:text-xl">
+						<p className="whitespace-pre-line break-keep font-bold text-[#111111] text-base leading-relaxed md:text-xl">
 							{"노출과 댓글유도, 예약까지. 이 3단계가 끊기지 않도록\n처음부터 끝까지 설계합니다"}
 						</p>
 					</Reveal>
@@ -425,7 +429,7 @@ export const ShortformServicePage = () => {
 						</Reveal>
 					</div>
 					<Reveal className="mt-10">
-						<p className="break-keep font-bold text-[#0a0a0a] text-xl md:text-3xl">
+						<p className="break-keep font-bold text-[#111111] text-xl md:text-3xl">
 							영상 1개당 스토리 2개 연동
 						</p>
 						<p className="mt-2 break-keep text-lg text-slate-600 md:text-xl">
@@ -440,13 +444,13 @@ export const ShortformServicePage = () => {
 				<div className="mx-auto max-w-[1400px]">
 					<Reveal>
 						<div className="flex items-start gap-5 text-left md:gap-8">
-							<span className="shrink-0 font-extrabold text-5xl text-[#e11d29] leading-none md:text-7xl">
+							<span className="shrink-0 font-extrabold text-5xl text-[#C8102E] leading-none md:text-7xl">
 								03
 							</span>
 							<div>
 								<p className="text-lg text-slate-500 md:text-xl">다양한 숏폼 플랫폼을 운영하며</p>
-								<h3 className="mt-2 break-keep font-extrabold text-2xl text-[#0a0a0a] leading-snug md:text-4xl">
-									<span className="text-[#e11d29]">검색+알고리즘 기반 바이럴 구조</span>를 만듭니다
+								<h3 className="mt-2 break-keep font-extrabold text-2xl text-[#111111] leading-snug md:text-4xl">
+									<span className="text-[#C8102E]">검색+알고리즘 기반 바이럴 구조</span>를 만듭니다
 								</h3>
 							</div>
 						</div>
@@ -465,15 +469,15 @@ export const ShortformServicePage = () => {
 					</Reveal>
 
 					<Reveal className="mt-20">
-						<p className="font-extrabold text-2xl text-[#e11d29] md:text-3xl">유튜브</p>
-						<p className="mt-1 font-bold text-[#0a0a0a] text-base md:text-lg">
+						<p className="font-extrabold text-2xl text-[#C8102E] md:text-3xl">유튜브</p>
+						<p className="mt-1 font-bold text-[#111111] text-base md:text-lg">
 							검색 + 알고리즘 기반 플랫폼
 						</p>
 						<div className="mx-auto mt-8 grid max-w-4xl grid-cols-3 gap-3 md:gap-4">
 							{YT_CHIPS.map((c) => (
 								<span
 									key={c}
-									className="break-keep rounded-xl bg-slate-100 px-4 py-5 text-center font-medium text-[#0a0a0a] text-base md:text-lg"
+									className="break-keep rounded-xl bg-slate-100 px-4 py-5 text-center font-medium text-[#111111] text-base md:text-lg"
 								>
 									{c}
 								</span>
@@ -495,21 +499,21 @@ export const ShortformServicePage = () => {
 						</p>
 					</Reveal>
 					<Reveal className="mt-10">
-						<p className="break-keep font-bold text-[#0a0a0a] text-lg md:text-2xl">
+						<p className="break-keep font-bold text-[#111111] text-lg md:text-2xl">
 							환자가 정보를 찾을 때 키워드 검색과 알고리즘을 통해 노출됩니다
 						</p>
 					</Reveal>
 
 					<Reveal className="mt-20">
-						<p className="font-extrabold text-2xl text-[#e11d29] md:text-3xl">인스타그램</p>
-						<p className="mt-1 font-bold text-[#0a0a0a] text-base md:text-lg">
+						<p className="font-extrabold text-2xl text-[#C8102E] md:text-3xl">인스타그램</p>
+						<p className="mt-1 font-bold text-[#111111] text-base md:text-lg">
 							알고리즘 추천기반 플랫폼
 						</p>
 						<div className="mx-auto mt-8 grid max-w-4xl grid-cols-3 gap-3 md:gap-4">
 							{IG_CHIPS.map((c) => (
 								<span
 									key={c}
-									className="break-keep rounded-xl bg-slate-100 px-4 py-5 text-center font-medium text-[#0a0a0a] text-base md:text-lg"
+									className="break-keep rounded-xl bg-slate-100 px-4 py-5 text-center font-medium text-[#111111] text-base md:text-lg"
 								>
 									{c}
 								</span>
@@ -542,7 +546,7 @@ export const ShortformServicePage = () => {
 						</p>
 					</Reveal>
 					<Reveal className="mt-10">
-						<p className="break-keep font-bold text-[#0a0a0a] text-base md:text-xl">
+						<p className="break-keep font-bold text-[#111111] text-base md:text-xl">
 							새로운 환자가 알고리즘을 통해 우리 병원을 “발견”하게 됩니다
 						</p>
 					</Reveal>
@@ -550,7 +554,7 @@ export const ShortformServicePage = () => {
 			</section>
 
 			{/* 8. 04 — 진료과목별 콘텐츠 구조 + 환자 유입 퍼널 (레드 밴드) */}
-			<section className="w-full bg-[#e11d29] px-4 py-24 text-center md:px-8 md:py-28">
+			<section className="w-full bg-[#C8102E] px-4 py-24 text-center md:px-8 md:py-28">
 				<div className="mx-auto max-w-[1400px]">
 					<Reveal>
 						<div className="flex items-start gap-5 text-left md:gap-8">
@@ -575,9 +579,9 @@ export const ShortformServicePage = () => {
 					<div className="mx-auto mt-10 max-w-4xl space-y-3">
 						{SPECIALTY.map((s, i) => (
 							<Reveal key={s.field} delay={i * 0.06} direction="up">
-								<div className="rounded-xl bg-white px-6 py-5 text-center font-bold text-[#0a0a0a] text-lg md:text-xl">
+								<div className="rounded-xl bg-white px-6 py-5 text-center font-bold text-[#111111] text-lg md:text-xl">
 									{s.field} <span className="text-slate-400">→</span>{" "}
-									<span className="text-[#e11d29]">{s.psych}</span>
+									<span className="text-[#C8102E]">{s.psych}</span>
 								</div>
 							</Reveal>
 						))}
@@ -617,24 +621,24 @@ export const ShortformServicePage = () => {
 				<div className="mx-auto max-w-[1400px]">
 					<Reveal>
 						<div className="flex items-start gap-5 text-left md:gap-8">
-							<span className="shrink-0 font-extrabold text-5xl text-[#e11d29] leading-none md:text-7xl">
+							<span className="shrink-0 font-extrabold text-5xl text-[#C8102E] leading-none md:text-7xl">
 								05
 							</span>
 							<div>
 								<p className="text-lg text-slate-500 md:text-xl">
 									전체 온라인 마케팅은 하나의 방향으로 설계해
 								</p>
-								<h3 className="mt-2 break-keep font-extrabold text-2xl text-[#0a0a0a] leading-snug md:text-4xl">
-									<span className="text-[#e11d29]">‘브랜딩+전환’</span>을 동시에 만듭니다
+								<h3 className="mt-2 break-keep font-extrabold text-2xl text-[#111111] leading-snug md:text-4xl">
+									<span className="text-[#C8102E]">‘브랜딩+전환’</span>을 동시에 만듭니다
 								</h3>
 							</div>
 						</div>
 					</Reveal>
 					<Reveal className="mt-12">
-						<p className="break-keep font-bold text-[#0a0a0a] text-lg leading-relaxed md:text-2xl">
+						<p className="break-keep font-bold text-[#111111] text-lg leading-relaxed md:text-2xl">
 							하나의 메시지를 모든 채널에
 							<br />
-							<span className="text-[#e11d29]">일관되게 노출시킵니다</span>
+							<span className="text-[#C8102E]">일관되게 노출시킵니다</span>
 						</p>
 					</Reveal>
 					<Reveal className="mt-14">
@@ -656,7 +660,7 @@ export const ShortformServicePage = () => {
 			</section>
 
 			{/* 10. 신뢰형성 퍼널 (레드 밴드) */}
-			<section className="w-full bg-[#e11d29] px-4 py-24 text-center md:py-28">
+			<section className="w-full bg-[#C8102E] px-4 py-24 text-center md:py-28">
 				<Reveal>
 					<p className="break-keep font-bold text-2xl text-white leading-snug md:text-4xl">
 						일관성은 <span className="font-extrabold">신뢰</span>를 만들고
@@ -699,10 +703,10 @@ export const ShortformServicePage = () => {
 			<section className="bg-white px-4 py-24 text-center md:px-8 md:py-28">
 				<div className="mx-auto max-w-[1400px]">
 					<Reveal>
-						<h2 className="break-keep font-extrabold text-2xl text-[#0a0a0a] leading-snug tracking-tight md:text-4xl">
+						<h2 className="break-keep font-extrabold text-2xl text-[#111111] leading-snug tracking-tight md:text-4xl">
 							우리 병원도 이제
 							<br />
-							<span className="text-[#e11d29]">숏폼으로 환자가 쌓이는 구조</span>를 만들 차례입니다
+							<span className="text-[#C8102E]">숏폼으로 환자가 쌓이는 구조</span>를 만들 차례입니다
 						</h2>
 					</Reveal>
 					<Reveal direction="scale" className="mt-14 md:mt-16">
@@ -728,7 +732,7 @@ export const ShortformServicePage = () => {
 			<section className="bg-white px-4 py-24 text-center md:px-8 md:py-28">
 				<div className="mx-auto max-w-5xl">
 					<Reveal>
-						<h2 className="font-extrabold text-3xl text-[#e11d29] tracking-tight md:text-4xl">
+						<h2 className="font-extrabold text-3xl text-[#C8102E] tracking-tight md:text-4xl">
 							채널 성장 흐름
 						</h2>
 						<p className="mt-3 text-base text-slate-600 md:text-lg">
@@ -739,12 +743,12 @@ export const ShortformServicePage = () => {
 						{GROWTH.map((g, i) => (
 							<Reveal key={g.period} delay={i * 0.1} direction="up">
 								<p
-									className={`font-extrabold text-xl md:text-2xl ${g.active ? "text-[#e11d29]" : "text-[#0a0a0a]"}`}
+									className={`font-extrabold text-xl md:text-2xl ${g.active ? "text-[#C8102E]" : "text-[#111111]"}`}
 								>
 									{g.period}
 								</p>
 								<div
-									className={`mt-4 h-1.5 rounded-full ${g.active ? "bg-[#e11d29]" : "bg-[#f6c9cb]"}`}
+									className={`mt-4 h-1.5 rounded-full ${g.active ? "bg-[#C8102E]" : "bg-[#f6c9cb]"}`}
 								/>
 								<div className="mt-6 space-y-1.5 text-base text-slate-600 md:text-lg">
 									{g.items.map((it) => (
@@ -758,7 +762,7 @@ export const ShortformServicePage = () => {
 						<p className="break-keep text-lg text-slate-700 leading-relaxed md:text-2xl">
 							콘텐츠가 꾸준히 축적될수록
 							<br />
-							<span className="font-bold text-[#e11d29]">
+							<span className="font-bold text-[#C8102E]">
 								채널의 노출과 환자 유입은 점점 안정적으로 이어질 가능성이 높습니다
 							</span>
 						</p>
@@ -767,7 +771,7 @@ export const ShortformServicePage = () => {
 			</section>
 
 			{/* 13. 월 최대 3곳 (레드 밴드) */}
-			<section className="w-full bg-[#e11d29] px-4 py-24 text-center md:py-28">
+			<section className="w-full bg-[#C8102E] px-4 py-24 text-center md:py-28">
 				<Reveal>
 					<p className="break-keep text-white text-xl leading-relaxed md:text-3xl md:leading-relaxed">
 						단순 제작이 아닌
@@ -786,10 +790,10 @@ export const ShortformServicePage = () => {
 			<section className="bg-white px-4 py-24 text-center md:px-8 md:py-28">
 				<div className="mx-auto max-w-[1400px]">
 					<Reveal>
-						<h2 className="break-keep font-bold text-2xl text-[#0a0a0a] leading-snug tracking-tight md:text-4xl">
+						<h2 className="break-keep font-bold text-2xl text-[#111111] leading-snug tracking-tight md:text-4xl">
 							기획부터 전환까지 <span className="font-extrabold">모든 과정을 하나로 설계하는</span>
 							<br />
-							<span className="font-extrabold text-[#e11d29]">숏폼 올인원 마케팅 [끝장 숏폼]</span>
+							<span className="font-extrabold text-[#C8102E]">숏폼 올인원 마케팅 [끝장 숏폼]</span>
 						</h2>
 					</Reveal>
 					<Reveal direction="scale" className="mt-14 md:mt-16">
@@ -804,7 +808,7 @@ export const ShortformServicePage = () => {
 						/>
 					</Reveal>
 					<Reveal className="mt-8">
-						<p className="break-keep font-bold text-[#0a0a0a] text-base md:text-lg">
+						<p className="break-keep font-bold text-[#111111] text-base md:text-lg">
 							*T/O가 마감되었을 경우, 현재 진행 중인 계약이 종료될 때까지 추가 접수 절대 불가
 						</p>
 					</Reveal>
@@ -815,10 +819,10 @@ export const ShortformServicePage = () => {
 			<section className="bg-slate-50 px-4 py-24 md:px-8 md:py-28">
 				<div className="mx-auto max-w-3xl">
 					<Reveal>
-						<p className="mb-4 text-center font-bold text-[#e11d29] text-sm uppercase tracking-[0.25em] md:text-base">
+						<p className="mb-4 text-center font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 							FAQ
 						</p>
-						<h2 className="break-keep text-center font-extrabold text-2xl text-[#0a0a0a] leading-snug tracking-tight md:text-4xl">
+						<h2 className="break-keep text-center font-extrabold text-2xl text-[#111111] leading-snug tracking-tight md:text-4xl">
 							숏폼 마케팅, 자주 묻는 질문
 						</h2>
 					</Reveal>
@@ -826,7 +830,7 @@ export const ShortformServicePage = () => {
 						{SHORTFORM_FAQ.map((f, i) => (
 							<Reveal key={f.q} delay={i * 0.06}>
 								<div className="rounded-2xl bg-white p-6 ring-1 ring-black/5 md:p-8">
-									<h3 className="break-keep font-bold text-[#0a0a0a] text-lg md:text-xl">
+									<h3 className="break-keep font-bold text-[#111111] text-lg md:text-xl">
 										Q. {f.q}
 									</h3>
 									<p className="mt-3 break-keep text-slate-600 leading-relaxed">{f.a}</p>

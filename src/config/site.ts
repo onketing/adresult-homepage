@@ -1,15 +1,16 @@
 import type { NavItem } from "@/types";
 
-const rawUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://adresult.kr";
+// 기준 도메인: 피부과마케팅.com (punycode). 본사 adresult.kr과 별개의 마포지사 사이트.
+const rawUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://xn--vb0bs6vtzcc3x9secwd.com";
 const url = rawUrl.replace(/\/$/, "");
 
 export const siteConfig = {
-	name: "애드리절트",
-	nameKo: "애드리절트",
+	name: "애드리절트 마포지사",
+	nameKo: "애드리절트 마포지사",
 	nameEn: "ADRESULT",
-	title: "병원마케팅 대행사 애드리절트(ADRESULT) | 결과로 말하는 광고회사",
+	title: "애드리절트 마포지사 | 결과로 말하는 병원마케팅 회사 (본사 직영)",
 	description:
-		"병원마케팅 대행사 애드리절트 — 진료과별 1:1 맞춤 AIO·숏폼·바이럴 마케팅으로 신환을 늘립니다. 업력 11년·누적 1,272곳.",
+		"애드리절트 마포지사는 본사 병원마케팅 운영 시스템을 기반으로 AIO, 숏폼, 스레드, 카페바이럴, 블로그를 병원 상황에 맞게 조합해 제안합니다. 병원마케팅회사·병원마케팅전문업체 애드리절트 마포지사.",
 	keywords: [
 		// 브랜드
 		"애드리절트",
@@ -29,18 +30,31 @@ export const siteConfig = {
 		"병원마케팅성공사례",
 		"병원신규환자마케팅",
 		"의료마케팅",
+		// 상품
+		"병원 신규환자 통합 노출 패키지",
+		"숏폼 카페바이럴 스레드 AIO 통합 병원마케팅",
 		// 서비스 유형
-		"병원 AIO마케팅",
+		"병원AIO마케팅",
 		"병원AI검색마케팅",
 		"병원GEO마케팅",
 		"병원AI노출마케팅",
-		"병원 숏폼 마케팅",
+		"병원숏폼마케팅",
 		"병원릴스마케팅",
 		"병원쇼츠마케팅",
-		"병원 유튜브 쇼츠 마케팅",
-		"병원 바이럴 마케팅",
+		"병원틱톡마케팅",
+		"병원인스타마케팅",
+		"병원유튜브쇼츠마케팅",
+		"병원영상마케팅",
+		"병원SNS마케팅",
+		"병원숏폼제작업체",
+		"병원카페바이럴",
+		"병원바이럴마케팅",
+		"병원카페마케팅",
+		"병원후기바이럴",
+		"병원맘카페마케팅",
+		"병원스레드마케팅",
+		"병원스레드광고",
 		"병원 블로그 마케팅",
-		"병원 인스타 마케팅",
 		// 진료과
 		"피부과마케팅회사",
 		"성형외과마케팅회사",
@@ -65,6 +79,7 @@ export const siteConfig = {
 		tel: "1661-4829",
 		email: "mail@adresult.kr",
 		address: "서울 강남구 헌릉로618길 9 (세곡동) 1층",
+		branchAddress: "서울 마포구 잔다리로3안길 41 승현빌딩 2층",
 		owner: "이승민",
 		businessName: "애드리절트",
 		businessNumber: "889-88-00231",
@@ -78,29 +93,56 @@ export const siteConfig = {
 	nav: [
 		{
 			label: "회사소개",
-			href: "/about",
-			matchPrefix: "/about",
+			href: "/branch",
+			matchPrefix: "/branch",
 			children: [
-				{ label: "ABOUT", href: "/about", icon: "Building2" },
-				{ label: "HISTORY", href: "/history", icon: "History" },
-				{ label: "CEO", href: "/ceo", icon: "User" },
-				{ label: "PEOPLE", href: "/people", icon: "UsersRound" },
+				{ label: "마포지사 소개", href: "/branch", icon: "Building2" },
+				{ label: "지사장 소개", href: "/branch/director", icon: "User" },
+				{ label: "운영 철학", href: "/branch/philosophy", icon: "Compass" },
+				{ label: "상담 프로세스", href: "/branch/process", icon: "ListChecks" },
+				{ label: "애드리절트 본사", href: "/about", icon: "Building2" },
+				{ label: "연혁·수상", href: "/history", icon: "History" },
+				{ label: "CEO 소개", href: "/ceo", icon: "User" },
+				{ label: "조직·구성원", href: "/people", icon: "UsersRound" },
 			],
 		},
 		{
 			label: "마케팅",
-			href: "/services/aio",
+			href: "/services/integrated",
 			matchPrefix: "/services",
 			children: [
+				{ label: "통합 노출 설계", href: "/services/integrated", icon: "Layers" },
+				{ label: "AIO 마케팅", href: "/services/aio", icon: "Sparkles" },
+				{ label: "끝장숏폼", href: "/services/shortform", icon: "Zap" },
+				{ label: "블로그 마케팅", href: "/services/blog", icon: "PenLine" },
+				{ label: "카페바이럴", href: "/services/cafe-viral", icon: "MessagesSquare" },
+				{ label: "스레드 마케팅", href: "/services/threads", icon: "MessageCircle" },
+				{ label: "플레이스·후기 관리", href: "/services/place-review", icon: "MapPin" },
+				{ label: "홈페이지 콘텐츠", href: "/services/homepage-content", icon: "FileText" },
+				{ label: "홈페이지 리빌딩", href: "/services/homepage-rebuilding", icon: "FileText" },
+				{ label: "영상패키지", href: "/services/video", icon: "Zap" },
+				{ label: "애드필름 (촬영)", href: "/services/adfilm", icon: "Star" },
+				{ label: "재활마케팅", href: "/services/rehab", icon: "Activity" },
+				{ label: "해외 마케팅", href: "/services/global", icon: "Building2" },
+			],
+		},
+		{
+			label: "진료과",
+			href: "/specialty/dermatology",
+			matchPrefix: "/specialty",
+			children: [
+				{ label: "피부과 마케팅", href: "/specialty/dermatology", icon: "Sparkles" },
+				{ label: "성형외과 마케팅", href: "/specialty/plastic-surgery", icon: "Star" },
+				{ label: "정형외과 마케팅", href: "/specialty/orthopedics", icon: "Bone" },
+				{ label: "통증의학과 마케팅", href: "/specialty/pain-medicine", icon: "Activity" },
+				{ label: "치과 마케팅", href: "/specialty/dentistry", icon: "Smile" },
+				{ label: "한의원 마케팅", href: "/specialty/oriental-medicine", icon: "Leaf" },
+				{ label: "산부인과 마케팅", href: "/specialty/obgyn", icon: "HeartPulse" },
+				{ label: "소아과 마케팅", href: "/specialty/pediatrics", icon: "Baby" },
 				{
-					label: "AIO마케팅",
-					href: "/services/aio",
-					icon: "Sparkles",
-				},
-				{
-					label: "끝장숏폼",
-					href: "/services/shortform",
-					icon: "Zap",
+					label: "내과·검진센터 마케팅",
+					href: "/specialty/internal-medicine",
+					icon: "Stethoscope",
 				},
 			],
 		},
@@ -111,6 +153,17 @@ export const siteConfig = {
 			children: [
 				{ label: "성공사례", href: "/cases", icon: "FileText" },
 				{ label: "고객후기", href: "/reviews", icon: "Star" },
+				{ label: "미디어·언론", href: "/media", icon: "Newspaper" },
+				{ label: "진심이 STORY", href: "/story", icon: "Heart" },
+			],
+		},
+		{
+			label: "칼럼·가이드",
+			href: "/insights",
+			matchPrefix: "/insights",
+			children: [
+				{ label: "병원마케팅 칼럼", href: "/insights", icon: "PenLine" },
+				{ label: "병원마케팅 가이드", href: "/guide", icon: "BookOpen" },
 			],
 		},
 		{ label: "FAQ", href: "/faq" },

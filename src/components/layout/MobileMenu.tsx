@@ -4,7 +4,6 @@ import { MenuIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Logo } from "@/components/shared/Logo";
 import {
 	Accordion,
 	AccordionContent,
@@ -36,9 +35,10 @@ export const MobileMenu = ({ isLight = false }: { isLight?: boolean }) => {
 			</SheetTrigger>
 			<SheetContent side="right" className="w-[85vw] bg-white p-0 sm:w-72">
 				<div className="flex h-full flex-col">
-					{/* Logo */}
-					<div className="border-slate-100 border-b px-6 py-5">
-						<Logo />
+					{/* Wordmark */}
+					<div className="flex items-baseline gap-1.5 border-[#E4E2DF] border-b px-6 py-5">
+						<span className="font-extrabold text-[#090909] text-lg tracking-tight">ADRESULT</span>
+						<span aria-hidden="true" className="inline-block h-1.5 w-1.5 bg-[#C8102E]" />
 					</div>
 
 					{/* 상단 CTA */}
@@ -46,9 +46,9 @@ export const MobileMenu = ({ isLight = false }: { isLight?: boolean }) => {
 						<Link
 							href="/contact"
 							onClick={() => setOpen(false)}
-							className="block w-full rounded-md bg-[#3a0509] py-3 text-center font-semibold text-sm text-white transition-opacity hover:opacity-80"
+							className="block w-full bg-[#111111] py-3 text-center font-bold text-sm text-white transition-colors hover:bg-[#C8102E]"
 						>
-							문의하기
+							병원 마케팅 진단 신청
 						</Link>
 					</div>
 
@@ -63,7 +63,7 @@ export const MobileMenu = ({ isLight = false }: { isLight?: boolean }) => {
 											<AccordionTrigger
 												className={cn(
 													"rounded-lg px-4 py-3 font-medium text-[15px] hover:bg-slate-50 hover:no-underline",
-													isParentActive ? "text-[#0a0a0a]" : "text-foreground",
+													isParentActive ? "text-[#111111]" : "text-foreground",
 												)}
 											>
 												{item.label}
@@ -81,7 +81,7 @@ export const MobileMenu = ({ isLight = false }: { isLight?: boolean }) => {
 																className={cn(
 																	"rounded-lg px-3 py-3 text-sm transition-colors hover:bg-slate-50",
 																	isChildActive
-																		? "bg-[#3a0509]/8 font-semibold text-[#0a0a0a]"
+																		? "bg-[#0B0B0B]/8 font-semibold text-[#111111]"
 																		: "text-slate-600",
 																)}
 															>
@@ -104,7 +104,7 @@ export const MobileMenu = ({ isLight = false }: { isLight?: boolean }) => {
 									onClick={() => setOpen(false)}
 									className={cn(
 										"rounded-lg px-4 py-3 font-medium text-[15px] transition-colors hover:bg-slate-50",
-										isActive ? "text-[#0a0a0a]" : "text-foreground",
+										isActive ? "text-[#111111]" : "text-foreground",
 									)}
 								>
 									{item.label}
@@ -114,13 +114,13 @@ export const MobileMenu = ({ isLight = false }: { isLight?: boolean }) => {
 					</nav>
 
 					{/* 하단 문의하기 */}
-					<div className="border-slate-100 border-t p-4">
+					<div className="border-[#E4E2DF] border-t p-4">
 						<Link
 							href="/contact"
 							onClick={() => setOpen(false)}
-							className="block w-full rounded-md bg-[#3a0509] py-3.5 text-center font-semibold text-sm text-white transition-opacity hover:opacity-80"
+							className="block w-full bg-[#111111] py-3.5 text-center font-bold text-sm text-white transition-colors hover:bg-[#C8102E]"
 						>
-							문의하기
+							병원 마케팅 진단 신청
 						</Link>
 					</div>
 				</div>

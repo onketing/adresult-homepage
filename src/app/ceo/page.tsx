@@ -52,13 +52,13 @@ export const CeoPage = () => {
 					</Reveal>
 
 					<Reveal direction="right">
-						<p className="mb-4 font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
+						<p className="mb-4 font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 							CEO&rsquo;s Greeting
 						</p>
-						<h2 className="font-extrabold text-3xl text-[#0a0a0a] leading-tight tracking-tight md:text-5xl">
+						<h2 className="font-extrabold text-3xl text-[#111111] leading-tight tracking-tight md:text-5xl">
 							CEO 인사말
 						</h2>
-						<p className="mt-8 break-keep font-bold text-[#0a0a0a] text-xl md:text-2xl">
+						<p className="mt-8 break-keep font-bold text-[#111111] text-xl md:text-2xl">
 							안녕하세요. 애드리절트 이승민입니다.
 						</p>
 						<div className="mt-6 space-y-5">
@@ -72,7 +72,7 @@ export const CeoPage = () => {
 							))}
 						</div>
 						<div className="mt-10 border-slate-200 border-t pt-6">
-							<p className="font-extrabold text-[#0a0a0a] text-xl">이승민 대표</p>
+							<p className="font-extrabold text-[#111111] text-xl">이승민 대표</p>
 							<p className="mt-2 text-slate-500 text-sm leading-relaxed md:text-base">
 								현) 애드리절트 CEO
 								<br />
@@ -86,7 +86,7 @@ export const CeoPage = () => {
 			</section>
 
 			{/* 대표 유튜브 채널 배너 */}
-			<section className="w-full bg-[#e11d29] px-4 py-20 text-center md:py-24">
+			<section className="w-full bg-[#C8102E] px-4 py-20 text-center md:py-24">
 				<Reveal>
 					<p className="text-lg text-white/85 md:text-xl">이승민 대표 - YouTube</p>
 					<p className="mt-3 break-keep font-extrabold text-2xl text-white md:text-4xl">
@@ -96,7 +96,7 @@ export const CeoPage = () => {
 						href={CEO_YOUTUBE}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="mt-8 inline-flex min-w-[240px] items-center justify-center gap-2.5 rounded-full bg-white px-8 py-4 font-bold text-[#0a0a0a] text-lg transition-transform hover:scale-[1.03]"
+						className="mt-8 inline-flex min-w-[240px] items-center justify-center gap-2.5 bg-white px-8 py-4 font-bold text-[#111111] text-lg transition-colors hover:bg-[#F5F5F5]"
 					>
 						<Image src="/youtube-logo.png" alt="" width={24} height={24} className="h-6 w-6" />{" "}
 						바로가기
@@ -108,14 +108,14 @@ export const CeoPage = () => {
 			<section className="bg-white px-4 py-24 text-center md:px-8 md:py-32">
 				<div className="mx-auto max-w-[1600px]">
 					<Reveal>
-						<p className="mb-3 font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
+						<p className="mb-3 font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 							CEO&rsquo;s Book
 						</p>
 						<p className="text-lg text-slate-500 md:text-xl">실전에서 바로 써먹는 마케팅 비법</p>
-						<h2 className="mt-2 break-keep font-extrabold text-4xl text-[#0a0a0a] tracking-tight md:text-5xl">
+						<h2 className="mt-2 break-keep font-extrabold text-4xl text-[#111111] tracking-tight md:text-5xl">
 							마케팅 때문에 고민입니다
 						</h2>
-						<span className="mt-6 inline-flex rounded-full bg-[#e11d29] px-6 py-2.5 font-bold text-sm text-white md:text-base">
+						<span className="mt-6 inline-flex bg-[#C8102E] px-6 py-2.5 font-bold text-sm text-white md:text-base">
 							교보문고 경제/경영부문 베스트셀러
 						</span>
 					</Reveal>
@@ -133,7 +133,7 @@ export const CeoPage = () => {
 
 					{/* 추천사 */}
 					<Reveal className="mx-auto mt-14 max-w-3xl md:mt-16">
-						<p className="break-keep font-bold text-[#0a0a0a] text-xl md:text-2xl">
+						<p className="break-keep font-bold text-[#111111] text-xl md:text-2xl">
 							많은 비용을 투자하고도 제대로 마케팅 효과를 보지 못한
 							<br />
 							소상공인들에게 등불 같은 책.

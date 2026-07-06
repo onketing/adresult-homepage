@@ -1,29 +1,26 @@
 "use client";
 
 import {
+	AtSign,
 	BarChart3,
 	ChevronDown,
+	Clapperboard,
 	ClipboardList,
 	LogOut,
+	MapPin,
+	MessagesSquare,
+	PenLine,
 	ShieldCheck,
+	Sparkles,
 	Target,
 	Wallet,
 } from "lucide-react";
 import { type ComponentType, type SVGProps, useEffect, useRef, useState } from "react";
-import { FAQ_CATEGORIES, FAQ_ITEMS } from "@/data/faq";
+import { FAQ_CATEGORIES, FAQ_CATEGORY_SLUGS, FAQ_ITEMS } from "@/data/faq";
 import { cn } from "@/lib/utils";
 import type { FaqCategory } from "@/types";
 
 type IconType = ComponentType<SVGProps<SVGSVGElement>>;
-
-const CATEGORY_SLUGS: Record<FaqCategory, string> = {
-	비용: "cost",
-	"진행 안내": "guide",
-	광고규정: "regulation",
-	운영보고: "operation",
-	성과: "results",
-	해지환불: "exit",
-};
 
 const CATEGORY_ICONS: Record<FaqCategory, IconType> = {
 	비용: Wallet,
@@ -32,9 +29,15 @@ const CATEGORY_ICONS: Record<FaqCategory, IconType> = {
 	운영보고: BarChart3,
 	성과: Target,
 	해지환불: LogOut,
+	"AIO 마케팅": Sparkles,
+	"숏폼 마케팅": Clapperboard,
+	"스레드 마케팅": AtSign,
+	카페바이럴: MessagesSquare,
+	"블로그 마케팅": PenLine,
+	"상담 안내": MapPin,
 };
 
-const categoryDomId = (cat: FaqCategory) => `faq-${CATEGORY_SLUGS[cat]}`;
+const categoryDomId = (cat: FaqCategory) => `faq-${FAQ_CATEGORY_SLUGS[cat]}`;
 
 export const FaqDirectory = () => {
 	const [active, setActive] = useState<FaqCategory>(FAQ_CATEGORIES[0]);
@@ -82,7 +85,7 @@ export const FaqDirectory = () => {
 								className={cn(
 									"shrink-0 rounded-full px-4 py-1.5 font-semibold text-sm transition-all duration-200",
 									active === cat
-										? "bg-[#ef3c39] text-white"
+										? "bg-[#C8102E] text-white"
 										: "bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900",
 								)}
 							>
@@ -112,14 +115,14 @@ export const FaqDirectory = () => {
 										className={cn(
 											"flex items-center gap-3 border-l-2 px-3 py-2 text-left font-semibold text-sm transition-colors",
 											isActive
-												? "border-[#ef3c39] bg-[#ef3c39]/5 text-[#ef3c39]"
+												? "border-[#C8102E] bg-[#C8102E]/5 text-[#C8102E]"
 												: "border-transparent text-slate-600 hover:text-slate-900",
 										)}
 									>
 										<Icon
 											className={cn(
 												"h-4 w-4 shrink-0",
-												isActive ? "text-[#ef3c39]" : "text-slate-400",
+												isActive ? "text-[#C8102E]" : "text-slate-400",
 											)}
 											aria-hidden="true"
 										/>
@@ -139,12 +142,12 @@ export const FaqDirectory = () => {
 								<div key={cat} id={categoryDomId(cat)} className="mb-14 scroll-mt-28 last:mb-0">
 									<div className="mb-6 flex items-center justify-between">
 										<div className="flex items-center gap-3">
-											<span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-[#ef3c39]/15 text-[#ef3c39]">
+											<span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-[#C8102E]/15 text-[#C8102E]">
 												<Icon className="h-5 w-5" aria-hidden="true" />
 											</span>
 											<div>
-												<p className="mb-1 font-mono text-[#ef3c39] text-xs uppercase tracking-[0.25em]">
-													{CATEGORY_SLUGS[cat]}
+												<p className="mb-1 font-mono text-[#C8102E] text-xs uppercase tracking-[0.25em]">
+													{FAQ_CATEGORY_SLUGS[cat]}
 												</p>
 												<h3 className="font-bold text-2xl text-slate-900 tracking-tight">{cat}</h3>
 											</div>

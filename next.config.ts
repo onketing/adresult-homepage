@@ -64,8 +64,8 @@ const securityHeaders = [
 			"font-src 'self'",
 			// 연결: self + GA(지역 수집 엔드포인트 포함) + GTM + Vercel Analytics
 			"connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://va.vercel-scripts.com https://vitals.vercel-insights.com",
-			// iframe: YouTube만 기본 포함. 지도 사용 시 위 가이드 참고해 도메인 추가
-			"frame-src 'self' https://www.youtube.com",
+			// iframe: YouTube + Tally(문의 폼 임베드). 지도 사용 시 위 가이드 참고해 도메인 추가
+			"frame-src 'self' https://www.youtube.com https://tally.so",
 			// 미디어: self + blob (영상 배경 등)
 			"media-src 'self' blob:",
 			// 워커: self + blob
@@ -86,20 +86,20 @@ const nextConfig: NextConfig = {
 		];
 	},
 
-	// 문의하기 → 외부 Tally 폼으로 이동 (기존 /contact 링크 전부 여기로 리다이렉트)
 	async redirects() {
 		return [
-			{
-				source: "/contact",
-				destination: "https://tally.so/r/gDQkzJ",
-				permanent: false,
-			},
 			// 임웹 성공사례 view URL(?idx=…) → 새 개별 상세로 301
 			// 목록 URL(?bmode=list 등, idx 없음)은 매칭되지 않음
 			{
 				source: "/549265113",
 				has: [{ type: "query", key: "idx", value: "(?<idx>\\d+)" }],
 				destination: "/cases/:idx",
+				permanent: true,
+			},
+			// 칼럼 통합: /column 목록 → /insights (개별 글 /column/:slug 는 유지)
+			{
+				source: "/column",
+				destination: "/insights",
 				permanent: true,
 			},
 		];

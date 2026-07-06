@@ -28,9 +28,9 @@ export const AboutOperator = ({ type }: { type: "plus" | "equal" }) => {
 				}}
 			>
 				{isPlus ? (
-					<Plus className="h-14 w-14 text-[#e11d29]" strokeWidth={4} aria-hidden="true" />
+					<Plus className="h-14 w-14 text-[#C8102E]" strokeWidth={4} aria-hidden="true" />
 				) : (
-					<Equal className="h-14 w-14 text-[#e11d29]" strokeWidth={4} aria-hidden="true" />
+					<Equal className="h-14 w-14 text-[#C8102E]" strokeWidth={4} aria-hidden="true" />
 				)}
 			</motion.span>
 		</motion.div>

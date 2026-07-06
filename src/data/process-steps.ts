@@ -5,25 +5,33 @@ export type ProcessStep = {
 	badge?: string;
 };
 
+// 진단 후 단계별 도입 구조 — 모든 채널을 한 번에 제안하지 않는다
 export const PROCESS_STEPS: ProcessStep[] = [
 	{
-		title: "마케팅 상담",
-		description: "병원 상황과 목표를 듣고, 궁금한 점은 무엇이든 직접 답해 드립니다.",
-		icon: "MessageSquare",
+		title: "병원 현황 진단",
+		description: "진료과, 지역, 경쟁 병원, 현재 운영 채널, 예산, 목표를 먼저 확인합니다.",
+		icon: "Stethoscope",
 	},
 	{
-		title: "병원 맞춤 전략",
-		description: "상품에 병원을 맞추지 않습니다. 병원에 맞춘 1:1 전략을 설계합니다.",
-		icon: "CalendarDays",
+		title: "우선순위 채널 선정",
+		description: "AIO, 숏폼, 스레드, 카페바이럴, 블로그 중 지금 가장 필요한 채널을 먼저 정합니다.",
+		icon: "ListChecks",
 	},
 	{
-		title: "콘텐츠 발행",
-		description: "AI·숏폼·블로그로 최적화된 콘텐츠를 발행하고 직접 관리합니다.",
-		icon: "PenLine",
+		title: "맞춤 상품 조합",
+		description:
+			"모든 채널을 한 번에 제안하지 않습니다. 병원 상황에 따라 단일 채널, 2개 채널 조합, 통합 운영 중 적합한 방식을 제안합니다.",
+		icon: "Puzzle",
 	},
 	{
-		title: "성과 점검",
-		description: "신환·문의 결과를 리포트로 확인하고, 결과에 따라 전략을 다시 세웁니다.",
+		title: "실행 및 성과 점검",
+		description:
+			"콘텐츠 발행 후 조회수와 검색 노출 키워드 표를 리포트로 확인합니다. 문의·내원 변화는 병원에서 확인해 주시는 데이터로 함께 점검합니다.",
 		icon: "BarChart2",
+	},
+	{
+		title: "확장 운영",
+		description: "성과가 확인된 채널은 강화하고, 부족한 접점은 다른 채널로 보완합니다.",
+		icon: "TrendingUp",
 	},
 ];

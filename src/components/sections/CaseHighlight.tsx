@@ -7,7 +7,7 @@ import { Reveal } from "@/components/shared/Reveal";
 import { CASE_HIGHLIGHTS, CASE_HIGHLIGHTS_SINGLE } from "@/data/case-highlight";
 
 const CountUp = ({ to, duration = 1.4 }: { to: number; duration?: number }) => {
-	const [val, setVal] = useState(0);
+	const [val, setVal] = useState(to); // SSR·크롤러는 최종 수치를 읽는다 (뷰포트 진입 시 0부터 카운트업)
 	const ref = useRef<HTMLSpanElement>(null);
 	const isInView = useInView(ref, { once: true });
 
@@ -53,8 +53,8 @@ const CaseCard = ({ item, caseNum }: { item: CaseItem; caseNum: number }) => {
 					</div>
 
 					{/* 한마디 */}
-					<blockquote className="mb-6 border-[#ef3c39]/30 border-l-4 pl-5">
-						<p className="break-keep font-bold text-2xl text-[#0a0a0a] leading-snug md:text-3xl">
+					<blockquote className="mb-6 border-[#C8102E]/30 border-l-4 pl-5">
+						<p className="break-keep font-bold text-2xl text-[#111111] leading-snug md:text-3xl">
 							&ldquo;{item.quote}&rdquo;
 						</p>
 						<footer className="mt-2 font-mono text-slate-500 text-sm">— {item.quoteAuthor}</footer>
@@ -63,7 +63,7 @@ const CaseCard = ({ item, caseNum }: { item: CaseItem; caseNum: number }) => {
 					{/* 결과 요약 */}
 					<p className="mb-9 break-keep text-slate-600 text-xl leading-relaxed md:text-2xl">
 						애드리절트 병원마케팅 후, 월 신규 환자{" "}
-						<span className="font-extrabold text-2xl text-[#ef3c39] md:text-3xl">
+						<span className="font-extrabold text-2xl text-[#C8102E] md:text-3xl">
 							<CountUp to={item.pct} />%
 						</span>{" "}
 						증가, 광고비{" "}
@@ -107,8 +107,8 @@ const SingleCaseCard = ({
 					</div>
 
 					{/* 한마디 */}
-					<blockquote className="mb-4 border-[#ef3c39]/30 border-l-4 pl-4">
-						<p className="break-keep font-bold text-[#0a0a0a] text-xl leading-snug md:text-2xl">
+					<blockquote className="mb-4 border-[#C8102E]/30 border-l-4 pl-4">
+						<p className="break-keep font-bold text-[#111111] text-xl leading-snug md:text-2xl">
 							&ldquo;{item.quote}&rdquo;
 						</p>
 						<footer className="mt-1.5 font-mono text-slate-500 text-sm">
@@ -119,7 +119,7 @@ const SingleCaseCard = ({
 					{/* 결과 요약 */}
 					<p className="mb-6 break-keep text-lg text-slate-600 leading-relaxed md:text-xl">
 						{item.period} 후 월 신규 환자{" "}
-						<span className="font-extrabold text-2xl text-[#ef3c39]">
+						<span className="font-extrabold text-2xl text-[#C8102E]">
 							<CountUp to={item.pct} />%
 						</span>{" "}
 						증가!
@@ -142,8 +142,8 @@ export const CaseHighlight = () => {
 			<div className="mx-auto max-w-6xl px-4 md:px-8">
 				{/* 섹션 헤더 */}
 				<Reveal className="mb-12">
-					<p className="mb-3 font-bold text-[#ef3c39] text-xl md:text-2xl">성공 사례</p>
-					<h2 className="break-keep font-bold text-4xl text-[#0a0a0a] tracking-tight md:text-6xl">
+					<p className="mb-3 font-bold text-[#C8102E] text-xl md:text-2xl">성공 사례</p>
+					<h2 className="break-keep font-bold text-4xl text-[#111111] tracking-tight md:text-6xl">
 						실제 병원마케팅 결과입니다.
 					</h2>
 				</Reveal>

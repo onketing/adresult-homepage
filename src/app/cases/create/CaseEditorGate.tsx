@@ -45,16 +45,16 @@ export const CaseEditorGate = () => {
 	if (unlocked) return <CaseEditor />;
 
 	return (
-		<div className="fixed inset-0 z-60 flex items-center justify-center bg-[#0a0a0a]/80 px-4 backdrop-blur-sm">
+		<div className="fixed inset-0 z-60 flex items-center justify-center bg-[#111111]/80 px-4 backdrop-blur-sm">
 			<form
 				onSubmit={submit}
 				className="w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.25)]"
 			>
 				<div className="mb-5 flex items-center gap-2">
-					<span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#fef2f2] text-[#e11d29]">
+					<span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#fef2f2] text-[#C8102E]">
 						<Lock className="h-4 w-4" />
 					</span>
-					<h1 className="font-bold text-[#0a0a0a] text-lg">관리자 확인</h1>
+					<h1 className="font-bold text-[#111111] text-lg">관리자 확인</h1>
 				</div>
 
 				<input
@@ -67,16 +67,16 @@ export const CaseEditorGate = () => {
 					}}
 					placeholder="비밀번호를 입력하세요"
 					className={cn(
-						"w-full rounded-lg border bg-white px-3.5 py-2.5 text-slate-900 text-sm outline-none transition-colors placeholder:text-slate-400 focus:border-[#e11d29] focus:ring-2 focus:ring-[#e11d29]/20",
-						error ? "border-[#e11d29]" : "border-slate-200",
+						"w-full rounded-lg border bg-white px-3.5 py-2.5 text-slate-900 text-sm outline-none transition-colors placeholder:text-slate-400 focus:border-[#C8102E] focus:ring-2 focus:ring-[#C8102E]/20",
+						error ? "border-[#C8102E]" : "border-slate-200",
 					)}
 				/>
 
-				{error && <p className="mt-2 text-[#e11d29] text-sm">비밀번호가 올바르지 않습니다</p>}
+				{error && <p className="mt-2 text-[#C8102E] text-sm">비밀번호가 올바르지 않습니다</p>}
 
 				<button
 					type="submit"
-					className="mt-5 w-full rounded-lg bg-[#e11d29] py-2.5 font-bold text-sm text-white transition-colors hover:bg-[#c11624]"
+					className="mt-5 w-full rounded-lg bg-[#C8102E] py-2.5 font-bold text-sm text-white transition-colors hover:bg-[#c11624]"
 				>
 					확인
 				</button>

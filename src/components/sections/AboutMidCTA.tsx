@@ -11,7 +11,7 @@ const spring = { type: "spring", stiffness: 280, damping: 18 } as const;
 
 export const AboutMidCTA = () => {
 	return (
-		<section className="relative overflow-hidden bg-[#3a0509] px-4 py-14 md:py-24">
+		<section className="relative overflow-hidden bg-[#0B0B0B] px-4 py-14 md:py-24">
 			{DESK_PHOTO_READY && (
 				<>
 					<Image
@@ -20,11 +20,11 @@ export const AboutMidCTA = () => {
 						fill
 						className="object-cover object-center"
 					/>
-					<div className="absolute inset-0 bg-[#3a0509]/85" />
+					<div className="absolute inset-0 bg-[#0B0B0B]/85" />
 					<div
 						className="pointer-events-none absolute inset-0"
 						style={{
-							background: "linear-gradient(135deg, #3a050930 0%, transparent 60%)",
+							background: "linear-gradient(135deg, #0B0B0B30 0%, transparent 60%)",
 						}}
 					/>
 				</>
@@ -73,7 +73,7 @@ export const AboutMidCTA = () => {
 							href={siteConfig.contact.kakaoOpenChat}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="block w-full rounded-md bg-[#FAE100] px-8 py-4 font-semibold text-[#3A1D1D] text-base transition-opacity hover:opacity-90"
+							className="block w-full rounded-md bg-[#FFFFFF] px-8 py-4 font-semibold text-[#3A1D1D] text-base transition-opacity hover:opacity-90"
 						>
 							카카오톡 1:1 문의
 						</a>

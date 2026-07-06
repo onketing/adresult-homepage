@@ -51,7 +51,7 @@ export const FloatingActions = () => {
 					type="button"
 					onClick={scrollToTop}
 					aria-label="맨 위로 이동"
-					className="flex h-16 w-16 items-center justify-center rounded-full border border-slate-200 bg-white text-[#0a0a0a] shadow-md transition-transform duration-300 hover:scale-110"
+					className="flex h-16 w-16 items-center justify-center rounded-full border border-slate-200 bg-white text-[#111111] shadow-md transition-transform duration-300 hover:scale-110"
 				>
 					<ArrowUp className="h-6 w-6" />
 				</button>

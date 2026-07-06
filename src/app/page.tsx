@@ -1,29 +1,41 @@
 import type { Metadata } from "next";
 import { AdresultYouTube } from "@/components/sections/AdresultYouTube";
+import { BranchIntroSection } from "@/components/sections/BranchIntroSection";
 import { CaseHighlight } from "@/components/sections/CaseHighlight";
 import { CloseUpManagement } from "@/components/sections/CloseUpManagement";
 import { CostBreakdown } from "@/components/sections/CostBreakdown";
 import { CustomStrategy } from "@/components/sections/CustomStrategy";
+import { DepartmentsSection } from "@/components/sections/DepartmentsSection";
 import { ExcellentCompany } from "@/components/sections/ExcellentCompany";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Hero } from "@/components/sections/Hero";
+import { MarketShift } from "@/components/sections/MarketShift";
+import { PackageSection } from "@/components/sections/PackageSection";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { ReviewVideos } from "@/components/sections/ReviewVideos";
 import { TmapPartner } from "@/components/sections/TmapPartner";
+import { BreadcrumbJsonLd } from "@/components/shared/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-	title: "병원마케팅 애드리절트(ADRESULT) | 결과로 말하는 광고회사",
+	title: "애드리절트 마포지사 | 결과로 말하는 병원마케팅 회사 (본사 직영)",
 	description:
-		"병원마케팅 대행사 애드리절트 — 진료과별 1:1 맞춤 AIO·숏폼·바이럴 마케팅으로 신환을 늘립니다. 업력 11년·누적 1,272곳.",
+		"병원마케팅회사 애드리절트 — 진료과·지역·병원 상황에 따라 AIO·숏폼·스레드·카페바이럴·블로그를 필요한 만큼 조합하는 병원마케팅전문업체. 애드리절트 기준 업력 11년·누적 1,272곳.",
 	keywords: [
-		"병원마케팅",
-		"병원마케팅 대행사",
-		"병원 AI마케팅",
+		"병원마케팅회사",
+		"병원마케팅대행사",
+		"병원마케팅업체",
+		"병원마케팅전문업체",
+		"병원온라인마케팅",
+		"병원광고회사",
+		"병원홍보대행사",
+		"병원신규환자마케팅",
+		"병원마케팅성공사례",
+		"병원마케팅비용",
+		"병원 신규환자 통합 노출 패키지",
 		"병원 숏폼 마케팅",
-		"병원 유튜브",
-		"피부과 마케팅",
-		"정형외과 마케팅",
-		"성형외과 마케팅",
+		"병원 스레드 마케팅",
+		"병원 카페바이럴",
+		"병원 AIO 마케팅",
 		"애드리절트",
 	],
 };
@@ -38,6 +50,14 @@ const homeFaqSchema = {
 			acceptedAnswer: {
 				"@type": "Answer",
 				text: "애드리절트(ADRESULT)는 업력 11년의 병원마케팅 전문 대행사입니다. 누적 1,272곳의 마케팅을 맡았고, 전국 200여 곳의 병원과 함께합니다. 상품에 병원을 맞추지 않고, 진료과별 1:1 맞춤 전략으로 신규 환자를 늘립니다.",
+			},
+		},
+		{
+			"@type": "Question",
+			name: "애드리절트는 어떤 상품을 제안하나요?",
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: "애드리절트는 모든 병원에 같은 상품을 제안하지 않습니다. 진료과, 지역 경쟁도, 현재 운영 채널, 예산, 목표를 먼저 진단한 뒤 AIO(AI 검색 노출), 숏폼, 스레드, 카페바이럴, 블로그를 필요한 만큼 조합해 제안합니다. 단일 채널로 시작할 수도 있고, 병원 상황에 따라 2개 채널 조합이나 통합 운영을 제안하기도 합니다. 조합 운영 시에는 채널 사이의 환자 여정이 하나로 이어지도록 함께 설계합니다.",
 			},
 		},
 		{
@@ -79,12 +99,17 @@ export const HomePage = () => {
 	return (
 		<>
 			<script type="application/ld+json">{JSON.stringify(homeFaqSchema)}</script>
+			<BreadcrumbJsonLd items={[{ name: "홈", path: "" }]} />
 			<Hero />
+			<MarketShift />
+			<DepartmentsSection />
+			<PackageSection />
+			<CostBreakdown />
+			<BranchIntroSection />
 			<ExcellentCompany />
 			<ReviewVideos />
 			<CustomStrategy />
 			<CaseHighlight />
-			<CostBreakdown />
 			<CloseUpManagement />
 			<AdresultYouTube />
 			<ProcessSteps />

@@ -6,14 +6,14 @@ export const CloseUpManagement = () => {
 		<section className="bg-white px-4 py-16 md:py-32">
 			<div className="mx-auto max-w-5xl">
 				<Reveal>
-					<p className="mb-4 font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
+					<p className="mb-4 font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 						Close-up Management
 					</p>
 					<p className="mb-2 font-semibold text-slate-500 text-xl md:text-2xl">
 						애드리절트는 결과에 집착합니다.
 					</p>
-					<h2 className="break-keep font-extrabold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
-						결과로 말하는 <span className="text-[#ef3c39]">병원마케팅</span>
+					<h2 className="break-keep font-extrabold text-3xl text-[#111111] tracking-tight md:text-5xl">
+						결과로 말하는 <span className="text-[#C8102E]">병원마케팅</span>
 					</h2>
 				</Reveal>
 

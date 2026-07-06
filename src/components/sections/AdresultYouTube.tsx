@@ -23,7 +23,7 @@ const VideoCard = ({ id }: { id: string }) => {
 			href={watchUrl(id)}
 			target="_blank"
 			rel="noopener noreferrer"
-			className="group relative block overflow-hidden rounded-xl shadow-sm ring-1 ring-[#ef3c39]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(239,60,57,0.18)] hover:ring-[#ef3c39]"
+			className="group relative block overflow-hidden rounded-xl shadow-sm ring-1 ring-[#C8102E]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(200,16,46,0.18)] hover:ring-[#C8102E]"
 		>
 			<div className="relative aspect-video bg-slate-100">
 				<Image
@@ -35,7 +35,7 @@ const VideoCard = ({ id }: { id: string }) => {
 					onError={() => setSrc(thumbFallback(id))}
 				/>
 				<div className="absolute inset-0 flex items-center justify-center bg-black/5 transition-colors group-hover:bg-black/10">
-					<span className="flex h-14 w-14 items-center justify-center rounded-full bg-black/45 backdrop-blur-sm transition-colors group-hover:bg-[#ef3c39]">
+					<span className="flex h-14 w-14 items-center justify-center rounded-full bg-black/45 backdrop-blur-sm transition-colors group-hover:bg-[#C8102E]">
 						<Play className="ml-0.5 h-6 w-6 fill-white text-white" aria-hidden="true" />
 					</span>
 				</div>
@@ -51,11 +51,11 @@ export const AdresultYouTube = () => {
 				{/* 헤더 */}
 				<Reveal>
 					<div className="mb-12 md:mb-16">
-						<p className="mb-4 font-bold text-[#ef3c39] text-sm uppercase tracking-[0.25em] md:text-base">
+						<p className="mb-4 font-bold text-[#C8102E] text-sm uppercase tracking-[0.25em] md:text-base">
 							ADRESULT YOUTUBE
 						</p>
-						<h2 className="break-keep font-extrabold text-4xl text-[#0a0a0a] leading-[1.15] tracking-tight md:text-6xl">
-							우리는 당신의 <span className="text-[#ef3c39]">마지막 병원마케팅 회사</span>
+						<h2 className="break-keep font-extrabold text-4xl text-[#111111] leading-[1.15] tracking-tight md:text-6xl">
+							우리는 당신의 <span className="text-[#C8102E]">마지막 병원마케팅 회사</span>
 							입니다.
 						</h2>
 						<p className="mt-5 break-keep text-lg text-slate-600 leading-relaxed md:text-xl">
@@ -76,15 +76,15 @@ export const AdresultYouTube = () => {
 
 				{/* 채널 CTA */}
 				<Reveal className="mt-20 text-center md:mt-24">
-					<p className="break-keep font-bold text-[#0a0a0a] text-xl md:text-2xl">
-						국내 최다! <span className="text-[#ef3c39]">500여 개</span>의 병원마케팅 노하우 보유!
+					<p className="break-keep font-bold text-[#111111] text-xl md:text-2xl">
+						국내 최다! <span className="text-[#C8102E]">500여 개</span>의 병원마케팅 노하우 보유!
 					</p>
 					<p className="mt-2.5 text-base text-slate-600 md:text-lg">애드리절트TV에서 만나보세요.</p>
 					<a
 						href={ADRESULT_YOUTUBE_CHANNEL}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="mt-7 inline-flex items-center gap-2.5 rounded-full bg-[#ef3c39] px-7 py-4 font-bold text-base text-white shadow-[0_10px_30px_rgba(239,60,57,0.35)] transition-all hover:scale-[1.03] hover:bg-[#e11d29] md:text-lg"
+						className="mt-7 inline-flex items-center gap-2.5 bg-[#C8102E] px-7 py-4 font-bold text-base text-white transition-colors hover:bg-[#A50D26] md:text-lg"
 					>
 						<Youtube className="h-5 w-5" aria-hidden="true" />
 						병원마케팅 주치의 애드리절트TV - @adresult
@@ -93,7 +93,7 @@ export const AdresultYouTube = () => {
 
 				{/* 대표 영상 크게 임베드 */}
 				<Reveal className="mt-16 md:mt-20">
-					<div className="mx-auto max-w-5xl rounded-2xl bg-[#ef3c39] p-1.5 shadow-[0_24px_60px_rgba(239,60,57,0.25)]">
+					<div className="mx-auto max-w-5xl rounded-2xl bg-[#C8102E] p-1.5 shadow-[0_24px_60px_rgba(200,16,46,0.25)]">
 						<div className="relative aspect-video overflow-hidden rounded-xl bg-black">
 							<iframe
 								className="absolute inset-0 h-full w-full"
@@ -114,7 +114,7 @@ export const AdresultYouTube = () => {
 						href={ADRESULT_YOUTUBE_CHANNEL}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="inline-flex items-center gap-1.5 font-semibold text-[#ef3c39] text-base transition-colors hover:text-[#b3121e]"
+						className="inline-flex items-center gap-1.5 font-semibold text-[#C8102E] text-base transition-colors hover:text-[#A50D26]"
 					>
 						애드리절트TV에서 더 많은 후기 보기
 						<ArrowUpRight className="h-4 w-4" aria-hidden="true" />

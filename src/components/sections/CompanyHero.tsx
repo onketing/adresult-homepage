@@ -39,7 +39,7 @@ export const CompanyHero = ({ videoSrc = "/home-hero-video.mp4" }: { videoSrc?: 
 	};
 
 	return (
-		<section className="relative h-[calc(100svh-64px)] min-h-[420px] w-full overflow-hidden bg-[#0b1220] pt-16 md:h-[calc(100svh-65px)] md:pt-20">
+		<section className="relative h-[calc(100svh-64px)] min-h-[420px] w-full overflow-hidden bg-[#0B0B0B] pt-16 md:h-[calc(100svh-65px)] md:pt-20">
 			<video
 				ref={videoRef}
 				className="absolute inset-0 h-full w-full object-cover"

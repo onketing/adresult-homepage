@@ -2,15 +2,12 @@
 
 import { ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
+import { FAQ_CATEGORIES, FAQ_CATEGORY_SLUGS, FAQ_ITEMS } from "@/data/faq";
 
-const CATEGORY_CHIPS = [
-	{ label: "비용", slug: "cost" },
-	{ label: "진행 안내", slug: "guide" },
-	{ label: "광고규정", slug: "regulation" },
-	{ label: "운영보고", slug: "operation" },
-	{ label: "성과", slug: "results" },
-	{ label: "해지환불", slug: "exit" },
-] as const;
+const CATEGORY_CHIPS = FAQ_CATEGORIES.map((label) => ({
+	label,
+	slug: FAQ_CATEGORY_SLUGS[label],
+}));
 
 const scrollToCategory = (slug: string) => {
 	const el = document.getElementById(`faq-${slug}`);
@@ -28,7 +25,7 @@ export const FaqHero = () => {
 		<section className="relative flex min-h-screen items-center overflow-hidden bg-[#fafbfc] px-6 py-28 md:px-10 md:py-36">
 			{/* Soft tinted blobs */}
 			<div
-				className="pointer-events-none absolute top-[-10%] left-[-10%] h-[600px] w-[600px] rounded-full bg-[#ef3c39] opacity-[0.05] blur-[160px]"
+				className="pointer-events-none absolute top-[-10%] left-[-10%] h-[600px] w-[600px] rounded-full bg-[#C8102E] opacity-[0.05] blur-[160px]"
 				aria-hidden="true"
 			/>
 			<div
@@ -80,7 +77,7 @@ export const FaqHero = () => {
 			{/* Center content */}
 			<div className="relative z-10 mx-auto w-full max-w-4xl text-center">
 				<motion.p
-					className="mb-6 font-semibold text-[#ef3c39] text-sm uppercase tracking-[0.25em]"
+					className="mb-6 font-semibold text-[#C8102E] text-sm uppercase tracking-[0.25em]"
 					initial={{ opacity: 0, y: 16 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6 }}
@@ -105,7 +102,7 @@ export const FaqHero = () => {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.25 }}
 				>
-					자주 묻는 질문을 여섯 카테고리로 정리했습니다.
+					자주 묻는 질문을 카테고리별로 정리했습니다.
 				</motion.p>
 
 				{/* Category chips */}
@@ -120,7 +117,7 @@ export const FaqHero = () => {
 							key={chip.slug}
 							type="button"
 							onClick={() => scrollToCategory(chip.slug)}
-							className="rounded-full border border-slate-200 bg-white px-4 py-1.5 font-medium text-slate-700 text-sm transition-all duration-200 hover:border-[#ef3c39] hover:text-[#ef3c39] hover:shadow-[0_4px_12px_rgba(239,60,57,0.12)]"
+							className="rounded-full border border-slate-200 bg-white px-4 py-1.5 font-medium text-slate-700 text-sm transition-all duration-200 hover:border-[#C8102E] hover:text-[#C8102E] hover:shadow-[0_4px_12px_rgba(200,16,46,0.12)]"
 							initial={{ opacity: 0, y: 6 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.4, delay: 0.4 + i * 0.05 }}
@@ -140,7 +137,7 @@ export const FaqHero = () => {
 			>
 				<div className="h-px flex-1 bg-slate-200" />
 				<p className="font-mono text-[10px] text-slate-500 uppercase tracking-[0.3em]">
-					6 Categories · 25 Q&amp;A
+					{FAQ_CATEGORIES.length} Categories · {FAQ_ITEMS.length} Q&amp;A
 				</p>
 				<div className="h-px flex-1 bg-slate-200" />
 			</motion.div>

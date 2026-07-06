@@ -30,8 +30,8 @@ export const CompanyTabs = () => {
 							className={cn(
 								"flex-1 border-slate-200 border-l py-5 text-center font-bold text-sm tracking-wide transition-colors first:border-l-0 md:text-base",
 								active
-									? "bg-[#e11d29] text-white"
-									: "text-[#0a0a0a] hover:bg-slate-50 hover:text-[#e11d29]",
+									? "bg-[#C8102E] text-white"
+									: "text-[#111111] hover:bg-slate-50 hover:text-[#C8102E]",
 							)}
 						>
 							{tab.label}

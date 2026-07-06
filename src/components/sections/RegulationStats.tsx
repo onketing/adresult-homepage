@@ -6,7 +6,7 @@ import { Reveal } from "@/components/shared/Reveal";
 import { REGULATION_STATS, TREND_DATA } from "@/data/regulation-stats";
 
 const CountUp = ({ to, duration = 1.4 }: { to: number; duration?: number }) => {
-	const [val, setVal] = useState(0);
+	const [val, setVal] = useState(to); // SSR·크롤러는 최종 수치를 읽는다 (뷰포트 진입 시 0부터 카운트업)
 	const ref = useRef<HTMLSpanElement>(null);
 	const isInView = useInView(ref, { once: true });
 
@@ -36,7 +36,7 @@ export const RegulationStats = () => {
 	const barsInView = useInView(barRef, { once: true, margin: "-60px" });
 
 	return (
-		<section className="bg-[#0d0202] py-14 md:py-28">
+		<section className="bg-[#090909] py-14 md:py-28">
 			<div className="mx-auto max-w-5xl px-4 md:px-8">
 				<Reveal className="mb-12 text-center">
 					<p className="mb-3 font-semibold text-[#fca5a5] text-sm uppercase tracking-[0.25em]">

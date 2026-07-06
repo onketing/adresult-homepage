@@ -33,7 +33,7 @@ export const RegulationChecklist = () => {
 							<p className="mb-2 font-semibold text-slate-500 text-xs uppercase tracking-[0.2em]">
 								Checklist
 							</p>
-							<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-4xl">
+							<h2 className="font-bold text-3xl text-[#111111] tracking-tight md:text-4xl">
 								발행 전, 항목별로 점검합니다.
 							</h2>
 							<p className="mt-4 break-keep text-slate-600 text-sm leading-relaxed">
@@ -90,7 +90,7 @@ export const RegulationChecklist = () => {
 													>
 														<motion.path
 															d="M3 8 L6.5 11.5 L13 5"
-															stroke="#ef3c39"
+															stroke="#C8102E"
 															strokeWidth="1.8"
 															strokeLinecap="round"
 															strokeLinejoin="round"
@@ -100,7 +100,7 @@ export const RegulationChecklist = () => {
 
 												{/* 항목 텍스트 */}
 												<div className="flex-1">
-													<p className="text-[#0a0a0a] text-sm">{item.text}</p>
+													<p className="text-[#111111] text-sm">{item.text}</p>
 												</div>
 
 												{/* 법령 라벨 */}

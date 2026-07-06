@@ -17,7 +17,7 @@ export const RegulationLawSwitcher = () => {
 					<p className="mb-2 font-semibold text-slate-500 text-xs uppercase tracking-[0.2em]">
 						Regulation
 					</p>
-					<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-4xl">
+					<h2 className="font-bold text-3xl text-[#111111] tracking-tight md:text-4xl">
 						진료과별, 항목별 점검 기준입니다.
 					</h2>
 					<p className="mt-3 text-slate-600 text-sm">
@@ -36,7 +36,7 @@ export const RegulationLawSwitcher = () => {
 								onClick={() => setSelected(i)}
 								className={`rounded-lg border px-4 py-2.5 text-left font-semibold text-sm transition-all ${
 									selected === i
-										? "border-[#ef3c39] bg-[#ef3c39] text-white"
+										? "border-[#C8102E] bg-[#C8102E] text-white"
 										: "border-slate-200 text-slate-700 hover:border-slate-400 hover:bg-slate-50"
 								}`}
 							>
@@ -59,7 +59,7 @@ export const RegulationLawSwitcher = () => {
 								{/* meta */}
 								<div className="mb-6 flex items-center gap-3">
 									<div>
-										<p className="font-bold text-[#0a0a0a] text-lg">{reg.profession}</p>
+										<p className="font-bold text-[#111111] text-lg">{reg.profession}</p>
 										<p className="mt-0.5 font-mono text-slate-500 text-xs tracking-[0.12em]">
 											{reg.law} · {reg.rule}
 										</p>
@@ -77,7 +77,7 @@ export const RegulationLawSwitcher = () => {
 											{reg.allowed.map((a) => (
 												<li key={a} className="flex items-start gap-2">
 													<span className="mt-0.5 shrink-0 text-red-500 text-xs">✓</span>
-													<span className="break-keep text-[#0a0a0a] text-sm leading-relaxed">
+													<span className="break-keep text-[#111111] text-sm leading-relaxed">
 														{a}
 													</span>
 												</li>
@@ -118,7 +118,7 @@ export const RegulationLawSwitcher = () => {
 						<details key={r.slug} className="group">
 							<summary className="flex cursor-pointer list-none items-center justify-between py-4">
 								<div>
-									<span className="font-semibold text-[#0a0a0a] text-sm">{r.profession}</span>
+									<span className="font-semibold text-[#111111] text-sm">{r.profession}</span>
 									<span className="ml-2 font-mono text-[10px] text-slate-500">{r.law}</span>
 								</div>
 								<ChevronDown className="h-4 w-4 shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-180" />
@@ -133,7 +133,7 @@ export const RegulationLawSwitcher = () => {
 											{r.allowed.map((a) => (
 												<li key={a} className="flex items-start gap-1.5">
 													<span className="mt-0.5 shrink-0 text-red-500 text-xs">✓</span>
-													<span className="break-keep text-[#0a0a0a] text-xs leading-relaxed">
+													<span className="break-keep text-[#111111] text-xs leading-relaxed">
 														{a}
 													</span>
 												</li>
