@@ -115,6 +115,22 @@ const nextConfig: NextConfig = {
 				hostname: "**",
 			},
 		],
+		/**
+		 * Vercel 이미지 최적화를 쓰지 않는다 (2026-09-22).
+		 *
+		 * 배경: 팀(onketings-projects) Hobby 플랜의 Image Optimization 캐시 쓰기 한도
+		 * (100,000건)가 소진됐다. 칼럼·사례 330여 페이지를 크롤러가 훑을 때마다 이미지마다
+		 * 폭별 변환본이 새로 만들어져 쓰기가 쌓였다. 한도가 막히면 `/_next/image` 가 402 를
+		 * 반환하고 사이트 이미지가 전부 깨진다(같은 팀 onketing.kr 에서 2026-08 에 겪음).
+		 *
+		 * 그래서 자산 자체를 최적화했다: public 의 png·jpg·gif 630장을 WebP 로 재인코딩하고
+		 * (gif 는 애니메이션 유지), 게시판·사례 본문은 가로 1440px · 그 외는 1920px 로 줄였다.
+		 * OG 이미지와 PWA 아이콘만 png 로 남긴다.
+		 *
+		 * 주의: unoptimized 는 srcset 을 만들지 않는다. 새 이미지는 **WebP 로, 표시 크기에
+		 * 맞춰 미리 리사이즈**해서 넣는다.
+		 */
+		unoptimized: true,
 	},
 };
 

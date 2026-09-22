@@ -181,7 +181,7 @@ export const BoardArticleView = ({
 						className="block overflow-hidden rounded-2xl transition-transform hover:scale-[1.01]"
 					>
 						<Image
-							src="/images/cases/_footer/cta.jpg"
+							src="/images/cases/_footer/cta.webp"
 							alt={`애드리절트 병원마케팅 문의 ${siteConfig.contact.tel}`}
 							width={700}
 							height={300}
@@ -197,7 +197,7 @@ export const BoardArticleView = ({
 						className="block overflow-hidden rounded-2xl transition-transform hover:scale-[1.01]"
 					>
 						<Image
-							src="/images/cases/_footer/tv.jpg"
+							src="/images/cases/_footer/tv.webp"
 							alt="애드리절트 TV 바로가기"
 							width={700}
 							height={262}

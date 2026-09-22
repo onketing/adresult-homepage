@@ -7,7 +7,7 @@ import { preload } from "react-dom";
 // 회사소개 하위 페이지 공용 히어로 — 영상 배경 + "Company introduction"
 export const CompanyHero = ({ videoSrc = "/home-hero-video.mp4" }: { videoSrc?: string }) => {
 	// LCP 대비 히어로 poster를 우선순위로 프리로드
-	preload(videoSrc.replace(/\.mp4$/, "-poster.jpg"), { as: "image", fetchPriority: "high" });
+	preload(videoSrc.replace(/\.mp4$/, "-poster.webp"), { as: "image", fetchPriority: "high" });
 	const videoRef = useRef<HTMLVideoElement>(null);
 	const [muted, setMuted] = useState(true);
 
@@ -48,7 +48,7 @@ export const CompanyHero = ({ videoSrc = "/home-hero-video.mp4" }: { videoSrc?: 
 				loop
 				playsInline
 				preload="metadata"
-				poster={videoSrc.replace(/\.mp4$/, "-poster.jpg")}
+				poster={videoSrc.replace(/\.mp4$/, "-poster.webp")}
 			>
 				<source src={videoSrc} type="video/mp4" />
 				<track kind="captions" />

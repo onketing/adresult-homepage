@@ -37,7 +37,7 @@ type ValueBlock = {
 
 const VALUE_BLOCKS: ValueBlock[] = [
 	{
-		img: "/about/about-1.jpg",
+		img: "/about/about-1.webp",
 		w: 1920,
 		h: 1119,
 		alt: "고객과 소통하는 애드리절트",
@@ -53,7 +53,7 @@ const VALUE_BLOCKS: ValueBlock[] = [
 		),
 	},
 	{
-		img: "/about/about-2.jpg",
+		img: "/about/about-2.webp",
 		w: 1512,
 		h: 938,
 		alt: "마케팅 지식을 축적하는 애드리절트",
@@ -71,7 +71,7 @@ const VALUE_BLOCKS: ValueBlock[] = [
 		),
 	},
 	{
-		img: "/about/about-3.jpg",
+		img: "/about/about-3.webp",
 		w: 1874,
 		h: 1010,
 		alt: "함께 성장하는 애드리절트",
@@ -85,7 +85,7 @@ const VALUE_BLOCKS: ValueBlock[] = [
 		),
 	},
 	{
-		img: "/about/about-4.jpg",
+		img: "/about/about-4.webp",
 		w: 1541,
 		h: 888,
 		alt: "확실한 성과를 만드는 애드리절트",
@@ -104,25 +104,25 @@ const VALUE_BLOCKS: ValueBlock[] = [
 
 const KNOWHOW_CARDS: { img: string; alt: string; desc: string; offset: string }[] = [
 	{
-		img: "/about/about-seo.jpg",
+		img: "/about/about-seo.webp",
 		alt: "탁월한 S.E.O 실력",
 		desc: "고객이 검색할 때 우리 브랜드를 쉽게 찾을 수 있도록, 다양한 온라인 매체를 활용해 검색 노출을 최적화합니다.",
 		offset: "lg:mt-0",
 	},
 	{
-		img: "/about/about-marketing.jpg",
+		img: "/about/about-marketing.webp",
 		alt: "마케팅 관련 지식 3,500여 개 보유",
 		desc: "고객과 끊임없이 소통하며 발견한 마케팅 지식만 3,500여 개. 이를 바탕으로 우리 병원을 더욱 빠르고 효과적으로 관리합니다.",
 		offset: "lg:mt-24",
 	},
 	{
-		img: "/about/about-contents.jpg",
+		img: "/about/about-contents.webp",
 		alt: "구매전환을 높이는 콘텐츠 기획력",
 		desc: "수많은 브랜드 중에서 왜 우리여야 하는지 ‘Why Me’를 고민하며 차별화된 콘텐츠를 기획합니다.",
 		offset: "lg:mt-0",
 	},
 	{
-		img: "/about/about-study.jpg",
+		img: "/about/about-study.webp",
 		alt: "대행사를 가르치는 대행사",
 		desc: "애드리절트는 마케팅 실행사이자 대행사로서 소상공인, 마케팅 대행사, 의사 등을 대상으로 마케팅 교육을 제공할 만큼 검증된 실력을 갖추고 있습니다.",
 		offset: "lg:mt-24",
@@ -360,7 +360,7 @@ export const AboutPage = () => {
 
 				<div className="relative mt-12 w-full md:mt-16">
 					<Image
-						src="/about/floor-information.jpg"
+						src="/about/floor-information.webp"
 						alt="애드리절트 사옥 전경"
 						width={1920}
 						height={850}
@@ -419,7 +419,7 @@ export const AboutPage = () => {
 								<div className="h-full rounded-2xl border border-slate-200 bg-white p-8 shadow-[0_2px_20px_rgba(15,23,42,0.04)]">
 									<div className="flex items-center gap-2.5">
 										<Image
-											src="/title-logo.png"
+											src="/title-logo.webp"
 											alt=""
 											width={28}
 											height={28}

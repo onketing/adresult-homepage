@@ -56,30 +56,30 @@ const HASHTAGS: { label: string; color: string }[] = [
 ];
 
 const GRID_GIFS = [
-	"/aio/gemini-2.gif",
-	"/aio/gemini-3.gif",
-	"/aio/gemini-4.gif",
-	"/aio/gemini-5.gif",
+	"/aio/gemini-2.webp",
+	"/aio/gemini-3.webp",
+	"/aio/gemini-4.webp",
+	"/aio/gemini-5.webp",
 ];
 
-const AIO_EXAMS = ["/aio/aio-exam-1.png", "/aio/aio-exam-2.png", "/aio/aio-exam-3.png"];
+const AIO_EXAMS = ["/aio/aio-exam-1.webp", "/aio/aio-exam-2.webp", "/aio/aio-exam-3.webp"];
 
 const EXPOSURES = [
-	"/aio/google-exposure-1.png",
-	"/aio/google-exposure-2.png",
-	"/aio/google-exposure-3.png",
-	"/aio/google-exposure-4.png",
-	"/aio/google-exposure-5.png",
-	"/aio/google-exposure-6.png",
+	"/aio/google-exposure-1.webp",
+	"/aio/google-exposure-2.webp",
+	"/aio/google-exposure-3.webp",
+	"/aio/google-exposure-4.webp",
+	"/aio/google-exposure-5.webp",
+	"/aio/google-exposure-6.webp",
 ];
 
 const HOSPITAL_EXPOSURES = [
-	"/aio/hospital-exposure-1.png",
-	"/aio/hospital-exposure-2.png",
-	"/aio/hospital-exposure-3.png",
-	"/aio/hospital-exposure-4.png",
-	"/aio/hospital-exposure-5.png",
-	"/aio/hospital-exposure-6.png",
+	"/aio/hospital-exposure-1.webp",
+	"/aio/hospital-exposure-2.webp",
+	"/aio/hospital-exposure-3.webp",
+	"/aio/hospital-exposure-4.webp",
+	"/aio/hospital-exposure-5.webp",
+	"/aio/hospital-exposure-6.webp",
 ];
 
 const AIRANK_CHECKS: {
@@ -92,26 +92,26 @@ const AIRANK_CHECKS: {
 }[] = [
 	{
 		text: "1. 매일 우리 병원이 어느 AI에서 언급되었는지 질의어 별로 체크합니다.",
-		img: "/aio/aio-check-1.png",
+		img: "/aio/aio-check-1.webp",
 		w: 1920,
 		h: 1000,
 		caption: "※실제 애드리절트 병원 고객사 AI 분석 자료",
 	},
 	{
 		text: "2. 우리 병원과 경쟁 병원의 추천 추이를 확인할 수 있습니다.",
-		img: "/aio/aio-check-2.png",
+		img: "/aio/aio-check-2.webp",
 		w: 1660,
 		h: 397,
 	},
 	{
 		text: "3. 내가 원하는 질문에 답을 어디에서 참고하는지 확인할 수 있습니다.",
-		img: "/aio/aio-check-3.png",
+		img: "/aio/aio-check-3.webp",
 		w: 1415,
 		h: 611,
 	},
 	{
 		text: "4. 추천 및 언급되면 바로 캡쳐하여 저장하므로, 진짜 추천되었는지 확인할 수 있습니다.(정확도 최고!)",
-		img: "/aio/aio-check-4.gif",
+		img: "/aio/aio-check-4.webp",
 		w: 1280,
 		h: 720,
 		gif: true,
@@ -213,7 +213,7 @@ export const AioPage = () => {
 
 					<Reveal direction="right">
 						<Image
-							src="/aio/gemini-search.png"
+							src="/aio/gemini-search.webp"
 							alt="Gemini에게 병원 추천을 물어본 검색 화면"
 							width={537}
 							height={504}
@@ -277,7 +277,7 @@ export const AioPage = () => {
 					</Reveal>
 					<Reveal direction="scale" className="mt-12 md:mt-14">
 						<Image
-							src="/aio/gemini-1.gif"
+							src="/aio/gemini-1.webp"
 							alt="AI가 애드리절트를 추천하는 화면"
 							width={1280}
 							height={720}
@@ -336,7 +336,7 @@ export const AioPage = () => {
 
 					<Reveal direction="scale" className="mt-12 md:mt-14">
 						<Image
-							src="/aio/recommendation.png"
+							src="/aio/recommendation.webp"
 							alt="AI 검색을 통해 애드리절트를 추천받고 문의한 실제 사례"
 							width={1275}
 							height={1268}
@@ -382,7 +382,7 @@ export const AioPage = () => {
 
 					<Reveal direction="scale" className="mt-12 md:mt-14">
 						<Image
-							src="/aio/rate-of-increase.png"
+							src="/aio/rate-of-increase.webp"
 							alt="애드리절트 유입 경로 중 AI검색 유입의 증가율 추이 그래프"
 							width={1280}
 							height={783}

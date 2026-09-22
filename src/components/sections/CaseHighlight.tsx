@@ -75,8 +75,8 @@ const CaseCard = ({ item, caseNum }: { item: CaseItem; caseNum: number }) => {
 
 					{/* 그래프 2개 */}
 					<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-						<CaseChart src={`/exam${caseNum}-1.gif`} />
-						<CaseChart src={`/exam${caseNum}-2.gif`} />
+						<CaseChart src={`/exam${caseNum}-1.webp`} />
+						<CaseChart src={`/exam${caseNum}-2.webp`} />
 					</div>
 				</div>
 			</div>
@@ -127,7 +127,7 @@ const SingleCaseCard = ({
 
 					{/* 그래프 1개 */}
 					<div className="mt-auto">
-						<CaseChart src={`/exam${caseNum}-1.gif`} />
+						<CaseChart src={`/exam${caseNum}-1.webp`} />
 					</div>
 				</div>
 			</div>

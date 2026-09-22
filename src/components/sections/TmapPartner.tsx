@@ -11,7 +11,7 @@ export const TmapPartner = () => {
 					</h2>
 					<div className="mt-10 flex justify-center md:mt-14">
 						<Image
-							src="/adresult-tmap.png"
+							src="/adresult-tmap.webp"
 							alt="T-Map × 애드리절트 공식 파트너"
 							width={671}
 							height={146}

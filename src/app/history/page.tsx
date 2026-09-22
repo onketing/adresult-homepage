@@ -130,7 +130,7 @@ export const HistoryPage = () => {
 					<div className="mt-16 grid items-center gap-12 md:mt-20 md:grid-cols-2 md:gap-20">
 						<Reveal direction="left">
 							<Image
-								src="/history/awards.png"
+								src="/history/awards.webp"
 								alt="애드리절트 수상·인증 이력"
 								width={686}
 								height={547}

@@ -74,10 +74,10 @@ const PAIN_QUOTES = [
 const PROBLEM_STEPS = ["기획없이\n찍고", "편집해서\n올리고", "조회수만\n기다리는 구조"];
 
 const EXAM_THUMBS = [
-	{ src: "/shortform/shortform-exam-1.png", w: 1112, h: 1980 },
-	{ src: "/shortform/shortform-exam-2.png", w: 1118, h: 1950 },
-	{ src: "/shortform/shortform-exam-3.png", w: 1108, h: 1978 },
-	{ src: "/shortform/shortform-exam-4.jpg", w: 1080, h: 1920 },
+	{ src: "/shortform/shortform-exam-1.webp", w: 1112, h: 1980 },
+	{ src: "/shortform/shortform-exam-2.webp", w: 1118, h: 1950 },
+	{ src: "/shortform/shortform-exam-3.webp", w: 1108, h: 1978 },
+	{ src: "/shortform/shortform-exam-4.webp", w: 1080, h: 1920 },
 ];
 
 const VS_GENERAL = ["편집 중심", "업로드 중심", "조회수 중심"];
@@ -103,11 +103,11 @@ const FUNNEL = [
 ];
 
 const CHANNELS = [
-	{ src: "/shortform/step5-1.png", w: 623, h: 623 },
-	{ src: "/shortform/step5-2.png", w: 623, h: 623 },
-	{ src: "/shortform/step5-3.png", w: 623, h: 623 },
-	{ src: "/shortform/step5-4.png", w: 623, h: 623 },
-	{ src: "/shortform/step5-5.png", w: 648, h: 623 },
+	{ src: "/shortform/step5-1.webp", w: 623, h: 623 },
+	{ src: "/shortform/step5-2.webp", w: 623, h: 623 },
+	{ src: "/shortform/step5-3.webp", w: 623, h: 623 },
+	{ src: "/shortform/step5-4.webp", w: 623, h: 623 },
+	{ src: "/shortform/step5-5.webp", w: 648, h: 623 },
 ];
 
 const GROWTH = [
@@ -201,7 +201,7 @@ export const ShortformServicePage = () => {
 					</Reveal>
 					<Reveal direction="right">
 						<Image
-							src="/shortform/background.png"
+							src="/shortform/background.webp"
 							alt="병원 원장이 숏폼을 촬영하는 현장"
 							width={726}
 							height={404}
@@ -298,7 +298,7 @@ export const ShortformServicePage = () => {
 					<div className="mt-12 flex flex-col items-center gap-5 md:mt-14 md:flex-row md:items-center md:gap-7">
 						<Reveal direction="up" className="w-full md:w-[38%]">
 							<Image
-								src="/shortform/direct-1.jpg"
+								src="/shortform/direct-1.webp"
 								alt="현직 인플루언서가 촬영을 코칭하는 현장"
 								width={1000}
 								height={750}
@@ -309,7 +309,7 @@ export const ShortformServicePage = () => {
 						</Reveal>
 						<Reveal direction="up" delay={0.08} className="w-full md:w-[57%]">
 							<Image
-								src="/shortform/direct-2.gif"
+								src="/shortform/direct-2.webp"
 								alt="촬영 현장 코칭 장면"
 								width={600}
 								height={338}
@@ -390,7 +390,7 @@ export const ShortformServicePage = () => {
 					</Reveal>
 					<Reveal direction="scale" className="mt-12 md:mt-14">
 						<Image
-							src="/shortform/step2-1.png"
+							src="/shortform/step2-1.webp"
 							alt="댓글 유도 → 예약 전환 구조"
 							width={866}
 							height={526}
@@ -405,9 +405,9 @@ export const ShortformServicePage = () => {
 						</p>
 					</Reveal>
 					<div className="mt-16 flex items-start justify-center gap-8 md:mt-20 md:gap-16">
-						<Reveal direction="up">
+						<Reveal direction="up" className="w-[45%] max-w-[300px]">
 							<Image
-								src="/shortform/step2-2.png"
+								src="/shortform/step2-2.webp"
 								alt="인스타그램 스토리 연동 사례 1"
 								width={331}
 								height={590}
@@ -416,9 +416,9 @@ export const ShortformServicePage = () => {
 								className="h-auto w-full max-w-[300px]"
 							/>
 						</Reveal>
-						<Reveal direction="up" delay={0.08}>
+						<Reveal direction="up" delay={0.08} className="w-[45%] max-w-[300px]">
 							<Image
-								src="/shortform/step2-3.png"
+								src="/shortform/step2-3.webp"
 								alt="인스타그램 스토리 연동 사례 2"
 								width={331}
 								height={590}
@@ -458,7 +458,7 @@ export const ShortformServicePage = () => {
 
 					<Reveal direction="scale" className="mt-14 md:mt-16">
 						<Image
-							src="/shortform/step3-1.png"
+							src="/shortform/step3-1.webp"
 							alt="검색+알고리즘 기반 유튜브·인스타그램 바이럴 구조"
 							width={1300}
 							height={521}
@@ -486,7 +486,7 @@ export const ShortformServicePage = () => {
 					</Reveal>
 					<Reveal direction="scale" className="mt-10">
 						<Image
-							src="/shortform/step3-2.png"
+							src="/shortform/step3-2.webp"
 							alt="유튜브 검색 노출 예시"
 							width={862}
 							height={371}
@@ -523,22 +523,22 @@ export const ShortformServicePage = () => {
 					<Reveal direction="scale" className="mt-10">
 						<div className="flex items-start justify-center gap-4 md:gap-6">
 							<Image
-								src="/shortform/step3-3.png"
+								src="/shortform/step3-3.webp"
 								alt="인스타그램 알고리즘 노출 예시 1"
 								width={296}
 								height={528}
 								quality={90}
 								sizes="(max-width: 768px) 45vw, 260px"
-								className="h-auto w-full max-w-[260px]"
+								className="h-auto w-[45%] max-w-[260px]"
 							/>
 							<Image
-								src="/shortform/step3-4.png"
+								src="/shortform/step3-4.webp"
 								alt="인스타그램 알고리즘 노출 예시 2"
 								width={296}
 								height={528}
 								quality={90}
 								sizes="(max-width: 768px) 45vw, 260px"
-								className="h-auto w-full max-w-[260px]"
+								className="h-auto w-[45%] max-w-[260px]"
 							/>
 						</div>
 						<p className="mt-4 text-slate-400 text-sm md:text-base">
@@ -711,7 +711,7 @@ export const ShortformServicePage = () => {
 					</Reveal>
 					<Reveal direction="scale" className="mt-14 md:mt-16">
 						<Image
-							src="/shortform/calendar.png"
+							src="/shortform/calendar.webp"
 							alt="26년 9월까지 예약 마감된 병원 캘린더"
 							width={1488}
 							height={570}
@@ -798,7 +798,7 @@ export const ShortformServicePage = () => {
 					</Reveal>
 					<Reveal direction="scale" className="mt-14 md:mt-16">
 						<Image
-							src="/shortform/site.png"
+							src="/shortform/site.webp"
 							alt="애드리절트 끝장숏폼 촬영 현장"
 							width={1500}
 							height={550}

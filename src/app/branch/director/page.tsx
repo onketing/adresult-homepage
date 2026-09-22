@@ -145,7 +145,7 @@ export const BranchDirectorPage = () => {
 									className="absolute -top-3 -left-3 h-full w-full border border-[#3A3835]"
 								/>
 								<Image
-									src="/people/director-hanwoori.jpg"
+									src="/people/director-hanwoori.webp"
 									alt="애드리절트 마포지사 한우리 지사장 프로필 사진"
 									width={843}
 									height={1030}

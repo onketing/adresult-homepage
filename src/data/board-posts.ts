@@ -18,13 +18,13 @@ export const STORY_ARTICLES: BoardArticle[] = [
 		title: "안녕하세요, 진심이입니다 😄",
 		excerpt:
 			"안녕하세요 :) 애드리절트의 사랑스러운 마스코트, 진심이 입니다 😄 당신의 마지막 마케팅 파트너가 되기위해 고군분투하는 애드리절트 마케터들의 일상과 마케팅 노하우 등 다양한 이야기를 전하고 있어요. 저는 웹툰, 영상 등 다양한 형태로 만나보실 수 있답니다~ 앞으로도 따뜻하고 밝은 에너지",
-		cover: "/images/boards/story/167659870/1.png",
+		cover: "/images/boards/story/167659870/1.webp",
 		coverW: 740,
 		coverH: 640,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/story/167659870/1.png",
+				src: "/images/boards/story/167659870/1.webp",
 				w: 740,
 				h: 640,
 				alt: "77e6d95018555.png",
@@ -101,7 +101,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/167659870/2.png",
+				src: "/images/boards/story/167659870/2.webp",
 				w: 250,
 				h: 216,
 				alt: "806a858a30577.png",
@@ -114,13 +114,13 @@ export const STORY_ARTICLES: BoardArticle[] = [
 		title: "[진심이 story] 환자가 많이 늘었어요!",
 		excerpt:
 			'💬진심이 Say 애드리절트 직원들이 가장~~ 듣고 싶은 말"환자 늘었어요!"저희의 노력이 결실을 맺는 순간입니다.매일 들어도 질리지 않는 행복한 피드백!이 한 마디를 듣기 위해오늘도 애드리절트는 달립니다.',
-		cover: "/images/boards/story/168469554/1.png",
+		cover: "/images/boards/story/168469554/1.webp",
 		coverW: 1024,
 		coverH: 1536,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/story/168469554/1.png",
+				src: "/images/boards/story/168469554/1.webp",
 				w: 1024,
 				h: 1536,
 				alt: "c039987292594.png",
@@ -128,7 +128,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/168469554/2.png",
+				src: "/images/boards/story/168469554/2.webp",
 				w: 1024,
 				h: 1536,
 				alt: "3cae3993cfeb9.png",
@@ -136,7 +136,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/168469554/3.png",
+				src: "/images/boards/story/168469554/3.webp",
 				w: 1024,
 				h: 1536,
 				alt: "7ae2f58d1c921.png",
@@ -144,7 +144,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/168469554/4.png",
+				src: "/images/boards/story/168469554/4.webp",
 				w: 1024,
 				h: 1536,
 				alt: "882d9d29c6ef8.png",
@@ -224,13 +224,13 @@ export const STORY_ARTICLES: BoardArticle[] = [
 		title: '[진심이 story] "척추전문병원" 써도 되나요?',
 		excerpt:
 			'💬진심이 Say Q. 척추전문병원, 써도 될까요?🔽"의료법 제42조 제1항보건복지부로부터 전문병원으로 지정받은 기관만 지정기간 동안 전문병원 명칭 사용이 가능합니다.같은 이름의 지점이 여러곳인 경우 지정받은 지점만 사용할 수 있으며, 타 지점에서 병원명이 같다는 이유만으로 전문병원을 쓸',
-		cover: "/images/boards/story/168469529/1.png",
+		cover: "/images/boards/story/168469529/1.webp",
 		coverW: 800,
 		coverH: 1000,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/story/168469529/1.png",
+				src: "/images/boards/story/168469529/1.webp",
 				w: 800,
 				h: 1000,
 				alt: "6e6c77fc0c038.png",
@@ -238,7 +238,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/168469529/2.png",
+				src: "/images/boards/story/168469529/2.webp",
 				w: 800,
 				h: 1000,
 				alt: "d2ebe7932fd79.png",
@@ -246,7 +246,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/168469529/3.png",
+				src: "/images/boards/story/168469529/3.webp",
 				w: 800,
 				h: 1000,
 				alt: "8693a62017c22.png",
@@ -326,13 +326,13 @@ export const STORY_ARTICLES: BoardArticle[] = [
 		title: "[진심이 story] 병원마케팅 직업병..",
 		excerpt:
 			'💬진심이 Say 병원마케팅 하는 우리는.. 직업병이 있습니다. "환자들이 병원을 어떤 경로로 갈까?" 늘 궁금해요 ㅎㅎ 그래서 지인들이 저희의 설문조사 대상이 됩니다😄 가족, 친구 가리지 않고 어떻게 병원을 가는지 물어보는데요, 50대 까지는 검색이 1순위, 60대 이후로는 집근처가 많',
-		cover: "/images/boards/story/167893401/1.png",
+		cover: "/images/boards/story/167893401/1.webp",
 		coverW: 600,
 		coverH: 750,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/story/167893401/1.png",
+				src: "/images/boards/story/167893401/1.webp",
 				w: 600,
 				h: 750,
 				alt: "7030a8b847cd7.png",
@@ -340,7 +340,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/167893401/2.png",
+				src: "/images/boards/story/167893401/2.webp",
 				w: 600,
 				h: 750,
 				alt: "0f315c380f0d6.png",
@@ -348,7 +348,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/167893401/3.png",
+				src: "/images/boards/story/167893401/3.webp",
 				w: 600,
 				h: 750,
 				alt: "49f070a145979.png",
@@ -356,7 +356,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/167893401/4.png",
+				src: "/images/boards/story/167893401/4.webp",
 				w: 600,
 				h: 750,
 				alt: "431f0b80f560f.png",
@@ -636,13 +636,13 @@ export const STORY_ARTICLES: BoardArticle[] = [
 		title: '[진심이 story]"도수센터" 써도 되나요?',
 		excerpt:
 			"💬진심이 Say 병원마케팅 할 때 이 표현 써도 되나요? Q. 도수센터, 써도 되나요? \"의료법 제42조 및 시행규칙 제40조 의료기관명칭 표기시 '센터' 또는 'center'는 의원이나 병원급 의료기관에서 사용할 수 없으며...\" 종합병원이 아닌 일반 병·의원에서 '센터'는 사용할 수",
-		cover: "/images/boards/story/167893313/1.png",
+		cover: "/images/boards/story/167893313/1.webp",
 		coverW: 600,
 		coverH: 750,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/story/167893313/1.png",
+				src: "/images/boards/story/167893313/1.webp",
 				w: 600,
 				h: 750,
 				alt: "4af0f692fe140.png",
@@ -650,7 +650,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/167893313/2.png",
+				src: "/images/boards/story/167893313/2.webp",
 				w: 600,
 				h: 750,
 				alt: "f4db8b66188d7.png",
@@ -766,13 +766,13 @@ export const STORY_ARTICLES: BoardArticle[] = [
 		title: "[진심이 story] 파워링크.. 너무 비싼데요?",
 		excerpt:
 			"💬진심이 Say 파워링크는 네이버 최상단에 위치하고 있어, 병원들이 기본으로 진행하는 광고 중 하나에요. 파워링크는 클릭 한 번에 얼마. 이렇게 클릭 당 비용이 차감되는 CPC 광고입니다. 최상단 위치라 하면 좋긴하지만..우선 비싸고, 비싸게 광고한 만큼 전환은 잘 안되고. 그래서 고민",
-		cover: "/images/boards/story/167893269/1.jpg",
+		cover: "/images/boards/story/167893269/1.webp",
 		coverW: 600,
 		coverH: 750,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/story/167893269/1.jpg",
+				src: "/images/boards/story/167893269/1.webp",
 				w: 600,
 				h: 750,
 				alt: "bc1660cdd3f6a.jpg",
@@ -780,7 +780,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/167893269/2.jpg",
+				src: "/images/boards/story/167893269/2.webp",
 				w: 600,
 				h: 750,
 				alt: "0678fd6ece003.jpg",
@@ -788,7 +788,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/167893269/3.jpg",
+				src: "/images/boards/story/167893269/3.webp",
 				w: 600,
 				h: 750,
 				alt: "f189c43d2f01e.jpg",
@@ -796,7 +796,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/167893269/4.jpg",
+				src: "/images/boards/story/167893269/4.webp",
 				w: 600,
 				h: 750,
 				alt: "4f1e5a21f48e2.jpg",
@@ -1054,13 +1054,13 @@ export const STORY_ARTICLES: BoardArticle[] = [
 		title: "[진심이 story] 병원마케팅 회사의 협박",
 		excerpt:
 			"💬진심이 Say 얼마 전.. 정말 '황당한' 병원마케팅 회사의 갑질 이야기를 들었어요.상황은 이렇습니다. 병원마케팅을 통한 환자 유입이 저조하고, 관리에 불만이 있던 원장님이 오랜 고심끝에 광고 중단 의사를 밝혔다고 합니다.그랬더니 광고회사에서의료심의를 운운하며,본인 회사의 광고를 중단",
-		cover: "/images/boards/story/167893125/1.png",
+		cover: "/images/boards/story/167893125/1.webp",
 		coverW: 600,
 		coverH: 800,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/story/167893125/1.png",
+				src: "/images/boards/story/167893125/1.webp",
 				w: 600,
 				h: 800,
 				alt: "c844bb9e0ead1.png",
@@ -1068,7 +1068,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/167893125/2.png",
+				src: "/images/boards/story/167893125/2.webp",
 				w: 600,
 				h: 800,
 				alt: "3a962c435bfdd.png",
@@ -1076,7 +1076,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/167893125/3.png",
+				src: "/images/boards/story/167893125/3.webp",
 				w: 600,
 				h: 800,
 				alt: "4ef72906f9215.png",
@@ -1336,13 +1336,13 @@ export const STORY_ARTICLES: BoardArticle[] = [
 		title: "[진심이 story] 환자가 안와요..",
 		excerpt:
 			'💬진심이 Say 병원마케팅을 해서 환자가 계속 늘기만 한다면 얼마나 좋을까요? ^^ 아무리 마케팅 비용을 많이 쓰고, 잘 한다해도 환자는 늘기도, 줄기도 합니다. 진짜 잘 하는 병원마케팅 광고회사는 위기에 강한 법! 애드리절트는 원장님들의 "환자가 안와요.." 라는 말에 가장 민감하게',
-		cover: "/images/boards/story/167659604/1.jpg",
+		cover: "/images/boards/story/167659604/1.webp",
 		coverW: 400,
 		coverH: 500,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/story/167659604/1.jpg",
+				src: "/images/boards/story/167659604/1.webp",
 				w: 400,
 				h: 500,
 				alt: "1654dcec6e63e.jpg",
@@ -1350,7 +1350,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/167659604/2.jpg",
+				src: "/images/boards/story/167659604/2.webp",
 				w: 400,
 				h: 500,
 				alt: "90948b9c842ff.jpg",
@@ -1358,7 +1358,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/167659604/3.jpg",
+				src: "/images/boards/story/167659604/3.webp",
 				w: 400,
 				h: 500,
 				alt: "28562f0fbd271.jpg",
@@ -1366,7 +1366,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/167659604/4.jpg",
+				src: "/images/boards/story/167659604/4.webp",
 				w: 400,
 				h: 500,
 				alt: "32e73b7fe2f8f.jpg",
@@ -1374,7 +1374,7 @@ export const STORY_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/story/167659604/5.jpg",
+				src: "/images/boards/story/167659604/5.webp",
 				w: 400,
 				h: 500,
 				alt: "891b47a706b56.jpg",
@@ -1490,7 +1490,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "AI병원추천, 우리 병원은 AI 검색 결과에 얼마나 노출될까요?",
 		excerpt:
 			'실제로 많은 원장님들께서 상담 시 가장 먼저 던지는 질문 중 하나입니다. 환자들은 이제 네이버 검색을 넘어 AI에게 "강남에서 임플란트 잘하는 치과 추천해 줘", "내 증상에 맞는 병원 어디야?"라고 묻기 시작했습니다. 하지만 정작 우리 병원이 AI 답변에서 얼마나 언급되는지, 경쟁 병',
-		cover: "/images/boards/column/171084411/1.gif",
+		cover: "/images/boards/column/171084411/1.webp",
 		coverW: 640,
 		coverH: 360,
 		blocks: [
@@ -1521,7 +1521,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/171084411/1.gif",
+				src: "/images/boards/column/171084411/1.webp",
 				w: 640,
 				h: 360,
 				alt: "48b058cb5cbe2.gif",
@@ -1557,7 +1557,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/171084411/2.gif",
+				src: "/images/boards/column/171084411/2.webp",
 				w: 640,
 				h: 360,
 				alt: "83041a1ec9eac.gif",
@@ -1692,7 +1692,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/171084411/3.gif",
+				src: "/images/boards/column/171084411/3.webp",
 				w: 640,
 				h: 360,
 				alt: "b315f09b9a768.gif",
@@ -1723,7 +1723,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/171084411/4.gif",
+				src: "/images/boards/column/171084411/4.webp",
 				w: 640,
 				h: 360,
 				alt: "dd1e7d1399bbf.gif",
@@ -1754,7 +1754,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/171084411/5.gif",
+				src: "/images/boards/column/171084411/5.webp",
 				w: 640,
 				h: 360,
 				alt: "83e5e24633dfc.gif",
@@ -1785,7 +1785,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/171084411/6.gif",
+				src: "/images/boards/column/171084411/6.webp",
 				w: 640,
 				h: 360,
 				alt: "77dbd93805c9f.gif",
@@ -1816,7 +1816,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/171084411/7.gif",
+				src: "/images/boards/column/171084411/7.webp",
 				w: 640,
 				h: 360,
 				alt: "4542c27db4e0b.gif",
@@ -1913,7 +1913,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원유튜브 숏폼 밈 따라하기 전 반드시 확인해야 할 운영 전략",
 		excerpt:
 			"병원 유튜브 채널을 운영하며 릴스나 쇼츠 같은 숏폼 콘텐츠에 도전하는 원장님들이 많아지고 있습니다. 최근 유행하는 밈(Meme)을 따라 하며 춤을 추거나 재미있는 영상을 올렸는데, 정작 환자들의 반응은 차갑거나 오히려 병원의 신뢰도가 떨어지는 것 같아 고민이신가요? 열심히 준비한 영상이",
-		cover: "/images/boards/column/171045644/1.gif",
+		cover: "/images/boards/column/171045644/1.webp",
 		coverW: 640,
 		coverH: 360,
 		blocks: [
@@ -1947,7 +1947,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/171045644/1.gif",
+				src: "/images/boards/column/171045644/1.webp",
 				w: 640,
 				h: 360,
 				alt: "afd6d40d41eb4.gif",
@@ -2037,7 +2037,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/171045644/2.gif",
+				src: "/images/boards/column/171045644/2.webp",
 				w: 640,
 				h: 360,
 				alt: "d931e848e23d4.gif",
@@ -2119,7 +2119,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/171045644/3.gif",
+				src: "/images/boards/column/171045644/3.webp",
 				w: 640,
 				h: 360,
 				alt: "22718017076cb.gif",
@@ -2256,7 +2256,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/171045644/4.gif",
+				src: "/images/boards/column/171045644/4.webp",
 				w: 640,
 				h: 360,
 				alt: "73f15f1e8a177.gif",
@@ -2343,7 +2343,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "AI마케팅, 변화하는 병원 생태계에서 살아남는 핵심 전략",
 		excerpt:
 			'요즘 병원을 운영하시면서 "옆 동네 병원은 환자가 넘쳐나는데, 우리 병원은 왜 정체되어 있을까?"라는 고민 한 번쯤 해보셨을 겁니다. 매일 진료에 매진하시느라 마케팅 트렌드까지 챙기기 버거우시겠지만, 이제는 AI를 활용하지 않고서는 환자들의 선택을 받기 어려운 시대가 되었습니다. 단순히',
-		cover: "/images/boards/column/170936721/1.gif",
+		cover: "/images/boards/column/170936721/1.webp",
 		coverW: 640,
 		coverH: 360,
 		blocks: [
@@ -2370,7 +2370,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170936721/1.gif",
+				src: "/images/boards/column/170936721/1.webp",
 				w: 640,
 				h: 360,
 				alt: "dcc93ff7d7d2e.gif",
@@ -2495,7 +2495,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170936721/2.gif",
+				src: "/images/boards/column/170936721/2.webp",
 				w: 640,
 				h: 360,
 				alt: "db91ce653b83d.gif",
@@ -2558,7 +2558,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170936721/3.gif",
+				src: "/images/boards/column/170936721/3.webp",
 				w: 640,
 				h: 360,
 				alt: "361e9578f11c6.gif",
@@ -2611,7 +2611,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170936721/4.gif",
+				src: "/images/boards/column/170936721/4.webp",
 				w: 640,
 				h: 360,
 				alt: "8863c25e80105.gif",
@@ -2660,7 +2660,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170936721/5.gif",
+				src: "/images/boards/column/170936721/5.webp",
 				w: 640,
 				h: 360,
 				alt: "38987b1cb204d.gif",
@@ -2710,7 +2710,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170936721/6.gif",
+				src: "/images/boards/column/170936721/6.webp",
 				w: 640,
 				h: 360,
 				alt: "f65afbbc690e2.gif",
@@ -2807,7 +2807,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원마케팅대행사 선택 실패하신 분들 필독!",
 		excerpt:
 			"열심히 광고비를 쓰고, 노출도 잘 되는 것 같은데 정작 병원을 찾는 환자의 발길은 예전과 다름없어 답답함을 느끼는 원장님들이 많으십니다. 소위 '잘나가는' 병원들은 단순히 돈을 많이 써서 상위 노출을 시키는 것이 아니라, 그들만의 명확한 성공 방정식이 따로 있습니다. 마케팅의 본질은 단",
-		cover: "/images/boards/column/170771161/1.gif",
+		cover: "/images/boards/column/170771161/1.webp",
 		coverW: 640,
 		coverH: 360,
 		blocks: [
@@ -2834,7 +2834,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170771161/1.gif",
+				src: "/images/boards/column/170771161/1.webp",
 				w: 640,
 				h: 360,
 				alt: "31c97aa949bca.gif",
@@ -2911,7 +2911,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170771161/2.gif",
+				src: "/images/boards/column/170771161/2.webp",
 				w: 640,
 				h: 360,
 				alt: "da253eae61493.gif",
@@ -2973,7 +2973,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170771161/3.gif",
+				src: "/images/boards/column/170771161/3.webp",
 				w: 640,
 				h: 360,
 				alt: "b137c5f54f908.gif",
@@ -3037,7 +3037,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170771161/4.gif",
+				src: "/images/boards/column/170771161/4.webp",
 				w: 640,
 				h: 360,
 				alt: "b6a08badfaf0d.gif",
@@ -3086,7 +3086,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170771161/5.gif",
+				src: "/images/boards/column/170771161/5.webp",
 				w: 640,
 				h: 360,
 				alt: "dddc534cb170b.gif",
@@ -3135,7 +3135,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170771161/6.gif",
+				src: "/images/boards/column/170771161/6.webp",
 				w: 640,
 				h: 360,
 				alt: "b70db87ce17b0.gif",
@@ -3201,7 +3201,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병의원마케팅, 환자가 끊이지 않는 병원은 무엇이 다를까요?",
 		excerpt:
 			"원장님, 혹시 우리 병원도 실력만큼은 어디에도 뒤지지 않는데, 왜 정작 환자들의 문의 전화는 늘지 않는지 답답함을 느껴보신 적 없으신가요? 많은 원장님들께서 탁월한 치료 효과와 임상 사례를 보유하고 계심에도 불구하고, 이를 대중에게 알리는 과정에서 한계에 부딪히곤 합니다. 특히 희귀 난",
-		cover: "/images/boards/column/170706625/1.gif",
+		cover: "/images/boards/column/170706625/1.webp",
 		coverW: 640,
 		coverH: 360,
 		blocks: [
@@ -3228,7 +3228,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170706625/1.gif",
+				src: "/images/boards/column/170706625/1.webp",
 				w: 640,
 				h: 360,
 				alt: "9c76710661a55.gif",
@@ -3315,7 +3315,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170706625/2.gif",
+				src: "/images/boards/column/170706625/2.webp",
 				w: 640,
 				h: 360,
 				alt: "0843f49aca10c.gif",
@@ -3374,7 +3374,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170706625/3.gif",
+				src: "/images/boards/column/170706625/3.webp",
 				w: 640,
 				h: 360,
 				alt: "986f666e80030.gif",
@@ -3423,7 +3423,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170706625/4.gif",
+				src: "/images/boards/column/170706625/4.webp",
 				w: 640,
 				h: 360,
 				alt: "13a8af234ac74.gif",
@@ -3472,7 +3472,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170706625/5.gif",
+				src: "/images/boards/column/170706625/5.webp",
 				w: 640,
 				h: 360,
 				alt: "bc902cd9efce5.gif",
@@ -3534,7 +3534,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170706625/6.gif",
+				src: "/images/boards/column/170706625/6.webp",
 				w: 640,
 				h: 360,
 				alt: "5c57a7f13d595.gif",
@@ -3636,7 +3636,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원마케팅광고, 미쉐린 2스타 식당에서 찾은 매출 상승의 답",
 		excerpt:
 			"매일같이 쏟아지는 병원마케팅광고 홍수 속에서 우리 병원만의 특별함을 어떻게 전달해야 할지 고민하고 계시지는 않나요? 신규 환자를 유치하기 위해 막대한 비용을 지출하고 있지만, 정작 내원한 환자들이 불만 섞인 리뷰를 남기거나 재방문으로 이어지지 않아 답답함을 느끼는 원장님들이 많으실 겁니",
-		cover: "/images/boards/column/170646791/1.gif",
+		cover: "/images/boards/column/170646791/1.webp",
 		coverW: 640,
 		coverH: 360,
 		blocks: [
@@ -3681,7 +3681,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170646791/1.gif",
+				src: "/images/boards/column/170646791/1.webp",
 				w: 640,
 				h: 360,
 				alt: "9648c93d9fbf7.gif",
@@ -3769,7 +3769,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170646791/2.gif",
+				src: "/images/boards/column/170646791/2.webp",
 				w: 640,
 				h: 360,
 				alt: "9d595393b23ce.gif",
@@ -3829,7 +3829,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170646791/3.gif",
+				src: "/images/boards/column/170646791/3.webp",
 				w: 640,
 				h: 360,
 				alt: "29dbc1275fc37.gif",
@@ -3915,7 +3915,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170646791/4.gif",
+				src: "/images/boards/column/170646791/4.webp",
 				w: 640,
 				h: 360,
 				alt: "d1f42bbeb2f6c.gif",
@@ -3979,7 +3979,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170646791/5.gif",
+				src: "/images/boards/column/170646791/5.webp",
 				w: 640,
 				h: 360,
 				alt: "4236c66740eb3.gif",
@@ -4031,7 +4031,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170646791/6.gif",
+				src: "/images/boards/column/170646791/6.webp",
 				w: 640,
 				h: 360,
 				alt: "ad7036476a26e.gif",
@@ -4145,7 +4145,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원광고, 60개 대행사 미팅 후 깨달은 '진짜' 실행력의 차이",
 		excerpt:
 			'병원 경영을 하다 보면 하루에도 수십 통씩 걸려오는 광고 대행사의 전화와 책상 위에 쌓여가는 제안서들을 마주하게 됩니다. "우리 업체가 1등이다", "상위 노출은 따 놓은 당상이다"라는 화려한 언변에 속아 계약을 진행했다가, 정작 실행 단계에서는 소통조차 되지 않아 속앓이를 하신 적 없',
-		cover: "/images/boards/column/170641543/1.gif",
+		cover: "/images/boards/column/170641543/1.webp",
 		coverW: 640,
 		coverH: 360,
 		blocks: [
@@ -4184,7 +4184,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170641543/1.gif",
+				src: "/images/boards/column/170641543/1.webp",
 				w: 640,
 				h: 360,
 				alt: "bb806e61c0fb0.gif",
@@ -4302,7 +4302,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170641543/2.gif",
+				src: "/images/boards/column/170641543/2.webp",
 				w: 640,
 				h: 360,
 				alt: "1153567c7d69e.gif",
@@ -4341,7 +4341,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170641543/3.gif",
+				src: "/images/boards/column/170641543/3.webp",
 				w: 640,
 				h: 360,
 				alt: "4e6122c4f6035.gif",
@@ -4389,7 +4389,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170641543/4.gif",
+				src: "/images/boards/column/170641543/4.webp",
 				w: 640,
 				h: 360,
 				alt: "6ecc197d3da4c.gif",
@@ -4432,7 +4432,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170641543/5.gif",
+				src: "/images/boards/column/170641543/5.webp",
 				w: 640,
 				h: 360,
 				alt: "1e3f741145af8.gif",
@@ -4471,7 +4471,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170641543/6.gif",
+				src: "/images/boards/column/170641543/6.webp",
 				w: 640,
 				h: 360,
 				alt: "2b6475d638786.gif",
@@ -4534,7 +4534,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원홍보, 검색량에 속지 마세요! 매출로 직결되는 '검색의 언어' 전략",
 		excerpt:
 			"\"원장님, 매달 마케팅 비용으로 수백만 원을 지출하는데 왜 정작 신환 숫자는 제자리걸음일까요?\" 많은 원장님께서 검색량이 높은 이른바 '대형 키워드'를 선점하면 매출이 폭발적으로 오를 거라 믿으십니다. 하지만 현실은 냉혹합니다. 조회수는 수천 회에 달하는데 막상 병원 문을 열고 들어오는",
-		cover: "/images/boards/column/170537457/1.gif",
+		cover: "/images/boards/column/170537457/1.webp",
 		coverW: 640,
 		coverH: 360,
 		blocks: [
@@ -4598,7 +4598,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170537457/1.gif",
+				src: "/images/boards/column/170537457/1.webp",
 				w: 640,
 				h: 360,
 				alt: "c29f6eab115b8.gif",
@@ -4692,7 +4692,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170537457/2.gif",
+				src: "/images/boards/column/170537457/2.webp",
 				w: 640,
 				h: 360,
 				alt: "7837adb5e92c5.gif",
@@ -4811,7 +4811,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170537457/3.gif",
+				src: "/images/boards/column/170537457/3.webp",
 				w: 640,
 				h: 360,
 				alt: "48028ad4e8696.gif",
@@ -4842,7 +4842,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170537457/4.gif",
+				src: "/images/boards/column/170537457/4.webp",
 				w: 640,
 				h: 360,
 				alt: "7d6d3fed2b5c3.gif",
@@ -4905,7 +4905,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170537457/5.gif",
+				src: "/images/boards/column/170537457/5.webp",
 				w: 640,
 				h: 360,
 				alt: "fbc001cc05088.gif",
@@ -4966,13 +4966,13 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원 마케팅, 이제는 네이버보다 ‘구글 SEO’와 ‘AI 추천’이 핵심인 이유",
 		excerpt:
 			'1. 훅(Hook): 쏟아지는 광고비, 그런데 왜 신환 예약은 제자리일까요? "원장님, 매달 수백만 원씩 네이버 광고에 쏟아붓고 있는데 왜 예약 문의는 예전만 못할까요?" 최근 많은 원장님께서 공통적으로 겪고 계신 뼈아픈 고민입니다. 과거에는 네이버 파워링크나 블로그 상위 노출만으로도',
-		cover: "/images/boards/column/170523558/1.gif",
+		cover: "/images/boards/column/170523558/1.webp",
 		coverW: 640,
 		coverH: 360,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/column/170523558/1.gif",
+				src: "/images/boards/column/170523558/1.webp",
 				w: 640,
 				h: 360,
 				alt: "bb4faa236193e.gif",
@@ -5027,7 +5027,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170523558/2.gif",
+				src: "/images/boards/column/170523558/2.webp",
 				w: 640,
 				h: 360,
 				alt: "3bfb099f74fe9.gif",
@@ -5114,7 +5114,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170523558/3.png",
+				src: "/images/boards/column/170523558/3.webp",
 				w: 640,
 				h: 360,
 				alt: "444007d736f65.png",
@@ -5275,7 +5275,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170523558/4.gif",
+				src: "/images/boards/column/170523558/4.webp",
 				w: 640,
 				h: 360,
 				alt: "db9d4a3d01ca1.gif",
@@ -5338,7 +5338,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/170523558/5.gif",
+				src: "/images/boards/column/170523558/5.webp",
 				w: 640,
 				h: 360,
 				alt: "dd47b8f66ee81.gif",
@@ -5410,7 +5410,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원매출증가가 정체될 때 확인해야 하는 병원브랜드블로그 전략 기준",
 		excerpt:
 			"병원 마케팅 상담을 진행하다 보면 이런 질문을 자주 듣게 됩니다. 실제로 대부분의 병원은 이미 광고를 집행하고 있고, 블로그나 SNS 같은 채널도 운영 중입니다. 그럼에도 불구하고 기대했던 병원매출증가로 이어지지 않는 경우가 적지 않습니다. 이 지점에서 중요한 것은 ‘마케팅을 하고 있느",
-		cover: "/images/boards/column/169944848/1.png",
+		cover: "/images/boards/column/169944848/1.webp",
 		coverW: 1920,
 		coverH: 1058,
 		blocks: [
@@ -5441,7 +5441,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169944848/1.png",
+				src: "/images/boards/column/169944848/1.webp",
 				w: 1920,
 				h: 1058,
 				alt: "4a4d55b3c1222.png",
@@ -5470,7 +5470,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169944848/2.gif",
+				src: "/images/boards/column/169944848/2.webp",
 				w: 520,
 				h: 293,
 				alt: "3baccd567c4f7.gif",
@@ -5524,7 +5524,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169944848/3.png",
+				src: "/images/boards/column/169944848/3.webp",
 				w: 1920,
 				h: 1081,
 				alt: "f8893405f076f.png",
@@ -5585,7 +5585,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169944848/4.png",
+				src: "/images/boards/column/169944848/4.webp",
 				w: 1920,
 				h: 1075,
 				alt: "2273d1d60ac53.png",
@@ -5650,7 +5650,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169944848/5.png",
+				src: "/images/boards/column/169944848/5.webp",
 				w: 1920,
 				h: 1072,
 				alt: "7edf6be57fdc5.png",
@@ -5694,7 +5694,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169944848/6.gif",
+				src: "/images/boards/column/169944848/6.webp",
 				w: 520,
 				h: 293,
 				alt: "17ed156ac8267.gif",
@@ -5748,7 +5748,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169944848/7.gif",
+				src: "/images/boards/column/169944848/7.webp",
 				w: 520,
 				h: 293,
 				alt: "3cbb4224c5420.gif",
@@ -5767,7 +5767,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169944848/8.gif",
+				src: "/images/boards/column/169944848/8.webp",
 				w: 520,
 				h: 293,
 				alt: "1f81f7428281a.gif",
@@ -5780,7 +5780,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원마케팅추천 전략｜광고 이후 성과를 결정하는 환자 경험 설계",
 		excerpt:
 			"병원 마케팅을 고민할 때 많은 병원이 광고 집행, 노출 순위, 방문 수 증가에 집중합니다. 하지만 실제로 성과의 격차가 벌어지는 지점은 광고 이후, 환자가 병원을 직접 경험하는 순간입니다. 첫 방문은 이미 선택의 결과입니다. 중요한 것은 그 다음입니다. 이 방문이 한 번으로 끝날지, 아",
-		cover: "/images/boards/column/169939730/1.gif",
+		cover: "/images/boards/column/169939730/1.webp",
 		coverW: 520,
 		coverH: 293,
 		blocks: [
@@ -5853,7 +5853,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169939730/1.gif",
+				src: "/images/boards/column/169939730/1.webp",
 				w: 520,
 				h: 293,
 				alt: "246356d9ff68f.gif",
@@ -5960,7 +5960,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169939730/2.gif",
+				src: "/images/boards/column/169939730/2.webp",
 				w: 520,
 				h: 293,
 				alt: "e1a5f64811b98.gif",
@@ -6075,7 +6075,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169939730/3.png",
+				src: "/images/boards/column/169939730/3.webp",
 				w: 1920,
 				h: 1081,
 				alt: "856ed7bf97c19.png",
@@ -6159,7 +6159,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169939730/4.png",
+				src: "/images/boards/column/169939730/4.webp",
 				w: 1920,
 				h: 1078,
 				alt: "b63004b4c8fd8.png",
@@ -6269,7 +6269,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169939730/5.png",
+				src: "/images/boards/column/169939730/5.webp",
 				w: 1920,
 				h: 1076,
 				alt: "1513b4bb57f4b.png",
@@ -6379,7 +6379,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169939730/6.png",
+				src: "/images/boards/column/169939730/6.webp",
 				w: 1920,
 				h: 1087,
 				alt: "9bb647549490a.png",
@@ -6474,7 +6474,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원세미나, 지금 다시 선택받는 이유",
 		excerpt:
 			"병원 운영에서 마케팅의 중요성은 이제 누구나 알고 있는 사실입니다. 하지만 실제 현장에서는 지금 우리 병원이 잘 가고 있는지, 무엇을 먼저 점검해야 하는지를 판단하기가 쉽지 않습니다. 그래서 많은 원장님들이 각종 강의와 교육을 경험하지만, 막상 돌아오면 실무에 바로 적용되지 않아 아쉬움",
-		cover: "/images/boards/column/169925170/1.gif",
+		cover: "/images/boards/column/169925170/1.webp",
 		coverW: 520,
 		coverH: 293,
 		blocks: [
@@ -6536,7 +6536,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169925170/1.gif",
+				src: "/images/boards/column/169925170/1.webp",
 				w: 520,
 				h: 293,
 				alt: "3c8800b7a6180.gif",
@@ -6591,7 +6591,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169925170/2.png",
+				src: "/images/boards/column/169925170/2.webp",
 				w: 1920,
 				h: 1085,
 				alt: "d896a52af35bc.png",
@@ -6657,7 +6657,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169925170/3.gif",
+				src: "/images/boards/column/169925170/3.webp",
 				w: 520,
 				h: 293,
 				alt: "cd70aac72d8d4.gif",
@@ -6723,7 +6723,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169925170/4.gif",
+				src: "/images/boards/column/169925170/4.webp",
 				w: 520,
 				h: 293,
 				alt: "0d9e33b6ddc02.gif",
@@ -6779,7 +6779,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169925170/5.png",
+				src: "/images/boards/column/169925170/5.webp",
 				w: 1920,
 				h: 1087,
 				alt: "2532dcc5af0c9.png",
@@ -6841,7 +6841,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169925170/6.png",
+				src: "/images/boards/column/169925170/6.webp",
 				w: 1920,
 				h: 1129,
 				alt: "e2697b56eb04d.png",
@@ -6903,7 +6903,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169925170/7.png",
+				src: "/images/boards/column/169925170/7.webp",
 				w: 1920,
 				h: 1121,
 				alt: "b0d74ccc2dad5.png",
@@ -7008,7 +7008,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원광고컨설팅, 진료 이후가 재방문을 결정한다",
 		excerpt:
 			"병원 마케팅을 이야기할 때 가장 먼저 떠올리는 것은 여전히 ‘신규 환자 유입’입니다. 검색 노출, 광고 클릭 수, 상담 문의 증가까지. 물론 모두 중요한 지표입니다. 하지만 실제 병원 운영 데이터를 분석해보면, 병원의 안정적인 성과를 만드는 힘은 다른 곳에 있습니다. 한 번 방문한 환자",
-		cover: "/images/boards/column/169923223/1.png",
+		cover: "/images/boards/column/169923223/1.webp",
 		coverW: 1920,
 		coverH: 1079,
 		blocks: [
@@ -7069,7 +7069,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169923223/1.png",
+				src: "/images/boards/column/169923223/1.webp",
 				w: 1920,
 				h: 1079,
 				alt: "fadf17daa0f2e.png",
@@ -7155,7 +7155,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169923223/2.gif",
+				src: "/images/boards/column/169923223/2.webp",
 				w: 520,
 				h: 293,
 				alt: "fd814f6aa144d.gif",
@@ -7307,7 +7307,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169923223/3.gif",
+				src: "/images/boards/column/169923223/3.webp",
 				w: 520,
 				h: 293,
 				alt: "56aa4c67bf592.gif",
@@ -7428,7 +7428,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169923223/4.png",
+				src: "/images/boards/column/169923223/4.webp",
 				w: 1920,
 				h: 1067,
 				alt: "7673ef77e62fe.png",
@@ -7577,7 +7577,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169923223/5.gif",
+				src: "/images/boards/column/169923223/5.webp",
 				w: 520,
 				h: 293,
 				alt: "16e7f6ba9c635.gif",
@@ -7724,7 +7724,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원블로그대행사, 블로그는 잘 보이는데, 왜 병원 운영은 더 어려워질까",
 		excerpt:
 			"검색창에 병원 이름을 입력하면 블로그 글은 꾸준히 노출되고 있습니다. 그런데 상담 전 질문은 늘고, 예약 전 이탈이 잦아지고, 최근 들어 불만까지 반복된다면 문제의 원인은 ‘운영 태도’가 아니라 콘텐츠 구조에 있을 수 있습니다. 많은 병원이 블로그를 성실히 운영하지만 성과 판단 기준은",
-		cover: "/images/boards/column/169899556/1.png",
+		cover: "/images/boards/column/169899556/1.webp",
 		coverW: 1822,
 		coverH: 1030,
 		blocks: [
@@ -7796,7 +7796,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169899556/1.png",
+				src: "/images/boards/column/169899556/1.webp",
 				w: 1822,
 				h: 1030,
 				alt: "c5f6be89f7ad1.png",
@@ -7870,7 +7870,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169899556/2.png",
+				src: "/images/boards/column/169899556/2.webp",
 				w: 1822,
 				h: 1020,
 				alt: "d553a36670cea.png",
@@ -7944,7 +7944,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169899556/3.png",
+				src: "/images/boards/column/169899556/3.webp",
 				w: 1822,
 				h: 1026,
 				alt: "4fe84c881bdc0.png",
@@ -8041,7 +8041,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169899556/4.gif",
+				src: "/images/boards/column/169899556/4.webp",
 				w: 520,
 				h: 293,
 				alt: "d4f0442d71a6f.gif",
@@ -8120,7 +8120,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169899556/5.gif",
+				src: "/images/boards/column/169899556/5.webp",
 				w: 520,
 				h: 293,
 				alt: "d8e10a79ae78d.gif",
@@ -8251,7 +8251,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원마케팅업체｜무료 병원마케팅, 신중해야 하는 이유",
 		excerpt:
 			"병원 마케팅 상담을 진행하다 보면 많은 원장님들께서 공통적으로 받는 제안이 있습니다. 바로 ‘무료 병원마케팅’, 혹은 ‘성과 없으면 전액 환불’이라는 조건입니다. 개원 초기이거나 기존 광고 성과에 만족하지 못한 상황이라면, 이런 조건은 충분히 매력적으로 느껴질 수 있습니다. 하지만 실제",
-		cover: "/images/boards/column/169886430/1.png",
+		cover: "/images/boards/column/169886430/1.webp",
 		coverW: 1822,
 		coverH: 1016,
 		blocks: [
@@ -8330,7 +8330,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169886430/1.png",
+				src: "/images/boards/column/169886430/1.webp",
 				w: 1822,
 				h: 1016,
 				alt: "1ad72cf7c9822.png",
@@ -8414,7 +8414,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169886430/2.png",
+				src: "/images/boards/column/169886430/2.webp",
 				w: 1822,
 				h: 1028,
 				alt: "64a3efa11dfd5.png",
@@ -8473,7 +8473,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169886430/3.gif",
+				src: "/images/boards/column/169886430/3.webp",
 				w: 520,
 				h: 293,
 				alt: "8b09a2545433d.gif",
@@ -8567,7 +8567,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169886430/4.gif",
+				src: "/images/boards/column/169886430/4.webp",
 				w: 520,
 				h: 293,
 				alt: "939135876d730.gif",
@@ -8633,7 +8633,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169886430/5.png",
+				src: "/images/boards/column/169886430/5.webp",
 				w: 1810,
 				h: 1016,
 				alt: "9c7f70dd27adb.png",
@@ -8703,7 +8703,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169886430/6.png",
+				src: "/images/boards/column/169886430/6.webp",
 				w: 1816,
 				h: 1016,
 				alt: "174ddbcd0a994.png",
@@ -8916,7 +8916,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원광고마케팅, 비용만 늘고 변화가 없다면 구조부터 살펴봐야 합니다",
 		excerpt:
 			"원장님이 반드시 확인해야 할 핵심 점검 기준 안녕하세요. 애드리절트입니다. 병원을 운영하다 보면 어느 순간부터 마케팅이 투자가 아니라 부담으로 느껴질 때가 있습니다. 매달 일정한 금액이 지출되지만 체감되는 변화는 없고, 신규 환자 유입은 여전히 소개나 기존 환자에 의존하고 있다면 자연스",
-		cover: "/images/boards/column/169871267/1.jpg",
+		cover: "/images/boards/column/169871267/1.webp",
 		coverW: 911,
 		coverH: 515,
 		blocks: [
@@ -9015,7 +9015,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169871267/1.jpg",
+				src: "/images/boards/column/169871267/1.webp",
 				w: 911,
 				h: 515,
 				alt: "174fb30db93f6.jpg",
@@ -9124,7 +9124,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169871267/2.jpg",
+				src: "/images/boards/column/169871267/2.webp",
 				w: 911,
 				h: 510,
 				alt: "a1f73bc40bf22.jpg",
@@ -9225,7 +9225,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169871267/3.jpg",
+				src: "/images/boards/column/169871267/3.webp",
 				w: 911,
 				h: 513,
 				alt: "490a496308eba.jpg",
@@ -9382,7 +9382,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169871267/4.gif",
+				src: "/images/boards/column/169871267/4.webp",
 				w: 520,
 				h: 293,
 				alt: "a83c2bc9f5316.gif",
@@ -9474,7 +9474,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169871267/5.gif",
+				src: "/images/boards/column/169871267/5.webp",
 				w: 520,
 				h: 293,
 				alt: "1ea0449f3bc45.gif",
@@ -9653,7 +9653,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원광고대행사 선택 전 반드시 고민해야 할 병원 마케팅 운영 전략",
 		excerpt:
 			"병원을 운영하다 보면 어느 순간 이런 고민이 생깁니다. 진료와 행정만으로도 하루가 빠듯한데, 온라인 마케팅까지 신경 써야 하는 상황. 특히 블로그, 영상, SNS처럼 콘텐츠 기반 마케팅을 본격적으로 고민하는 단계라면 선택은 더 복잡해집니다. •    병원 내부에서 직접 운영하는 것이 맞",
-		cover: "/images/boards/column/169840917/1.png",
+		cover: "/images/boards/column/169840917/1.webp",
 		coverW: 1920,
 		coverH: 1084,
 		blocks: [
@@ -9739,7 +9739,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169840917/1.png",
+				src: "/images/boards/column/169840917/1.webp",
 				w: 1920,
 				h: 1084,
 				alt: "009e3ab7c9447.png",
@@ -9861,7 +9861,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169840917/2.gif",
+				src: "/images/boards/column/169840917/2.webp",
 				w: 520,
 				h: 293,
 				alt: "8e069616bc05d.gif",
@@ -9970,7 +9970,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169840917/3.png",
+				src: "/images/boards/column/169840917/3.webp",
 				w: 1919,
 				h: 1060,
 				alt: "655fb932b878d.png",
@@ -10089,7 +10089,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169840917/4.png",
+				src: "/images/boards/column/169840917/4.webp",
 				w: 1920,
 				h: 1118,
 				alt: "d3399317b48d7.png",
@@ -10188,7 +10188,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169840917/5.png",
+				src: "/images/boards/column/169840917/5.webp",
 				w: 1920,
 				h: 1064,
 				alt: "bbc825af36df4.png",
@@ -10255,7 +10255,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169840917/6.gif",
+				src: "/images/boards/column/169840917/6.webp",
 				w: 520,
 				h: 293,
 				alt: "438080b926e8a.gif",
@@ -10408,7 +10408,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169840917/7.png",
+				src: "/images/boards/column/169840917/7.webp",
 				w: 1920,
 				h: 1081,
 				alt: "dae03d41e0134.png",
@@ -10483,7 +10483,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169840917/8.gif",
+				src: "/images/boards/column/169840917/8.webp",
 				w: 520,
 				h: 293,
 				alt: "a0c6a4ec359b5.gif",
@@ -10558,7 +10558,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원마케팅회사 vs 인하우스 마케팅, 무엇을 기준으로 판단해야 할까?",
 		excerpt:
 			"병원을 운영하다 보면 어느 순간부터 마케팅이 가장 큰 고민으로 떠오릅니다.진료에 집중하던 시기를 지나, 이제는 “어떻게 알려야 할지”를 고민하게 되는 순간이 찾아옵니다. 그때 대부분의 원장님들이 비슷한 질문 앞에 서게 됩니다. 병원 내부에서 직접 마케팅을 관리하는 것이 맞을까?아니면 병",
-		cover: "/images/boards/column/169750627/1.png",
+		cover: "/images/boards/column/169750627/1.webp",
 		coverW: 1920,
 		coverH: 1080,
 		blocks: [
@@ -10685,7 +10685,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169750627/1.png",
+				src: "/images/boards/column/169750627/1.webp",
 				w: 1920,
 				h: 1080,
 				alt: "f6272d4c1e820.png",
@@ -10846,7 +10846,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169750627/2.png",
+				src: "/images/boards/column/169750627/2.webp",
 				w: 1920,
 				h: 1080,
 				alt: "9f7da691ae42e.png",
@@ -11047,7 +11047,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169750627/3.gif",
+				src: "/images/boards/column/169750627/3.webp",
 				w: 520,
 				h: 293,
 				alt: "1a2def9bfdf76.gif",
@@ -11181,7 +11181,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169750627/4.png",
+				src: "/images/boards/column/169750627/4.webp",
 				w: 1920,
 				h: 1080,
 				alt: "652fc436ee6a7.png",
@@ -11304,7 +11304,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169750627/5.png",
+				src: "/images/boards/column/169750627/5.webp",
 				w: 1920,
 				h: 1086,
 				alt: "e889ad1f65d8f.png",
@@ -11449,7 +11449,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169750627/6.gif",
+				src: "/images/boards/column/169750627/6.webp",
 				w: 520,
 				h: 293,
 				alt: "68077c6599c96.gif",
@@ -11573,7 +11573,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원홍보, 치료 효과를 병원 성장으로 연결한 실제 사례",
 		excerpt:
 			"병원을 운영하는 과정에서 의료 기술의 수준과 병원의 성장 속도가 반드시 비례하지는 않습니다. 치료 효과에 대한 확신이 있음에도 불구하고, 병원의 가치가 충분히 전달되지 않아 성장의 정체를 겪는 경우는 적지 않습니다. 본 칼럼에서는 동맥 줄기세포 클리닉을 중심으로 운영되던 한 병원이 천안",
-		cover: "/images/boards/column/169750503/1.gif",
+		cover: "/images/boards/column/169750503/1.webp",
 		coverW: 520,
 		coverH: 293,
 		blocks: [
@@ -11611,7 +11611,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169750503/1.gif",
+				src: "/images/boards/column/169750503/1.webp",
 				w: 520,
 				h: 293,
 				alt: "7f9e44389654d.gif",
@@ -11676,7 +11676,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169750503/2.gif",
+				src: "/images/boards/column/169750503/2.webp",
 				w: 520,
 				h: 293,
 				alt: "ccdb17f797394.gif",
@@ -11776,7 +11776,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169750503/3.png",
+				src: "/images/boards/column/169750503/3.webp",
 				w: 1920,
 				h: 1076,
 				alt: "0e21b69348bb4.png",
@@ -11841,7 +11841,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169750503/4.gif",
+				src: "/images/boards/column/169750503/4.webp",
 				w: 520,
 				h: 293,
 				alt: "46ddb3a239d99.gif",
@@ -11920,7 +11920,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169750503/5.gif",
+				src: "/images/boards/column/169750503/5.webp",
 				w: 520,
 				h: 293,
 				alt: "1c8542b3040d5.gif",
@@ -12009,7 +12009,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169750503/6.png",
+				src: "/images/boards/column/169750503/6.webp",
 				w: 1920,
 				h: 1080,
 				alt: "ff4151ae65e41.png",
@@ -12138,7 +12138,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원플레이스 관리는 왜 모든 병원 마케팅의 첫 단계일까?",
 		excerpt:
 			"병원을 운영하다 보면 어느 순간부터 진료보다 더 어렵게 느껴지는 것이 마케팅입니다. 대행사 상담을 받아보면 블로그, 플레이스, 광고 상품 등 선택지는 넘쳐나지만, 막상 집행하고 나면 이런 생각이 들곤 합니다. “지금 이 방향이 맞는 걸까?” 이 질문이 반복된다면, 마케팅을 안 해서가 아",
-		cover: "/images/boards/column/169649905/1.png",
+		cover: "/images/boards/column/169649905/1.webp",
 		coverW: 1920,
 		coverH: 1084,
 		blocks: [
@@ -12234,7 +12234,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169649905/1.png",
+				src: "/images/boards/column/169649905/1.webp",
 				w: 1920,
 				h: 1084,
 				alt: "54bdc996c9d3c.png",
@@ -12334,7 +12334,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169649905/2.gif",
+				src: "/images/boards/column/169649905/2.webp",
 				w: 520,
 				h: 293,
 				alt: "77a720d4a0ddc.gif",
@@ -12446,7 +12446,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169649905/3.png",
+				src: "/images/boards/column/169649905/3.webp",
 				w: 1920,
 				h: 1076,
 				alt: "71aa672ae8ed4.png",
@@ -12578,7 +12578,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169649905/4.png",
+				src: "/images/boards/column/169649905/4.webp",
 				w: 1920,
 				h: 1077,
 				alt: "6ba8e475d0581.png",
@@ -12688,7 +12688,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169649905/5.gif",
+				src: "/images/boards/column/169649905/5.webp",
 				w: 520,
 				h: 293,
 				alt: "7c424b8f6e9d7.gif",
@@ -12764,7 +12764,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169649905/6.gif",
+				src: "/images/boards/column/169649905/6.webp",
 				w: 520,
 				h: 293,
 				alt: "4436d10a1f123.gif",
@@ -12852,7 +12852,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169649905/7.gif",
+				src: "/images/boards/column/169649905/7.webp",
 				w: 520,
 				h: 293,
 				alt: "004f8a2ef1472.gif",
@@ -12974,7 +12974,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원광고대행 비용, 왜 늘 부담부터 느껴질까?",
 		excerpt:
 			"병원을 운영 중이거나 개원을 앞둔 원장님들과 상담을 하다 보면 자주 듣는 말이 있습니다. “마케팅 견적이 생각했던 것보다 너무 높은데요?” 병원 마케팅을 알아보는 과정에서 블로그 중심의 병원광고대행 견적서를 받아보고 금액만 확인한 채 고민에 빠지는 경우도 적지 않습니다. 하지만 이 질문",
-		cover: "/images/boards/column/169640425/1.png",
+		cover: "/images/boards/column/169640425/1.webp",
 		coverW: 1920,
 		coverH: 1072,
 		blocks: [
@@ -13049,7 +13049,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169640425/1.png",
+				src: "/images/boards/column/169640425/1.webp",
 				w: 1920,
 				h: 1072,
 				alt: "31297b7a0346a.png",
@@ -13196,7 +13196,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169640425/2.gif",
+				src: "/images/boards/column/169640425/2.webp",
 				w: 520,
 				h: 293,
 				alt: "2513517f4cf8f.gif",
@@ -13321,7 +13321,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169640425/3.png",
+				src: "/images/boards/column/169640425/3.webp",
 				w: 1920,
 				h: 1073,
 				alt: "51c50ae5371f6.png",
@@ -13419,7 +13419,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169640425/4.gif",
+				src: "/images/boards/column/169640425/4.webp",
 				w: 520,
 				h: 293,
 				alt: "ce8a56694d575.gif",
@@ -13537,7 +13537,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169640425/5.gif",
+				src: "/images/boards/column/169640425/5.webp",
 				w: 520,
 				h: 293,
 				alt: "6ae70a331aacd.gif",
@@ -13628,7 +13628,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169640425/6.gif",
+				src: "/images/boards/column/169640425/6.webp",
 				w: 520,
 				h: 293,
 				alt: "0304f39d8067a.gif",
@@ -13724,7 +13724,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169640425/7.png",
+				src: "/images/boards/column/169640425/7.webp",
 				w: 1920,
 				h: 1066,
 				alt: "f79cedd5f016f.png",
@@ -13854,7 +13854,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169640425/8.gif",
+				src: "/images/boards/column/169640425/8.webp",
 				w: 520,
 				h: 293,
 				alt: "165995e5297a3.gif",
@@ -13997,7 +13997,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원마케팅비용만 기준으로 결정했을 때 놓치기 쉬운 부분은?",
 		excerpt:
 			"병원을 개원하거나 운영하면서 마케팅을 고민하는 원장님들이 가장 먼저 떠올리는 채널 중 하나는 블로그입니다. 실제 상담 과정에서도 “블로그 운영 비용이 얼마나 드나요?”라는 질문이 초반에 나오는 경우가 많습니다. 그만큼 블로그는 병원 홍보의 기본 수단처럼 인식되고 있으며, 병원마케팅을 준",
-		cover: "/images/boards/column/169628194/1.png",
+		cover: "/images/boards/column/169628194/1.webp",
 		coverW: 520,
 		coverH: 293,
 		blocks: [
@@ -14035,7 +14035,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169628194/1.png",
+				src: "/images/boards/column/169628194/1.webp",
 				w: 520,
 				h: 293,
 				alt: "b5da9cee54a96.png",
@@ -14085,7 +14085,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169628194/2.png",
+				src: "/images/boards/column/169628194/2.webp",
 				w: 1920,
 				h: 1080,
 				alt: "816c3f3b44047.png",
@@ -14145,7 +14145,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169628194/3.png",
+				src: "/images/boards/column/169628194/3.webp",
 				w: 520,
 				h: 293,
 				alt: "f5399bf35a541.png",
@@ -14208,7 +14208,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169628194/4.png",
+				src: "/images/boards/column/169628194/4.webp",
 				w: 1920,
 				h: 1080,
 				alt: "3a5fe15b3ef35.png",
@@ -14262,7 +14262,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169628194/5.png",
+				src: "/images/boards/column/169628194/5.webp",
 				w: 520,
 				h: 293,
 				alt: "8d971494790d1.png",
@@ -14425,7 +14425,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원리뷰, 환자의 선택은 커뮤니티에서 이미 결정된다",
 		excerpt:
 			"요즘 환자들이 병원을 고르는 방식은 과거와 확연히 달라졌습니다. 예전에는 집에서 얼마나 가까운지, 시설이 얼마나 큰지가 중요한 판단 요소였다면, 이제는 방문 전 이미 온라인에서 병원에 대한 인식이 형성되는 경우가 많습니다. 실제로 많은 환자들이 광고나 공식 홈페이지보다 먼저 병원리뷰와",
-		cover: "/images/boards/column/169590967/1.png",
+		cover: "/images/boards/column/169590967/1.webp",
 		coverW: 1920,
 		coverH: 1086,
 		blocks: [
@@ -14487,7 +14487,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169590967/1.png",
+				src: "/images/boards/column/169590967/1.webp",
 				w: 1920,
 				h: 1086,
 				alt: "2a5a99028ad68.png",
@@ -14541,7 +14541,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169590967/2.gif",
+				src: "/images/boards/column/169590967/2.webp",
 				w: 520,
 				h: 293,
 				alt: "959d6c5db636a.gif",
@@ -14591,7 +14591,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169590967/3.png",
+				src: "/images/boards/column/169590967/3.webp",
 				w: 1920,
 				h: 1081,
 				alt: "080886851ff46.png",
@@ -14651,7 +14651,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169590967/4.gif",
+				src: "/images/boards/column/169590967/4.webp",
 				w: 520,
 				h: 293,
 				alt: "8906417e4cf17.gif",
@@ -14715,7 +14715,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169590967/5.png",
+				src: "/images/boards/column/169590967/5.webp",
 				w: 1920,
 				h: 1076,
 				alt: "e584a8dba6a03.png",
@@ -14758,7 +14758,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169590967/6.gif",
+				src: "/images/boards/column/169590967/6.webp",
 				w: 520,
 				h: 293,
 				alt: "e03e5f641e394.gif",
@@ -14812,7 +14812,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169590967/7.gif",
+				src: "/images/boards/column/169590967/7.webp",
 				w: 520,
 				h: 293,
 				alt: "7ed39f17caf54.gif",
@@ -14855,7 +14855,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169590967/8.png",
+				src: "/images/boards/column/169590967/8.webp",
 				w: 1920,
 				h: 1061,
 				alt: "af72b782e5449.png",
@@ -14962,7 +14962,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원마케팅회사, 이제는 ‘정보 제공’보다 ‘경험을 먼저 그려주는 콘텐츠’가 필요합니다",
 		excerpt:
 			"병원 마케팅을 둘러싼 환경은 이전과 확연히 달라졌습니다. 과거에는 병원의 위치, 규모, 시설 같은 물리적 요소가 선택에 큰 영향을 미쳤다면, 지금은 환자가 병원을 찾기 전 온라인에서 어떤 이미지를 먼저 접하느냐가 결정적인 기준이 되고 있습니다. 특히 경쟁이 치열한 진료과일수록 단순한 홍",
-		cover: "/images/boards/column/169586411/1.jpg",
+		cover: "/images/boards/column/169586411/1.webp",
 		coverW: 973,
 		coverH: 551,
 		blocks: [
@@ -15049,7 +15049,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169586411/1.jpg",
+				src: "/images/boards/column/169586411/1.webp",
 				w: 973,
 				h: 551,
 				alt: "b13d4d40d4610.jpg",
@@ -15167,7 +15167,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169586411/2.gif",
+				src: "/images/boards/column/169586411/2.webp",
 				w: 520,
 				h: 293,
 				alt: "c814eaf9f1c86.gif",
@@ -15244,7 +15244,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169586411/3.gif",
+				src: "/images/boards/column/169586411/3.webp",
 				w: 520,
 				h: 293,
 				alt: "b7bb8ce56a0a6.gif",
@@ -15343,7 +15343,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169586411/4.gif",
+				src: "/images/boards/column/169586411/4.webp",
 				w: 520,
 				h: 293,
 				alt: "f38986009a2fe.gif",
@@ -15408,7 +15408,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169586411/5.jpg",
+				src: "/images/boards/column/169586411/5.webp",
 				w: 968,
 				h: 541,
 				alt: "08c4e1eaaa9b6.jpg",
@@ -15512,7 +15512,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원마케팅, 성과를 만드는 병원은 무엇이 다를까요?",
 		excerpt:
 			"병원을 개원했거나 운영 중인 원장님이라면 마케팅을 두고 한 번쯤은 이런 생각을 해보셨을 것입니다. “지금 시작해도 효과가 있을까?” “비용만 쓰고 끝나는 건 아닐까?” “우리 병원 이미지와 맞지 않으면 어떡하지?” 이러한 고민은 너무도 자연스럽습니다. 그래서 많은 병원들이 병원마케팅을",
-		cover: "/images/boards/column/169557684/1.gif",
+		cover: "/images/boards/column/169557684/1.webp",
 		coverW: 520,
 		coverH: 293,
 		blocks: [
@@ -15610,7 +15610,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169557684/1.gif",
+				src: "/images/boards/column/169557684/1.webp",
 				w: 520,
 				h: 293,
 				alt: "77b6d35a6ecf6.gif",
@@ -15702,7 +15702,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169557684/2.png",
+				src: "/images/boards/column/169557684/2.webp",
 				w: 1920,
 				h: 1086,
 				alt: "99aebbdbe8b92.png",
@@ -15819,7 +15819,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169557684/3.gif",
+				src: "/images/boards/column/169557684/3.webp",
 				w: 520,
 				h: 293,
 				alt: "5c66dc3046d4e.gif",
@@ -15936,7 +15936,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169557684/4.png",
+				src: "/images/boards/column/169557684/4.webp",
 				w: 1920,
 				h: 1068,
 				alt: "b234e2f016560.png",
@@ -16057,7 +16057,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169557684/5.gif",
+				src: "/images/boards/column/169557684/5.webp",
 				w: 520,
 				h: 293,
 				alt: "309d5528a317c.gif",
@@ -16147,7 +16147,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169557684/6.gif",
+				src: "/images/boards/column/169557684/6.webp",
 				w: 520,
 				h: 293,
 				alt: "a26cb934555c4.gif",
@@ -16298,7 +16298,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169557684/7.png",
+				src: "/images/boards/column/169557684/7.webp",
 				w: 1920,
 				h: 1068,
 				alt: "42c4452959e4b.png",
@@ -16311,7 +16311,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원광고대행사, 실패를 줄이기 위해 반드시 점검해야 할 5가지 기준",
 		excerpt:
 			"같은 병원 바이럴 마케팅을 진행했는데도 어떤 곳은 빠르게 성과를 만들고, 어떤 곳은 기대만큼의 반응을 얻지 못합니다. 이 차이는 단순히 ‘방법 선택’의 문제가 아니라, 시작 전 점검과 진행 과정의 완성도에서 갈립니다. 성과가 나오지 않을 때 흔히 하는 선택은 “다른 마케팅으로 바꿔볼까?",
-		cover: "/images/boards/column/169505149/1.png",
+		cover: "/images/boards/column/169505149/1.webp",
 		coverW: 1646,
 		coverH: 1602,
 		blocks: [
@@ -16436,7 +16436,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169505149/1.png",
+				src: "/images/boards/column/169505149/1.webp",
 				w: 1646,
 				h: 1602,
 				alt: "77101beeb2762.png",
@@ -16574,7 +16574,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169505149/2.png",
+				src: "/images/boards/column/169505149/2.webp",
 				w: 740,
 				h: 417,
 				alt: "306025f1ae58b.png",
@@ -16664,7 +16664,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169505149/3.jpg",
+				src: "/images/boards/column/169505149/3.webp",
 				w: 887,
 				h: 491,
 				alt: "94b43ffb1f840.jpg",
@@ -16754,7 +16754,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169505149/4.jpg",
+				src: "/images/boards/column/169505149/4.webp",
 				w: 887,
 				h: 497,
 				alt: "a4ed4d8c2788d.jpg",
@@ -16779,7 +16779,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169505149/5.jpg",
+				src: "/images/boards/column/169505149/5.webp",
 				w: 885,
 				h: 487,
 				alt: "1d9ff5fb7e532.jpg",
@@ -16832,7 +16832,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169505149/6.png",
+				src: "/images/boards/column/169505149/6.webp",
 				w: 1352,
 				h: 1020,
 				alt: "d6f60ac24fa51.png",
@@ -16910,7 +16910,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/169505149/7.jpg",
+				src: "/images/boards/column/169505149/7.webp",
 				w: 887,
 				h: 491,
 				alt: "293c1c62cc23e.jpg",
@@ -16934,13 +16934,13 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "병원마케팅의 패러다임 전환: '가치비'의 시대가 온다",
 		excerpt:
 			'병원마케팅의 패러다임 전환: \'가치비(價値比)\'의 시대가 온다 - 신뢰 자산을 쌓는 병원의 새로운 성장 공식 요즘 병원마케팅 현장에서 자주 들려오는 말이 있다. "광고비는 매달 쓰는데, 환자가 남질 않아요." "좋아요 수는 늘었는데, 예약 전화는 왜 안 오죠?" 디저털 환경이 고도화되면',
-		cover: "/images/boards/column/168600485/1.png",
+		cover: "/images/boards/column/168600485/1.webp",
 		coverW: 1280,
 		coverH: 720,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/column/168600485/1.png",
+				src: "/images/boards/column/168600485/1.webp",
 				w: 1280,
 				h: 720,
 				alt: "f2c4c4ca204e2.png",
@@ -17019,7 +17019,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/168600485/2.png",
+				src: "/images/boards/column/168600485/2.webp",
 				w: 416,
 				h: 409,
 				alt: "4053049e5e950.png",
@@ -17291,7 +17291,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/168600485/3.png",
+				src: "/images/boards/column/168600485/3.webp",
 				w: 381,
 				h: 420,
 				alt: "a99183a021bbf.png",
@@ -17491,7 +17491,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/168600485/4.png",
+				src: "/images/boards/column/168600485/4.webp",
 				w: 411,
 				h: 405,
 				alt: "75786e46ef9b8.png",
@@ -17649,7 +17649,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/168600485/5.png",
+				src: "/images/boards/column/168600485/5.webp",
 				w: 410,
 				h: 403,
 				alt: "30bae80dfd866.png",
@@ -17750,7 +17750,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/168600485/6.png",
+				src: "/images/boards/column/168600485/6.webp",
 				w: 417,
 				h: 416,
 				alt: "1d9e2de8d78b0.png",
@@ -17877,7 +17877,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/168600485/7.png",
+				src: "/images/boards/column/168600485/7.webp",
 				w: 394,
 				h: 400,
 				alt: "f1d086f00437d.png",
@@ -17996,7 +17996,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/168600485/8.png",
+				src: "/images/boards/column/168600485/8.webp",
 				w: 380,
 				h: 381,
 				alt: "58cbabb614e77.png",
@@ -18292,13 +18292,13 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "[애드리절트 칼럼] 편리함은 잊히지만, 배려는 남는다",
 		excerpt:
 			"편리함은 곧 망각을 부른다 - 소비자가 기억하는 건 불편 속에서의 배려다 오늘날 대부분의 브랜드는 ‘편리함’을 경쟁력으로 내세운다. 클릭 한 번이면 결제가 끝나고, 몇 시간 안에 제품이 도착하는 세상이다. 그러나 아이러니하게도 편리함은 이제 차별화 요소가 되지 못한다. 너무 매끄럽고 완",
-		cover: "/images/boards/column/167694049/1.png",
+		cover: "/images/boards/column/167694049/1.webp",
 		coverW: 1280,
 		coverH: 720,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/column/167694049/1.png",
+				src: "/images/boards/column/167694049/1.webp",
 				w: 1280,
 				h: 720,
 				alt: "a14e18c479df5.png",
@@ -18466,7 +18466,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167694049/2.png",
+				src: "/images/boards/column/167694049/2.webp",
 				w: 547,
 				h: 364,
 				alt: "병원마케팅",
@@ -18512,7 +18512,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167694049/3.png",
+				src: "/images/boards/column/167694049/3.webp",
 				w: 602,
 				h: 602,
 				alt: "병원홍보",
@@ -18573,7 +18573,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167694049/4.png",
+				src: "/images/boards/column/167694049/4.webp",
 				w: 338,
 				h: 338,
 				alt: "병원홍보",
@@ -18661,7 +18661,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167694049/5.png",
+				src: "/images/boards/column/167694049/5.webp",
 				w: 424,
 				h: 421,
 				alt: "병원마케팅회사",
@@ -18789,7 +18789,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167694049/6.png",
+				src: "/images/boards/column/167694049/6.webp",
 				w: 394,
 				h: 394,
 				alt: "병원홍보마케팅",
@@ -18874,7 +18874,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167694049/7.png",
+				src: "/images/boards/column/167694049/7.webp",
 				w: 495,
 				h: 371,
 				alt: "병원광고회사",
@@ -18987,13 +18987,13 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "[애드리절트 칼럼] 친절함이 독이 될 수 있다?",
 		excerpt:
 			"브랜드도 피곤하게 만들 수 있다 - 과잉 친절과 감정 과잉의 브랜딩 역효과 브랜딩은 본질적으로 소비자에게 긍정적인 경험을 주기 위한 활동이다. 하지만 지나친 감정 과잉, 과도한 친절 메시지는 때때로 역효과를 불러온다. “고객님은 세상에서 가장 특별합니다!” 같은 과장된 멘트나, 불필요하",
-		cover: "/images/boards/column/167573019/1.png",
+		cover: "/images/boards/column/167573019/1.webp",
 		coverW: 1280,
 		coverH: 720,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/column/167573019/1.png",
+				src: "/images/boards/column/167573019/1.webp",
 				w: 1280,
 				h: 720,
 				alt: "129e498547bc6.png",
@@ -19093,7 +19093,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167573019/2.png",
+				src: "/images/boards/column/167573019/2.webp",
 				w: 356,
 				h: 356,
 				alt: "bb07cb47df523.png",
@@ -19390,7 +19390,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167573019/3.png",
+				src: "/images/boards/column/167573019/3.webp",
 				w: 258,
 				h: 258,
 				alt: "a217635bc786c.png",
@@ -19525,7 +19525,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167573019/4.png",
+				src: "/images/boards/column/167573019/4.webp",
 				w: 655,
 				h: 527,
 				alt: "7d247ae781d90.png",
@@ -19619,7 +19619,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167573019/5.png",
+				src: "/images/boards/column/167573019/5.webp",
 				w: 392,
 				h: 312,
 				alt: "293ca00c476bb.png",
@@ -19755,7 +19755,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167573019/6.png",
+				src: "/images/boards/column/167573019/6.webp",
 				w: 305,
 				h: 305,
 				alt: "c4f98575c5701.png",
@@ -19996,7 +19996,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167573019/7.png",
+				src: "/images/boards/column/167573019/7.webp",
 				w: 314,
 				h: 255,
 				alt: "16b93af519e8b.png",
@@ -20110,13 +20110,13 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "[애드리절트 칼럼] 소비자의 목소리로 브랜드는 완성된다",
 		excerpt:
 			"소비자는 ‘내가 등장하는 브랜드’를 원한다 - 소비자의 목소리로 완성되는 브랜드 과거 마케팅은 ‘브랜드가 말하고 소비자는 듣는’ 일방향 구조였다. 하지만 지금 소비자는 더 이상 수동적인 수신자가 아니다. 브랜드가 보여주는 화면, 콘텐츠 속에서 내가 등장하고 있는가?—이 질문에 대한 답이",
-		cover: "/images/boards/column/167488478/1.png",
+		cover: "/images/boards/column/167488478/1.webp",
 		coverW: 1280,
 		coverH: 720,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/column/167488478/1.png",
+				src: "/images/boards/column/167488478/1.webp",
 				w: 1280,
 				h: 720,
 				alt: "f110c96c2b4ca.png",
@@ -20285,7 +20285,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167488478/2.png",
+				src: "/images/boards/column/167488478/2.webp",
 				w: 853,
 				h: 397,
 				alt: "de15509daa259.png",
@@ -20352,7 +20352,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167488478/3.png",
+				src: "/images/boards/column/167488478/3.webp",
 				w: 817,
 				h: 326,
 				alt: "0633ea834873a.png",
@@ -20429,7 +20429,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167488478/4.png",
+				src: "/images/boards/column/167488478/4.webp",
 				w: 814,
 				h: 325,
 				alt: "fb3b28b507a83.png",
@@ -20581,7 +20581,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167488478/5.png",
+				src: "/images/boards/column/167488478/5.webp",
 				w: 345,
 				h: 345,
 				alt: "6c83e32be38b5.png",
@@ -20675,7 +20675,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167488478/6.png",
+				src: "/images/boards/column/167488478/6.webp",
 				w: 417,
 				h: 420,
 				alt: "df3981ce6eb34.png",
@@ -20788,7 +20788,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167488478/7.png",
+				src: "/images/boards/column/167488478/7.webp",
 				w: 940,
 				h: 433,
 				alt: "e5ef47054902b.png",
@@ -20888,7 +20888,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167488478/8.png",
+				src: "/images/boards/column/167488478/8.webp",
 				w: 433,
 				h: 433,
 				alt: "30a4629a1183d.png",
@@ -20977,13 +20977,13 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "[애드리절트 칼럼] 사과에서 끝나면 발전할 수 없다",
 		excerpt:
 			"진정성은 ‘사과’로 완성된다 - 위기 대응의 언어, 변화를 약속하는 태도 브랜드가 위기에 처했을 때, 대응의 언어는 다양하다. 해명, 설명, 변명, 그리고 때로는 침묵. 하지만 소비자의 마음을 움직이는 순간은 결국 ‘사과’에서 온다. 사과가 단순히 나온 문장이 아니라, 브랜드 철학과 태",
-		cover: "/images/boards/column/167382196/1.png",
+		cover: "/images/boards/column/167382196/1.webp",
 		coverW: 1280,
 		coverH: 720,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/column/167382196/1.png",
+				src: "/images/boards/column/167382196/1.webp",
 				w: 1280,
 				h: 720,
 				alt: "0b2d1b4c686ac.png",
@@ -21132,7 +21132,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167382196/2.png",
+				src: "/images/boards/column/167382196/2.webp",
 				w: 570,
 				h: 400,
 				alt: "7563e785a0f5f.png",
@@ -21214,7 +21214,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167382196/3.png",
+				src: "/images/boards/column/167382196/3.webp",
 				w: 666,
 				h: 374,
 				alt: "e401bd6818a73.png",
@@ -21292,7 +21292,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167382196/4.png",
+				src: "/images/boards/column/167382196/4.webp",
 				w: 636,
 				h: 535,
 				alt: "81a8ecf9a6b21.png",
@@ -21402,7 +21402,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167382196/5.png",
+				src: "/images/boards/column/167382196/5.webp",
 				w: 470,
 				h: 508,
 				alt: "117337dd8b214.png",
@@ -21482,7 +21482,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167382196/6.png",
+				src: "/images/boards/column/167382196/6.webp",
 				w: 626,
 				h: 291,
 				alt: "a3a0c33e1fc64.png",
@@ -21829,7 +21829,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167382196/7.png",
+				src: "/images/boards/column/167382196/7.webp",
 				w: 348,
 				h: 439,
 				alt: "ada22b83a7061.png",
@@ -21921,7 +21921,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167382196/8.png",
+				src: "/images/boards/column/167382196/8.webp",
 				w: 406,
 				h: 430,
 				alt: "e038569c4362d.png",
@@ -22010,13 +22010,13 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: '[애드리절트 칼럼] "블로그 효과 있어요?" 이 글로 종결합니다. (with.CDJ)',
 		excerpt:
 			"CDJ, 병원 마케팅의 최종 게이트웨이를 여는 길 - 신환 유입 with. CDJ 관리 병원 마케팅을 하며 가장 많이 듣는 질문 중 하나가 “블로그 효과 있어요?”라는 것이다. 병원 원장이나 실장 입장에서는 당연히 궁금한 지점일 수 있다. 매달 예산을 투입하고, 시간을 들여 콘텐츠를 쌓",
-		cover: "/images/boards/column/167367530/1.png",
+		cover: "/images/boards/column/167367530/1.webp",
 		coverW: 1280,
 		coverH: 720,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/column/167367530/1.png",
+				src: "/images/boards/column/167367530/1.webp",
 				w: 1280,
 				h: 720,
 				alt: "53b3b19d42a28.png",
@@ -22102,7 +22102,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167367530/2.png",
+				src: "/images/boards/column/167367530/2.webp",
 				w: 617,
 				h: 617,
 				alt: "69f62fd88f0b5.png",
@@ -22211,7 +22211,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167367530/3.png",
+				src: "/images/boards/column/167367530/3.webp",
 				w: 438,
 				h: 438,
 				alt: "ffd5e3df6d615.png",
@@ -22402,7 +22402,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167367530/4.png",
+				src: "/images/boards/column/167367530/4.webp",
 				w: 940,
 				h: 479,
 				alt: "e44f0bfd813ad.png",
@@ -22450,7 +22450,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167367530/5.png",
+				src: "/images/boards/column/167367530/5.webp",
 				w: 705,
 				h: 434,
 				alt: "49cad5795eed9.png",
@@ -22523,7 +22523,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167367530/6.png",
+				src: "/images/boards/column/167367530/6.webp",
 				w: 291,
 				h: 291,
 				alt: "f916ade4362ff.png",
@@ -22691,13 +22691,13 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "[애드리절트 칼럼] 브랜드 철학은 어떻게 '루틴'이 되는가",
 		excerpt:
 			"- 지속성 있는 진정성은 결국 루틴에서 나온다 많은 브랜드가 멋진 미션과 가치를 선언한다. 하지만 소비자 마음속에 그 철학이 자리 잡는 순간은 ‘선언’이 아니라 ‘습관’에서 온다. 철학이 매일의 행동으로 반복될 때, 비로소 진정성이 느껴진다. 파타고니아(Patagonia)는 “환경을 지",
-		cover: "/images/boards/column/167323643/1.png",
+		cover: "/images/boards/column/167323643/1.webp",
 		coverW: 1280,
 		coverH: 720,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/1.png",
+				src: "/images/boards/column/167323643/1.webp",
 				w: 1280,
 				h: 720,
 				alt: "eeae13754efe2.png",
@@ -22770,7 +22770,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/2.png",
+				src: "/images/boards/column/167323643/2.webp",
 				w: 940,
 				h: 412,
 				alt: "e1d9aebd68e9d.png",
@@ -22829,7 +22829,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/3.png",
+				src: "/images/boards/column/167323643/3.webp",
 				w: 459,
 				h: 378,
 				alt: "e34901622eb0e.png",
@@ -22848,7 +22848,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/4.png",
+				src: "/images/boards/column/167323643/4.webp",
 				w: 484,
 				h: 254,
 				alt: "f5bf3458879b7.png",
@@ -22891,7 +22891,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/5.png",
+				src: "/images/boards/column/167323643/5.webp",
 				w: 633,
 				h: 352,
 				alt: "3660b9f55eece.png",
@@ -22971,7 +22971,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/6.png",
+				src: "/images/boards/column/167323643/6.webp",
 				w: 891,
 				h: 178,
 				alt: "d6f8beab3bded.png",
@@ -23004,7 +23004,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/7.png",
+				src: "/images/boards/column/167323643/7.webp",
 				w: 652,
 				h: 372,
 				alt: "ba311a2ab87ac.png",
@@ -23035,7 +23035,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/8.png",
+				src: "/images/boards/column/167323643/8.webp",
 				w: 940,
 				h: 659,
 				alt: "e9eca6b0ac45a.png",
@@ -23083,7 +23083,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/9.png",
+				src: "/images/boards/column/167323643/9.webp",
 				w: 387,
 				h: 456,
 				alt: "8054dbfb50532.png",
@@ -23209,7 +23209,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/10.png",
+				src: "/images/boards/column/167323643/10.webp",
 				w: 940,
 				h: 422,
 				alt: "08fb549a2b66a.png",
@@ -23269,7 +23269,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/11.png",
+				src: "/images/boards/column/167323643/11.webp",
 				w: 369,
 				h: 383,
 				alt: "d006876509c99.png",
@@ -23333,7 +23333,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/12.png",
+				src: "/images/boards/column/167323643/12.webp",
 				w: 628,
 				h: 669,
 				alt: "bccef1ddd59a3.png",
@@ -23362,7 +23362,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/13.png",
+				src: "/images/boards/column/167323643/13.webp",
 				w: 936,
 				h: 527,
 				alt: "fa2a9b9998ef1.png",
@@ -23393,7 +23393,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/14.png",
+				src: "/images/boards/column/167323643/14.webp",
 				w: 628,
 				h: 723,
 				alt: "ea78ffabc52df.png",
@@ -23411,7 +23411,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/15.png",
+				src: "/images/boards/column/167323643/15.webp",
 				w: 559,
 				h: 567,
 				alt: "e198a1e8114e1.png",
@@ -23440,7 +23440,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/16.png",
+				src: "/images/boards/column/167323643/16.webp",
 				w: 510,
 				h: 561,
 				alt: "2639cf5ffdfc4.png",
@@ -23492,7 +23492,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/17.png",
+				src: "/images/boards/column/167323643/17.webp",
 				w: 625,
 				h: 679,
 				alt: "0dd4fb7cd485e.png",
@@ -23521,7 +23521,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/18.png",
+				src: "/images/boards/column/167323643/18.webp",
 				w: 966,
 				h: 471,
 				alt: "b246c0c1dd58e.png",
@@ -23550,7 +23550,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/19.png",
+				src: "/images/boards/column/167323643/19.webp",
 				w: 571,
 				h: 762,
 				alt: "b5bcd8f05614e.png",
@@ -23589,7 +23589,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/20.png",
+				src: "/images/boards/column/167323643/20.webp",
 				w: 465,
 				h: 617,
 				alt: "17b006141ef5d.png",
@@ -23597,7 +23597,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167323643/21.png",
+				src: "/images/boards/column/167323643/21.webp",
 				w: 447,
 				h: 526,
 				alt: "bd537d289948e.png",
@@ -23675,13 +23675,13 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "[애드리절트 칼럼] 주저함의 미덕, 완벽한 응답보다 솔직함이 남는다",
 		excerpt:
 			"- 완벽한 응답보다, 주저한 솔직함이 더 깊게 꽂히는 이유 보통 영업, 세일즈라고 하면 ‘말을 잘하는 것’이라고 생각한다. 이건 영업을 하는 입장에서도, 소비자 입장에서도 마찬가지다. 하지만 정작 소비자가 지갑을 여는 순간은, 영업자가 막힘없이 말을 잘해서일 때보다 ‘나를 위한 진심’을",
-		cover: "/images/boards/column/167114689/1.png",
+		cover: "/images/boards/column/167114689/1.webp",
 		coverW: 1280,
 		coverH: 720,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/column/167114689/1.png",
+				src: "/images/boards/column/167114689/1.webp",
 				w: 1280,
 				h: 720,
 				alt: "a91cea34d69ab.png",
@@ -23769,7 +23769,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167114689/2.png",
+				src: "/images/boards/column/167114689/2.webp",
 				w: 464,
 				h: 644,
 				alt: "271d20b1f1d2a.png",
@@ -23915,7 +23915,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167114689/3.png",
+				src: "/images/boards/column/167114689/3.webp",
 				w: 336,
 				h: 395,
 				alt: "0a73a41458345.png",
@@ -23997,7 +23997,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167114689/4.png",
+				src: "/images/boards/column/167114689/4.webp",
 				w: 433,
 				h: 289,
 				alt: "41a8a9ba07a33.png",
@@ -24209,7 +24209,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167114689/5.png",
+				src: "/images/boards/column/167114689/5.webp",
 				w: 420,
 				h: 447,
 				alt: "f25a70f345a6a.png",
@@ -24323,7 +24323,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167114689/6.png",
+				src: "/images/boards/column/167114689/6.webp",
 				w: 452,
 				h: 534,
 				alt: "1fd1b865d51bd.png",
@@ -24394,13 +24394,13 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "[애드리절트 칼럼] AI 브랜딩의 역설, 왜 인간다움이 더 중요해졌나",
 		excerpt:
 			"기업 입장에서는 속도, 효율, 비용 절감이라는 세 가지 강점을 가진 ‘꿈의 기술’이다.하지만 이 변화 속에서 역설적인 현상이 나타난다.기술이 완벽해질수록, 브랜드는 더 인간적이어야 한다는 사실이다. AI 콘텐츠는 빠르고 매끄럽다. 그러나 문제는 모든 것이 비슷해진다는 점이다.   동일한",
-		cover: "/images/boards/column/167005067/1.png",
+		cover: "/images/boards/column/167005067/1.webp",
 		coverW: 1280,
 		coverH: 720,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/column/167005067/1.png",
+				src: "/images/boards/column/167005067/1.webp",
 				w: 1280,
 				h: 720,
 				alt: "4258cfebc8f9c.png",
@@ -24496,7 +24496,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167005067/2.png",
+				src: "/images/boards/column/167005067/2.webp",
 				w: 265,
 				h: 397,
 				alt: "bcf2e5cd5fe88.png",
@@ -24622,7 +24622,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167005067/3.png",
+				src: "/images/boards/column/167005067/3.webp",
 				w: 405,
 				h: 388,
 				alt: "27092b767d51e.png",
@@ -24738,7 +24738,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167005067/4.png",
+				src: "/images/boards/column/167005067/4.webp",
 				w: 374,
 				h: 445,
 				alt: "16d1a2bccee4f.png",
@@ -24919,7 +24919,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167005067/5.png",
+				src: "/images/boards/column/167005067/5.webp",
 				w: 940,
 				h: 585,
 				alt: "927f0f8607b93.png",
@@ -24965,7 +24965,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167005067/6.png",
+				src: "/images/boards/column/167005067/6.webp",
 				w: 869,
 				h: 519,
 				alt: "93a277d05a4d7.png",
@@ -25050,7 +25050,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/167005067/7.png",
+				src: "/images/boards/column/167005067/7.webp",
 				w: 381,
 				h: 469,
 				alt: "3cde4c2b8f0f9.png",
@@ -25110,13 +25110,13 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "[애드리절트 칼럼] BTS 브랜딩, 브랜드가 민낯을 보여주기 시작한 이유",
 		excerpt:
 			"한때 브랜드는 ‘무결점’을 추구했다. - 깔끔한 이미지, 세련된 카피, 완벽한 패키징. 하지만 요즘 트렌드는 완전히 달라졌다. 소셜 미디어에서 우리는 브랜드가 실수한 순간, 준비 중인 모습, 심지어 실패담까지 공개하는 장면을 쉽게 볼 수 있다. 브랜드는 왜 굳이 자신들의 민낯을 보여주기",
-		cover: "/images/boards/column/166842790/1.png",
+		cover: "/images/boards/column/166842790/1.webp",
 		coverW: 1280,
 		coverH: 720,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/column/166842790/1.png",
+				src: "/images/boards/column/166842790/1.webp",
 				w: 1280,
 				h: 720,
 				alt: "d31dfb178bef5.png",
@@ -25310,7 +25310,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/166842790/2.png",
+				src: "/images/boards/column/166842790/2.webp",
 				w: 570,
 				h: 380,
 				alt: "acba856fbdca6.png",
@@ -25507,7 +25507,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/166842790/3.png",
+				src: "/images/boards/column/166842790/3.webp",
 				w: 581,
 				h: 467,
 				alt: "a0e222c2fa74d.png",
@@ -25710,7 +25710,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/166842790/4.png",
+				src: "/images/boards/column/166842790/4.webp",
 				w: 720,
 				h: 559,
 				alt: "f6d51764b57e1.png",
@@ -25739,7 +25739,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/166842790/5.png",
+				src: "/images/boards/column/166842790/5.webp",
 				w: 940,
 				h: 499,
 				alt: "e66b543e3e84a.png",
@@ -25811,7 +25811,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/166842790/6.png",
+				src: "/images/boards/column/166842790/6.webp",
 				w: 444,
 				h: 444,
 				alt: "d847a30f9ceec.png",
@@ -25849,13 +25849,13 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "[애드리절트 칼럼] 2025 마케팅의 성패는 '진심력'에 달렸다",
 		excerpt:
 			"단지 감정을 담는 것(진심)에 그치지 않고 그 진심을 실천하고 전달하는 힘(실행력)까지 포함된 개념 애드리절트 마스코트 진심이 + 力 소비자는 이제 ‘진심인가?’보다 ‘그 진심을 얼마나 지속적으로 보여주고, 실천하고, 나에게 맞게 다가오는가?’를 묻는다. 이는 마케팅의 중심이 감성적인",
-		cover: "/images/boards/column/166635717/1.png",
+		cover: "/images/boards/column/166635717/1.webp",
 		coverW: 1280,
 		coverH: 720,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/column/166635717/1.png",
+				src: "/images/boards/column/166635717/1.webp",
 				w: 1280,
 				h: 720,
 				alt: "ddb269af46f8f.png",
@@ -25908,7 +25908,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/166635717/2.png",
+				src: "/images/boards/column/166635717/2.webp",
 				w: 359,
 				h: 518,
 				alt: "애드리절트 마스코트 진심이 + 力",
@@ -26455,7 +26455,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/166635717/3.png",
+				src: "/images/boards/column/166635717/3.webp",
 				w: 940,
 				h: 129,
 				alt: "b7f72c3a926b9.png",
@@ -26504,7 +26504,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/166635717/4.png",
+				src: "/images/boards/column/166635717/4.webp",
 				w: 940,
 				h: 430,
 				alt: "f4f0a874e5ffd.png",
@@ -26744,7 +26744,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/166635717/5.png",
+				src: "/images/boards/column/166635717/5.webp",
 				w: 382,
 				h: 362,
 				alt: "41ccf7c191610.png",
@@ -26820,13 +26820,13 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 		title: "[애드리절트 칼럼] 2025년 마케팅 트렌드: 가치 환원 전략",
 		excerpt:
 			"ㅡ 가치 환원 전략의 시대 “나는 이 브랜드로부터 무엇을 받았을까ㅡ 그리고 어떻게 돌려줄 것인가?” 마케팅은 더 이상 ‘팔기 위한 말’만으로는 통하지 않는다. 지금의 소비자는 브랜드를 단순히 ‘상품 제공자’로 보지 않는다. 대신 자신의 삶과 연결되고, 사회적으로 책임을 다하며 진심 어린",
-		cover: "/images/boards/column/166422838/1.png",
+		cover: "/images/boards/column/166422838/1.webp",
 		coverW: 1920,
 		coverH: 1080,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/column/166422838/1.png",
+				src: "/images/boards/column/166422838/1.webp",
 				w: 1920,
 				h: 1080,
 				alt: "병원마케팅",
@@ -26932,7 +26932,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/166422838/2.png",
+				src: "/images/boards/column/166422838/2.webp",
 				w: 426,
 				h: 639,
 				alt: "병원마케팅회사",
@@ -27401,7 +27401,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/166422838/3.png",
+				src: "/images/boards/column/166422838/3.webp",
 				w: 940,
 				h: 411,
 				alt: "출처 touchland 홈페이지",
@@ -27409,7 +27409,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/166422838/4.png",
+				src: "/images/boards/column/166422838/4.webp",
 				w: 940,
 				h: 378,
 				alt: "출처 touchland 홈페이지",
@@ -27451,7 +27451,7 @@ export const COLUMN_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/column/166422838/5.png",
+				src: "/images/boards/column/166422838/5.webp",
 				w: 572,
 				h: 506,
 				alt: "병원브랜딩",
@@ -27467,13 +27467,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "제1차 대구여성경제인포럼 및 6월 정기월례회 개최",
 		excerpt:
 			"2026년 6월 18일 대구 인터불고호텔 즐거운홀에서 제 1차 대구여성경제인포럼이 개최되었습니다. 애드리절트 이승민 대표는 해당 포럼에서 [AI에게 추천 받는 기업의 비밀]이라는 주제로 약 1시간 반에 걸쳐 강의를 진행하였습니다.",
-		cover: "/images/boards/press/172039101/1.png",
+		cover: "/images/boards/press/172039101/1.webp",
 		coverW: 1720,
 		coverH: 746,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/172039101/1.png",
+				src: "/images/boards/press/172039101/1.webp",
 				w: 1720,
 				h: 746,
 				alt: "8866b67fdbf8e.png",
@@ -27501,7 +27501,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/172039101/2.jpg",
+				src: "/images/boards/press/172039101/2.webp",
 				w: 1920,
 				h: 1440,
 				alt: "f25226f3acd67.jpg",
@@ -27509,7 +27509,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/172039101/3.jpg",
+				src: "/images/boards/press/172039101/3.webp",
 				w: 1920,
 				h: 1440,
 				alt: "823529b8571ec.jpg",
@@ -27522,13 +27522,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "애드리절트, 2025 원데이 속성 세미나 성공적 마무리",
 		excerpt:
 			"▶ 기사 원문보기 : https://www.fntoday.co.kr/news/articleView.html?idxno=367472 병원 마케팅 전문 기업 애드리절트가 지난 11월, 초보 원장들을 대상으로 마케팅 기초부터 실무 실습, 1:1 피드백까지 아우르는 '2025 병원마케팅 원데이",
-		cover: "/images/boards/press/170968387/1.png",
+		cover: "/images/boards/press/170968387/1.webp",
 		coverW: 928,
 		coverH: 762,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/170968387/1.png",
+				src: "/images/boards/press/170968387/1.webp",
 				w: 928,
 				h: 762,
 				alt: "382485e36af13.png",
@@ -27580,7 +27580,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/170968387/2.png",
+				src: "/images/boards/press/170968387/2.webp",
 				w: 475,
 				h: 261,
 				alt: "898815855b153.png",
@@ -27593,13 +27593,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "애드리절트, 중국인 마케터 중심의 병의원 특화 솔루션 출시",
 		excerpt:
 			"▶ 기사 원문보기  : https://edu.donga.com/news/articleView.html?idxno=101762 애드리절트는 한국 의료에 대한 중화권의 높은 관심을 반영하여, 현지 감성을 잘 아는 중국인 마케터가 직접 전담하는 ‘병의원 중화권 마케팅 올인원 패키지’를 출시했",
-		cover: "/images/boards/press/170968273/1.png",
+		cover: "/images/boards/press/170968273/1.webp",
 		coverW: 776,
 		coverH: 836,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/170968273/1.png",
+				src: "/images/boards/press/170968273/1.webp",
 				w: 776,
 				h: 836,
 				alt: "29e8ccbe5912c.png",
@@ -27651,7 +27651,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/170968273/2.png",
+				src: "/images/boards/press/170968273/2.webp",
 				w: 534,
 				h: 398,
 				alt: "8f4eb85f5cde7.png",
@@ -27664,13 +27664,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "애드리절트, 실전 노하우 담은 ‘병원마케팅 원데이 속성 과외’ 성황리 종료",
 		excerpt:
 			"▶ 기사 원문보기 : https://www.fntoday.co.kr/news/articleView.html?idxno=380265 병원 마케팅 전문 기업 애드리절트가 지난 15일, 병원장 및 실무자를 대상으로 실무에 즉시 적용 가능한 '병원마케팅 원데이 속성 과외'를 성황리에 마쳤습니다",
-		cover: "/images/boards/press/170968198/1.png",
+		cover: "/images/boards/press/170968198/1.webp",
 		coverW: 851,
 		coverH: 816,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/170968198/1.png",
+				src: "/images/boards/press/170968198/1.webp",
 				w: 851,
 				h: 816,
 				alt: "96e38c70681b2.png",
@@ -27722,7 +27722,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/170968198/2.png",
+				src: "/images/boards/press/170968198/2.webp",
 				w: 532,
 				h: 398,
 				alt: "e23e93ab89ab6.png",
@@ -27735,13 +27735,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "병원 마케팅 전문 애드리절트, 개원의 대상 AI 마케팅 핵심 전략 강의",
 		excerpt:
 			"▶ 기사 원문보기 : https://www.enetnews.co.kr/news/articleView.html?idxno=48177 병원 마케팅 전문 기업 애드리절트가 ‘제1회 대한개원의마케팅경영학회’에 참여하여, 장윤정 센터장의 강연을 통해 AI 시대의 실전 병원 마케팅 핵심 전략을 공",
-		cover: "/images/boards/press/170968141/1.png",
+		cover: "/images/boards/press/170968141/1.webp",
 		coverW: 938,
 		coverH: 789,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/170968141/1.png",
+				src: "/images/boards/press/170968141/1.webp",
 				w: 938,
 				h: 789,
 				alt: "94dd40da3605d.png",
@@ -27793,7 +27793,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/170968141/2.png",
+				src: "/images/boards/press/170968141/2.webp",
 				w: 715,
 				h: 532,
 				alt: "36b00a2f161e5.png",
@@ -27806,13 +27806,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "애드리절트, AI 기반 병원 마케팅 분석 솔루션 ‘AIRANK’ 전격 출시",
 		excerpt:
 			"▶ 기사 원문보기 :  https://edu.donga.com/news/articleView.html?idxno=105655 병원 마케팅의 중심이 단순 검색 노출에서 'AI 추천'으로 변화함에 따라, 애드리절트는 병원의 AI 노출 수준을 정량적으로 분석할 수 있는 솔루션 'AIRANK'",
-		cover: "/images/boards/press/170968070/1.png",
+		cover: "/images/boards/press/170968070/1.webp",
 		coverW: 891,
 		coverH: 757,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/170968070/1.png",
+				src: "/images/boards/press/170968070/1.webp",
 				w: 891,
 				h: 757,
 				alt: "fcbb0e96e08d6.png",
@@ -27868,13 +27868,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "‘나눔의 10년’ 애드리절트 이승민 대표, 동대문시각특화장애인복지관에 누적 1억 원 기부",
 		excerpt:
 			"▶ 기사 원문보기 : https://n.news.naver.com/article/366/0001158476?sid=101 애드리절트는 2017년부터 현재까지 약 10년 동안 동대문시각특화장애인복지관에 총 1억 원 이상을 기부하며 꾸준한 나눔을 실천해 왔습니다. 해당 후원금은 시각장애인의",
-		cover: "/images/boards/press/170967947/1.png",
+		cover: "/images/boards/press/170967947/1.webp",
 		coverW: 935,
 		coverH: 796,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/170967947/1.png",
+				src: "/images/boards/press/170967947/1.webp",
 				w: 935,
 				h: 796,
 				alt: "ed50a1cdeaf4b.png",
@@ -27926,7 +27926,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/170967947/2.png",
+				src: "/images/boards/press/170967947/2.webp",
 				w: 360,
 				h: 473,
 				alt: "02552ff0e083a.png",
@@ -27939,13 +27939,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "애드리절트, 병원마케팅 非심의 세미나 성료",
 		excerpt:
 			"▶기사 원문 보기 https://mdtoday.co.kr/news/view/1065590477996824 병원 전문 마케팅 기업 애드리절트는 지난달 23일 ‘병원 마케팅 비심의 세미나’를 개최하여 성황리에 마무리했습니다. 세미나에서는 블로그 심의 이슈로 인한 홍보 제약을 해결할 수 있는",
-		cover: "/images/boards/press/167764393/1.png",
+		cover: "/images/boards/press/167764393/1.webp",
 		coverW: 901,
 		coverH: 166,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167764393/1.png",
+				src: "/images/boards/press/167764393/1.webp",
 				w: 901,
 				h: 166,
 				alt: "31c09be0cc1ed.png",
@@ -27953,7 +27953,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167764393/2.png",
+				src: "/images/boards/press/167764393/2.webp",
 				w: 823,
 				h: 593,
 				alt: "fe166882ed69e.png",
@@ -28003,7 +28003,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167764393/3.png",
+				src: "/images/boards/press/167764393/3.webp",
 				w: 600,
 				h: 338,
 				alt: "9197b6775430b.png",
@@ -28011,7 +28011,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167764393/4.png",
+				src: "/images/boards/press/167764393/4.webp",
 				w: 966,
 				h: 725,
 				alt: "cc2453f160f50.png",
@@ -28024,13 +28024,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "동대문시각특화장애인복지관, 애드리절트 후원으로 시각장애인 생활용구 지원",
 		excerpt:
 			"▶기사 원문 보기 http://withinnews.co.kr/news/view.html?section=1&category=155&item=&no=36921 동대문시각특화장애인복지관은 애드리절트의 후원으로 시각장애인을 위한 생활용구 지원사업을 진행하였습니다. 총 263명 중 102명이 선",
-		cover: "/images/boards/press/167764301/1.png",
+		cover: "/images/boards/press/167764301/1.webp",
 		coverW: 712,
 		coverH: 862,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167764301/1.png",
+				src: "/images/boards/press/167764301/1.webp",
 				w: 712,
 				h: 862,
 				alt: "32b4337444e2e.png",
@@ -28081,7 +28081,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167764301/2.png",
+				src: "/images/boards/press/167764301/2.webp",
 				w: 650,
 				h: 487,
 				alt: "fcb52c150106f.png",
@@ -28094,13 +28094,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "창립 10주년 맞은 애드리절트, 성장과 혁신 발자취 “디지털 마케팅 미래 연다”",
 		excerpt:
 			"▶기사 원문 보기 https://www.fntoday.co.kr/news/articleView.html?idxno=346515 애드리절트가 창립 10주년을 맞아 지난 성과를 돌아보고 앞으로의 비전을 재정비하겠다고 밝혔습니다. 병원마케팅 선도 기업으로 자리매김한 애드리절트는 세부키워드 전",
-		cover: "/images/boards/press/167764219/1.png",
+		cover: "/images/boards/press/167764219/1.webp",
 		coverW: 1354,
 		coverH: 237,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167764219/1.png",
+				src: "/images/boards/press/167764219/1.webp",
 				w: 1354,
 				h: 237,
 				alt: "cfb0c85a9fafb.png",
@@ -28108,7 +28108,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167764219/2.png",
+				src: "/images/boards/press/167764219/2.webp",
 				w: 847,
 				h: 677,
 				alt: "20e6ea28290f4.png",
@@ -28160,7 +28160,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167764219/3.png",
+				src: "/images/boards/press/167764219/3.webp",
 				w: 600,
 				h: 378,
 				alt: "f5e0bf5111cf8.png",
@@ -28173,13 +28173,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "애드리절트, 동문장애인복지관에 사랑의 후원금 2,000만원 전달 약정",
 		excerpt:
 			"▶기사 원문 보기 http://www.withinnews.co.kr/news/view.html?section=1&category=155&item=&no=35467 동문장애인복지관은 지난 1월 9일 애드리절트로부터 시각장애인을 위한 사랑의 후원금 2,000만 원을 약정받았다고 밝혔습니다.",
-		cover: "/images/boards/press/167764101/1.png",
+		cover: "/images/boards/press/167764101/1.webp",
 		coverW: 724,
 		coverH: 705,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167764101/1.png",
+				src: "/images/boards/press/167764101/1.webp",
 				w: 724,
 				h: 705,
 				alt: "d777d474dbdb0.png",
@@ -28230,7 +28230,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167764101/2.png",
+				src: "/images/boards/press/167764101/2.webp",
 				w: 650,
 				h: 400,
 				alt: "784615edc7b6a.png",
@@ -28243,13 +28243,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "병원마케팅 회사 애드리절트, 메디게이트 컨퍼런스에서 병원마케팅 특강 성료",
 		excerpt:
 			"▶기사 원문 보기 https://www.medisobizanews.com/news/articleView.html?idxno=121412 병원마케팅 전문기업 애드리절트는 지난 17일 코엑스에서 열린 ‘2024 메디게이트 성공개원 정보&학술 컨퍼런스’에서 개원의 대상 마케팅 강의를 진행했습",
-		cover: "/images/boards/press/167763982/1.png",
+		cover: "/images/boards/press/167763982/1.webp",
 		coverW: 1039,
 		coverH: 114,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167763982/1.png",
+				src: "/images/boards/press/167763982/1.webp",
 				w: 1039,
 				h: 114,
 				alt: "d54bea121132f.png",
@@ -28257,7 +28257,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167763982/2.png",
+				src: "/images/boards/press/167763982/2.webp",
 				w: 677,
 				h: 626,
 				alt: "d3a11fda66f98.png",
@@ -28309,7 +28309,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167763982/3.png",
+				src: "/images/boards/press/167763982/3.webp",
 				w: 600,
 				h: 450,
 				alt: "병원마케팅 회사 애드리절트, 메디게이트 컨퍼런스에서 병원마케팅 특강 성료",
@@ -28322,13 +28322,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "동문장애인복지관, 제45회 흰지팡이의 날 기념행사 개최",
 		excerpt:
 			"▶기사 원문 보기 http://www.withinnews.co.kr/news/view.html?section=1&category=155&item=&no=34730 동문장애인복지관은 지난 10월 18일 제45회 흰지팡이의 날 기념행사를 개최하여 시각장애인과 가족, 지역주민 70여 명이 함",
-		cover: "/images/boards/press/167763923/1.png",
+		cover: "/images/boards/press/167763923/1.webp",
 		coverW: 711,
 		coverH: 813,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167763923/1.png",
+				src: "/images/boards/press/167763923/1.webp",
 				w: 711,
 				h: 813,
 				alt: "151f2d566e864.png",
@@ -28385,13 +28385,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "동문장애인복지관, 시각장애인들과 함께 지리산 천왕봉 등정 성공",
 		excerpt:
 			"▶기사 원문 보기 http://www.withinnews.co.kr/news/view.html?section=1&category=155&item=&no=33602 동문장애인복지관은 시각장애인 5명과 자원봉사자들이 함께 지리산 천왕봉 등반에 성공하였다고 밝혔습니다. 참가자들은 1:1 동행",
-		cover: "/images/boards/press/167763731/1.png",
+		cover: "/images/boards/press/167763731/1.webp",
 		coverW: 707,
 		coverH: 750,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167763731/1.png",
+				src: "/images/boards/press/167763731/1.webp",
 				w: 707,
 				h: 750,
 				alt: "5cf0f98af54d4.png",
@@ -28443,7 +28443,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167763731/2.png",
+				src: "/images/boards/press/167763731/2.webp",
 				w: 650,
 				h: 366,
 				alt: "a3e75c6ffc6c1.png",
@@ -28451,7 +28451,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167763731/3.png",
+				src: "/images/boards/press/167763731/3.webp",
 				w: 650,
 				h: 488,
 				alt: "9d89b9b192b74.png",
@@ -28459,7 +28459,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167763731/4.png",
+				src: "/images/boards/press/167763731/4.webp",
 				w: 650,
 				h: 488,
 				alt: "c286577a1a404.png",
@@ -28483,13 +28483,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "병원마케팅 전문기업 애드리절트, 24년 3월 부산 병원마케팅 세미나 개최",
 		excerpt:
 			"▶기사 원문 보기 https://www.medisobizanews.com/news/articleView.html?idxno=114269 병원 마케팅 전문기업 애드리절트는 3월 16일 부산디자인진흥원에서 ‘부산 병원마케팅 세미나’를 개최합니다. 4회차를 맞은 이번 병원마케팅 세미나는 개원",
-		cover: "/images/boards/press/167763625/1.png",
+		cover: "/images/boards/press/167763625/1.webp",
 		coverW: 1007,
 		coverH: 64,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167763625/1.png",
+				src: "/images/boards/press/167763625/1.webp",
 				w: 1007,
 				h: 64,
 				alt: "db0a1c851cf22.png",
@@ -28497,7 +28497,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167763625/2.png",
+				src: "/images/boards/press/167763625/2.webp",
 				w: 655,
 				h: 456,
 				alt: "ee38e0ce34d12.png",
@@ -28549,7 +28549,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167763625/3.png",
+				src: "/images/boards/press/167763625/3.webp",
 				w: 600,
 				h: 346,
 				alt: "cb77c1fa88682.png",
@@ -28562,13 +28562,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "애드리절트, 병원 개원 마케팅 세미나 성료",
 		excerpt:
 			"▶기사 원문 보기 https://mdtoday.co.kr/news/view/1065603015594587 병원 마케팅 전문기업 애드리절트는 9월 9일 ‘2023 개원 마케팅 ZOOM 세미나’를 열고 개원의들을 대상으로 실질적인 마케팅 전략을 공유하였습니다. 세미나에서는 신환 유입 전략,",
-		cover: "/images/boards/press/167759945/1.png",
+		cover: "/images/boards/press/167759945/1.webp",
 		coverW: 886,
 		coverH: 202,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167759945/1.png",
+				src: "/images/boards/press/167759945/1.webp",
 				w: 886,
 				h: 202,
 				alt: "84728b314b5de.png",
@@ -28576,7 +28576,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167759945/2.png",
+				src: "/images/boards/press/167759945/2.webp",
 				w: 830,
 				h: 701,
 				alt: "bee9580cc3a49.png",
@@ -28628,7 +28628,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167759945/3.png",
+				src: "/images/boards/press/167759945/3.webp",
 				w: 500,
 				h: 500,
 				alt: "1e5a2542d207c.png",
@@ -28641,13 +28641,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "애드리절트, ‘제1회 병원 마케팅 QnA 워크숍’ 성황리에 마쳐",
 		excerpt:
 			"▶기사 원문 보기 https://mdtoday.co.kr/news/view/1065577457539037 병원 마케팅 전문기업 애드리절트는 병원 원장들을 대상으로 ‘제1회 병원 마케팅 QnA 워크숍’을 개최하였습니다. 이번 워크숍은 온라인·오프라인 마케팅에서의 피해 사례를 예방하고 실질",
-		cover: "/images/boards/press/167757745/1.png",
+		cover: "/images/boards/press/167757745/1.webp",
 		coverW: 1098,
 		coverH: 173,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167757745/1.png",
+				src: "/images/boards/press/167757745/1.webp",
 				w: 1098,
 				h: 173,
 				alt: "9296385a602fe.png",
@@ -28655,7 +28655,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757745/2.png",
+				src: "/images/boards/press/167757745/2.webp",
 				w: 842,
 				h: 781,
 				alt: "8d0532bd500ad.png",
@@ -28716,7 +28716,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757745/3.png",
+				src: "/images/boards/press/167757745/3.webp",
 				w: 500,
 				h: 413,
 				alt: "d6dec87c8cdcd.png",
@@ -28729,13 +28729,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "병원 마케팅 전문 애드리절트, 마포·부산 지사 출범",
 		excerpt:
 			"▶기사 원문 보기 https://www.fetv.co.kr/news/article.html?no=141019 병원 마케팅 전문기업 애드리절트는 부산지사와 마포지사를 새롭게 설립하며 사업 확장을 추진하였습니다. 부산지사는 현직 의사가 운영해 실제 병원 운영 경험을 반영한 전략을 제공하고,",
-		cover: "/images/boards/press/167757713/1.png",
+		cover: "/images/boards/press/167757713/1.webp",
 		coverW: 722,
 		coverH: 719,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167757713/1.png",
+				src: "/images/boards/press/167757713/1.webp",
 				w: 722,
 				h: 719,
 				alt: "de13ed040366d.png",
@@ -28787,7 +28787,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757713/2.png",
+				src: "/images/boards/press/167757713/2.webp",
 				w: 680,
 				h: 510,
 				alt: "c545cecba8769.png",
@@ -28800,13 +28800,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "애드리절트, 2023 고용노동부 강소기업 공식 선정",
 		excerpt:
 			"▶기사 원문 보기 https://www.fntoday.co.kr/news/articleView.html?idxno=294412 병원 광고 전문기업 애드리절트는 탄탄한 경영 성과와 사회적 가치를 인정받아 2023년 고용노동부 강소기업에 선정되었습니다. 회사는 병원 고객사 확대, 지사 설립",
-		cover: "/images/boards/press/167757555/1.png",
+		cover: "/images/boards/press/167757555/1.webp",
 		coverW: 1111,
 		coverH: 189,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167757555/1.png",
+				src: "/images/boards/press/167757555/1.webp",
 				w: 1111,
 				h: 189,
 				alt: "604e375898580.png",
@@ -28814,7 +28814,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757555/2.png",
+				src: "/images/boards/press/167757555/2.webp",
 				w: 907,
 				h: 500,
 				alt: "09234ec602d16.png",
@@ -28866,7 +28866,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757555/3.png",
+				src: "/images/boards/press/167757555/3.webp",
 				w: 600,
 				h: 338,
 				alt: "52c19bb2a5135.png",
@@ -28874,7 +28874,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757555/4.png",
+				src: "/images/boards/press/167757555/4.webp",
 				w: 600,
 				h: 849,
 				alt: "ad8f62f4ae555.png",
@@ -28887,13 +28887,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "제4회 벳아너스 경영 세미나 성황리 개최…“고객 충성도가 핵심”",
 		excerpt:
 			"▶기사 원문 보기 https://www.news1.kr/industry/general-industry/4961756 벳아너스는 18일 서울 서초구 드림플러스 강남에서 제4회 경영 세미나를 개최해 전국의 수의사와 병원 관계자 50여 명이 참석하였습니다. 첫 강연자로 나선 애드리절트 이승민",
-		cover: "/images/boards/press/167757469/1.png",
+		cover: "/images/boards/press/167757469/1.webp",
 		coverW: 1016,
 		coverH: 67,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167757469/1.png",
+				src: "/images/boards/press/167757469/1.webp",
 				w: 1016,
 				h: 67,
 				alt: "73d2ef7854195.png",
@@ -28901,7 +28901,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757469/2.png",
+				src: "/images/boards/press/167757469/2.webp",
 				w: 734,
 				h: 643,
 				alt: "030d649c19fe9.png",
@@ -28953,7 +28953,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757469/3.png",
+				src: "/images/boards/press/167757469/3.webp",
 				w: 750,
 				h: 479,
 				alt: "cd99dc6cc5d63.png",
@@ -28966,13 +28966,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "동문장애인복지관, 개관 12주년 맞아 ‘동행축제’ 열어",
 		excerpt:
 			"▶기사 원문 보기 http://www.withinnews.co.kr/news/view.html?section=1&category=155&item=&no=28191 동문장애인복지관은 개관 12주년을 맞아 장애인과 비장애인이 함께하는 ‘동행축제’를 새힘아트홀에서 개최하였습니다. 행사에는 구",
-		cover: "/images/boards/press/167757280/1.png",
+		cover: "/images/boards/press/167757280/1.webp",
 		coverW: 718,
 		coverH: 820,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167757280/1.png",
+				src: "/images/boards/press/167757280/1.webp",
 				w: 718,
 				h: 820,
 				alt: "c0059764fe0a4.png",
@@ -29035,7 +29035,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757280/2.png",
+				src: "/images/boards/press/167757280/2.webp",
 				w: 650,
 				h: 433,
 				alt: "424061dbd0753.png",
@@ -29048,13 +29048,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "2021 마케팅 콘텐츠 양과 질 모두 잡는다…애드리절트 ‘메디컬 패키지’ 출시",
 		excerpt:
 			"▶기사 원문 보기 https://www.medisobizanews.com/news/articleView.html?idxno=83936 병원 전문 마케팅 대행사 애드리절트는 콘텐츠의 양과 질을 동시에 충족할 수 있는 ‘메디컬 패키지’를 출시하였습니다. 이승민 대표는 실제 병원 마케팅 사례",
-		cover: "/images/boards/press/167757136/1.jpg",
+		cover: "/images/boards/press/167757136/1.webp",
 		coverW: 1022,
 		coverH: 114,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167757136/1.jpg",
+				src: "/images/boards/press/167757136/1.webp",
 				w: 1022,
 				h: 114,
 				alt: "d92d393a76cb3.jpg",
@@ -29062,7 +29062,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757136/2.png",
+				src: "/images/boards/press/167757136/2.webp",
 				w: 600,
 				h: 900,
 				alt: "329b653aa7e91.png",
@@ -29070,7 +29070,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757136/3.png",
+				src: "/images/boards/press/167757136/3.webp",
 				w: 615,
 				h: 152,
 				alt: "5c99f9035e561.png",
@@ -29122,7 +29122,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757136/4.png",
+				src: "/images/boards/press/167757136/4.webp",
 				w: 600,
 				h: 900,
 				alt: "f34dd1cf1d929.png",
@@ -29130,7 +29130,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757136/5.png",
+				src: "/images/boards/press/167757136/5.webp",
 				w: 600,
 				h: 337,
 				alt: "106e25495f4dc.png",
@@ -29143,13 +29143,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "애드리절트, 지역 사회복지유공자로서 동대문구 표창 받아",
 		excerpt:
 			"▶기사 원문 보기 https://view.asiae.co.kr/article/2021090707195290109 동대문구는 제22회 사회복지의 날을 맞아 사회복지유공자 38명에게 표창을 수여하였습니다. 수상자에는 사회복지기관 종사자 34명과 함께 동아제약, 애드리절트, 김세윤 후원자,",
-		cover: "/images/boards/press/167757001/1.jpeg",
+		cover: "/images/boards/press/167757001/1.webp",
 		coverW: 784,
 		coverH: 816,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167757001/1.jpeg",
+				src: "/images/boards/press/167757001/1.webp",
 				w: 784,
 				h: 816,
 				alt: "81a5ece34d440.jpeg",
@@ -29212,7 +29212,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757001/2.png",
+				src: "/images/boards/press/167757001/2.webp",
 				w: 745,
 				h: 496,
 				alt: "d85aa547d267a.png",
@@ -29220,7 +29220,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757001/3.png",
+				src: "/images/boards/press/167757001/3.webp",
 				w: 745,
 				h: 992,
 				alt: "ad5e1b106a6c0.png",
@@ -29228,7 +29228,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757001/4.png",
+				src: "/images/boards/press/167757001/4.webp",
 				w: 745,
 				h: 406,
 				alt: "68cfa551efdc8.png",
@@ -29236,7 +29236,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757001/5.png",
+				src: "/images/boards/press/167757001/5.webp",
 				w: 745,
 				h: 484,
 				alt: "a4c894663921f.png",
@@ -29244,7 +29244,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167757001/6.png",
+				src: "/images/boards/press/167757001/6.webp",
 				w: 745,
 				h: 452,
 				alt: "98a4763bf1631.png",
@@ -29257,13 +29257,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "‘마케팅 때문에 고민입니다’ 저자 이승민, 판매특공대 포럼 특강",
 		excerpt:
 			"▶기사 원문 보기 https://www.newsfreezone.co.kr/news/articleView.html?idxno=127169 판매특공대는 8월 28일 약 60여 명의 온라인 사업자들이 참석한 가운데 마케팅포럼을 개최하였습니다. 이날 행사에는 『마케팅 때문에 고민입니다』의 저자",
-		cover: "/images/boards/press/167756892/1.jpg",
+		cover: "/images/boards/press/167756892/1.webp",
 		coverW: 1213,
 		coverH: 136,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167756892/1.jpg",
+				src: "/images/boards/press/167756892/1.webp",
 				w: 1213,
 				h: 136,
 				alt: "41c6fd342ee4b.jpg",
@@ -29271,7 +29271,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167756892/2.jpg",
+				src: "/images/boards/press/167756892/2.webp",
 				w: 856,
 				h: 674,
 				alt: "ea4023c01d79f.jpg",
@@ -29323,7 +29323,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167756892/3.jpg",
+				src: "/images/boards/press/167756892/3.webp",
 				w: 700,
 				h: 355,
 				alt: "31c9ceb3ff66d.jpg",
@@ -29336,13 +29336,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "애드리절트 지원 속, 시각장애인·자원봉사자 14명 키나발루산 등반 성공",
 		excerpt:
 			'▶기사 원문 보기 https://www.ablenews.co.kr/news/articleView.html?idxno=83930 애드리절트의 후원으로 동문장애인복지관 시각장애인과 자원봉사자 14명이 말레이시아 키나발루산(4,095m) 정상에 올랐습니다. 이들은 "함께 오름"이라는 목표로',
-		cover: "/images/boards/press/167706408/1.png",
+		cover: "/images/boards/press/167706408/1.webp",
 		coverW: 752,
 		coverH: 727,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167706408/1.png",
+				src: "/images/boards/press/167706408/1.webp",
 				w: 752,
 				h: 727,
 				alt: "dd5c7017621ab.png",
@@ -29435,7 +29435,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167706408/2.png",
+				src: "/images/boards/press/167706408/2.webp",
 				w: 560,
 				h: 373,
 				alt: "df539ddf64559.png",
@@ -29443,7 +29443,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167706408/3.png",
+				src: "/images/boards/press/167706408/3.webp",
 				w: 650,
 				h: 433,
 				alt: "0195b6691c025.png",
@@ -29456,13 +29456,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "애드리절트 후원 힘입어 시각장애인 해외등반 사업 2년 연속 진행",
 		excerpt:
 			"▶기사 원문 보기 http://www.withinnews.co.kr/news/view.html?section=1&category=153&item=&no=19267 동문장애인복지관은 시각장애인과 자원봉사자가 함께하는 2019 동남아시아 최고봉 키나발루산(말레이시아/해발 4,095m) 해외",
-		cover: "/images/boards/press/167706106/1.png",
+		cover: "/images/boards/press/167706106/1.webp",
 		coverW: 708,
 		coverH: 816,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167706106/1.png",
+				src: "/images/boards/press/167706106/1.webp",
 				w: 708,
 				h: 816,
 				alt: "9ea7d296dc316.png",
@@ -29514,7 +29514,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167706106/2.png",
+				src: "/images/boards/press/167706106/2.webp",
 				w: 650,
 				h: 433,
 				alt: "d63a67a32e1cc.png",
@@ -29527,13 +29527,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "애드리절트와 함께한 동문장애인복지관 시각장애인 키나발루산 도전 준비",
 		excerpt:
 			"▶기사 원문 보기 https://www.ablenews.co.kr/news/articleView.html?idxno=82141 동문장애인복지관은 지난 2019년 4월 시각장애인과 자원봉사자 등 15명이 용문산에서 시각장애인 해외원정 등반을 위한 사전 훈련을 실시했습니다. 이번 훈련은 (",
-		cover: "/images/boards/press/167705976/1.png",
+		cover: "/images/boards/press/167705976/1.webp",
 		coverW: 763,
 		coverH: 670,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167705976/1.png",
+				src: "/images/boards/press/167705976/1.webp",
 				w: 763,
 				h: 670,
 				alt: "4ee4bf7a21364.png",
@@ -29590,13 +29590,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "애드리절트 이승민 대표, 취준생 위한 온라인 마케팅 특강 진행",
 		excerpt:
 			"▶기사 원문 보기 https://www.sedaily.com/NewsView/1S73Y1XSM2 2018년 안양일자리센터는 지난 10월 29일부터 3일간 안양시 청년들을 대상으로 온라인·SNS 마케팅 실무 특강을 진행했습니다. 강의는 애드리절트 이승민 대표와 모바일마케팅캠퍼스 임헌수 소",
-		cover: "/images/boards/press/167705937/1.png",
+		cover: "/images/boards/press/167705937/1.webp",
 		coverW: 645,
 		coverH: 728,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167705937/1.png",
+				src: "/images/boards/press/167705937/1.webp",
 				w: 645,
 				h: 728,
 				alt: "d9c4b3117e823.png",
@@ -29659,7 +29659,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167705937/2.png",
+				src: "/images/boards/press/167705937/2.webp",
 				w: 500,
 				h: 375,
 				alt: "27b1c1d07d0de.png",
@@ -29672,13 +29672,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "'한 걸음의 기적' 애드리절트, 동문장애복지관 주최 시각장애인 일본 후지산 등반 후원",
 		excerpt:
 			"▶기사 원문 보기 https://www.segye.com/newsView/20180720003793?OutUrl=naver 온라인 광고 기업 (주)애드리절트는 지난 15일 진행된 ‘시각장애인의 일본 후지산 등반’ 프로젝트에 후원금을 전달했습니다. 해당 프로그램은 동문장애복지관이 주최했으",
-		cover: "/images/boards/press/167705198/1.png",
+		cover: "/images/boards/press/167705198/1.webp",
 		coverW: 775,
 		coverH: 595,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167705198/1.png",
+				src: "/images/boards/press/167705198/1.webp",
 				w: 775,
 				h: 595,
 				alt: "4c0d382ea7dc2.png",
@@ -29761,7 +29761,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167705198/2.png",
+				src: "/images/boards/press/167705198/2.webp",
 				w: 500,
 				h: 651,
 				alt: "60bdae3e1f4fb.png",
@@ -29769,7 +29769,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167705198/3.png",
+				src: "/images/boards/press/167705198/3.webp",
 				w: 550,
 				h: 366,
 				alt: "76b7caaf1bc78.png",
@@ -29782,13 +29782,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "애드리절트 이승민 대표, 아임닥터 세미나서 병원 마케팅 5대 필수 전략 제시",
 		excerpt:
 			"▶기사 원문 보기 https://www.mdtoday.co.kr/mdtoday/index.html?no=319637 10만 의사 커뮤니티 ‘아임닥터’ 세미나에서 애드리절트 이승민 대표는 병원 온라인 마케팅의 필수 요소 5가지를 소개했습니다. 강의에서 매출 공식을 중심으로 잠재고객 이해,",
-		cover: "/images/boards/press/167704971/1.png",
+		cover: "/images/boards/press/167704971/1.webp",
 		coverW: 938,
 		coverH: 775,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167704971/1.png",
+				src: "/images/boards/press/167704971/1.webp",
 				w: 938,
 				h: 775,
 				alt: "afcd146a0f624.png",
@@ -29851,7 +29851,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167704971/2.png",
+				src: "/images/boards/press/167704971/2.webp",
 				w: 310,
 				h: 316,
 				alt: "ef031e9fe05d6.png",
@@ -29864,13 +29864,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "애드리절트, 장애인 후원사로서 사회공헌 성과 인정받아",
 		excerpt:
 			"▶기사 원문 보기 https://www.mk.co.kr/news/society/8115107 마케팅 회사 애드리절트가 장애아동·청소년 인재양성 후원 공로로 ‘드림리절트’ 활동을 인정받아 동대문구청장상을 수상했습니다. 애드리절트는 후원금 지원뿐 아니라 사회적 관심을 유도하며 장애인 복지",
-		cover: "/images/boards/press/167676547/1.png",
+		cover: "/images/boards/press/167676547/1.webp",
 		coverW: 756,
 		coverH: 796,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167676547/1.png",
+				src: "/images/boards/press/167676547/1.webp",
 				w: 756,
 				h: 796,
 				alt: "a9f0676b1784d.png",
@@ -29922,7 +29922,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167676547/2.png",
+				src: "/images/boards/press/167676547/2.webp",
 				w: 500,
 				h: 334,
 				alt: "65cc1987803ab.png",
@@ -29935,13 +29935,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "2017 한국브랜드선호도1위 애드리절트, 병원온라인마케팅 부문 선정",
 		excerpt:
 			"▶기사 원문 보기 https://magazine.hankyung.com/business/article/201709253399b 애드리절트는 2017년 한국브랜드선호도1위 인증식에서 병원온라인마케팅 서비스 부문 1위를 차지했습니다. 차별화된 온라인 마케팅 전략과 검색 패턴 분석을 통해 병",
-		cover: "/images/boards/press/167676267/1.png",
+		cover: "/images/boards/press/167676267/1.webp",
 		coverW: 822,
 		coverH: 827,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167676267/1.png",
+				src: "/images/boards/press/167676267/1.webp",
 				w: 822,
 				h: 827,
 				alt: "3bc66b6886f34.png",
@@ -30004,7 +30004,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167676267/2.png",
+				src: "/images/boards/press/167676267/2.webp",
 				w: 500,
 				h: 333,
 				alt: "68d4638a2ddfb.png",
@@ -30017,13 +30017,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "2016 애드리절트 대표 이승민, 대한민국 인물 대상 수상",
 		excerpt:
 			"▶ 기사 원문 보기 https://www.gukjenews.com/news/articleView.html?idxno=625613 애드리절트 이승민 대표는 2017년 1월 3일 ‘2016년을 빛낸 자랑스러운 대한민국 인물대상’을 수상했습니다. 애드리절트는 차별화된 전략으로 비용 대비 광고",
-		cover: "/images/boards/press/167675874/1.png",
+		cover: "/images/boards/press/167675874/1.webp",
 		coverW: 559,
 		coverH: 766,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167675874/1.png",
+				src: "/images/boards/press/167675874/1.webp",
 				w: 559,
 				h: 766,
 				alt: "77398400451a7.png",
@@ -30074,7 +30074,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167675874/2.png",
+				src: "/images/boards/press/167675874/2.webp",
 				w: 447,
 				h: 600,
 				alt: "ba06ba7b18cd2.png",
@@ -30087,13 +30087,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "2016 고객이 신뢰하는 브랜드대상 수상",
 		excerpt:
 			'▶기사 원문 보기 https://www.kfenews.co.kr/news/articleView.html?idxno=528878 온라인마케팅회사 애드리절트가 "2016 고객이 신뢰하는 브랜드 대상"에서 온라인마케팅 부문 대상을 수상하였습니다. 서울 강남구 삼성동 라마다호텔에서 열린 이번',
-		cover: "/images/boards/press/167570237/1.png",
+		cover: "/images/boards/press/167570237/1.webp",
 		coverW: 914,
 		coverH: 666,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167570237/1.png",
+				src: "/images/boards/press/167570237/1.webp",
 				w: 914,
 				h: 666,
 				alt: "085f517a5f301.png",
@@ -30134,7 +30134,7 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/boards/press/167570237/2.png",
+				src: "/images/boards/press/167570237/2.webp",
 				w: 1440,
 				h: 960,
 				alt: "8ea671fb41a55.png",
@@ -30147,13 +30147,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "'브랜드 블로그' 마케팅의 새로운 패러다임의 시작",
 		excerpt:
 			"▶기사 원문 보기 : https://www.sisunnews.co.kr/news/articleView.html?idxno=22503 마케팅, 이제 더이상 선택이 아닌 필수입니다. 그 중 바이럴 마케팅은 가장 기본이 되었는데요, 특히 온라인 하면 가장 먼저 떠오르는 게 바로 블로그 마케팅",
-		cover: "/images/boards/press/167570093/1.png",
+		cover: "/images/boards/press/167570093/1.webp",
 		coverW: 884,
 		coverH: 733,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167570093/1.png",
+				src: "/images/boards/press/167570093/1.webp",
 				w: 884,
 				h: 733,
 				alt: "9a2f1ede1feb1.png",
@@ -30221,13 +30221,13 @@ export const PRESS_ARTICLES: BoardArticle[] = [
 		title: "홍콩 한인요식업협회 초청으로 진행된 마케팅 교육",
 		excerpt:
 			"▶기사 원문 보기 : https://www.dt.co.kr/article/10933639 애드리절트 이승민 대표가 홍콩 한인요식업협회의 초청으로 마케팅 교육을 진행하였습니다. 한국관광공사 홍콩지사에서 진행된 이번 마케팅 교육은 총 5일간 진행되었으며, SNS를 활용한 다양한 마케팅 사례",
-		cover: "/images/boards/press/167569935/1.png",
+		cover: "/images/boards/press/167569935/1.webp",
 		coverW: 930,
 		coverH: 685,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/boards/press/167569935/1.png",
+				src: "/images/boards/press/167569935/1.webp",
 				w: 930,
 				h: 685,
 				alt: "2ff9469a01377.png",

@@ -42,7 +42,7 @@ export const CeoPage = () => {
 				<div className="mx-auto grid max-w-[1600px] items-center gap-12 md:grid-cols-2 md:gap-20">
 					<Reveal direction="left">
 						<Image
-							src="/ceo/ceo.jpg"
+							src="/ceo/ceo.webp"
 							alt="애드리절트 대표 이승민"
 							width={891}
 							height={1071}
@@ -98,7 +98,7 @@ export const CeoPage = () => {
 						rel="noopener noreferrer"
 						className="mt-8 inline-flex min-w-[240px] items-center justify-center gap-2.5 bg-white px-8 py-4 font-bold text-[#111111] text-lg transition-colors hover:bg-[#F5F5F5]"
 					>
-						<Image src="/youtube-logo.png" alt="" width={24} height={24} className="h-6 w-6" />{" "}
+						<Image src="/youtube-logo.webp" alt="" width={24} height={24} className="h-6 w-6" />{" "}
 						바로가기
 					</Link>
 				</Reveal>
@@ -122,7 +122,7 @@ export const CeoPage = () => {
 
 					<Reveal direction="scale" className="mt-12 md:mt-16">
 						<Image
-							src="/ceo/book.png"
+							src="/ceo/book.webp"
 							alt="이승민 대표 저서 『마케팅 때문에 고민입니다』"
 							width={1200}
 							height={925}

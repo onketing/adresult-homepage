@@ -25,7 +25,7 @@ const EXECS: Exec[] = [
 	{
 		name: "장윤정",
 		title: "센터장",
-		photo: "/people/member-1.jpg",
+		photo: "/people/member-1.webp",
 		paragraphs: [
 			{
 				text: "입사 초 대표님께서 회사와 고객,\n그리고 나의 우선순위를 정할 때\n1순위는 고객이라고 하셨습니다.",
@@ -42,7 +42,7 @@ const EXECS: Exec[] = [
 	{
 		name: "윤수환",
 		title: "팀장",
-		photo: "/people/member-2.jpg",
+		photo: "/people/member-2.webp",
 		paragraphs: [
 			{ text: "저희 팀에는 유독\n‘사람을 진심으로 아끼는’ 원장님들이 많습니다." },
 			{
@@ -68,7 +68,7 @@ const EXECS: Exec[] = [
 	{
 		name: "김구환",
 		title: "팀장",
-		photo: "/people/member-3.jpg",
+		photo: "/people/member-3.webp",
 		paragraphs: [
 			{
 				text: "수준 높은 의료는 생명을 살리는 힘이 있으며,\n때로는 누군가의 삶에 자신감을\n회복시켜 주기도 합니다.",
@@ -86,7 +86,7 @@ const EXECS: Exec[] = [
 	{
 		name: "한우리",
 		title: "지사장",
-		photo: "/people/member-4.jpg",
+		photo: "/people/member-4.webp",
 		headline: "함께하면 안 되는 건 없다!\n결과를 만들어내는 마케터",
 		paragraphs: [
 			{
@@ -123,7 +123,7 @@ const EXECS: Exec[] = [
 	{
 		name: "이미지",
 		title: "팀장",
-		photo: "/people/member-5.jpg",
+		photo: "/people/member-5.webp",
 		paragraphs: [
 			{ text: "병원을 운영하다 보면\n답답하고 막막한 순간들이 찾아오잖아요." },
 			{ text: "그럴 때 옆에서 같이 고민하고\n조금씩 방향을 찾아가는 사람이 되고 싶습니다." },
@@ -145,7 +145,7 @@ const EXECS: Exec[] = [
 	{
 		name: "유희경",
 		title: "지사장",
-		photo: "/people/member-6.jpg",
+		photo: "/people/member-6.webp",
 		headline: "집요함으로 성과를 만드는\n15년 차 약사 출신 마케터",
 		paragraphs: [
 			{ text: "저는 애드리절트 서초지사장이자,\n올해로 15년 차 약사입니다." },
@@ -174,7 +174,7 @@ const EXECS: Exec[] = [
 	{
 		name: "박기환",
 		title: "지사장",
-		photo: "/people/member-7.jpg",
+		photo: "/people/member-7.webp",
 		headline: "의사의 마음을 가장 잘 아는\n의사 마케터",
 		paragraphs: [
 			{
@@ -198,7 +198,7 @@ const EXECS: Exec[] = [
 	{
 		name: "김태영",
 		title: "지사장",
-		photo: "/people/member-8.jpg",
+		photo: "/people/member-8.webp",
 		headline: "우리 고객사 병원을 지역 내 1위로\n브랜딩하는 마케터",
 		paragraphs: [
 			{ text: "안녕하세요. 애드리절트 중부 지사장 김태영입니다." },
@@ -228,7 +228,7 @@ const EXECS: Exec[] = [
 	{
 		name: "손승연",
 		title: "지사장",
-		photo: "/people/member-9.jpg",
+		photo: "/people/member-9.webp",
 		paragraphs: [
 			{ text: "안녕하세요. 애드리절트 이룸지사장 손승연입니다." },
 			{

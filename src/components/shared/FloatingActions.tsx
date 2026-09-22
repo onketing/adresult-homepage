@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
 import { siteConfig } from "@/config/site";
 
 const SOCIALS = [
-	{ href: siteConfig.contact.youtube, src: "/youtube-logo.png", label: "애드리절트TV 유튜브" },
-	{ href: siteConfig.contact.naverBlog, src: "/blog-logo.png", label: "네이버 블로그" },
-	{ href: siteConfig.contact.instagram, src: "/instagram-logo.png", label: "인스타그램" },
-	{ href: siteConfig.contact.kakaoOpenChat, src: "/kakao-logo.png", label: "카카오톡 채널" },
+	{ href: siteConfig.contact.youtube, src: "/youtube-logo.webp", label: "애드리절트TV 유튜브" },
+	{ href: siteConfig.contact.naverBlog, src: "/blog-logo.webp", label: "네이버 블로그" },
+	{ href: siteConfig.contact.instagram, src: "/instagram-logo.webp", label: "인스타그램" },
+	{ href: siteConfig.contact.kakaoOpenChat, src: "/kakao-logo.webp", label: "카카오톡 채널" },
 ];
 
 export const FloatingActions = () => {

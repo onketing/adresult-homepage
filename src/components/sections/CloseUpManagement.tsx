@@ -19,7 +19,7 @@ export const CloseUpManagement = () => {
 
 				<Reveal className="mt-14 flex justify-center md:mt-20">
 					<Image
-						src="/adresult-diagram.png"
+						src="/adresult-diagram.webp"
 						alt="애드리절트 병원마케팅 프로세스 다이어그램"
 						width={584}
 						height={648}

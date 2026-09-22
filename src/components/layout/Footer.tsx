@@ -4,10 +4,10 @@ import { siteConfig } from "@/config/site";
 import { SPECIALTIES } from "@/data/specialties";
 
 const SOCIALS: { src: string; href: string; label: string }[] = [
-	{ src: "/youtube-logo.png", href: siteConfig.contact.youtube, label: "유튜브" },
-	{ src: "/blog-logo.png", href: siteConfig.contact.naverBlog, label: "네이버 블로그" },
-	{ src: "/instagram-logo.png", href: siteConfig.contact.instagram, label: "인스타그램" },
-	{ src: "/kakao-logo.png", href: siteConfig.contact.kakaoOpenChat, label: "카카오톡" },
+	{ src: "/youtube-logo.webp", href: siteConfig.contact.youtube, label: "유튜브" },
+	{ src: "/blog-logo.webp", href: siteConfig.contact.naverBlog, label: "네이버 블로그" },
+	{ src: "/instagram-logo.webp", href: siteConfig.contact.instagram, label: "인스타그램" },
+	{ src: "/kakao-logo.webp", href: siteConfig.contact.kakaoOpenChat, label: "카카오톡" },
 ];
 
 const SERVICE_LINKS = [

@@ -42,7 +42,7 @@ export const PeoplePage = () => {
 
 					<Reveal direction="scale" className="mt-14 md:mt-16">
 						<Image
-							src="/people/organization.jpg"
+							src="/people/organization.webp"
 							alt="애드리절트 조직도"
 							width={1300}
 							height={800}

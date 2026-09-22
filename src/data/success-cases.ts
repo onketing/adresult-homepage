@@ -62,7 +62,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "네. 애드리절트는 광고만 관리하는 것이 아니라 매일 꼼꼼한 평판 관리, 상황에 맞춘 맞춤 전략, 오래 함께하는 지원으로 병원의 실질적인 고민을 함께 해결합니다.",
 			},
 		],
-		cover: "/images/cases/167560631/1.png",
+		cover: "/images/cases/167560631/1.webp",
 		coverW: 364,
 		coverH: 1358,
 		blocks: [
@@ -119,7 +119,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167560631/1.png",
+				src: "/images/cases/167560631/1.webp",
 				w: 364,
 				h: 1358,
 				alt: "[병원 평판관리] 악성리뷰 확인만으로는 부족해요",
@@ -182,7 +182,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167560631/2.png",
+				src: "/images/cases/167560631/2.webp",
 				w: 370,
 				h: 320,
 				alt: "3a963c0a6f2ad.png",
@@ -190,7 +190,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167560631/3.png",
+				src: "/images/cases/167560631/3.webp",
 				w: 364,
 				h: 1133,
 				alt: "병원평판",
@@ -316,7 +316,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "'병원 입장에서' 도움이 될 만한 내용만 먼저 제안합니다. 리뉴얼처럼 번거로울 수 있는 작업도 병원 성장에 필요하다면 선제적으로 제안드립니다.",
 			},
 		],
-		cover: "/images/cases/167560320/1.png",
+		cover: "/images/cases/167560320/1.webp",
 		coverW: 364,
 		coverH: 702,
 		blocks: [
@@ -395,7 +395,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167560320/1.png",
+				src: "/images/cases/167560320/1.webp",
 				w: 364,
 				h: 702,
 				alt: "f9fe157aced04.png",
@@ -515,7 +515,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "인지도를 새로 쌓아야 하지만, 개원 전부터 브랜딩 콘텐츠를 준비하고 과감히 투자하면 빠르게 자리 잡을 수 있습니다. 이 병원은 3개월 만에 예약 마감을 달성했습니다.",
 			},
 		],
-		cover: "/images/cases/167545669/1.png",
+		cover: "/images/cases/167545669/1.webp",
 		coverW: 589,
 		coverH: 285,
 		blocks: [
@@ -726,7 +726,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167545669/1.png",
+				src: "/images/cases/167545669/1.webp",
 				w: 589,
 				h: 285,
 				alt: "병원마케팅광고",
@@ -734,7 +734,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167545669/2.png",
+				src: "/images/cases/167545669/2.webp",
 				w: 589,
 				h: 257,
 				alt: "병의원마케팅",
@@ -742,7 +742,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167545669/3.png",
+				src: "/images/cases/167545669/3.webp",
 				w: 589,
 				h: 257,
 				alt: "대구병원마케팅",
@@ -1188,13 +1188,13 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "고객사가 요청하지 않아도 하나의 콘텐츠를 오래 썼다 싶으면 먼저 이미지 리뉴얼을 제안하고, 수정 요청에는 빠르게 응대해 후속 작업을 진행합니다.",
 			},
 		],
-		cover: "/images/cases/167542522/1.png",
+		cover: "/images/cases/167542522/1.webp",
 		coverW: 362,
 		coverH: 587,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/cases/167542522/1.png",
+				src: "/images/cases/167542522/1.webp",
 				w: 362,
 				h: 587,
 				alt: "[피부과마케팅] 한 달 만에 유입수가 1,000회 이상 늘어난 이후",
@@ -1387,7 +1387,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167542522/2.png",
+				src: "/images/cases/167542522/2.webp",
 				w: 816,
 				h: 454,
 				alt: "병원홍보",
@@ -1406,7 +1406,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167542522/3.png",
+				src: "/images/cases/167542522/3.webp",
 				w: 816,
 				h: 454,
 				alt: "온라인마케팅",
@@ -1439,7 +1439,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167542522/4.png",
+				src: "/images/cases/167542522/4.webp",
 				w: 466,
 				h: 120,
 				alt: "a365849fda95a.png",
@@ -1530,7 +1530,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167542522/5.png",
+				src: "/images/cases/167542522/5.webp",
 				w: 502,
 				h: 173,
 				alt: "병원광고",
@@ -1599,7 +1599,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167542522/6.png",
+				src: "/images/cases/167542522/6.webp",
 				w: 364,
 				h: 148,
 				alt: "병원개원",
@@ -1644,7 +1644,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167542522/7.png",
+				src: "/images/cases/167542522/7.webp",
 				w: 363,
 				h: 465,
 				alt: "부산병원마케팅",
@@ -1880,13 +1880,13 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "키워드 분석 → 병원별 우선순위 → 전략적 배치 → 변화하는 네이버 로직 연구 → 핵심 키워드 반복 작업의 다섯 단계로 진행하며, S병원은 일주일 만에 노출도가 2배로 올랐습니다.",
 			},
 		],
-		cover: "/images/cases/167449883/1.png",
+		cover: "/images/cases/167449883/1.webp",
 		coverW: 349,
 		coverH: 519,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/cases/167449883/1.png",
+				src: "/images/cases/167449883/1.webp",
 				w: 349,
 				h: 519,
 				alt: "병원마케팅성공사례",
@@ -1921,7 +1921,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167449883/2.png",
+				src: "/images/cases/167449883/2.webp",
 				w: 369,
 				h: 260,
 				alt: "병원마케팅대행사",
@@ -2037,7 +2037,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167449883/3.png",
+				src: "/images/cases/167449883/3.webp",
 				w: 376,
 				h: 567,
 				alt: "병원마케팅회사",
@@ -2045,7 +2045,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167449883/4.png",
+				src: "/images/cases/167449883/4.webp",
 				w: 503,
 				h: 324,
 				alt: "병원브랜딩",
@@ -2176,7 +2176,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167449883/5.png",
+				src: "/images/cases/167449883/5.webp",
 				w: 393,
 				h: 111,
 				alt: "병원개원마케팅",
@@ -2478,7 +2478,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167449883/6.png",
+				src: "/images/cases/167449883/6.webp",
 				w: 361,
 				h: 362,
 				alt: "병원바이럴마케팅",
@@ -2610,13 +2610,13 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "인지도가 없는 개원 병원은 자주 노출돼 환자의 인식에 들어가야 합니다. '줄 세우기 전략'과 환자 바이럴(좋은 리뷰)로 '개인 병원인데 리뷰가 좋다'는 인식을 만드는 것이 핵심입니다.",
 			},
 		],
-		cover: "/images/cases/167431321/1.png",
+		cover: "/images/cases/167431321/1.webp",
 		coverW: 390,
 		coverH: 417,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/cases/167431321/1.png",
+				src: "/images/cases/167431321/1.webp",
 				w: 390,
 				h: 417,
 				alt: "병원온라인마케팅",
@@ -2841,7 +2841,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167431321/2.png",
+				src: "/images/cases/167431321/2.webp",
 				w: 762,
 				h: 864,
 				alt: "강남병원마케팅",
@@ -2922,7 +2922,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167431321/3.png",
+				src: "/images/cases/167431321/3.webp",
 				w: 464,
 				h: 823,
 				alt: "인천병원마케팅",
@@ -3041,7 +3041,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167431321/4.png",
+				src: "/images/cases/167431321/4.webp",
 				w: 700,
 				h: 860,
 				alt: "병원전문마케팅",
@@ -3117,7 +3117,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167431321/5.png",
+				src: "/images/cases/167431321/5.webp",
 				w: 390,
 				h: 306,
 				alt: "서울병원마케팅",
@@ -3369,7 +3369,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "실무자 한 명이 고객사 하나를 전담하는 시스템이라, 맡은 병원에 대한 애정도와 관심이 높습니다.",
 			},
 		],
-		cover: "/images/cases/167431125/1.png",
+		cover: "/images/cases/167431125/1.webp",
 		coverW: 563,
 		coverH: 225,
 		blocks: [
@@ -3438,7 +3438,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167431125/1.png",
+				src: "/images/cases/167431125/1.webp",
 				w: 563,
 				h: 225,
 				alt: "병원마케팅대행",
@@ -3931,7 +3931,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167431125/2.png",
+				src: "/images/cases/167431125/2.webp",
 				w: 936,
 				h: 1017,
 				alt: "병원광고마케팅",
@@ -3939,7 +3939,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167431125/3.png",
+				src: "/images/cases/167431125/3.webp",
 				w: 819,
 				h: 690,
 				alt: "7fea1ea9dd06c.png",
@@ -4087,7 +4087,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "코로나 타격 등 외부 요인으로 쉽지 않았지만, 원장님의 신뢰와 적극적인 자료 협조 속에 꾸준한 시도로 목표였던 월 매출 1억을 달성했습니다.",
 			},
 		],
-		cover: "/images/cases/167408277/1.png",
+		cover: "/images/cases/167408277/1.webp",
 		coverW: 361,
 		coverH: 326,
 		blocks: [
@@ -4130,7 +4130,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167408277/1.png",
+				src: "/images/cases/167408277/1.webp",
 				w: 361,
 				h: 326,
 				alt: "병원홍보마케팅",
@@ -4175,7 +4175,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167408277/2.png",
+				src: "/images/cases/167408277/2.webp",
 				w: 370,
 				h: 320,
 				alt: "cb1e0793cc82c.png",
@@ -4240,7 +4240,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167408277/3.png",
+				src: "/images/cases/167408277/3.webp",
 				w: 353,
 				h: 439,
 				alt: "병의원블로그",
@@ -4271,7 +4271,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167408277/4.png",
+				src: "/images/cases/167408277/4.webp",
 				w: 275,
 				h: 589,
 				alt: "병원온라인광고",
@@ -4302,7 +4302,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167408277/5.png",
+				src: "/images/cases/167408277/5.webp",
 				w: 360,
 				h: 663,
 				alt: "병원마케팅사례",
@@ -4623,7 +4623,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167408277/6.png",
+				src: "/images/cases/167408277/6.webp",
 				w: 370,
 				h: 320,
 				alt: "95cf807279776.png",
@@ -4652,7 +4652,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "V의원은 내과 광고가 많지 않은 지역이라 무엇을 검색하든 병원이 노출되는 독점에 가까운 마케팅이 가능했고, 개원 3주 만에 홍보 효과를 체감했습니다.",
 			},
 		],
-		cover: "/images/cases/167382901/1.png",
+		cover: "/images/cases/167382901/1.webp",
 		coverW: 486,
 		coverH: 809,
 		blocks: [
@@ -4810,7 +4810,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167382901/1.png",
+				src: "/images/cases/167382901/1.webp",
 				w: 486,
 				h: 809,
 				alt: "병원바이럴",
@@ -4876,7 +4876,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167382901/2.png",
+				src: "/images/cases/167382901/2.webp",
 				w: 788,
 				h: 575,
 				alt: "메디컬마케팅",
@@ -4907,7 +4907,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167382901/3.png",
+				src: "/images/cases/167382901/3.webp",
 				w: 670,
 				h: 718,
 				alt: "병원개원홍보",
@@ -5044,7 +5044,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167382901/4.png",
+				src: "/images/cases/167382901/4.webp",
 				w: 812,
 				h: 448,
 				alt: "병원대행사",
@@ -5085,7 +5085,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167382901/5.png",
+				src: "/images/cases/167382901/5.webp",
 				w: 355,
 				h: 710,
 				alt: "의원마케팅",
@@ -5202,7 +5202,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167382901/6.png",
+				src: "/images/cases/167382901/6.webp",
 				w: 320,
 				h: 766,
 				alt: "병원마케팅교육",
@@ -5352,7 +5352,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167382901/7.png",
+				src: "/images/cases/167382901/7.webp",
 				w: 370,
 				h: 320,
 				alt: "bc203b7bc1430.png",
@@ -5381,7 +5381,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "오랜 경력의 마케팅 팀장 1명 인건비 정도로 생각하시면 됩니다. 마케터를 직접 뽑아 교육하는 것보다 비용·시간·성과 면에서 효율적입니다.",
 			},
 		],
-		cover: "/images/cases/167382065/1.png",
+		cover: "/images/cases/167382065/1.webp",
 		coverW: 364,
 		coverH: 623,
 		blocks: [
@@ -5526,7 +5526,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167382065/1.png",
+				src: "/images/cases/167382065/1.webp",
 				w: 364,
 				h: 623,
 				alt: "병원광고업체",
@@ -5737,7 +5737,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167382065/2.png",
+				src: "/images/cases/167382065/2.webp",
 				w: 361,
 				h: 361,
 				alt: "병원광고회사",
@@ -5895,7 +5895,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167382065/3.png",
+				src: "/images/cases/167382065/3.webp",
 				w: 613,
 				h: 480,
 				alt: "병의원홍보",
@@ -5970,13 +5970,13 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "78개 중 52개 노출을 상위노출 보장형(키워드당 60~70만 원 시세)으로 환산하면 3천만 원이 넘지만, Y치과는 마케팅 팀장 1명 인건비 수준만 지출하고 있습니다.",
 			},
 		],
-		cover: "/images/cases/167324919/1.png",
+		cover: "/images/cases/167324919/1.webp",
 		coverW: 355,
 		coverH: 441,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/cases/167324919/1.png",
+				src: "/images/cases/167324919/1.webp",
 				w: 355,
 				h: 441,
 				alt: "병원블로그",
@@ -6009,7 +6009,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167324919/2.png",
+				src: "/images/cases/167324919/2.webp",
 				w: 370,
 				h: 320,
 				alt: "b79f94b133d80.png",
@@ -6039,7 +6039,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167324919/3.png",
+				src: "/images/cases/167324919/3.webp",
 				w: 356,
 				h: 642,
 				alt: "병원블로그마케팅",
@@ -6101,7 +6101,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167324919/4.png",
+				src: "/images/cases/167324919/4.webp",
 				w: 791,
 				h: 915,
 				alt: "치과마케팅",
@@ -6339,7 +6339,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167324919/5.png",
+				src: "/images/cases/167324919/5.webp",
 				w: 800,
 				h: 1700,
 				alt: "치과블로그마케팅",
@@ -6571,7 +6571,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167324919/6.png",
+				src: "/images/cases/167324919/6.webp",
 				w: 632,
 				h: 1849,
 				alt: "치과홍보",
@@ -6817,7 +6817,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167324919/7.png",
+				src: "/images/cases/167324919/7.webp",
 				w: 376,
 				h: 839,
 				alt: "치과홍보",
@@ -7063,7 +7063,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "콘텐츠가 누적될수록 힘을 발휘하는 상품이라, 글이 누적되기까지 보통 2~3개월 정도가 필요합니다. 이 병원은 6년간 수천 건의 콘텐츠를 발행했습니다.",
 			},
 		],
-		cover: "/images/cases/167311629/2.png",
+		cover: "/images/cases/167311629/2.webp",
 		coverW: 831,
 		coverH: 631,
 		blocks: [
@@ -7144,7 +7144,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167311629/1.png",
+				src: "/images/cases/167311629/1.webp",
 				w: 370,
 				h: 320,
 				alt: "병원블로그대행",
@@ -7255,7 +7255,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167311629/2.png",
+				src: "/images/cases/167311629/2.webp",
 				w: 831,
 				h: 631,
 				alt: "병원브랜드블로그",
@@ -7296,7 +7296,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167311629/3.png",
+				src: "/images/cases/167311629/3.webp",
 				w: 388,
 				h: 135,
 				alt: "병원블로그관리",
@@ -7316,7 +7316,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167311629/4.png",
+				src: "/images/cases/167311629/4.webp",
 				w: 966,
 				h: 425,
 				alt: "병원블로그관리대행",
@@ -7379,7 +7379,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167311629/5.png",
+				src: "/images/cases/167311629/5.webp",
 				w: 966,
 				h: 483,
 				alt: "병원홍보회사",
@@ -7571,7 +7571,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167311629/6.png",
+				src: "/images/cases/167311629/6.webp",
 				w: 370,
 				h: 320,
 				alt: "b892f5b404717.png",
@@ -7781,7 +7781,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "광고뿐 아니라 병원의 높은 의료 서비스 수준과 내부의 적극적인 피드백·참여가 함께여서 가능했습니다. 원장·팀장·실장이 광고에 참여할 때 효과가 큽니다.",
 			},
 		],
-		cover: "/images/cases/167311286/2.png",
+		cover: "/images/cases/167311286/2.webp",
 		coverW: 364,
 		coverH: 449,
 		blocks: [
@@ -7810,7 +7810,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167311286/1.png",
+				src: "/images/cases/167311286/1.webp",
 				w: 370,
 				h: 320,
 				alt: "강남병원홍보",
@@ -7981,7 +7981,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167311286/2.png",
+				src: "/images/cases/167311286/2.webp",
 				w: 364,
 				h: 449,
 				alt: "병원홍보업체",
@@ -7989,7 +7989,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167311286/3.png",
+				src: "/images/cases/167311286/3.webp",
 				w: 357,
 				h: 590,
 				alt: "병원마케팅대행사추천",
@@ -8082,7 +8082,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167311286/4.png",
+				src: "/images/cases/167311286/4.webp",
 				w: 370,
 				h: 320,
 				alt: "병원블로그마케팅잘하는곳",
@@ -8322,7 +8322,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167311286/5.png",
+				src: "/images/cases/167311286/5.webp",
 				w: 1167,
 				h: 648,
 				alt: "병원마케팅추천",
@@ -8386,7 +8386,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167311286/6.png",
+				src: "/images/cases/167311286/6.webp",
 				w: 782,
 				h: 728,
 				alt: "병원홍보전문",
@@ -8773,7 +8773,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167311286/7.png",
+				src: "/images/cases/167311286/7.webp",
 				w: 373,
 				h: 837,
 				alt: "병의원마케팅잘하는곳",
@@ -8936,7 +8936,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "환자가 병원을 찾는 경로를 분석해 만든 상품으로, 잠재 환자에게 병원을 알리는 '기본'을 지키며 광고를 진행하는 방식입니다.",
 			},
 		],
-		cover: "/images/cases/167310045/2.png",
+		cover: "/images/cases/167310045/2.webp",
 		coverW: 428,
 		coverH: 648,
 		blocks: [
@@ -8999,7 +8999,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167310045/1.png",
+				src: "/images/cases/167310045/1.webp",
 				w: 375,
 				h: 443,
 				alt: "정형외과마케팅",
@@ -9051,7 +9051,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167310045/2.png",
+				src: "/images/cases/167310045/2.webp",
 				w: 428,
 				h: 648,
 				alt: "정형외과블로그",
@@ -9093,7 +9093,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167310045/3.png",
+				src: "/images/cases/167310045/3.webp",
 				w: 617,
 				h: 751,
 				alt: "정형외과개원",
@@ -9123,7 +9123,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167310045/4.png",
+				src: "/images/cases/167310045/4.webp",
 				w: 966,
 				h: 557,
 				alt: "정형외과마케팅",
@@ -9238,7 +9238,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167310045/5.png",
+				src: "/images/cases/167310045/5.webp",
 				w: 740,
 				h: 640,
 				alt: "정형외과홍보",
@@ -9267,7 +9267,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "특정 키워드를 보장하는 방식이 아니라, 잠재 환자가 실제로 검색하는 유의미한 키워드를 많이 발굴해 브랜드 블로그로 노출시키는 방식(메디컬 패키지)으로 진행합니다.",
 			},
 		],
-		cover: "/images/cases/167309357/1.png",
+		cover: "/images/cases/167309357/1.webp",
 		coverW: 966,
 		coverH: 775,
 		blocks: [
@@ -9286,7 +9286,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167309357/1.png",
+				src: "/images/cases/167309357/1.webp",
 				w: 966,
 				h: 775,
 				alt: "병원홍보전문",
@@ -9306,7 +9306,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167309357/2.png",
+				src: "/images/cases/167309357/2.webp",
 				w: 370,
 				h: 320,
 				alt: "616c1e18561b5.png",
@@ -9491,7 +9491,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167309357/3.png",
+				src: "/images/cases/167309357/3.webp",
 				w: 882,
 				h: 490,
 				alt: "병원광고잘하는곳",
@@ -9532,7 +9532,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167309357/4.png",
+				src: "/images/cases/167309357/4.webp",
 				w: 1167,
 				h: 648,
 				alt: "의료마케팅회사",
@@ -9655,7 +9655,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167309357/5.png",
+				src: "/images/cases/167309357/5.webp",
 				w: 966,
 				h: 639,
 				alt: "병원광고효과좋은사례",
@@ -9674,7 +9674,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167309357/6.png",
+				src: "/images/cases/167309357/6.webp",
 				w: 726,
 				h: 814,
 				alt: "병원마케팅비교분석",
@@ -9715,7 +9715,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "블로그·유튜브·방송을 주력으로 진행했고, 광고한 채널 전반에서 골고루 문의가 들어온다는 피드백을 받았습니다.",
 			},
 		],
-		cover: "/images/cases/167308882/1.jpg",
+		cover: "/images/cases/167308882/1.webp",
 		coverW: 508,
 		coverH: 149,
 		blocks: [
@@ -9732,7 +9732,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167308882/1.jpg",
+				src: "/images/cases/167308882/1.webp",
 				w: 508,
 				h: 149,
 				alt: "병원광고실적좋은업체",
@@ -9840,7 +9840,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167308882/2.png",
+				src: "/images/cases/167308882/2.webp",
 				w: 336,
 				h: 445,
 				alt: "병원마케팅대행사추천후기",
@@ -9942,7 +9942,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167308882/3.jpg",
+				src: "/images/cases/167308882/3.webp",
 				w: 584,
 				h: 463,
 				alt: "전국병원마케팅전문",
@@ -9992,7 +9992,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167308882/4.png",
+				src: "/images/cases/167308882/4.webp",
 				w: 966,
 				h: 473,
 				alt: "의료광고법위반없는마케팅",
@@ -10081,7 +10081,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167308882/5.png",
+				src: "/images/cases/167308882/5.webp",
 				w: 321,
 				h: 276,
 				alt: "병원광고불법사례피하는법",
@@ -10124,7 +10124,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167308882/6.png",
+				src: "/images/cases/167308882/6.webp",
 				w: 370,
 				h: 320,
 				alt: "e4102f4f820dc.png",
@@ -10158,7 +10158,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "환자는 '00 목통증'·'00 교통사고한의원'처럼 다양한 세부 키워드로 검색하기 때문에, 어떤 검색어에도 병원이 노출돼야 신환 유입이 늘어납니다.",
 			},
 		],
-		cover: "/images/cases/167296385/1.png",
+		cover: "/images/cases/167296385/1.webp",
 		coverW: 934,
 		coverH: 187,
 		blocks: [
@@ -10194,7 +10194,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167296385/1.png",
+				src: "/images/cases/167296385/1.webp",
 				w: 934,
 				h: 187,
 				alt: "한의원마케팅",
@@ -10277,7 +10277,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167296385/2.png",
+				src: "/images/cases/167296385/2.webp",
 				w: 787,
 				h: 771,
 				alt: "한의원블로그",
@@ -10297,7 +10297,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167296385/3.png",
+				src: "/images/cases/167296385/3.webp",
 				w: 762,
 				h: 282,
 				alt: "한의원광고",
@@ -10339,7 +10339,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167296385/4.png",
+				src: "/images/cases/167296385/4.webp",
 				w: 966,
 				h: 193,
 				alt: "한의원홍보",
@@ -10494,7 +10494,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167296385/5.png",
+				src: "/images/cases/167296385/5.webp",
 				w: 559,
 				h: 751,
 				alt: "한의원블로그마케팅",
@@ -10719,7 +10719,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167296385/6.png",
+				src: "/images/cases/167296385/6.webp",
 				w: 393,
 				h: 524,
 				alt: "한의원블로그광고",
@@ -10838,7 +10838,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167296385/7.png",
+				src: "/images/cases/167296385/7.webp",
 				w: 966,
 				h: 212,
 				alt: "한의원마케팅",
@@ -10957,7 +10957,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167296385/8.png",
+				src: "/images/cases/167296385/8.webp",
 				w: 740,
 				h: 640,
 				alt: "bf29724d02a54.png",
@@ -10986,7 +10986,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "안과는 아직 타 진료과에 비해 광고를 진행하는 곳이 많지 않아, 지역 내 상위 노출을 선점하기 좋은 시점입니다.",
 			},
 		],
-		cover: "/images/cases/167284802/1.jpg",
+		cover: "/images/cases/167284802/1.webp",
 		coverW: 684,
 		coverH: 467,
 		blocks: [
@@ -10997,7 +10997,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167284802/1.jpg",
+				src: "/images/cases/167284802/1.webp",
 				w: 684,
 				h: 467,
 				alt: "안과광고",
@@ -11202,7 +11202,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167284802/2.png",
+				src: "/images/cases/167284802/2.webp",
 				w: 687,
 				h: 751,
 				alt: "병원마케팅",
@@ -11256,7 +11256,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167284802/3.png",
+				src: "/images/cases/167284802/3.webp",
 				w: 580,
 				h: 699,
 				alt: "안과마케팅",
@@ -11286,7 +11286,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167284802/4.png",
+				src: "/images/cases/167284802/4.webp",
 				w: 572,
 				h: 691,
 				alt: "안과홍보",
@@ -11461,7 +11461,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167284802/5.png",
+				src: "/images/cases/167284802/5.webp",
 				w: 732,
 				h: 846,
 				alt: "안과블로그",
@@ -11469,7 +11469,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167284802/6.png",
+				src: "/images/cases/167284802/6.webp",
 				w: 736,
 				h: 712,
 				alt: "안과블로그마케팅",
@@ -11615,7 +11615,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167284802/7.png",
+				src: "/images/cases/167284802/7.webp",
 				w: 334,
 				h: 355,
 				alt: "안과브랜드블로그",
@@ -11646,7 +11646,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167284802/8.png",
+				src: "/images/cases/167284802/8.webp",
 				w: 322,
 				h: 533,
 				alt: "안과홍보광고",
@@ -11696,7 +11696,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167284802/9.png",
+				src: "/images/cases/167284802/9.webp",
 				w: 966,
 				h: 1114,
 				alt: "안과홍보마케팅",
@@ -11729,7 +11729,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167284802/10.png",
+				src: "/images/cases/167284802/10.webp",
 				w: 966,
 				h: 1136,
 				alt: "안과마케팅광고",
@@ -11892,7 +11892,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167284802/11.png",
+				src: "/images/cases/167284802/11.webp",
 				w: 740,
 				h: 640,
 				alt: "안과마케팅성공사례",
@@ -11921,7 +11921,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "정형외과·피부과·성형외과·안과·치과·암병원 등 다양한 분과의 원장님들이 인터넷 신환 증가 등 실제 성과 피드백을 주셨습니다.",
 			},
 		],
-		cover: "/images/cases/167246533/2.png",
+		cover: "/images/cases/167246533/2.webp",
 		coverW: 337,
 		coverH: 416,
 		blocks: [
@@ -12024,7 +12024,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167246533/1.png",
+				src: "/images/cases/167246533/1.webp",
 				w: 1280,
 				h: 720,
 				alt: "병원마케팅성공사례",
@@ -12133,7 +12133,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167246533/2.png",
+				src: "/images/cases/167246533/2.webp",
 				w: 337,
 				h: 416,
 				alt: "[병원마케팅 성공사례] 병원마케팅 효과 어느 정도일까요?",
@@ -12141,7 +12141,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167246533/3.jpg",
+				src: "/images/cases/167246533/3.webp",
 				w: 330,
 				h: 483,
 				alt: "[병원마케팅 성공사례] 병원마케팅 효과 어느 정도일까요?",
@@ -12149,7 +12149,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167246533/4.png",
+				src: "/images/cases/167246533/4.webp",
 				w: 335,
 				h: 184,
 				alt: "병원광고",
@@ -12157,7 +12157,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167246533/5.png",
+				src: "/images/cases/167246533/5.webp",
 				w: 329,
 				h: 334,
 				alt: "병원개원",
@@ -12179,7 +12179,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167246533/6.png",
+				src: "/images/cases/167246533/6.webp",
 				w: 260,
 				h: 217,
 				alt: "강남병원마케팅",
@@ -12201,7 +12201,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167246533/7.png",
+				src: "/images/cases/167246533/7.webp",
 				w: 323,
 				h: 179,
 				alt: "서울병원마케팅",
@@ -12223,7 +12223,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167246533/8.png",
+				src: "/images/cases/167246533/8.webp",
 				w: 305,
 				h: 462,
 				alt: "병원마케팅대행",
@@ -12245,7 +12245,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167246533/9.png",
+				src: "/images/cases/167246533/9.webp",
 				w: 323,
 				h: 809,
 				alt: "병원광고마케팅",
@@ -12253,7 +12253,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167246533/10.png",
+				src: "/images/cases/167246533/10.webp",
 				w: 353,
 				h: 202,
 				alt: "병원광고대행사",
@@ -12261,7 +12261,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167246533/11.png",
+				src: "/images/cases/167246533/11.webp",
 				w: 339,
 				h: 681,
 				alt: "병원마케팅",
@@ -12269,7 +12269,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167246533/12.png",
+				src: "/images/cases/167246533/12.webp",
 				w: 305,
 				h: 295,
 				alt: "병원홍보",
@@ -12295,7 +12295,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167246533/13.png",
+				src: "/images/cases/167246533/13.webp",
 				w: 324,
 				h: 329,
 				alt: "병원마케팅대행",
@@ -12329,13 +12329,13 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "계약 전 센터장과 상담을 하고, 계약이 진행되면 전담 팀이 배정되어 관리합니다.",
 			},
 		],
-		cover: "/images/cases/167246130/1.png",
+		cover: "/images/cases/167246130/1.webp",
 		coverW: 352,
 		coverH: 547,
 		blocks: [
 			{
 				type: "img",
-				src: "/images/cases/167246130/1.png",
+				src: "/images/cases/167246130/1.webp",
 				w: 352,
 				h: 547,
 				alt: "병원블로그",
@@ -12388,7 +12388,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167246130/2.png",
+				src: "/images/cases/167246130/2.webp",
 				w: 345,
 				h: 342,
 				alt: "병원블로그마케팅",
@@ -12482,7 +12482,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167246130/3.png",
+				src: "/images/cases/167246130/3.webp",
 				w: 463,
 				h: 388,
 				alt: "병원광고관리",
@@ -12512,7 +12512,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "원장님 블로그를 중심으로 환자 니즈를 반영한 콘텐츠를 만들고, 아이디어와 피드백을 빠르게 주고받으며 개선하는 애자일 방식으로 진행했습니다.",
 			},
 		],
-		cover: "/images/cases/167232106/3.png",
+		cover: "/images/cases/167232106/3.webp",
 		coverW: 966,
 		coverH: 593,
 		blocks: [
@@ -12563,7 +12563,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167232106/1.png",
+				src: "/images/cases/167232106/1.webp",
 				w: 534,
 				h: 128,
 				alt: "병원마케팅성공사례",
@@ -12706,7 +12706,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167232106/2.png",
+				src: "/images/cases/167232106/2.webp",
 				w: 329,
 				h: 228,
 				alt: "병원마케팅대행사",
@@ -12760,7 +12760,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167232106/3.png",
+				src: "/images/cases/167232106/3.webp",
 				w: 966,
 				h: 593,
 				alt: "병원블로그관리",
@@ -12844,7 +12844,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167232106/4.png",
+				src: "/images/cases/167232106/4.webp",
 				w: 535,
 				h: 374,
 				alt: "병원블로그광고",
@@ -12886,7 +12886,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167232106/5.png",
+				src: "/images/cases/167232106/5.webp",
 				w: 645,
 				h: 780,
 				alt: "병원블로그",
@@ -12929,7 +12929,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167232106/6.png",
+				src: "/images/cases/167232106/6.webp",
 				w: 336,
 				h: 311,
 				alt: "병원블로그홍보",
@@ -13007,7 +13007,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167232106/7.png",
+				src: "/images/cases/167232106/7.webp",
 				w: 965,
 				h: 443,
 				alt: "병원홍보",
@@ -13108,7 +13108,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167232106/8.png",
+				src: "/images/cases/167232106/8.webp",
 				w: 450,
 				h: 378,
 				alt: "병원광고대행사",
@@ -13254,7 +13254,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "아닙니다. 조회수·체류시간보다 '실제로 환자가 얼마나 오는가'에 집중해, 매달 어떤 질환에 집중할지와 효과는 어떤지를 병원과 소통하며 관리합니다.",
 			},
 		],
-		cover: "/images/cases/167212324/1.png",
+		cover: "/images/cases/167212324/1.webp",
 		coverW: 800,
 		coverH: 850,
 		blocks: [
@@ -13265,7 +13265,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167212324/1.png",
+				src: "/images/cases/167212324/1.webp",
 				w: 800,
 				h: 850,
 				alt: "치과마케팅",
@@ -13399,7 +13399,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167212324/2.png",
+				src: "/images/cases/167212324/2.webp",
 				w: 800,
 				h: 800,
 				alt: "치과블로그",
@@ -13561,7 +13561,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167212324/3.png",
+				src: "/images/cases/167212324/3.webp",
 				w: 800,
 				h: 799,
 				alt: "치과홍보",
@@ -13760,7 +13760,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167212324/4.png",
+				src: "/images/cases/167212324/4.webp",
 				w: 800,
 				h: 1700,
 				alt: "치과온라인마케팅",
@@ -13846,7 +13846,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167212324/5.png",
+				src: "/images/cases/167212324/5.webp",
 				w: 800,
 				h: 850,
 				alt: "치과온라인광고",
@@ -13987,7 +13987,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167212324/6.png",
+				src: "/images/cases/167212324/6.webp",
 				w: 800,
 				h: 850,
 				alt: "치과마케팅성공사례",
@@ -14181,7 +14181,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167212324/7.png",
+				src: "/images/cases/167212324/7.webp",
 				w: 690,
 				h: 544,
 				alt: "병원마케팅대행사",
@@ -14189,7 +14189,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167212324/8.png",
+				src: "/images/cases/167212324/8.webp",
 				w: 800,
 				h: 1885,
 				alt: "애드리절트",
@@ -14342,7 +14342,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167212324/9.png",
+				src: "/images/cases/167212324/9.webp",
 				w: 800,
 				h: 850,
 				alt: "병원마케팅애드리절트",
@@ -14469,7 +14469,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "첫 달은 콘텐츠 제작과 니즈 분석 등 준비 기간이었고, 두 달째부터 병원명 검색량이 3배 이상 늘며 뚜렷한 변화가 나타났습니다.",
 			},
 		],
-		cover: "/images/cases/167070308/1.png",
+		cover: "/images/cases/167070308/1.webp",
 		coverW: 329,
 		coverH: 228,
 		blocks: [
@@ -14525,7 +14525,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167070308/1.png",
+				src: "/images/cases/167070308/1.webp",
 				w: 329,
 				h: 228,
 				alt: "피부과마케팅",
@@ -14558,7 +14558,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167070308/2.png",
+				src: "/images/cases/167070308/2.webp",
 				w: 966,
 				h: 593,
 				alt: "피부과블로그",
@@ -14622,7 +14622,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167070308/3.png",
+				src: "/images/cases/167070308/3.webp",
 				w: 535,
 				h: 374,
 				alt: "피부과광고",
@@ -14664,7 +14664,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167070308/4.png",
+				src: "/images/cases/167070308/4.webp",
 				w: 345,
 				h: 843,
 				alt: "피부과홍보",
@@ -14672,7 +14672,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/167070308/5.png",
+				src: "/images/cases/167070308/5.webp",
 				w: 347,
 				h: 841,
 				alt: "피부과바이럴마케팅",
@@ -14765,7 +14765,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "아닙니다. 광고비를 늘린 것이 아니라 병원마케팅 전략 자체를 세부키워드 중심으로 재설계한 결과입니다.",
 			},
 		],
-		cover: "/images/cases/166883724/1.png",
+		cover: "/images/cases/166883724/1.webp",
 		coverW: 498,
 		coverH: 307,
 		blocks: [
@@ -14890,7 +14890,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/166883724/1.png",
+				src: "/images/cases/166883724/1.webp",
 				w: 498,
 				h: 307,
 				alt: "병원마케팅성공사례",
@@ -14898,7 +14898,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/166883724/2.png",
+				src: "/images/cases/166883724/2.webp",
 				w: 484,
 				h: 290,
 				alt: "979bc26b48da1.png",
@@ -14906,7 +14906,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/166883724/3.png",
+				src: "/images/cases/166883724/3.webp",
 				w: 538,
 				h: 391,
 				alt: "병원광고",
@@ -15033,7 +15033,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "기존 대행사는 환자가 줄어도 자사 광고에는 문제가 없다고만 하고 한 팀처럼 움직이지 않았습니다. 애드리절트는 병원에 필요한 것을 먼저 제안하며 한 팀으로 관리했습니다.",
 			},
 		],
-		cover: "/images/cases/164429049/1.png",
+		cover: "/images/cases/164429049/1.webp",
 		coverW: 364,
 		coverH: 81,
 		blocks: [
@@ -15113,7 +15113,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/164429049/1.png",
+				src: "/images/cases/164429049/1.webp",
 				w: 364,
 				h: 81,
 				alt: "병원홍보",
@@ -15132,7 +15132,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/164429049/2.png",
+				src: "/images/cases/164429049/2.webp",
 				w: 358,
 				h: 403,
 				alt: "병원홍보성공사례",
@@ -15183,7 +15183,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "파워링크를 끄고 검색 의도에 맞춘 콘텐츠로 전환한 뒤 전년 같은 시기 대비 환자가 30% 증가했습니다.",
 			},
 		],
-		cover: "/images/cases/164427329/5.png",
+		cover: "/images/cases/164427329/5.webp",
 		coverW: 969,
 		coverH: 693,
 		blocks: [
@@ -15257,7 +15257,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/164427329/1.png",
+				src: "/images/cases/164427329/1.webp",
 				w: 382,
 				h: 441,
 				alt: "정형외과마케팅",
@@ -15297,7 +15297,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/164427329/2.png",
+				src: "/images/cases/164427329/2.webp",
 				w: 375,
 				h: 141,
 				alt: "정형외과광고",
@@ -15352,7 +15352,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/164427329/3.png",
+				src: "/images/cases/164427329/3.webp",
 				w: 391,
 				h: 526,
 				alt: "정형외과성공사례",
@@ -15382,7 +15382,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/164427329/4.png",
+				src: "/images/cases/164427329/4.webp",
 				w: 396,
 				h: 234,
 				alt: "정형외과블로그",
@@ -15436,7 +15436,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/164427329/5.png",
+				src: "/images/cases/164427329/5.webp",
 				w: 969,
 				h: 693,
 				alt: "정형외과성공사례",
@@ -15484,7 +15484,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 				a: "개원 후 6개월 동안 월 약 1,000만~1,500만원의 광고비를 쓰고 있었습니다.",
 			},
 		],
-		cover: "/images/cases/164425283/1.png",
+		cover: "/images/cases/164425283/1.webp",
 		coverW: 364,
 		coverH: 229,
 		blocks: [
@@ -15629,7 +15629,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/164425283/1.png",
+				src: "/images/cases/164425283/1.webp",
 				w: 364,
 				h: 229,
 				alt: "정형외과마케팅",
@@ -15648,7 +15648,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/164425283/2.png",
+				src: "/images/cases/164425283/2.webp",
 				w: 364,
 				h: 434,
 				alt: "정형외과광고",
@@ -15667,7 +15667,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/164425283/3.png",
+				src: "/images/cases/164425283/3.webp",
 				w: 364,
 				h: 660,
 				alt: "정형외과마케팅성공사례",
@@ -15675,7 +15675,7 @@ export const CASE_ARTICLES: CaseArticle[] = [
 			},
 			{
 				type: "img",
-				src: "/images/cases/164425283/4.png",
+				src: "/images/cases/164425283/4.webp",
 				w: 364,
 				h: 528,
 				alt: "정형외과광고성공사례",
